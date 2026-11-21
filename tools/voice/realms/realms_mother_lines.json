@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "speaker": "mother",
+  "source": "Assets/Ankhu/Realms/Core/Content/WernesScripts.cs",
+  "lines": [
+    {
+      "key": "dialogue.mother.row.1",
+      "text": "Ankhu. He lives. Say it so the gods hear. He lives.",
+      "context": "Ankhu's mother. Scene: Shabti Row. This line is a memory, heard as if from far away."
+    }
+  ]
+}

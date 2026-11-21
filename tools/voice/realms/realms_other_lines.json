@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "speaker": "other",
+  "source": "Assets/Ankhu/Realms/Core/Content/WernesScripts.cs",
+  "lines": [
+    {
+      "key": "dialogue.other.row.1",
+      "text": "What is he called?",
+      "context": " Scene: Shabti Row. This line is a memory, heard as if from far away."
+    }
+  ]
+}

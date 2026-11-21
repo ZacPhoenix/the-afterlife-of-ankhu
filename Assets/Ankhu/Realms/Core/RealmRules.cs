@@ -34,6 +34,9 @@ namespace Ankhu.Realms.Core
         public WordGloss Gloss;
         /// <summary>Zones from which words reach it. Empty means anywhere in the room.</summary>
         public string[] Zones = Array.Empty<string>();
+        /// <summary>Phrases that reach it but that it will not answer to, with what the room says instead
+        /// (a shabti that answers only to its owner's name).</summary>
+        public Dictionary<string, string> Refuses = new Dictionary<string, string>();
     }
 
     /// <summary>A required state: object Id must be in one of States.</summary>
@@ -100,7 +103,8 @@ namespace Ankhu.Realms.Core
         Incomplete,
         InvalidTarget,
         OutOfReach,
-        Refused
+        Refused,
+        Ambiguous
     }
 
     public sealed class SpellResult
@@ -292,11 +296,33 @@ namespace Ankhu.Realms.Core
             string phrase = string.Join(" ", rest);
             if (phrase.Length > 0)
             {
-                target = MatchObject(phrase);
-                if (target == null)
+                List<RoomObject> found = MatchObjects(phrase, out string alias);
+                if (found.Count == 0)
                 {
                     r.Outcome = Judgement.InvalidTarget;
                     r.Message = $"There is no \"{phrase}\" here to {Lexicon.Gloss(verb).English}.";
+                    return r;
+                }
+                if (found.Count > 1)
+                {
+                    // Several things answer to the phrase: the ones within reach of where Ankhu stands decide.
+                    List<RoomObject> near = found.Where(o => o.Zones.Length == 0 || zone == null || Array.IndexOf(o.Zones, zone) >= 0).ToList();
+                    if (near.Count == 1) found = near;
+                    else
+                    {
+                        r.Outcome = near.Count == 0 ? Judgement.OutOfReach : Judgement.Ambiguous;
+                        r.Message = near.Count == 0
+                            ? $"No {alias} is close enough. Walk to the one you mean."
+                            : $"Which {alias}? Several hear you. Stand beside the one you mean.";
+                        return r;
+                    }
+                }
+                target = found[0];
+                if (target.Refuses != null && target.Refuses.TryGetValue(alias, out string refusal))
+                {
+                    r.TargetId = target.Id;
+                    r.Outcome = Judgement.Refused;
+                    r.Message = refusal;
                     return r;
                 }
             }
@@ -315,6 +341,13 @@ namespace Ankhu.Realms.Core
                 }
             }
 
+            if (target != null && phrase.Length == 0 && target.Refuses != null && target.Refuses.TryGetValue("", out string bare))
+            {
+                r.TargetId = target.Id;
+                r.Outcome = Judgement.Refused;
+                r.Message = bare;
+                return r;
+            }
             if (target != null) { r.TargetId = target.Id; if (target.Gloss != null) r.Words.Add(target.Gloss); }
 
             List<SpellRule> matching = forVerb.Where(x => x.Target == (target?.Id)).ToList();
@@ -386,21 +419,21 @@ namespace Ankhu.Realms.Core
             return o == null || o.Zones.Length == 0 || zone == null || Array.IndexOf(o.Zones, zone) >= 0;
         }
 
-        private RoomObject MatchObject(string phrase)
+        /// <summary>Every object whose longest matching alias is the longest found, and that alias.</summary>
+        private List<RoomObject> MatchObjects(string phrase, out string alias)
         {
-            // Longest alias that the phrase equals or ends with wins ("the shrine door" -> "shrine door").
-            RoomObject best = null;
+            var best = new List<RoomObject>();
             int bestLen = 0;
+            alias = phrase;
             foreach (RoomObject o in Def.Objects)
             {
+                int len = 0;
+                string hit = null;
                 foreach (string a in o.Aliases.Concat(new[] { o.Id.ToLowerInvariant() }))
-                {
-                    if ((phrase == a || phrase.EndsWith(" " + a) || phrase.StartsWith(a + " ")) && a.Length > bestLen)
-                    {
-                        best = o;
-                        bestLen = a.Length;
-                    }
-                }
+                    if ((phrase == a || phrase.EndsWith(" " + a) || phrase.StartsWith(a + " ")) && a.Length > len) { len = a.Length; hit = a; }
+                if (len == 0) continue;
+                if (len > bestLen) { best.Clear(); bestLen = len; alias = hit; }
+                if (len == bestLen) best.Add(o);
             }
             return best;
         }

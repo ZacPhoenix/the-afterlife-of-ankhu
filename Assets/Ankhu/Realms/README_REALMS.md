@@ -9,6 +9,7 @@ Everything that plays after `Opening_WalkDuat` lives here. The story source is t
 | `Realm_01_Arit1` | The First Gate (Spell 144). Learn the three keepers' names (heard, read, looked at) and speak them | name | A gate opens for one who is known. The keeper lies on its face, as Ankhu lay at the pool |
 | `Realm_02_Wernes_Field` | The Field That Waits. Open the sluice, wake the shabti, still the shabti. Memory A: Hori on his shoulders | open, wake, still | A man who let work do his living has to tell the worker to stop before he can remember |
 | `Realm_03_Wernes_House` | The House With One Door. Seal cannot be spoken until the false door gives Memory B (his father leaving) | seal (learned) | The word he feared since his father's door saves something small |
+| `Realm_04_Wernes_Row` | Shabti Row. Three plots, three sluices, three blank workers, and a fifth painted worker keeping the canal brimming. Words reach only the worker you stand beside. The fifth answers only to the name on its chest: still ankhu. Memory C (his mother names him) | all five | He made a worker to labour so he could rest, and never rested. The first time he says still to himself |
 
 Anpu gives Ankhu the codex at the First Gate. Each scene ends by loading the next `Realm_*` scene in Build Settings. The last one returns to the title.
 
@@ -59,7 +60,7 @@ Menu: Ankhu > Realms > Build Wernes Scenes, and Ankhu > Realms > Capture Realm C
 4. Prove the room solvable with the solver (`/home/user/realms-check/solver` in the cloud session, a breadth-first search over every utterance).
 5. Export voice lines (`Solver.dll export tools/voice/realms`) and record them (see `tools/voice/README.md`). Clips go to `Assets/Ankhu/Realms/Audio/Resources/RealmVoice/<key>.wav`.
 
-Rules can carry `Requires` conditions, `Also` side effects and `auto` consequences (derived states). A verb outside the room's verb set answers "You know this word exists, but your mouth cannot shape it yet", which is how a memory can teach a word mid-room (`Step.Learn`).
+Rules can carry `Requires` conditions, `Also` side effects and `auto` consequences (derived states). An object can refuse some of its aliases (`RoomObject.Refuses`, the key \"\" covers a bare verb), and several objects sharing an alias are told apart by the zone Ankhu stands in (`Judgement.Ambiguous` otherwise). A verb outside the room's verb set answers "You know this word exists, but your mouth cannot shape it yet", which is how a memory can teach a word mid-room (`Step.Learn`).
 
 ## Honest status
 

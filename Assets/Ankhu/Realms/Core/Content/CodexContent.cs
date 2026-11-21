@@ -64,7 +64,13 @@ namespace Ankhu.Realms.Core
                 "Once I had named all three, the gate opened and the announcer spoke my name: Ankhu, who wore the face of Anpu over the dead. A gate is not opened by force. It is opened by being known. Anpu says he can give me this gate and no other.",
                 "Wernes");
 
+            yield return Lore("lore.shabti_row", "Shabti Row", "A1 Z2",
+                "A long field with three plots, three sluices and three blank clay workers. The canal behind them is brimming, fuller than any canal should be. At the far end a fifth worker, finer and painted, carries water without rest. Its channel is worn deep.",
+                "Wernes");
+
             // ------------------------------------------------------------ clues
+            yield return Clue("clue.shabti_chest", "The name on its chest", "S34 N35 Aa1 G43",
+                "The painted shabti at the end of the row has a cartouche on its chest, and the name in it is mine. Anpu says it was put in my tomb to answer for me when the fields call. It does not answer to \"shabti\". It answers to Ankhu.");
             yield return Clue("clue.keeper_name", "The first pillar", "D2 D21 N35A",
                 "The keeper of the first gate: Face-downward, Numerous of Shapes. A figure carved lying on its face, the way I lay at the pool when I woke. Anpu said we have met. (Allen, Spell 144.)");
             yield return Clue("clue.guardian_name", "The second pillar", "F21 G17",
@@ -81,6 +87,9 @@ namespace Ankhu.Realms.Core
                 "Wernes");
             yield return Memory("memory.door_dawn", "The door at dawn", "O31 S20",
                 "I was six. My father knelt in his soldier's kilt and said: mind your mother, I will bring you something from the north. I did not answer him. Then the door shut, and the bolt was on the outside, at my eye height. He did not come back. That is where the word seal comes from, for me.",
+                "Wernes");
+            yield return Memory("memory.naming", "My mother names me", "S34 A17",
+                "Before anything I can remember. The one-room house, a midwife, my mother worn out and laughing with me in her arms. Ankhu, she said. He lives. Say it so the gods hear. She was the loudest person in my life, and at the start that was joy.",
                 "Wernes");
             yield return Memory("memory.reed_boat", "Hori's reed boat", "P1 A17",
                 "Hori made a boat of reeds when he was three. Neferet said it was to carry me home from the temple, because I never came home early. It sank by evening. He cried and she laughed until he laughed too. I made him another. I came home late the next night anyway.",

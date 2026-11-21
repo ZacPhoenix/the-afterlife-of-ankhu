@@ -51,6 +51,7 @@ namespace Ankhu.Realms.EditorTools
             BuildArit1();
             BuildField();
             BuildHouse();
+            BuildRow();
             AddToBuildSettings();
             AssetDatabase.SaveAssets();
             Debug.Log("[Realms] Wernes scenes built.");
@@ -597,6 +598,160 @@ namespace Ankhu.Realms.EditorTools
             Shot(ctx, "cam_outside", new Vector3(3.2f, 4.2f, -11.5f), new Vector3(-0.5f, 0.6f, 3.5f), 50f, new Vector3(0f, 1f, -4.5f), new Vector3(12f, 4f, 7f));
             Shot(ctx, "cam_plot", new Vector3(3.4f, 4.6f, -0.6f), new Vector3(-2.2f, 0.8f, 5.6f), 56f, new Vector3(0f, 1f, 3.4f), new Vector3(9f, 4f, 9f), 0.08f, 1);
             Finish(ctx, WernesScripts.House);
+        }
+
+        // ------------------------------------------------------------------ Room 1.3: Shabti Row
+
+        /// <summary>A clay shabti with a yoke and two jars and a WorkerLoop driver. Poses asleep and carrying.</summary>
+        private static RealmObjectView ShabtiFigure(Ctx ctx, Transform parent, string id, Vector3 pos, Material clay, float scale, Vector3 walkFrom, Vector3 walkTo, out Transform chest)
+        {
+            Transform root = RealmKit.Group("Shabti_" + id, parent, pos);
+            Transform worker = RealmKit.Group("Worker", root);
+            worker.localScale = Vector3.one * scale;
+            RealmKit.Shape(PrimitiveType.Capsule, "Body", worker, new Vector3(0f, 0.85f, 0f), new Vector3(0.5f, 0.75f, 0.42f), clay, true);
+            Transform head = RealmKit.Group("Head", worker, new Vector3(0f, 1.62f, 0f));
+            RealmKit.Shape(PrimitiveType.Sphere, "Face", head, new Vector3(0f, 0.1f, 0f), new Vector3(0.3f, 0.34f, 0.3f), clay);
+            RealmKit.Box("Wig", head, new Vector3(0f, 0.12f, 0.05f), new Vector3(0.34f, 0.36f, 0.3f), RealmKit.Shadow, false);
+            Transform eyes = RealmKit.Group("Eyes", head);
+            RealmKit.Shape(PrimitiveType.Sphere, "EyeL", eyes, new Vector3(-0.06f, 0.14f, -0.14f), Vector3.one * 0.04f, RealmKit.EyeGlow);
+            RealmKit.Shape(PrimitiveType.Sphere, "EyeR", eyes, new Vector3(0.06f, 0.14f, -0.14f), Vector3.one * 0.04f, RealmKit.EyeGlow);
+            chest = RealmKit.Group("Chest", worker, new Vector3(0f, 1.05f, -0.22f));
+            Transform jars = RealmKit.Group("Yoke", worker, new Vector3(0f, 1.42f, 0f));
+            RealmKit.Box("Pole", jars, Vector3.zero, new Vector3(1.4f, 0.05f, 0.05f), RealmKit.Wood, false);
+            RealmKit.Shape(PrimitiveType.Sphere, "JarL", jars, new Vector3(-0.66f, -0.3f, 0f), new Vector3(0.24f, 0.32f, 0.24f), RealmKit.Ochre);
+            RealmKit.Shape(PrimitiveType.Sphere, "JarR", jars, new Vector3(0.66f, -0.3f, 0f), new Vector3(0.24f, 0.32f, 0.24f), RealmKit.Ochre);
+            var driver = new GameObject("WorkDriver");
+            driver.transform.SetParent(root, false);
+            WorkerLoop loop = driver.AddComponent<WorkerLoop>();
+            loop.worker = worker;
+            loop.jars = jars;
+            loop.from = walkFrom;
+            loop.to = walkTo;
+            loop.period = 5.5f;
+            RealmObjectView v = View(ctx, root, id, new Vector3(0f, 1.7f * scale, 0f));
+            var a = Pose(v, "asleep", 0.8f); Part(a, head, head.localPosition, new Vector3(28f, 0f, 0f)); a.hide.Add(eyes.gameObject); a.hide.Add(driver);
+            var c = Pose(v, "carrying", 1.0f); Part(c, head, head.localPosition, Vector3.zero); c.show.Add(eyes.gameObject); c.show.Add(driver);
+            return v;
+        }
+
+        private static void BuildRow()
+        {
+            Ctx ctx = Begin(WernesScripts.Row, new Color(0.035f, 0.06f, 0.11f), 0.012f, 0.35f);
+            Transform w = ctx.world;
+            Ground(w, 180f, RealmKit.Mud);
+            Dunes(w, 9, 90f);
+
+            // Far gold grain and the grey ones.
+            Transform far = RealmKit.Group("FarFields", w);
+            var rnd = new System.Random(41);
+            Material grain = RealmKit.Lit("Grain", new Color(0.72f, 0.58f, 0.24f), 0.2f);
+            for (int r = 0; r < 6; r++)
+                RealmKit.Box("Grain" + r, far, new Vector3(0f, 0.25f, 20f + r * 3f), new Vector3(70f, 0.5f, 1.6f), grain, false);
+            Material grey = RealmKit.Lit("GreySoul", new Color(0.45f, 0.47f, 0.5f), 0.05f);
+            for (int i = 0; i < 8; i++)
+            {
+                Transform g = RealmKit.Group("GreyOne" + i, far, new Vector3(-26f + (float)rnd.NextDouble() * 50f, 0f, 22f + (float)rnd.NextDouble() * 14f), new Vector3(0f, (float)rnd.NextDouble() * 360f, 0f));
+                RealmKit.Shape(PrimitiveType.Capsule, "Body", g, new Vector3(0f, 0.8f, 0f), new Vector3(0.45f, 0.8f, 0.45f), grey, false, new Vector3(35f, 0f, 0f));
+            }
+
+            // The brimming canal along the back. Its level belongs to the painted shabti: full while it works.
+            RealmKit.Box("CanalBed", w, new Vector3(0f, -0.9f, 8f), new Vector3(46f, 0.2f, 3.4f), RealmKit.Mud, false);
+            RealmKit.Box("CanalBankS", w, new Vector3(0f, 0.15f, 6.1f), new Vector3(46f, 0.5f, 0.5f), RealmKit.Limestone);
+            RealmKit.Box("CanalBankN", w, new Vector3(0f, 0.15f, 9.9f), new Vector3(46f, 0.5f, 0.5f), RealmKit.Limestone);
+            GameObject canal = RealmKit.Box("CanalWater", w, new Vector3(0f, 0.32f, 8f), new Vector3(46f, 0.05f, 3.4f), RealmKit.WaterRough, false);
+            canal.AddComponent<WaterMotion>().amplitude = 0.015f;
+            Reeds(w, new Vector3(0f, 0f, 11.2f), new Vector3(44f, 0f, 1.4f), 240, 31);
+
+            Material clay = RealmKit.Lit("Clay", new Color(0.33f, 0.47f, 0.52f), 0.35f);
+            Material soilDry = RealmKit.Lit("SoilDry", new Color(0.52f, 0.43f, 0.32f), 0.05f);
+            Material soilWet = RealmKit.Lit("SoilWet", new Color(0.16f, 0.12f, 0.09f), 0.6f);
+            Material sprout = RealmKit.Lit("Sprout", new Color(0.36f, 0.62f, 0.22f), 0.3f);
+            string[] glyph = { "Z1", "Z2", "Z3" };
+            for (int i = 1; i <= 3; i++)
+            {
+                float x = -12f + (i - 1) * 6.5f;
+                Transform bay = RealmKit.Group("Bay" + i, w, new Vector3(x, 0f, 0f));
+                // Plot: a sunken bed with low limestone edges.
+                Transform plot = RealmKit.Group("Plot", bay, new Vector3(0.6f, 0f, 2.4f));
+                RealmKit.Box("EdgeW", plot, new Vector3(-2.2f, 0.12f, 0f), new Vector3(0.3f, 0.24f, 4.4f), RealmKit.Limestone, false);
+                RealmKit.Box("EdgeE", plot, new Vector3(2.2f, 0.12f, 0f), new Vector3(0.3f, 0.24f, 4.4f), RealmKit.Limestone, false);
+                RealmKit.Box("EdgeS", plot, new Vector3(0f, 0.12f, -2.2f), new Vector3(4.7f, 0.24f, 0.3f), RealmKit.Limestone, false);
+                GameObject dry = RealmKit.Box("SoilDry", plot, new Vector3(0f, 0.04f, 0f), new Vector3(4.1f, 0.06f, 4.1f), soilDry, false);
+                GameObject wet = RealmKit.Box("SoilWet", plot, new Vector3(0f, 0.045f, 0f), new Vector3(4.1f, 0.06f, 4.1f), soilWet, false);
+                GameObject flood = RealmKit.Box("Flood", plot, new Vector3(0f, 0.2f, 0f), new Vector3(4.1f, 0.04f, 4.1f), RealmKit.WaterRough, false);
+                flood.AddComponent<WaterMotion>().amplitude = 0.02f;
+                Transform sprouts = RealmKit.Group("Sprouts", plot);
+                for (int r = 0; r < 4; r++)
+                    for (int c = 0; c < 5; c++)
+                        RealmKit.Shape(PrimitiveType.Capsule, "Sprout", sprouts, new Vector3(-1.6f + c * 0.8f, 0.16f, -1.5f + r * 1.0f), new Vector3(0.06f, 0.12f, 0.06f), sprout);
+                Light plotGlow = InnerGlow(plot, new Vector3(0f, 1.4f, 0f), 0f, 5f);
+                RealmObjectView pv = View(ctx, plot, "plot" + i, new Vector3(0f, 0.6f, 0f));
+                var pd = Pose(pv, "dry", 0.4f); pd.show.Add(dry); pd.hide.Add(wet); pd.hide.Add(flood); pd.hide.Add(sprouts.gameObject);
+                pd.lights.Add(plotGlow); pd.lightIntensities.Add(0f);
+                var pdr = Pose(pv, "drowned", 1.2f); pdr.hide.Add(dry); pdr.show.Add(wet); pdr.show.Add(flood); pdr.hide.Add(sprouts.gameObject);
+                pdr.lights.Add(plotGlow); pdr.lightIntensities.Add(0f);
+                var pw = Pose(pv, "wet", 1.8f); pw.hide.Add(dry); pw.show.Add(wet); pw.hide.Add(flood); pw.show.Add(sprouts.gameObject);
+                pw.lights.Add(plotGlow); pw.lightIntensities.Add(1.4f);
+
+                // Sluice from the canal into the plot.
+                Transform sl = RealmKit.Group("Sluice", bay, new Vector3(0.6f, 0f, 5.6f));
+                RealmKit.Box("JambL", sl, new Vector3(-0.8f, 0.9f, 0f), new Vector3(0.4f, 1.8f, 0.8f), RealmKit.Sandstone);
+                RealmKit.Box("JambR", sl, new Vector3(0.8f, 0.9f, 0f), new Vector3(0.4f, 1.8f, 0.8f), RealmKit.Sandstone);
+                RealmKit.Box("Head", sl, new Vector3(0f, 1.95f, 0f), new Vector3(2.1f, 0.3f, 0.9f), RealmKit.Sandstone);
+                RealmKit.GlyphPlate("Count", sl, new Vector3(0f, 1.95f, -0.47f), new Vector3(0f, 180f, 0f), glyph[i - 1], 0.22f, false, new Color(1f, 0.78f, 0.4f, 0.6f));
+                Transform leaf = RealmKit.Group("Leaf", sl, new Vector3(0f, 0.6f, 0f));
+                RealmKit.Box("Board", leaf, Vector3.zero, new Vector3(1.2f, 1.2f, 0.16f), RealmKit.Wood, false);
+                GameObject spill = RealmKit.Box("Spill", sl, new Vector3(0f, 0.18f, -1.0f), new Vector3(1.1f, 0.04f, 1.6f), RealmKit.WaterRough, false);
+                RealmObjectView slv = View(ctx, sl, "sluice" + i, new Vector3(0f, 1.2f, -0.5f));
+                var ss = Pose(slv, "shut", 0.3f); Part(ss, leaf, new Vector3(0f, 0.6f, 0f), Vector3.zero); ss.hide.Add(spill);
+                var so = Pose(slv, "open", 1.6f); Part(so, leaf, new Vector3(0f, 1.6f, 0f), Vector3.zero); so.show.Add(spill);
+
+                ShabtiFigure(ctx, bay, "shabti" + i, new Vector3(-2.4f, 0f, 1.2f), clay, 1f, new Vector3(0f, 0f, 0f), new Vector3(1.4f, 0f, 1.6f), out _);
+                RealmKit.Brazier("Lamp" + i, bay, new Vector3(-2.6f, 0f, -1.4f), 8f, 2.0f);
+
+                Zone(ctx, "row" + i, new Vector3(x, 1f, 1.6f), new Vector3(6.4f, 4f, 9f));
+            }
+
+            // The fifth shabti: finer, painted, working in a channel it has worn a hand deep.
+            Transform end = RealmKit.Group("TheFifth", w, new Vector3(12.5f, 0f, 0f));
+            Material painted = RealmKit.Lit("PaintedFaience", new Color(0.10f, 0.42f, 0.52f), 0.6f);
+            RealmKit.Box("WornChannel", end, new Vector3(0f, -0.2f, 3.6f), new Vector3(1.2f, 0.1f, 4.6f), RealmKit.Mud, false);
+            GameObject worn = RealmKit.Box("WornWater", end, new Vector3(0f, -0.12f, 3.6f), new Vector3(1.1f, 0.04f, 4.6f), RealmKit.WaterRough, false);
+            worn.AddComponent<WaterMotion>().amplitude = 0.02f;
+            RealmKit.Box("ChannelLipW", end, new Vector3(-0.7f, 0.04f, 3.6f), new Vector3(0.16f, 0.24f, 4.6f), RealmKit.Limestone, false);
+            RealmKit.Box("ChannelLipE", end, new Vector3(0.7f, 0.04f, 3.6f), new Vector3(0.16f, 0.24f, 4.6f), RealmKit.Limestone, false);
+            RealmObjectView fv = ShabtiFigure(ctx, end, "fifth", new Vector3(-1.2f, 0f, 1.6f), painted, 1.15f, new Vector3(0f, 0f, 0f), new Vector3(0f, 0f, 3.4f), out Transform chest);
+            Transform cart = RealmKit.GlyphPlate("NameOnChest", chest, new Vector3(0f, 0f, -0.02f), new Vector3(0f, 180f, 0f), "S34 N35 Aa1 G43", 0.12f, true, new Color(1f, 0.82f, 0.45f, 1f));
+            GameObject chestGlow = RealmKit.Box("ChestGlow", chest, new Vector3(0f, 0f, -0.03f), new Vector3(0.2f, 0.5f, 0.01f), RealmKit.Additive("ChestGlow", new Color(1f, 0.78f, 0.4f, 0.0f), RealmKit.SoftDot()), false);
+            chestGlow.SetActive(false);
+            // The canal level rides on the fifth's poses: brimming while it carries, sunk when it rests.
+            var fa = fv.poses.First(p => p.state == "asleep");
+            var fc = fv.poses.First(p => p.state == "carrying");
+            Part(fa, canal.transform, new Vector3(0f, -0.45f, 8f), Vector3.zero, canal.transform.localScale); fa.hide.Add(worn);
+            Part(fc, canal.transform, new Vector3(0f, 0.32f, 8f), Vector3.zero, canal.transform.localScale); fc.show.Add(worn);
+            // Make "carrying" the first pose so captures and the start state show the fifth at work.
+            fv.poses.Remove(fc); fv.poses.Insert(0, fc);
+            Light fifthLight = InnerGlow(end, new Vector3(-1.2f, 2.6f, 0.6f), 1.2f, 6f);
+            ctx.director.cues.Add(new RealmSceneDirector.CueHook { cue = "chest", activate = new[] { chestGlow } });
+            RealmKit.Brazier("FifthLamp", end, new Vector3(1.6f, 0f, -0.6f), 9f, 2.2f);
+            RealmKit.Column("Obelisk", end, new Vector3(3.2f, 0f, 6.2f), 7f, 0.4f, RealmKit.Basalt, false);
+            Zone(ctx, "row5", new Vector3(12f, 1f, 1.6f), new Vector3(6.4f, 4f, 9f));
+
+            RealmKit.Motes(w, new Vector3(0f, 2f, 3f), new Vector3(34f, 4f, 12f), new Color(1f, 0.9f, 0.6f, 0.7f), 90);
+            // Dyke path along the front.
+            for (int i = 0; i < 18; i++)
+                RealmKit.Box("Dyke" + i, w, new Vector3(-17f + i * 2f, 0.05f, -2.6f), new Vector3(1.9f, 0.1f, 2.2f), RealmKit.Limestone, false);
+
+            RealmKit.Blocker(w, new Vector3(0f, 2f, -5f), new Vector3(42f, 4f, 1f));
+            RealmKit.Blocker(w, new Vector3(-19f, 2f, 1f), new Vector3(1f, 4f, 12f));
+            RealmKit.Blocker(w, new Vector3(17.5f, 2f, 1f), new Vector3(1f, 4f, 12f));
+            RealmKit.Blocker(w, new Vector3(0f, 2f, 6.6f), new Vector3(42f, 4f, 0.6f));
+
+            Cast(ctx, new Vector3(-16.5f, 0f, -2.6f), 90f, new Vector3(-17.6f, 0f, -3.2f));
+            Shot(ctx, "cam_west", new Vector3(-9.5f, 5.4f, -11.5f), new Vector3(-8.5f, 0.6f, 3.5f), 52f, new Vector3(-12f, 1f, 1f), new Vector3(13f, 4f, 12f));
+            Shot(ctx, "cam_mid", new Vector3(-0.5f, 5.0f, -11f), new Vector3(-1.5f, 0.6f, 3.2f), 52f, new Vector3(-1.5f, 1f, 1f), new Vector3(8f, 4f, 12f), 0.1f, 1);
+            Shot(ctx, "cam_fifth", new Vector3(8.6f, 2.6f, -5.4f), new Vector3(11.6f, 1.4f, 2.4f), 46f, new Vector3(11.5f, 1f, 1f), new Vector3(11f, 4f, 12f), 0.08f, 2);
+            Finish(ctx, WernesScripts.Row);
         }
 
         private static Transform Mark(Transform parent, string name, Vector3 pos)

@@ -137,6 +137,46 @@
       "key": "dialogue.anpu.house.6",
       "text": "A seal is not only a wall. Sometimes it is a hand over a cup.",
       "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The House With One Door."
+    },
+    {
+      "key": "dialogue.anpu.row.1",
+      "text": "Walk the row. Each worker hears whoever stands beside it.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: Shabti Row."
+    },
+    {
+      "key": "dialogue.anpu.row.2",
+      "text": "Then give the water somewhere to go. Your workers carry.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: Shabti Row."
+    },
+    {
+      "key": "dialogue.anpu.row.3",
+      "text": "They all answer to that word. Stand beside the one you mean.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: Shabti Row."
+    },
+    {
+      "key": "dialogue.anpu.row.4",
+      "text": "Look closer at what you are speaking to.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: Shabti Row."
+    },
+    {
+      "key": "dialogue.anpu.row.5",
+      "text": "They put it in your tomb. It answers for you when the fields call.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: Shabti Row."
+    },
+    {
+      "key": "dialogue.anpu.row.6",
+      "text": "Nobody told it to.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: Shabti Row."
+    },
+    {
+      "key": "dialogue.anpu.row.7",
+      "text": "It stopped. And the canal sank with it. Everything in this row was fed by its labour.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: Shabti Row."
+    },
+    {
+      "key": "dialogue.anpu.row.8",
+      "text": "And tonight you said it to stop. Remember how. You will need it.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: Shabti Row."
     }
   ]
 }

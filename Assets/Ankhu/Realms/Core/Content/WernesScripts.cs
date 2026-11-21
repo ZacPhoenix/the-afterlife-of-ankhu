@@ -8,6 +8,7 @@ namespace Ankhu.Realms.Core.Content
     ///   Realm_01_Arit1        The First Gate (Spell 144): learn and speak the three names. Anpu gives the codex.
     ///   Realm_02_Wernes_Field The Field That Waits: open, wake, still. Memory A, Hori on his shoulders.
     ///   Realm_03_Wernes_House The House With One Door: seal is unlearned until Memory B, the father's door.
+    ///   Realm_04_Wernes_Row   Shabti Row: all four verbs, focus by standing near, and still spoken to his own name. Memory C.
     /// Line text is ours unless marked Allen. Voice keys are dialogue.&lt;speaker&gt;.&lt;scene&gt;.&lt;n&gt;.
     /// </summary>
     public static class WernesScripts
@@ -15,12 +16,14 @@ namespace Ankhu.Realms.Core.Content
         public const string Gate = "Realm_01_Arit1";
         public const string Field = "Realm_02_Wernes_Field";
         public const string House = "Realm_03_Wernes_House";
+        public const string Row = "Realm_04_Wernes_Row";
 
         public static IEnumerable<SceneScript> All()
         {
             yield return BuildGate();
             yield return BuildField();
             yield return BuildHouse();
+            yield return BuildRow();
         }
 
         public static SceneScript ByScene(string scene)
@@ -356,8 +359,140 @@ namespace Ankhu.Realms.Core.Content
                 L.S(Speaker.Ankhu, "It held."),
                 L.S(Speaker.Anpu, "A seal is not only a wall. Sometimes it is a hand over a cup."),
                 Step.Write("lore.seal_saves"),
+                Step.Wait(0.8f),
+                Step.Next()));
+            return s;
+        }
+
+        // ---------------------------------------------------------------- Room 1.3: Shabti Row
+
+        private static readonly string[] Ordinal = { "first", "second", "third" };
+
+        private static SceneScript BuildRow()
+        {
+            var L = new Lines("row");
+            var room = new RoomDef
+            {
+                Id = "shabti_row",
+                Title = "Shabti Row",
+                Verbs = new HashSet<string> { "name", "open", "wake", "still", "seal" },
+            };
+            var goal = new List<Cond>();
+            for (int i = 1; i <= 3; i++)
+            {
+                string n = Ordinal[i - 1], zone = "row" + i, sh = "shabti" + i, sl = "sluice" + i, pl = "plot" + i;
+                room.Objects.Add(Obj(sh, n + " shabti", "asleep", new WordGloss("shabti", "shabti", "A1 Z1"), new[] { zone },
+                    "shabti", "worker", "clay worker", "figure", "clay figure", n + " shabti", n + " worker", "blank shabti", "ushabti"));
+                room.Objects.Add(Obj(sl, n + " sluice", "shut", new WordGloss("sluice", "sba", "O31 N35A"), new[] { zone },
+                    "sluice", "gate", "sluice gate", n + " sluice", n + " gate"));
+                room.Objects.Add(Obj(pl, n + " plot", "dry", new WordGloss("field", "sekhet", "M20"), new[] { zone },
+                    "plot", "field", "furrows", "earth", "seedbed", n + " plot", n + " field"));
+
+                room.Rules.Add(new SpellRule { Verb = "open", Target = sl, From = new[] { "shut" }, To = "open",
+                    Requires = new[] { new Cond("fifth", "carrying"), new Cond(sh, "asleep") }, Also = new[] { (pl, "drowned") }, Event = "flood",
+                    Success = "The canal is brimming. Water bursts through the sluice and drowns the furrows." });
+                room.Rules.Add(new SpellRule { Verb = "open", Target = sl, From = new[] { "shut" }, To = "open",
+                    Requires = new[] { new Cond("fifth", "carrying"), new Cond(sh, "carrying") },
+                    Success = "Water pours in, and the clay worker bails it out as fast as it comes." });
+                room.Rules.Add(new SpellRule { Verb = "open", Target = sl, From = new[] { "shut" }, To = "open",
+                    Requires = new[] { new Cond("fifth", "asleep") }, Event = "low_canal",
+                    Success = "The sluice lifts. The canal has sunk below it. Nothing comes through." });
+                room.Rules.Add(new SpellRule { Verb = "seal", Target = sl, From = new[] { "open" }, To = "shut",
+                    Success = "The sluice drops and holds." });
+                room.Rules.Add(new SpellRule { Verb = "wake", Target = sh, From = new[] { "asleep" }, To = "carrying",
+                    Requires = new[] { new Cond(pl, "drowned") }, Also = new[] { (pl, "wet") }, Event = "bail",
+                    Refusal = "It lifts its head, looks at the earth, and sleeps again. There is nothing here for it to carry." });
+                room.Rules.Add(new SpellRule { Verb = "still", Target = sh, From = new[] { "carrying" }, To = "asleep",
+                    Success = "The clay worker sets down its jars." });
+                room.Rules.Add(new SpellRule { Verb = "still", Target = pl, From = new[] { "drowned" }, To = "drowned",
+                    Requires = new[] { new Cond(pl, "never") },
+                    Refusal = "The flood lies quiet for a breath, and it is still a flood. Something has to carry it away." });
+                room.Rules.Add(new SpellRule { Verb = "auto", Target = pl, From = new[] { "wet" }, To = "drowned",
+                    Requires = new[] { new Cond(sh, "asleep"), new Cond(sl, "open"), new Cond("fifth", "carrying") }, Event = "redrown" });
+                goal.Add(new Cond(pl, "wet"));
+                goal.Add(new Cond(sh, "asleep"));
+            }
+
+            // The fifth shabti answers only to the name on its chest.
+            const string notMine = "It does not turn. It does not answer to \"shabti\". There is something written on its chest.";
+            RoomObject fifth = Obj("fifth", "painted shabti", "carrying", new WordGloss("Ankhu", "ankhu", "S34 N35 Aa1 G43", true), new[] { "row5" },
+                "ankhu", "shabti", "worker", "figure", "painted shabti", "fine shabti", "fifth shabti", "last shabti", "painted worker", "fifth", "ushabti");
+            foreach (string a in new[] { "", "shabti", "worker", "figure", "painted shabti", "fine shabti", "fifth shabti", "last shabti", "painted worker", "fifth", "ushabti" })
+                fifth.Refuses[a] = notMine;
+            room.Objects.Add(fifth);
+            room.Rules.Add(new SpellRule { Verb = "still", Target = "fifth", From = new[] { "carrying" }, To = "asleep", Event = "fifth_still",
+                Success = "The jars come down. The worn channel runs empty. The canal sinks." });
+            room.Rules.Add(new SpellRule { Verb = "wake", Target = "fifth", From = new[] { "asleep" }, To = "carrying", Event = "fifth_wake",
+                Success = "It lifts its jars again. It has always lifted them." });
+            goal.Add(new Cond("fifth", "asleep"));
+            room.Goal = goal.ToArray();
+
+            room.Hints.Add(new Hint { When = new[] { new Cond("fifth", "asleep"), new Cond("plot1", "dry", "drowned"), }, Text = "The canal has sunk. Only the painted worker kept it full. Wake it again, and still it last." });
+            room.Hints.Add(new Hint { When = new[] { new Cond("fifth", "asleep"), new Cond("plot2", "dry", "drowned") }, Text = "The canal has sunk. Only the painted worker kept it full. Wake it again, and still it last." });
+            room.Hints.Add(new Hint { When = new[] { new Cond("fifth", "asleep"), new Cond("plot3", "dry", "drowned") }, Text = "The canal has sunk. Only the painted worker kept it full. Wake it again, and still it last." });
+            for (int i = 1; i <= 3; i++)
+            {
+                string n = Ordinal[i - 1];
+                room.Hints.Add(new Hint { When = new[] { new Cond("plot" + i, "drowned"), new Cond("shabti" + i, "asleep") }, Text = $"The {n} plot is flooded. Its clay worker could carry the water off. Stand by it and wake the shabti." });
+                room.Hints.Add(new Hint { When = new[] { new Cond("plot" + i, "wet"), new Cond("shabti" + i, "carrying"), new Cond("sluice" + i, "open") }, Text = $"The {n} worker is bailing against an open sluice. Seal the sluice, then still the shabti." });
+                room.Hints.Add(new Hint { When = new[] { new Cond("plot" + i, "wet"), new Cond("shabti" + i, "carrying") }, Text = $"The {n} plot is wet. Its worker can rest. Still the shabti." });
+                room.Hints.Add(new Hint { When = new[] { new Cond("plot" + i, "dry") }, Text = $"The {n} plot is dry. The canal is brimming behind its sluice. Open it." });
+            }
+            room.Hints.Add(new Hint { When = new[] { new Cond("fifth", "carrying") }, Text = "Every plot is wet. One worker is still carrying at the end of the row. Read its chest, then still it by that name." });
+
+            var s = new SceneScript { SceneName = Row, Realm = "Wernes", Title = "Shabti Row", Room = room,
+                CodexOnEntry = new[] { "lore.codex", "word.name", "word.open", "word.wake", "word.still", "word.seal", "memory.shoulders", "memory.door_dawn" } };
+            s.Usables.Add(new Usable { Id = "chest", Prompt = "Read the name on its chest", Zone = "row5" });
+
+            s.Beats.Add(new Beat("arrive", TriggerKind.Start, "",
+                Step.Freeze(),
+                Step.Title("SHABTI ROW", 3.5f),
+                L.S(Speaker.Ankhu, "Three plots, three sluices, and the canal brimming behind them. Who keeps it so full?"),
+                L.S(Speaker.Anpu, "Walk the row. Each worker hears whoever stands beside it."),
+                Step.Write("lore.shabti_row"),
+                Step.Free()));
+
+            s.Beats.Add(new Beat("flood", TriggerKind.Event, "flood",
+                Step.Wait(1.0f),
+                L.S(Speaker.Ankhu, "Too much. The canal is too full."),
+                L.S(Speaker.Anpu, "Then give the water somewhere to go. Your workers carry.")));
+
+            s.Beats.Add(new Beat("ambiguous", TriggerKind.Failure, "Ambiguous",
+                L.S(Speaker.Anpu, "They all answer to that word. Stand beside the one you mean.")));
+            s.Beats.Add(new Beat("refused", TriggerKind.Failure, "Refused",
+                L.S(Speaker.Anpu, "Look closer at what you are speaking to.")));
+
+            s.Beats.Add(new Beat("chest", TriggerKind.Use, "chest",
+                Step.Freeze(),
+                Step.Cue("chest"),
                 Step.Wait(0.6f),
-                Step.Title("End of the vertical slice\nWernes continues: Shabti Row, and the second gate", 6f),
+                L.S(Speaker.Ankhu, "This one has my name."),
+                L.S(Speaker.Anpu, "They put it in your tomb. It answers for you when the fields call."),
+                L.S(Speaker.Ankhu, "It has not stopped."),
+                L.S(Speaker.Anpu, "Nobody told it to."),
+                Step.Write("clue.shabti_chest"),
+                Step.Free()));
+
+            s.Beats.Add(new Beat("fifth_still_early", TriggerKind.Event, "fifth_still",
+                Step.Wait(1.0f),
+                L.S(Speaker.Anpu, "It stopped. And the canal sank with it. Everything in this row was fed by its labour.")) { ForbidsFlags = new[] { "solved" } });
+
+            s.Beats.Add(new Beat("solved", TriggerKind.Solved, "",
+                Step.Flag("solved"),
+                Step.Freeze(),
+                Step.Wait(1.6f),
+                Step.Caption("The painted worker sets down its jars. Its channel is worn a hand deep. For the first time it rests."),
+                L.S(Speaker.Ankhu, "I made it to work so I could rest. I never rested."),
+                Step.Wait(0.6f),
+                L.M("mem_naming", Speaker.Narrator, "The same one-room house, earlier. A woman, exhausted and laughing, holds a newborn."),
+                L.M("mem_naming", Speaker.Other, "What is he called?"),
+                L.M("mem_naming", Speaker.Mother, "Ankhu. He lives. Say it so the gods hear. He lives."),
+                L.M("mem_naming", Speaker.Narrator, "She is the loudest person in his life, and at the start that is joy."),
+                Step.Write("memory.naming"),
+                L.S(Speaker.Ankhu, "She shouted it. She shouted my name at the gods."),
+                L.S(Speaker.Anpu, "And tonight you said it to stop. Remember how. You will need it."),
+                Step.Wait(0.6f),
+                Step.Title("End of the demo\nWernes continues at the second gate", 6f),
                 Step.End()));
             return s;
         }
