@@ -31,6 +31,12 @@ namespace Ankhu.CameraRig
         [Tooltip("Extra far clip distance beyond the play plane, for scenery behind it.")]
         [SerializeField, Min(1f)] private float depthBeyondPlane = 60f;
 
+        [Header("Framing (defaults are the Borrowed Dawn room)")]
+        [SerializeField, Min(0.5f)] private float orthoSize = BorrowedDawnLayout.CameraOrthoSize;
+        [SerializeField] private float fixedY = BorrowedDawnLayout.CameraFixedY;
+        [SerializeField] private float boundsMinX = BorrowedDawnLayout.RoomMinX;
+        [SerializeField] private float boundsMaxX = BorrowedDawnLayout.RoomMaxX;
+
         private Camera cam;
         private float velocityX;
 
@@ -39,7 +45,16 @@ namespace Ankhu.CameraRig
         public float PerspectiveFieldOfView => perspectiveFieldOfView;
 
         /// <summary>Distance from the camera to z = 0. Equal in both modes so depth content stays in view.</summary>
-        public float PlaneDistance => DistanceForFieldOfView(BorrowedDawnLayout.CameraOrthoSize, perspectiveFieldOfView);
+        public float PlaneDistance => DistanceForFieldOfView(orthoSize, perspectiveFieldOfView);
+
+        /// <summary>Sets the framing for a scene other than Borrowed Dawn. Half height at z = 0, camera y, and x bounds.</summary>
+        public void SetFraming(float halfHeight, float cameraY, float minX, float maxX)
+        {
+            orthoSize = Mathf.Max(0.5f, halfHeight);
+            fixedY = cameraY;
+            boundsMinX = minX;
+            boundsMaxX = maxX;
+        }
 
         public void Configure(Transform followTarget, Projection mode)
         {
@@ -88,7 +103,7 @@ namespace Ankhu.CameraRig
             float desired = ClampX(target.position.x);
             Vector3 p = transform.position;
             float x = smoothTime > 0f ? Mathf.SmoothDamp(p.x, desired, ref velocityX, smoothTime) : desired;
-            transform.position = new Vector3(x, BorrowedDawnLayout.CameraFixedY, -PlaneDistance);
+            transform.position = new Vector3(x, fixedY, -PlaneDistance);
         }
 
         /// <summary>Applies projection settings and jumps to the target with no smoothing. Works in edit mode.</summary>
@@ -97,7 +112,7 @@ namespace Ankhu.CameraRig
             ApplyProjection();
             float x = target != null ? ClampX(target.position.x) : ClampX(transform.position.x);
             velocityX = 0f;
-            transform.position = new Vector3(x, BorrowedDawnLayout.CameraFixedY, -PlaneDistance);
+            transform.position = new Vector3(x, fixedY, -PlaneDistance);
         }
 
         private void ApplyProjection()
@@ -108,7 +123,7 @@ namespace Ankhu.CameraRig
             if (projection == Projection.Orthographic)
             {
                 c.orthographic = true;
-                c.orthographicSize = BorrowedDawnLayout.CameraOrthoSize;
+                c.orthographicSize = orthoSize;
             }
             else
             {
@@ -121,8 +136,8 @@ namespace Ankhu.CameraRig
 
         public float ClampX(float desiredX)
         {
-            float halfWidth = BorrowedDawnLayout.CameraOrthoSize * Mathf.Max(0.01f, Cam.aspect);
-            return ClampCameraX(desiredX, halfWidth, BorrowedDawnLayout.RoomMinX, BorrowedDawnLayout.RoomMaxX);
+            float halfWidth = orthoSize * Mathf.Max(0.01f, Cam.aspect);
+            return ClampCameraX(desiredX, halfWidth, boundsMinX, boundsMaxX);
         }
 
         /// <summary>
