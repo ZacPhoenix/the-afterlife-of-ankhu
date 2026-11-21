@@ -44,6 +44,13 @@ namespace Ankhu.Core
             }
         }
 
+        /// <summary>Clears the static instance when entering play mode with domain reload disabled.</summary>
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        private static void ResetStatics()
+        {
+            Instance = null;
+        }
+
         private void Awake()
         {
             if (Instance != null && Instance != this)
