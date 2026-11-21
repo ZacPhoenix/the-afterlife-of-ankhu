@@ -58,6 +58,15 @@ namespace Ankhu.Speech
         private bool layoutDirty = true;
 
         public bool IsOpen => isOpen;
+
+        /// <summary>True while the bubble or its reply is on screen. The interaction prompt hides then so the two never overlap.</summary>
+        public static bool AnyVisible { get; private set; }
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        private static void ResetStatics()
+        {
+            AnyVisible = false;
+        }
         public SpeechBuffer Buffer => buffer;
         public SpeechHistory History => history;
 
@@ -138,6 +147,7 @@ namespace Ankhu.Speech
             bool panelVisible = isOpen || (replyTimer > 0f && spokenText.Length > 0);
             bool replyVisible = replyTimer > 0f;
             bool visible = panelVisible || replyVisible;
+            AnyVisible = visible;
             if (bubbleRoot.gameObject.activeSelf != visible)
             {
                 bubbleRoot.gameObject.SetActive(visible);

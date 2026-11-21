@@ -35,7 +35,7 @@ namespace Ankhu.World
         {
             if (bridge == null)
             {
-                bridge = Object.FindFirstObjectByType<PendulumBridge>();
+                bridge = Object.FindAnyObjectByType<PendulumBridge>();
                 if (bridge == null)
                 {
                     Debug.LogError("ChainBarrier has no PendulumBridge to watch. It stays closed.", this);

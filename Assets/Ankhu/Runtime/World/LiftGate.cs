@@ -51,7 +51,7 @@ namespace Ankhu.World
         {
             if (platform == null)
             {
-                platform = Object.FindFirstObjectByType<ElevatorPlatform>();
+                platform = Object.FindAnyObjectByType<ElevatorPlatform>();
                 if (platform == null)
                 {
                     Debug.LogError("LiftGate has no ElevatorPlatform to watch. It stays closed.", this);

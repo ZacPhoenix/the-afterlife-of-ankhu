@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Mirrors Packages/com.ankhu.borrowed-dawn/Runtime/Ankhu.BorrowedDawn.asmdef (noEngineReferences: true). -->
+  <PropertyGroup>
+    <AssemblyName>Ankhu.BorrowedDawn</AssemblyName>
+    <RootNamespace>Ankhu.BorrowedDawn</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(AnkhuRoot)../../Packages/com.ankhu.borrowed-dawn/Runtime/**/*.cs" />
+  </ItemGroup>
+</Project>

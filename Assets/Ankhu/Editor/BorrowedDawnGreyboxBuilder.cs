@@ -109,7 +109,9 @@ namespace Ankhu.EditorTools
             BuildGate(props, interactables);
             BuildLighting();
 
-            new GameObject("RoomRulesHost").AddComponent<RoomRulesHost>();
+            GameObject hostObject = new GameObject("RoomRulesHost");
+            hostObject.AddComponent<RoomRulesHost>();
+            AddRulesInstaller(hostObject);
             new GameObject("Debug").AddComponent<TraversalDebugPanel>();
 
             Camera camera = BuildCamera();
@@ -123,6 +125,25 @@ namespace Ankhu.EditorTools
             AddSceneToBuildSettings();
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
+        }
+
+        public const string RulesInstallerTypeName = "Ankhu.Bindings.BorrowedDawnRulesInstaller, Ankhu.Bindings";
+
+        /// <summary>
+        /// Adds the rules library binding. The greybox is not useful without it, so a missing binding
+        /// fails the build loudly instead of silently producing a scene that answers no spells.
+        /// Reflection keeps this editor assembly free of a compile-time reference to the rules package.
+        /// </summary>
+        private static void AddRulesInstaller(GameObject hostObject)
+        {
+            Type installer = Type.GetType(RulesInstallerTypeName);
+            if (installer == null)
+            {
+                throw new InvalidOperationException(
+                    "Ankhu.Bindings is not compiled, so the greybox would have no rules. Check the Console for compile errors " +
+                    "in Assets/Ankhu/Bindings or Packages/com.ankhu.borrowed-dawn, fix them, then build again.");
+            }
+            hostObject.AddComponent(installer);
         }
 
         // Materials
@@ -475,13 +496,17 @@ namespace Ankhu.EditorTools
             Block("GateLedgeSlab_West", parent, L.GateLedgeMinX, slabBottom, L.DeflectorX - 0.15f, L.UpperY, "UpperSlab");
             Block("GateLedgeSlab_East", parent, L.DeflectorX + 0.15f, slabBottom, L.GateLedgeMaxX, L.UpperY, "UpperSlab");
 
-            // Light-well grille: bars across the opening so the sun passes between them.
-            int bars = 5;
+            // Light well: a real opening in the slab, framed in gold so it reads as a hole the sun
+            // passes through. Three thin bronze bars form the walkable grille (the walk collider is
+            // continuous). The opening is wider than the beam's footprint at slab height.
+            Block("LightWellLip_West", parent, L.LightWellMinX - 0.08f, slabBottom - 0.05f, L.LightWellMinX, L.UpperY + 0.02f, "Bronze");
+            Block("LightWellLip_East", parent, L.LightWellMaxX, slabBottom - 0.05f, L.LightWellMaxX + 0.08f, L.UpperY + 0.02f, "Bronze");
+            int bars = 3;
             float span = L.LightWellMaxX - L.LightWellMinX;
             for (int i = 0; i < bars; i++)
             {
-                float x = L.LightWellMinX + span * (i + 0.5f) / bars;
-                Block("LightWellBar_" + i, parent, x - 0.03f, slabBottom, x + 0.03f, L.UpperY, "StoneDark");
+                float x = L.LightWellMinX + span * (i + 1f) / (bars + 1f);
+                Block("LightWellBar_" + i, parent, x - 0.02f, L.UpperY - 0.06f, x + 0.02f, L.UpperY, "Bronze");
             }
 
             // Foreground framing pillars, no colliders.

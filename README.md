@@ -8,6 +8,7 @@ Narrative puzzle adventure through a fictional Egyptian afterlife, built in Unit
 |---|---|---|
 | `Assets/Ankhu/Runtime/Integration/` | greybox | Engine-free adapter contract (`IRoomRulesAdapter`, `RoomSnapshot`, `PlayerContext`) |
 | `Assets/Ankhu/Runtime/` | greybox | Player, speech bubble, camera, world presentation, traversal test adapter |
+| `Assets/Ankhu/Bindings/` | greybox | Binds the rules library (`RuleProfile.Greybox`) to the adapter contract and keeps the rules location in step with where Ankhu walks |
 | `Assets/Ankhu/Editor/` | greybox | Code-generated scene and prefab builder |
 | `Assets/Ankhu/Generated/` | generated | Output of the builder. Rebuild instead of hand-editing |
 | `Packages/com.ankhu.borrowed-dawn/` | rules engine | Pure C# rules and parser (`Ankhu.BorrowedDawn`, no engine references) |

@@ -28,6 +28,13 @@ namespace Ankhu.Integration
         /// <summary>Request a physical interaction by id. See <see cref="InteractionIds"/>.</summary>
         CommandResult Interact(string interactionId, PlayerContext context);
 
+        /// <summary>
+        /// Evaluate an interaction without changing anything, so the UI can offer only actions that
+        /// would succeed from here. Must not raise <see cref="StateChanged"/> or touch undo history.
+        /// Adapters that cannot evaluate rules return <see cref="CommandOutcome.NotConnected"/>.
+        /// </summary>
+        CommandResult Preview(string interactionId, PlayerContext context);
+
         /// <summary>Restore the previous accepted state. Returns NoChange when there is nothing to undo.</summary>
         CommandResult Undo();
 
