@@ -111,7 +111,7 @@ namespace Ankhu.EditorTools
 
             GameObject hostObject = new GameObject("RoomRulesHost");
             hostObject.AddComponent<RoomRulesHost>();
-            AddRulesInstallerIfPresent(hostObject);
+            AddRulesInstaller(hostObject);
             new GameObject("Debug").AddComponent<TraversalDebugPanel>();
 
             Camera camera = BuildCamera();
@@ -127,17 +127,21 @@ namespace Ankhu.EditorTools
             AssetDatabase.Refresh();
         }
 
+        public const string RulesInstallerTypeName = "Ankhu.Bindings.BorrowedDawnRulesInstaller, Ankhu.Bindings";
+
         /// <summary>
-        /// Adds the rules library binding when its assembly is in the project. Without it the host
-        /// falls back to the traversal test adapter, so the greybox still builds and walks.
+        /// Adds the rules library binding. The greybox is not useful without it, so a missing binding
+        /// fails the build loudly instead of silently producing a scene that answers no spells.
+        /// Reflection keeps this editor assembly free of a compile-time reference to the rules package.
         /// </summary>
-        private static void AddRulesInstallerIfPresent(GameObject hostObject)
+        private static void AddRulesInstaller(GameObject hostObject)
         {
-            Type installer = Type.GetType("Ankhu.Bindings.BorrowedDawnRulesInstaller, Ankhu.Bindings");
+            Type installer = Type.GetType(RulesInstallerTypeName);
             if (installer == null)
             {
-                Debug.LogWarning("Ankhu.Bindings not found. The greybox will run with the traversal test adapter.");
-                return;
+                throw new InvalidOperationException(
+                    "Ankhu.Bindings is not compiled, so the greybox would have no rules. Check the Console for compile errors " +
+                    "in Assets/Ankhu/Bindings or Packages/com.ankhu.borrowed-dawn, fix them, then build again.");
             }
             hostObject.AddComponent(installer);
         }

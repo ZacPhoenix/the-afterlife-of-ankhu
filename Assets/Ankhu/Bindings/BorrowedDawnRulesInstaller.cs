@@ -33,6 +33,7 @@ namespace Ankhu.Bindings
         private PlayerController2D controller;
         private Vector2 lastAcceptedFeet;
         private bool pendingPlacement;
+        private bool reportedLostAdapter;
 
         public BorrowedDawnRulesAdapter Adapter => adapter;
 
@@ -50,9 +51,20 @@ namespace Ankhu.Bindings
                 return;
             }
 
-            adapter = new BorrowedDawnRulesAdapter();
-            host.Install(adapter);
+            try
+            {
+                adapter = new BorrowedDawnRulesAdapter();
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogError("The Borrowed Dawn rules library failed to start. The room falls back to the traversal test adapter.", this);
+                Debug.LogException(e, this);
+                adapter = null;
+                enabled = false;
+                return;
+            }
             adapter.StateChanged += HandleStateChanged;
+            host.Install(adapter);
         }
 
         private void Start()
@@ -87,6 +99,11 @@ namespace Ankhu.Bindings
             {
                 return;
             }
+            if (adapter == null)
+            {
+                ReportLostAdapter();
+                return;
+            }
 
             if (pendingPlacement)
             {
@@ -105,9 +122,25 @@ namespace Ankhu.Bindings
             }
         }
 
+        /// <summary>
+        /// The adapter is a plain C# object, so a script recompile during play mode drops it while the
+        /// component survives. Say so once instead of failing every physics step.
+        /// </summary>
+        private void ReportLostAdapter()
+        {
+            if (reportedLostAdapter)
+            {
+                return;
+            }
+            reportedLostAdapter = true;
+            enabled = false;
+            Debug.LogError("The Borrowed Dawn rules were lost, almost always because scripts recompiled during play mode. Stop play mode and press Play again.", this);
+            FeedbackBus.Publish(FeedbackSource.System, CommandOutcome.NotConnected, "Scripts changed while playing. Stop and press Play again.");
+        }
+
         private void HandleZoneChanged(string previousZone, string nextZone)
         {
-            if (pendingPlacement)
+            if (pendingPlacement || adapter == null)
             {
                 return;
             }

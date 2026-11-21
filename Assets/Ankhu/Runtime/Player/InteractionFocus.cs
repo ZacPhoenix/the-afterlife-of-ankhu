@@ -92,7 +92,7 @@ namespace Ankhu.Player
             {
                 return;
             }
-            bool show = focus != null && !InputGate.TextEntryActive;
+            bool show = focus != null && !InputGate.TextEntryActive && !Ankhu.Speech.SpeechBubbleController.AnyVisible;
             Vector2 local = Vector2.zero;
             if (show)
             {
