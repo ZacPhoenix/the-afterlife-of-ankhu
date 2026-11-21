@@ -97,13 +97,14 @@ Unicode NFKC, invariant lower case, every non letter or digit becomes a space, w
 | `bind X`, `release X` | `unbind`. Targets: `elevator`/`lift`, `shadow`, `bridge`/`pendulum` |
 | `wake bearer`, `sleep bearer` | `awaken`. Object `statue` |
 | `recall/strike/echo bell` | `ring bell`. Object `resonator` |
-| `take mirror`, `install mirror` | `pick up`, `place`. Object `sun mirror` |
+| `take mirror` | `carry`, `grab`, `lift`, `pick up`, `collect`. Object `sun mirror` |
+| `install mirror` | `place`, `put`, `set`, `insert`, `mount`. Optional `in`/`into`/`on`/`onto` `[sun] socket` after the mirror |
 | `read inscription` | objects `inscriptions`, `gallery` |
 | `go to X` | `go X`, `walk to X`, `move to X`. Places: `floor`/`ground`, `elevator`/`lift`, `gallery`/`balcony`, `landing`/`bell landing`, `gate`/`threshold` |
 | `board elevator`, `enter gallery`, `descend [to floor]`, `cross bridge` | movement shortcuts |
 | Gate Name | `he who returns the morning`, optionally prefixed by `speak` or `say`. Accepted by the parser always, but the rules reject it until the inscription has been read. |
 
-Failure statuses: `Empty`, `UnknownVerb`, `MissingArgument`, `InvalidArgument`, `TrailingWords`.
+Failure statuses: `Empty`, `UnknownVerb`, `MissingArgument`, `InvalidArgument`, `TrailingWords`. A bare verb (`carry`) gives `MissingArgument` with feedback such as "Carry what? It can act on: mirror." An unknown word gets neutral feedback, plus "Did you mean ...?" naming one verb when the word is one edit away (two for words over four letters, adjacent swaps count as one). Feedback never lists targets or steps for unknown words.
 
 ## Unity integration notes
 

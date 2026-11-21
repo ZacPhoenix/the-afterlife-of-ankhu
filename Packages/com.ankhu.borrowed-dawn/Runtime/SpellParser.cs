@@ -26,13 +26,20 @@ namespace Ankhu.BorrowedDawn
         public string Normalized { get; }
         /// <summary>Canonical verb recognised before the failure, if any (for "bind ..." style feedback).</summary>
         public string Verb { get; }
+        /// <summary>The verb exactly as the player typed it (after normalization), for feedback. Null when no verb was recognised.</summary>
+        public string SpokenVerb { get; }
+        /// <summary>For <see cref="ParseStatus.UnknownVerb"/>: the closest known verb by spelling, or null when nothing is close.</summary>
+        public string Suggestion { get; }
         /// <summary>The first token that could not be used, if any.</summary>
         public string OffendingText { get; }
         /// <summary>Canonical arguments the recognised verb accepts. Empty when no verb was recognised.</summary>
         public IReadOnlyList<string> ExpectedArguments { get; }
 
-        internal ParseResult(ParseStatus status, Command command, string normalized, string verb, string offending, IReadOnlyList<string> expected)
+        internal ParseResult(ParseStatus status, Command command, string normalized, string verb, string offending, IReadOnlyList<string> expected,
+            string spokenVerb = null, string suggestion = null)
         {
+            SpokenVerb = spokenVerb ?? verb;
+            Suggestion = suggestion;
             Status = status;
             Command = command;
             Normalized = normalized;
@@ -40,6 +47,9 @@ namespace Ankhu.BorrowedDawn
             OffendingText = offending;
             ExpectedArguments = expected ?? Array.Empty<string>();
         }
+
+        private static string Capitalize(string s) =>
+            string.IsNullOrEmpty(s) ? s : char.ToUpperInvariant(s[0]) + s.Substring(1);
 
         /// <summary>Player-facing feedback for a failed parse. Never names the gate's Name.</summary>
         public string Feedback
@@ -51,13 +61,13 @@ namespace Ankhu.BorrowedDawn
                     case ParseStatus.Ok: return string.Empty;
                     case ParseStatus.Empty: return string.Empty;
                     case ParseStatus.MissingArgument:
-                        return "“" + Verb + "” needs something to act on: " + string.Join(", ", ExpectedArguments) + ".";
+                        return Capitalize(SpokenVerb) + " what? It can act on: " + string.Join(", ", ExpectedArguments) + ".";
                     case ParseStatus.InvalidArgument:
-                        return "“" + Verb + "” cannot act on “" + OffendingText + "”. Try: " + string.Join(", ", ExpectedArguments) + ".";
+                        return "\u201C" + SpokenVerb + "\u201D cannot act on \u201C" + OffendingText + "\u201D. Try: " + string.Join(", ", ExpectedArguments) + ".";
                     case ParseStatus.TrailingWords:
-                        return "The words after “" + Verb + "” trail off at “" + OffendingText + "”. Keep the spell short.";
+                        return "The words after \u201C" + SpokenVerb + "\u201D trail off at \u201C" + OffendingText + "\u201D. Keep the spell short.";
                     default:
-                        return "The chamber does not understand “" + OffendingText + "”. Try flow west, bind shadow, wake bearer, recall bell, or echo bell.";
+                        return SpellParser.UnknownWordFeedback(OffendingText, Suggestion);
                 }
             }
         }
@@ -131,6 +141,8 @@ namespace Ankhu.BorrowedDawn
             var bearer = new[] { "bearer", "statue" };
             var bell = new[] { "bell", "resonator" };
             var mirror = new[] { "mirror", "sun mirror" };
+            // Placing may name the socket: "put the mirror in the socket". Articles are already stripped.
+            var mirrorPlaced = mirror.SelectMany(m => new[] { m, m + " in socket", m + " into socket", m + " on socket", m + " onto socket", m + " in sun socket", m + " into sun socket" }).ToArray();
             var inscription = new[] { "inscription", "inscriptions", "gallery" };
 
             Dictionary<string[], Command> Obj(string[] aliases, Command c) =>
@@ -151,8 +163,16 @@ namespace Ankhu.BorrowedDawn
                 new VerbRule { Phrase = T("echo"), Canonical = "echo", Arg = ArgKind.Fixed, FixedObjects = Obj(bell, Command.EchoBell) },
                 new VerbRule { Phrase = T("take"), Canonical = "take", Arg = ArgKind.Fixed, FixedObjects = Obj(mirror, Command.TakeMirror) },
                 new VerbRule { Phrase = T("pick up"), Canonical = "take", Arg = ArgKind.Fixed, FixedObjects = Obj(mirror, Command.TakeMirror) },
-                new VerbRule { Phrase = T("install"), Canonical = "install", Arg = ArgKind.Fixed, FixedObjects = Obj(mirror, Command.InstallMirror) },
-                new VerbRule { Phrase = T("place"), Canonical = "install", Arg = ArgKind.Fixed, FixedObjects = Obj(mirror, Command.InstallMirror) },
+                new VerbRule { Phrase = T("carry"), Canonical = "take", Arg = ArgKind.Fixed, FixedObjects = Obj(mirror, Command.TakeMirror) },
+                new VerbRule { Phrase = T("grab"), Canonical = "take", Arg = ArgKind.Fixed, FixedObjects = Obj(mirror, Command.TakeMirror) },
+                new VerbRule { Phrase = T("lift"), Canonical = "take", Arg = ArgKind.Fixed, FixedObjects = Obj(mirror, Command.TakeMirror) },
+                new VerbRule { Phrase = T("collect"), Canonical = "take", Arg = ArgKind.Fixed, FixedObjects = Obj(mirror, Command.TakeMirror) },
+                new VerbRule { Phrase = T("install"), Canonical = "install", Arg = ArgKind.Fixed, FixedObjects = Obj(mirrorPlaced, Command.InstallMirror) },
+                new VerbRule { Phrase = T("place"), Canonical = "install", Arg = ArgKind.Fixed, FixedObjects = Obj(mirrorPlaced, Command.InstallMirror) },
+                new VerbRule { Phrase = T("put"), Canonical = "install", Arg = ArgKind.Fixed, FixedObjects = Obj(mirrorPlaced, Command.InstallMirror) },
+                new VerbRule { Phrase = T("set"), Canonical = "install", Arg = ArgKind.Fixed, FixedObjects = Obj(mirrorPlaced, Command.InstallMirror) },
+                new VerbRule { Phrase = T("insert"), Canonical = "install", Arg = ArgKind.Fixed, FixedObjects = Obj(mirrorPlaced, Command.InstallMirror) },
+                new VerbRule { Phrase = T("mount"), Canonical = "install", Arg = ArgKind.Fixed, FixedObjects = Obj(mirrorPlaced, Command.InstallMirror) },
                 new VerbRule { Phrase = T("read"), Canonical = "read", Arg = ArgKind.Fixed, FixedObjects = Obj(inscription, Command.ReadInscription) },
                 new VerbRule { Phrase = T("board"), Canonical = "board", Arg = ArgKind.Fixed, FixedObjects = Obj(new[] { "elevator", "lift" }, Command.MoveTo(Location.Lift)) },
                 new VerbRule { Phrase = T("enter"), Canonical = "enter", Arg = ArgKind.Fixed, FixedObjects = Obj(new[] { "gallery", "balcony" }, Command.MoveTo(Location.Gallery)) },
@@ -216,7 +236,7 @@ namespace Ankhu.BorrowedDawn
                 return ParseArgument(rule, tokens, i, normalized);
             }
 
-            return new ParseResult(ParseStatus.UnknownVerb, null, normalized, null, tokens[0], null);
+            return new ParseResult(ParseStatus.UnknownVerb, null, normalized, null, tokens[0], null, null, Suggest(tokens[0]));
         }
 
         private static ParseResult ParseArgument(VerbRule rule, string[] tokens, int i, string normalized)
@@ -228,7 +248,7 @@ namespace Ankhu.BorrowedDawn
                 {
                     return Ok(rule.Intransitive, normalized);
                 }
-                return new ParseResult(ParseStatus.MissingArgument, null, normalized, rule.Canonical, null, expected);
+                return new ParseResult(ParseStatus.MissingArgument, null, normalized, rule.Canonical, null, expected, Spoken(rule));
             }
 
             Command cmd = null;
@@ -258,13 +278,73 @@ namespace Ankhu.BorrowedDawn
 
             if (cmd == null)
             {
-                return new ParseResult(ParseStatus.InvalidArgument, null, normalized, rule.Canonical, tokens[i], expected);
+                return new ParseResult(ParseStatus.InvalidArgument, null, normalized, rule.Canonical, tokens[i], expected, Spoken(rule));
             }
             if (i + consumed < tokens.Length)
             {
-                return new ParseResult(ParseStatus.TrailingWords, null, normalized, rule.Canonical, tokens[i + consumed], expected);
+                return new ParseResult(ParseStatus.TrailingWords, null, normalized, rule.Canonical, tokens[i + consumed], expected, Spoken(rule));
             }
             return Ok(cmd, normalized);
+        }
+
+        private static string Spoken(VerbRule rule) => string.Join(" ", rule.Phrase);
+
+        /// <summary>Every verb word the parser knows, in declaration order. Used for spelling suggestions.</summary>
+        public static IReadOnlyList<string> KnownVerbs { get; } = BuildRules().Select(r => string.Join(" ", r.Phrase)).Distinct().ToArray();
+
+        /// <summary>
+        /// Neutral feedback for a word the chamber does not know. Names at most one close verb by spelling, and
+        /// never suggests targets or a sequence, so it cannot hint at the solution or confirm a guessed Name.
+        /// </summary>
+        public static string UnknownWordFeedback(string word, string suggestion)
+        {
+            string head = "The chamber does not answer to \u201C" + word + "\u201D.";
+            return suggestion == null ? head : head + " Did you mean \u201C" + suggestion + "\u201D?";
+        }
+
+        /// <summary>
+        /// Closest single-word verb by edit distance (adjacent swaps count as one edit). Allows one edit for words of four letters or fewer and two
+        /// edits for longer words. Ties resolve to the earliest declared verb, so the result is deterministic.
+        /// </summary>
+        public static string Suggest(string word)
+        {
+            if (string.IsNullOrEmpty(word)) return null;
+            int limit = word.Length <= 4 ? 1 : 2;
+            string best = null;
+            int bestDistance = int.MaxValue;
+            foreach (string verb in KnownVerbs)
+            {
+                if (verb.IndexOf(' ') >= 0) continue;
+                int d = EditDistance(word, verb);
+                if (d > 0 && d <= limit && d < bestDistance)
+                {
+                    best = verb;
+                    bestDistance = d;
+                }
+            }
+            return best;
+        }
+
+        /// <summary>Optimal string alignment distance: insertions, deletions, substitutions and adjacent swaps each cost 1.</summary>
+        private static int EditDistance(string a, string b)
+        {
+            var d = new int[a.Length + 1, b.Length + 1];
+            for (int i = 0; i <= a.Length; i++) d[i, 0] = i;
+            for (int j = 0; j <= b.Length; j++) d[0, j] = j;
+            for (int i = 1; i <= a.Length; i++)
+            {
+                for (int j = 1; j <= b.Length; j++)
+                {
+                    int cost = a[i - 1] == b[j - 1] ? 0 : 1;
+                    int v = Math.Min(Math.Min(d[i - 1, j] + 1, d[i, j - 1] + 1), d[i - 1, j - 1] + cost);
+                    if (i > 1 && j > 1 && a[i - 1] == b[j - 2] && a[i - 2] == b[j - 1])
+                    {
+                        v = Math.Min(v, d[i - 2, j - 2] + 1);
+                    }
+                    d[i, j] = v;
+                }
+            }
+            return d[a.Length, b.Length];
         }
 
         private static IReadOnlyList<string> Expected(VerbRule rule)

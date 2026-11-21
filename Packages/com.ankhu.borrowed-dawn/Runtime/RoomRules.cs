@@ -200,7 +200,7 @@ namespace Ankhu.BorrowedDawn
                         return Reject(s, c, Outcome.WrongLocation, "Speak the gate’s name from its threshold.");
                     if (!s.NameDiscovered)
                         return Reject(s, c, Outcome.NameUnknown, p == RuleProfile.Greybox
-                            ? "The chamber does not understand. Try flow west, bind shadow, wake bearer, recall bell, or echo bell."
+                            ? SpellParser.UnknownWordFeedback("he", SpellParser.Suggest("he"))
                             : "Learn the name from the gallery first.");
                     if (!s.SunAtGate || !s.ShadowPresent || !s.EchoActive)
                         return Reject(s, c, Outcome.GateConditionsUnmet, "The gate hears you, but its sun, shadow, and sound must all be present.");

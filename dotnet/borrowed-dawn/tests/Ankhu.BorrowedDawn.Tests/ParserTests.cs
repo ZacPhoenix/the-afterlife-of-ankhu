@@ -114,7 +114,7 @@ namespace Ankhu.BorrowedDawn.Tests
             Assert.That(r.Command, Is.Null);
             Assert.That(r.Verb, Is.EqualTo(verb));
             Assert.That(r.ExpectedArguments, Is.EqualTo(expected));
-            Assert.That(r.Feedback, Does.Contain(verb));
+            Assert.That(r.Feedback, Does.Contain(text.Replace(" the", "")).IgnoreCase);
         }
 
         [TestCase("bind gate", "bind", "gate")]
