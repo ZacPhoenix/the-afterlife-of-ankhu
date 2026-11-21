@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "notes": "Source of truth for Ankhu's spoken spell library. expand_lines() in ankhu_voice.py turns this into one TTS request per take. Keys must match BorrowedDawnSpellVoice (Assets/Ankhu/Bindings) and SpellVoicePlanner (Assets/Ankhu/Runtime/Voice).",
+  "chainExample": "and still the bearer",
+  "clauses": [
+    { "id": "flow_west",       "text": "flow west",                "category": "word", "words": ["flow", "west"] },
+    { "id": "flow_east",       "text": "flow east",                "category": "word", "words": ["flow", "east"] },
+    { "id": "bind_elevator",   "text": "bind the elevator",        "category": "word", "words": ["bind", "the", "elevator"] },
+    { "id": "bind_shadow",     "text": "bind the shadow",          "category": "word", "words": ["bind", "the", "shadow"] },
+    { "id": "bind_bridge",     "text": "bind the bridge",          "category": "word", "words": ["bind", "the", "bridge"] },
+    { "id": "release_elevator","text": "release the elevator",     "category": "word", "words": ["release", "the", "elevator"] },
+    { "id": "release_shadow",  "text": "release the shadow",       "category": "word", "words": ["release", "the", "shadow"] },
+    { "id": "release_bridge",  "text": "release the bridge",       "category": "word", "words": ["release", "the", "bridge"] },
+    { "id": "wake_bearer",     "text": "wake, bearer",             "category": "word", "words": ["wake", "bearer"] },
+    { "id": "sleep_bearer",    "text": "sleep, bearer",            "category": "word", "words": ["sleep", "bearer"] },
+    { "id": "recall_bell",     "text": "recall the bell",          "category": "word", "words": ["recall", "the", "bell"] },
+    { "id": "echo_bell",       "text": "echo the bell",            "category": "word", "words": ["echo", "the", "bell"] },
+    { "id": "name_gate",       "text": "He Who Returns the Morning", "category": "name", "words": [], "positions": ["sole"] },
+    { "id": "take_mirror",     "text": "take the mirror",          "category": "deed", "words": ["take", "the", "mirror"], "positions": ["sole"] },
+    { "id": "install_mirror",  "text": "install the mirror",       "category": "deed", "words": ["install", "the", "mirror"], "positions": ["sole"] },
+    { "id": "read_inscription","text": "read the inscription",     "category": "deed", "words": ["read", "the", "inscription"], "positions": ["sole"] },
+    { "id": "strike_bell",     "text": "strike the bell",          "category": "deed", "words": ["strike", "the", "bell"], "positions": ["sole"] },
+    { "id": "cross_bridge",    "text": "cross the bridge",         "category": "deed", "words": ["cross", "the", "bridge"], "positions": ["sole"] },
+    { "id": "lower_ladder",    "text": "lower the ladder",         "category": "deed", "words": ["lower", "the", "ladder"], "positions": ["sole"] }
+  ],
+  "clausePositions": ["sole", "first", "medial", "final"],
+  "clauseVariants": 2,
+  "words": {
+    "verbs": ["name", "open", "seal", "wake", "still", "sleep", "flow", "bind", "release", "recall", "echo", "see", "calm", "ward", "become", "give", "weigh"],
+    "targets": ["elevator", "shadow", "bridge", "bearer", "bell", "mirror", "inscription", "water", "gate", "ladder", "door", "statue"],
+    "modifiers": ["west", "east", "swallow", "serpent", "heron"],
+    "function": ["the", "and"]
+  },
+  "wordVariants": 1
+}

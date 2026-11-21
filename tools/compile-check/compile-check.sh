@@ -61,7 +61,7 @@ if (( RUN_TESTS )); then
     if dotnet build Ankhu.Tests.Pure/Ankhu.Tests.Pure.csproj --no-restore $B \
          "-flp1:logfile=$LOGS/pure.err.log;errorsonly" >/dev/null 2>&1; then ok=1; break; fi
     # Drop files that failed (they lean on Unity-bound code) and retry.
-    bad=$(grep -oE '^/[^(]+\.cs' "$LOGS/pure.err.log" | sort -u | grep -v '/Runtime/Integration/' || true)
+    bad=$(grep -oE '(^|>)/[^(]+\.cs' "$LOGS/pure.err.log" | sed 's/^>//' | sort -u | grep -v '/Runtime/Integration/' || true)
     [[ -z "$bad" ]] && break
     echo "$bad" >>"$excl"
   done
