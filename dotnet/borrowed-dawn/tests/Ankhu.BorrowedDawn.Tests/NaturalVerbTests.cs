@@ -11,7 +11,7 @@ namespace Ankhu.BorrowedDawn.Tests
         private static readonly string[] TakeVerbs = { "take", "carry", "grab", "lift", "pick up", "collect" };
         private static readonly string[] PlaceVerbs = { "install", "place", "put", "set", "insert", "mount" };
         private static readonly string[] MirrorNouns = { "mirror", "sun mirror", "the mirror", "the sun mirror" };
-        private static readonly string[] SocketSuffixes = { "", " in socket", " into the socket", " on the socket", " onto socket", " in the sun socket", " into sun socket" };
+        private static readonly string[] SocketSuffixes = { "", " in socket", " into the socket", " on the socket", " onto socket", " in the sun socket", " into sun socket", " on the sun socket", " onto sun socket" };
 
         private static readonly object[] TakeCases =
             TakeVerbs.SelectMany(v => MirrorNouns.Select(n => (object)(v + " " + n))).ToArray();

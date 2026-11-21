@@ -142,7 +142,7 @@ namespace Ankhu.BorrowedDawn
             var bell = new[] { "bell", "resonator" };
             var mirror = new[] { "mirror", "sun mirror" };
             // Placing may name the socket: "put the mirror in the socket". Articles are already stripped.
-            var mirrorPlaced = mirror.SelectMany(m => new[] { m, m + " in socket", m + " into socket", m + " on socket", m + " onto socket", m + " in sun socket", m + " into sun socket" }).ToArray();
+            var mirrorPlaced = mirror.SelectMany(m => new[] { m, m + " in socket", m + " into socket", m + " on socket", m + " onto socket", m + " in sun socket", m + " into sun socket", m + " on sun socket", m + " onto sun socket" }).ToArray();
             var inscription = new[] { "inscription", "inscriptions", "gallery" };
 
             Dictionary<string[], Command> Obj(string[] aliases, Command c) =>
