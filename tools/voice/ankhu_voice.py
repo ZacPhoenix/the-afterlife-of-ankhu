@@ -110,9 +110,37 @@ ANPU_DESCRIPTIONS = {
     ),
 }
 
+# Round 2 (Zac, 2026-11-21): unusual accent, and no invented ambience. Voice Design tends to add room
+# tone, breaths or music when the description sounds cinematic, so these ask for a bare voice only.
+_CLEAN = (" Voice only: no background sound, no music, no sound effects, no echo, no room ambience."
+          " Clean studio recording, completely dry.")
+ANPU2_DESCRIPTIONS = {
+    "Q1_rolling_ancient": (
+        "An ancient god of the dead. Very deep, gravelly, husky bass, slow and hushed, enormous gravitas. "
+        "An unusual old-world accent that belongs to no living country: rolled r's, long open vowels, "
+        "consonants pressed forward, a faint lilt at the ends of phrases." + _CLEAN
+    ),
+    "Q2_nile_south": (
+        "A towering jackal-headed god guiding the dead. Deep, husky, gravelly bass, slow, hushed and "
+        "grave, immense calm authority. A distinctive accent with a soft Nubian and Sudanese colour: "
+        "warm rounded vowels, gently tapped r's, unhurried musical rhythm." + _CLEAN
+    ),
+    "Q3_liturgical": (
+        "An eternal god speaking in the cadence of a Coptic liturgical chanter. Very deep, resonant, "
+        "gravelly and husky, slow, hushed, every word weighed. An unusual accent with deep guttural "
+        "consonants, stretched vowels and a ceremonial sing-song rise and fall." + _CLEAN
+    ),
+    "Q4_stone_whisper": (
+        "A vast primordial god, half whispering. Deep, rasping, husky bass with heavy gravel, very slow, "
+        "hushed, enormous presence without volume. A strange, hard-to-place accent: clipped consonants, "
+        "dark rounded vowels, slight Eastern Mediterranean colour, foreign to modern English." + _CLEAN
+    ),
+}
+
 CANDIDATE_SETS = {
     "ankhu": (CANDIDATE_TEXT, VOICE_DESCRIPTIONS),
     "anpu": (ANPU_TEXT, ANPU_DESCRIPTIONS),
+    "anpu2": (ANPU_TEXT, ANPU2_DESCRIPTIONS),
 }
 
 
@@ -338,7 +366,7 @@ def cmd_candidates(args):
 
 
 def cmd_save_voice(args):
-    all_desc = dict(VOICE_DESCRIPTIONS, **ANPU_DESCRIPTIONS)
+    all_desc = dict(VOICE_DESCRIPTIONS, **ANPU_DESCRIPTIONS, **ANPU2_DESCRIPTIONS)
     description = args.description or all_desc.get(args.label or "", args.name)
     res = request("POST", "/v1/text-to-voice", {
         "voice_name": args.name, "voice_description": description, "generated_voice_id": args.generated_id})
@@ -411,11 +439,15 @@ def cmd_asr(args):
     for i, f in enumerate(files, 1):
         with open(os.path.join(args.dir, f), "rb") as fh:
             data = fh.read()
-        body, ctype = _multipart({"model_id": "scribe_v1", "language_code": "en", "tag_audio_events": "false"},
+        body, ctype = _multipart({"model_id": "scribe_v1", "language_code": "en",
+                                  "tag_audio_events": "true" if args.events else "false"},
                                  "file", f, data, "audio/wav" if f.lower().endswith(".wav") else "audio/mpeg")
         res = request("POST", "/v1/speech-to-text", raw_body=body, content_type=ctype)
         results[f] = res.get("text", "")
-        print(f"[{i}/{len(files)}] {f}: {results[f]!r}")
+        events = [w.get("text") for w in res.get("words", []) if w.get("type") == "audio_event"]
+        if args.events:
+            results[f] = {"text": results[f], "audio_events": events}
+        print(f"[{i}/{len(files)}] {f}: {res.get('text', '')!r}" + (f"  EVENTS: {events}" if events else ""))
     out = args.out or os.path.join(args.dir, "asr.json")
     with open(out, "w", encoding="utf-8") as fh:
         json.dump(results, fh, indent=1)
@@ -433,7 +465,8 @@ def main():
     s.set_defaults(fn=cmd_save_voice)
     u = sub.add_parser("use-voice"); u.add_argument("--voice-id", required=True); u.add_argument("--name"); u.set_defaults(fn=cmd_use_voice)
     b = sub.add_parser("batch"); b.add_argument("--only"); b.add_argument("--force", action="store_true"); b.set_defaults(fn=cmd_batch)
-    a = sub.add_parser("asr"); a.add_argument("dir"); a.add_argument("--out"); a.set_defaults(fn=cmd_asr)
+    a = sub.add_parser("asr"); a.add_argument("dir"); a.add_argument("--out")
+    a.add_argument("--events", action="store_true", help="ask Scribe to tag non-speech audio (music, breathing, ...)"); a.set_defaults(fn=cmd_asr)
     args = p.parse_args()
     args.fn(args)
 
