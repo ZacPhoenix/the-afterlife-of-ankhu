@@ -60,9 +60,12 @@ namespace Ankhu.EditorTools.Environment
             ti.spritePixelsPerUnit = PixelsPerUnit;
             ti.mipmapEnabled = false;
             ti.alphaIsTransparency = true;
-            ti.wrapMode = TextureWrapMode.Repeat;
+            // Repeat across, clamp vertically: a vertical repeat lets bilinear filtering bleed the
+            // bottom row onto the top edge and draws a seam across cropped plates.
+            ti.wrapModeU = TextureWrapMode.Repeat;
+            ti.wrapModeV = TextureWrapMode.Clamp;
             ti.filterMode = FilterMode.Bilinear;
-            ti.maxTextureSize = 16384;
+            ti.maxTextureSize = 8192; // every plate is at most 6480 px wide, and 8192 is the common GPU limit
             ti.textureCompression = TextureImporterCompression.CompressedHQ;
             ti.npotScale = TextureImporterNPOTScale.None;
             var s = new TextureImporterSettings();
