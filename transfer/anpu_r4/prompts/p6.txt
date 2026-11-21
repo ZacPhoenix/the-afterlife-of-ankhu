@@ -1,0 +1,16 @@
+Reference images: attendants_roster_front_v2.png is THE CHARACTERS (first reference): each figure must keep its exact head, skin colour and material over the WHOLE body, kilt colour and accessories, and its slim lean body. attendants_roster_front.png is the same six, for head detail only.
+
+IMAGE: attendants_roster_side_v2. The same six attendants in the same order left to right, each in LEFT SIDE profile, same scale, feet on one shared baseline, even gaps. Every body faces LEFT (chest and toes point to the left edge of the image). Every face or snout points LEFT, except e, whose head is turned completely backwards, so his face points RIGHT while his body faces left. Skin colour is the same from head to toe for each figure and matches the front view, never a brown human skin tone:
+ a) Sab: charcoal-grey fur and charcoal-grey skin everywhere, red neck band, white kilt.
+ b) Gate Warden: deep blue-green skin everywhere, crocodile head, yellow-ochre kilt, leather wristguards.
+ c) Ram Herald: fiery red-orange skin everywhere, curled horns tight to the skull, white kilt, red sash belt.
+ d) Serpent Sentinel: jet-black skin with faint blue sheen everywhere, cobra head with flat rigid hood, white kilt.
+ e) Hraf-haf: blue-green skin everywhere, shaved human head turned backwards, yellow-ochre kilt.
+ f) Obsidian Torch-Priest: polished glassy black obsidian everywhere, bald human head, white eyes, round human ears, white kilt.
+Slim lean bodies with soft musculature, no visible abs, matching the v2 front.
+
+STYLE: Sculpted Dream style, character model sheet for a stylized 3D game, soft sculpted forms like a hand-crafted miniature at heroic scale, matte painted materials, even neutral studio lighting from the front with soft ambient occlusion, no dramatic glow, no rim light, same rendering style as the reference Ankhu sheet.
+LAYOUT: flat plain uniform mid grey background (#7F7F7F), no floor texture, no shadows on the background, every figure full body from top of ears to soles with generous margin, all figures the same size and with feet on one shared baseline, orthographic views, no overlapping figures.
+POSE: A-pose, arms straight and angled down about 45 degrees away from the body with a clear gap between arms and torso, hands open with fingers slightly apart, legs straight and apart at hip width with a clear gap between the legs, standing on flat feet, looking straight ahead, mouth closed.
+CONSTRUCTION (critical, the image will be converted to a 3D model): every garment edge stands away from the skin, the kilt is stiff starched linen that flares outward like a rigid triangle and ends above the knee with a clear visible gap between kilt hem and both thighs, nothing hangs between the legs, no long ribbons, no tassels, no fringe, no loose straps, no capes or cloaks, no long hair, ears are tall rigid upright triangles, jewellery is solid and flush to the body (broad collar, armbands, wristbands), hands are EMPTY (no staff, no weapon, no object of any kind in any view).
+BANNED: text, labels, hieroglyph-like writing, watermark, border, props in hands, cape, crook, flail, long robe, transparent fabric, motion blur, glow, fire, background scenery, extra characters, chibi proportions, bodybuilder anatomy.

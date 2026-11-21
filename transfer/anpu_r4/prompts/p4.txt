@@ -1,0 +1,7 @@
+Reference images: emissaries_family.png and ref_ankhu_sheet.png set the render style and plain grey sheet layout only.
+
+IMAGE: props_attendants. Prop sheet on the plain grey background, no characters, each prop in FRONT and SIDE view, vertical, side by side, sized for a 1.85 m figure: a pair of large curved flint knives, a straight bronze knife, a short linen torch (unlit), an ankh of gold over black, a small reed mat. Plain solid shapes.
+
+STYLE: Sculpted Dream style, character model sheet for a stylized 3D game, soft sculpted forms like a hand-crafted miniature at heroic scale, matte painted materials, even neutral studio lighting from the front with soft ambient occlusion, no dramatic glow, no rim light, same rendering style as the reference Ankhu sheet.
+BANNED: text, labels, hieroglyph-like writing, watermark, border, props in hands, cape, crook, flail, long robe, transparent fabric, motion blur, glow, fire, background scenery, extra characters, chibi proportions, bodybuilder anatomy.
+OVERRIDE for this image: no characters and no pose; the props are the subject.

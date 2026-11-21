@@ -1,0 +1,13 @@
+Reference images: emissaries_family.png sets the shared attendant body and the render style. obsidian_guardians_v2.png shows the polished obsidian material. ref_ankhu_sheet.png sets the render style and plain grey sheet layout only.
+
+Shared base for all attendants: ONE identical lean human body, about 1.85 m, same proportions in every figure, so one 3D body and rig serves them all. Only the head, skin material, kilt colour and one or two flush rigid accessories change. Every figure: pleated shendyt kilt (white or yellow-ochre) stiff and above the knee with a gap to the thighs, a broad beaded usekh collar flush on the chest, bare feet, hands empty. No gold heavier than small accents (gold belongs to Anpu). Heads are rigid sculpted forms with clean necks.
+
+IMAGE: attendants_poses. An illustrated pose and role sheet (not for 3D conversion, poses allowed, props allowed here). Four separate vignettes on the plain grey background, evenly spaced, no text:
+(i) a crocodile-headed Gate Warden (deep blue-green skin, yellow-ochre kilt, leather wristguards) squatting tightly on a reed mat, knees drawn up, two large curved flint knives held upright resting on the knees;
+(ii) the jackal Sab (short muzzle, charcoal-grey fur, red linen neck band, white kilt) kneeling in the henu jubilation pose, one fist to the chest and the other arm raised;
+(iii) two attendants standing rigidly at attention flanking a stone doorway (a simple plain stone door frame, nothing else);
+(iv) the Obsidian Torch-Priest (bald, polished glassy black obsidian, white calcite eyes, round human ears, white kilt) holding a burning torch high, the flame soft gold.
+
+STYLE: Sculpted Dream style, character model sheet for a stylized 3D game, soft sculpted forms like a hand-crafted miniature at heroic scale, matte painted materials, even neutral studio lighting from the front with soft ambient occlusion, no dramatic glow, no rim light, same rendering style as the reference Ankhu sheet.
+BANNED: text, labels, hieroglyph-like writing, watermark, border, props in hands, cape, crook, flail, long robe, transparent fabric, motion blur, glow, fire, background scenery, extra characters, chibi proportions, bodybuilder anatomy.
+OVERRIDE for this image: poses and props in hands are wanted, the stone doorway is allowed, and the single torch flame in vignette (iv) is allowed (soft gold, small, no glow on the background). Everything else in BANNED still applies.
