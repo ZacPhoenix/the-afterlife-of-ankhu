@@ -27,7 +27,8 @@ namespace Ankhu.BorrowedDawn.Analysis
     public sealed class StateSpace
     {
         public RoomState Start { get; }
-        public RuleProfile Profile { get; }
+        public RuleProfile Profile => Room.Profile;
+        public RoomDefinition Room { get; }
         /// <summary>Reachable states keyed by <see cref="RoomState.Pack"/>.</summary>
         public IReadOnlyDictionary<int, RoomState> States => _states;
         public IReadOnlyList<Edge> Edges => _edges;
@@ -43,15 +44,20 @@ namespace Ankhu.BorrowedDawn.Analysis
         private readonly Dictionary<int, int> _toGoal = new Dictionary<int, int>();
         private readonly Dictionary<int, List<int>> _reverse = new Dictionary<int, List<int>>();
 
-        private StateSpace(RoomState start, RuleProfile profile)
+        private StateSpace(RoomDefinition room, RoomState start)
         {
+            Room = room;
             Start = start;
-            Profile = profile;
         }
 
-        public static StateSpace Explore(RoomState start = null, RuleProfile profile = RuleProfile.Prototype)
+        public static StateSpace Explore(RoomState start = null, RuleProfile profile = RuleProfile.Prototype) =>
+            Explore(RoomDefinition.BorrowedDawn(profile), start);
+
+        /// <summary>Explores a room under its own vocabulary and goal. Goal states are not expanded.</summary>
+        public static StateSpace Explore(RoomDefinition room, RoomState start = null)
         {
-            var space = new StateSpace(start ?? RoomState.Initial, profile);
+            if (room is null) throw new ArgumentNullException(nameof(room));
+            var space = new StateSpace(room, start ?? room.Start);
             space.Forward();
             space.Backward();
             return space;
@@ -70,7 +76,7 @@ namespace Ankhu.BorrowedDawn.Analysis
                 RoomState s = _states[k];
                 foreach (Command c in RoomRules.AllCommands)
                 {
-                    CommandResult r = RoomRules.Apply(s, c, Profile);
+                    CommandResult r = Room.Apply(s, c);
                     if (!r.Accepted) continue;
                     int n = r.State.Pack();
                     _edges.Add(new Edge(k, n, c));
@@ -90,7 +96,7 @@ namespace Ankhu.BorrowedDawn.Analysis
             var queue = new Queue<int>();
             foreach (var kv in _states)
             {
-                if (kv.Value.Won)
+                if (Room.IsGoal(kv.Value))
                 {
                     _toGoal[kv.Key] = 0;
                     queue.Enqueue(kv.Key);
@@ -112,7 +118,7 @@ namespace Ankhu.BorrowedDawn.Analysis
         public bool GoalReachable => _toGoal.ContainsKey(Start.Pack());
 
         /// <summary>Non-won reachable states from which no won state is reachable.</summary>
-        public IEnumerable<RoomState> Softlocks => _states.Where(kv => !kv.Value.Won && !_toGoal.ContainsKey(kv.Key)).Select(kv => kv.Value);
+        public IEnumerable<RoomState> Softlocks => _states.Where(kv => !Room.IsGoal(kv.Value) && !_toGoal.ContainsKey(kv.Key)).Select(kv => kv.Value);
 
         /// <summary>Non-won states with no accepted outgoing command at all.</summary>
         public IEnumerable<RoomState> DeadEnds
@@ -120,7 +126,7 @@ namespace Ankhu.BorrowedDawn.Analysis
             get
             {
                 var hasOut = new HashSet<int>(_edges.Select(e => e.From));
-                return _states.Where(kv => !kv.Value.Won && !hasOut.Contains(kv.Key)).Select(kv => kv.Value);
+                return _states.Where(kv => !Room.IsGoal(kv.Value) && !hasOut.Contains(kv.Key)).Select(kv => kv.Value);
             }
         }
 
@@ -130,7 +136,7 @@ namespace Ankhu.BorrowedDawn.Analysis
             int best = -1;
             foreach (var kv in _states)
             {
-                if (kv.Value.Won && (best < 0 || _depth[kv.Key] < _depth[best])) best = kv.Key;
+                if (Room.IsGoal(kv.Value) && (best < 0 || _depth[kv.Key] < _depth[best])) best = kv.Key;
             }
             if (best < 0) return null;
             return PathTo(best);
@@ -157,7 +163,7 @@ namespace Ankhu.BorrowedDawn.Analysis
             var memo = new Dictionary<int, long>();
             long Count(int k)
             {
-                if (_states[k].Won) return 1;
+                if (Room.IsGoal(_states[k])) return 1;
                 if (memo.TryGetValue(k, out long v)) return v;
                 long total = 0;
                 int d = _toGoal[k];
@@ -176,9 +182,12 @@ namespace Ankhu.BorrowedDawn.Analysis
         /// visited. Returns null when the restriction makes the room unsolvable. Used to ask design questions
         /// such as "can the room be solved without ever binding the elevator".
         /// </summary>
-        public static IReadOnlyList<Command> ShortestSolutionWhere(Func<RoomState, Command, bool> allowCommand, Func<RoomState, bool> allowState = null, RoomState start = null, RuleProfile profile = RuleProfile.Prototype)
+        public static IReadOnlyList<Command> ShortestSolutionWhere(Func<RoomState, Command, bool> allowCommand, Func<RoomState, bool> allowState = null, RoomState start = null, RuleProfile profile = RuleProfile.Prototype) =>
+            ShortestSolutionWhere(RoomDefinition.BorrowedDawn(profile), allowCommand, allowState, start);
+
+        public static IReadOnlyList<Command> ShortestSolutionWhere(RoomDefinition room, Func<RoomState, Command, bool> allowCommand, Func<RoomState, bool> allowState = null, RoomState start = null)
         {
-            start = start ?? RoomState.Initial;
+            start = start ?? room.Start;
             var parent = new Dictionary<int, (int, Command)>();
             var seen = new HashSet<int> { start.Pack() };
             var queue = new Queue<RoomState>();
@@ -186,7 +195,7 @@ namespace Ankhu.BorrowedDawn.Analysis
             while (queue.Count > 0)
             {
                 RoomState s = queue.Dequeue();
-                if (s.Won)
+                if (room.IsGoal(s))
                 {
                     var path = new List<Command>();
                     int k = s.Pack();
@@ -201,7 +210,7 @@ namespace Ankhu.BorrowedDawn.Analysis
                 foreach (Command c in RoomRules.AllCommands)
                 {
                     if (!allowCommand(s, c)) continue;
-                    CommandResult r = RoomRules.Apply(s, c, profile);
+                    CommandResult r = room.Apply(s, c);
                     if (!r.Accepted) continue;
                     if (allowState != null && !allowState(r.State)) continue;
                     int n = r.State.Pack();

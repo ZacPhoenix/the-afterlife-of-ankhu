@@ -34,7 +34,13 @@ namespace Ankhu.BorrowedDawn
         public RoomState State { get; private set; }
 
         /// <summary>Rule set used for every command in this session.</summary>
-        public RuleProfile Profile { get; }
+        public RuleProfile Profile => Room.Profile;
+
+        /// <summary>The room being played: vocabulary, goal and start state.</summary>
+        public RoomDefinition Room { get; }
+
+        /// <summary>True once the room's goal holds.</summary>
+        public bool IsSolved => Room.IsGoal(State);
 
         /// <summary>Count of accepted actions since the last reset, minus undone actions.</summary>
         public int StepCount { get; private set; }
@@ -53,9 +59,18 @@ namespace Ankhu.BorrowedDawn
 
         public PuzzleSession(RuleProfile profile) : this(RoomState.Initial, DefaultUndoCapacity, profile) { }
 
+        /// <summary>Plays a specific room, for example one of <see cref="TeachingRooms"/>.</summary>
+        public PuzzleSession(RoomDefinition room, int undoCapacity = DefaultUndoCapacity)
+        {
+            if (undoCapacity < 0) throw new ArgumentOutOfRangeException(nameof(undoCapacity));
+            Room = room ?? throw new ArgumentNullException(nameof(room));
+            State = room.Start;
+            _undoCapacity = undoCapacity;
+        }
+
         public PuzzleSession(RoomState start, int undoCapacity = DefaultUndoCapacity, RuleProfile profile = RuleProfile.Prototype)
         {
-            Profile = profile;
+            Room = RoomDefinition.BorrowedDawn(profile);
             if (undoCapacity < 0) throw new ArgumentOutOfRangeException(nameof(undoCapacity));
             State = start ?? throw new ArgumentNullException(nameof(start));
             _undoCapacity = undoCapacity;
@@ -64,7 +79,7 @@ namespace Ankhu.BorrowedDawn
         public CommandResult Execute(Command command)
         {
             RoomState before = State;
-            CommandResult result = RoomRules.Apply(before, command, Profile);
+            CommandResult result = Room.Apply(before, command);
             if (result.Accepted)
             {
                 if (_undoCapacity > 0)
@@ -110,7 +125,7 @@ namespace Ankhu.BorrowedDawn
         public void Reset()
         {
             RoomState before = State;
-            State = RoomState.Initial;
+            State = Room.Start;
             _undo.Clear();
             StepCount = 0;
             StateChanged?.Invoke(before, State);
