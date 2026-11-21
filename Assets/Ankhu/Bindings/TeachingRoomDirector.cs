@@ -30,10 +30,23 @@ namespace Ankhu.Bindings
         private static readonly Color SpeakerColor = new Color(0.78f, 0.66f, 1f);
         private static readonly Color LineColor = new Color(0.96f, 0.93f, 0.86f);
 
+        /// <summary>
+        /// Raised when Anpu starts a line: (dialogue key, text). Keys are
+        /// dialogue.anpu.&lt;room id&gt;.intro.&lt;n&gt; (n from 1), dialogue.anpu.&lt;room id&gt;.nudge.&lt;Outcome&gt;
+        /// and dialogue.anpu.&lt;room id&gt;.solve. Voice playback subscribes here.
+        /// </summary>
+        public static event System.Action<string, string> AnpuLineStarted;
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        private static void ResetStatics()
+        {
+            AnpuLineStarted = null;
+        }
+
         private BorrowedDawnRulesInstaller installer;
         private BorrowedDawnRulesAdapter adapter;
         private readonly HashSet<Outcome> nudged = new HashSet<Outcome>();
-        private readonly Queue<string> pending = new Queue<string>();
+        private readonly Queue<KeyValuePair<string, string>> pending = new Queue<KeyValuePair<string, string>>();
 
         private GameObject panel;
         private Text speakerText;
@@ -64,9 +77,9 @@ namespace Ankhu.Bindings
 
             RoomDefinition room = adapter.Room;
             Show(room.Title, string.Empty, TitleSeconds, TitleColor);
-            foreach (string line in room.AnpuIntro)
+            for (int i = 0; i < room.AnpuIntro.Count; i++)
             {
-                pending.Enqueue(line);
+                pending.Enqueue(new KeyValuePair<string, string>(Key(room, "intro." + (i + 1)), room.AnpuIntro[i]));
             }
         }
 
@@ -87,7 +100,8 @@ namespace Ankhu.Bindings
             }
             if ((panel == null || !panel.activeSelf) && pending.Count > 0)
             {
-                ShowAnpu(pending.Dequeue(), SecondsPerIntroLine);
+                KeyValuePair<string, string> next = pending.Dequeue();
+                ShowAnpu(next.Key, next.Value, SecondsPerIntroLine);
             }
 
             Keyboard keyboard = Keyboard.current;
@@ -107,7 +121,7 @@ namespace Ankhu.Bindings
             {
                 nudged.Add(result.Outcome);
                 pending.Clear();
-                ShowAnpu(nudge, NudgeSeconds);
+                ShowAnpu(Key(adapter.Room, "nudge." + result.Outcome), nudge, NudgeSeconds);
             }
         }
 
@@ -119,7 +133,7 @@ namespace Ankhu.Bindings
             }
             solved = true;
             pending.Clear();
-            ShowAnpu(adapter.Room.AnpuOnSolve, SolveSeconds + 1f);
+            ShowAnpu(Key(adapter.Room, "solve"), adapter.Room.AnpuOnSolve, SolveSeconds + 1f);
             StartCoroutine(LoadNextAfter(SolveSeconds));
         }
 
@@ -149,13 +163,19 @@ namespace Ankhu.Bindings
             SceneManager.LoadScene(next, LoadSceneMode.Single);
         }
 
-        private void ShowAnpu(string line, float seconds)
+        public static string Key(RoomDefinition room, string part)
+        {
+            return "dialogue.anpu." + room.Id + "." + part;
+        }
+
+        private void ShowAnpu(string key, string line, float seconds)
         {
             if (string.IsNullOrEmpty(line))
             {
                 return;
             }
             Show("Anpu", line, seconds, LineColor);
+            AnpuLineStarted?.Invoke(key, line);
         }
 
         private void Show(string speaker, string line, float seconds, Color lineColor)
