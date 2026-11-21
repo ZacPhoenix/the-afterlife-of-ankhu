@@ -241,5 +241,46 @@ namespace Ankhu.Tests
             Assert.AreEqual(CommandOutcome.Rejected, adapter.Preview(InteractionIds.ReadInscription, At(ZoneIds.Gallery)).Outcome);
             Assert.AreEqual(ZoneIds.Floor, adapter.RulesZoneId);
         }
+
+        [TestCase("carry mirror")]
+        [TestCase("Carry the mirror.")]
+        [TestCase("pick up mirror")]
+        [TestCase("grab mirror")]
+        public void NaturalTakeVerbsWorkThroughTheAdapter(string spoken)
+        {
+            Say(ZoneIds.Floor, "flow west");
+            Walk(ZoneIds.Lift);
+            Say(ZoneIds.Lift, "flow east");
+            Say(ZoneIds.Lift, "bind elevator");
+            Say(ZoneIds.Lift, "flow west");
+            Say(ZoneIds.Lift, spoken);
+            Assert.AreEqual(MirrorLocation.Carried, adapter.Current.Mirror);
+        }
+
+        [TestCase("place mirror in socket")]
+        [TestCase("put the mirror on the sun socket")]
+        [TestCase("install mirror")]
+        public void NaturalPlaceVerbsWorkThroughTheAdapter(string spoken)
+        {
+            Say(ZoneIds.Floor, "flow west");
+            Walk(ZoneIds.Lift);
+            Say(ZoneIds.Lift, "flow east");
+            Say(ZoneIds.Lift, "bind elevator");
+            Say(ZoneIds.Lift, "flow west");
+            Say(ZoneIds.Lift, "carry mirror");
+            Walk(ZoneIds.Gallery);
+            Use(ZoneIds.Gallery, InteractionIds.LowerLadder);
+            Walk(ZoneIds.Floor);
+            Say(ZoneIds.Floor, spoken);
+            Assert.AreEqual(MirrorLocation.Socket, adapter.Current.Mirror);
+        }
+
+        [Test]
+        public void BareCarryAsksWhatRatherThanFailingAsUnknown()
+        {
+            CommandResult r = adapter.Speak("carry", At(ZoneIds.Floor));
+            Assert.AreEqual(CommandOutcome.Incomplete, r.Outcome);
+            StringAssert.Contains("mirror", r.Message);
+        }
     }
 }
