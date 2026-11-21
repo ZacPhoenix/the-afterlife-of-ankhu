@@ -1,0 +1,8 @@
+{
+  "name": "com.ankhu.borrowed-dawn",
+  "displayName": "Ankhu Borrowed Dawn Rules",
+  "version": "0.1.0",
+  "unity": "6000.0",
+  "description": "Engine-free rules, parser, undo and solver for the Borrowed Dawn room. No UnityEngine dependency.",
+  "author": { "name": "Zac Phoenix" }
+}

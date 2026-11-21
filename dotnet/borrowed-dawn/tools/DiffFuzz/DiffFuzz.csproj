@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- The library sources are compiled straight into this tool (read-only glob) instead of a ProjectReference,
+       so building the harness never writes bin/ or obj/ output under src/. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../../../Packages/com.ankhu.borrowed-dawn/Runtime/*.cs" Link="Lib/%(Filename)%(Extension)" />
+    <Compile Include="../../../../Packages/com.ankhu.borrowed-dawn/Runtime/Analysis/*.cs" Link="Lib/Analysis/%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>
