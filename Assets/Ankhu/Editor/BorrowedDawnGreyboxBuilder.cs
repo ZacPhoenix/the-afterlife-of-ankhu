@@ -109,7 +109,9 @@ namespace Ankhu.EditorTools
             BuildGate(props, interactables);
             BuildLighting();
 
-            new GameObject("RoomRulesHost").AddComponent<RoomRulesHost>();
+            GameObject hostObject = new GameObject("RoomRulesHost");
+            hostObject.AddComponent<RoomRulesHost>();
+            AddRulesInstallerIfPresent(hostObject);
             new GameObject("Debug").AddComponent<TraversalDebugPanel>();
 
             Camera camera = BuildCamera();
@@ -123,6 +125,21 @@ namespace Ankhu.EditorTools
             AddSceneToBuildSettings();
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
+        }
+
+        /// <summary>
+        /// Adds the rules library binding when its assembly is in the project. Without it the host
+        /// falls back to the traversal test adapter, so the greybox still builds and walks.
+        /// </summary>
+        private static void AddRulesInstallerIfPresent(GameObject hostObject)
+        {
+            Type installer = Type.GetType("Ankhu.Bindings.BorrowedDawnRulesInstaller, Ankhu.Bindings");
+            if (installer == null)
+            {
+                Debug.LogWarning("Ankhu.Bindings not found. The greybox will run with the traversal test adapter.");
+                return;
+            }
+            hostObject.AddComponent(installer);
         }
 
         // Materials

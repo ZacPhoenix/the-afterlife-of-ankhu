@@ -14,6 +14,8 @@
     <ProjectReference Include="../Ankhu.Integration/Ankhu.Integration.csproj" />
     <ProjectReference Include="../Ankhu.Runtime/Ankhu.Runtime.csproj" />
     <ProjectReference Include="../Ankhu.Editor/Ankhu.Editor.csproj" />
+    <ProjectReference Include="../Ankhu.Bindings/Ankhu.Bindings.csproj" />
+    <ProjectReference Include="../Ankhu.BorrowedDawn/Ankhu.BorrowedDawn.csproj" />
     <PackageReference Include="NUnit" Version="3.14.0" />
   </ItemGroup>
 </Project>

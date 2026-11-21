@@ -32,7 +32,7 @@ namespace Ankhu.Player
             }
             if (camera == null)
             {
-                camera = Object.FindFirstObjectByType<Camera>();
+                camera = Object.FindAnyObjectByType<Camera>();
             }
 
             // Player root: feet at the transform origin, on the z = 0 play plane.
