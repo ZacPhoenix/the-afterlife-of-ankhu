@@ -32,6 +32,7 @@ namespace Ankhu.BorrowedDawn
         LadderRaised,
         BindingBearsLoad,
         UnavailableInProfile,
+        NotYetTaught,
     }
 
     /// <summary>Result of applying a command. On rejection <see cref="State"/> is the unchanged input state.</summary>

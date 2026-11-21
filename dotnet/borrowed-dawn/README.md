@@ -49,6 +49,18 @@ int saved = session.State.Pack();                 // 15-bit save key, unique per
 | `PuzzleSession` | Current state, bounded undo (100 by default, matching the prototype), reset, load, events. |
 | `Analysis.StateSpace` | Exhaustive reachable-state graph, softlock detection, shortest solutions, constrained solves for design questions. |
 
+## Anpu teaching rooms
+
+Borrowed Dawn proved too dense to be a first puzzle in Zac's playtest, so Anpu teaches its mechanics one at a time first. `TeachingRooms` defines three small rooms on the Greybox rules. Each is a `RoomDefinition`: a start state, the spells taught so far, a goal, and Anpu's provisional lines and nudges keyed by `Outcome`. Play one with `new PuzzleSession(TeachingRooms.Cistern)` and check `session.IsSolved`. A spell not yet taught is refused with `Outcome.NotYetTaught` and changes nothing.
+
+| Room | Teaches | Shortest | Lesson enforced by solver |
+|---|---|---|---|
+| The Cistern | `flow` moves water, water moves the lift | 4 | cannot be solved without `flow` |
+| The Held Step | `bind` holds the lift, `release` only once water bears the weight | 6 | needs bind, release and the return of the water |
+| The Lingering Shadow | bind the shadow before waking its owner, and the two-thread limit | 4 | needs bind shadow, a release and waking the Bearer |
+
+Full report: `TEACHING_ROOMS.md` (`dotnet run -c Release --project tools/Analyze -- --teaching TEACHING_ROOMS.md`).
+
 ## Rules profiles
 
 | Profile | Use |

@@ -44,6 +44,8 @@ namespace Ankhu.BorrowedDawn.Tools
 
         private static int Main(string[] args)
         {
+            if (args.Length > 0 && args[0] == "--teaching") return Teaching.Run(args.Length > 1 ? args[1] : null);
+
             RuleProfile profile = RuleProfile.Prototype;
             var rest = new List<string>();
             for (int i = 0; i < args.Length; i++)

@@ -120,7 +120,8 @@ namespace Ankhu.BorrowedDawn.Tests
         [Test]
         public void Constructor_ValidatesArguments()
         {
-            Assert.That(() => new PuzzleSession(null), Throws.ArgumentNullException);
+            Assert.That(() => new PuzzleSession((RoomState)null), Throws.ArgumentNullException);
+            Assert.That(() => new PuzzleSession((RoomDefinition)null), Throws.ArgumentNullException);
             Assert.That(() => new PuzzleSession(RoomState.Initial, -1), Throws.InstanceOf<ArgumentOutOfRangeException>());
             Assert.That(PuzzleSession.DefaultUndoCapacity, Is.EqualTo(100));
         }
