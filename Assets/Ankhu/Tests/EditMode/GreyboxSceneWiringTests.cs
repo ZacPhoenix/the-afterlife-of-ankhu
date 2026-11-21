@@ -25,8 +25,12 @@ namespace Ankhu.Tests
         {
             BorrowedDawnGreyboxBuilder.Build();
 
-            RoomRulesHost[] hosts = UnityEngine.Object.FindObjectsByType<RoomRulesHost>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-            Assert.AreEqual(1, hosts.Length, "The greybox scene must contain exactly one RoomRulesHost");
+            var hosts = new System.Collections.Generic.List<RoomRulesHost>();
+            foreach (GameObject root in UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects())
+            {
+                hosts.AddRange(root.GetComponentsInChildren<RoomRulesHost>(true));
+            }
+            Assert.AreEqual(1, hosts.Count, "The greybox scene must contain exactly one RoomRulesHost");
 
             Type installer = Type.GetType(BorrowedDawnGreyboxBuilder.RulesInstallerTypeName);
             Assert.IsNotNull(installer);
