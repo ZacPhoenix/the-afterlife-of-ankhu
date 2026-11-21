@@ -27,6 +27,9 @@ namespace Ankhu.Bindings
         private const float AnchorBridgeX = (L.GapMinX + L.GapMaxX) * 0.5f;
         private const float AnchorGateX = L.GateLedgeMinX + 1f;
 
+        [Tooltip("Rules room id. Empty or borrowed-dawn plays the full room. Teaching rooms use their TeachingRooms id.")]
+        [SerializeField] private string roomId = BorrowedDawnRooms.BorrowedDawnId;
+
         private BorrowedDawnRulesAdapter adapter;
         private RoomRulesHost host;
         private PlayerZoneTracker tracker;
@@ -36,6 +39,8 @@ namespace Ankhu.Bindings
         private bool reportedLostAdapter;
 
         public BorrowedDawnRulesAdapter Adapter => adapter;
+
+        public string RoomId => roomId;
 
         private void Awake()
         {
@@ -53,7 +58,7 @@ namespace Ankhu.Bindings
 
             try
             {
-                adapter = new BorrowedDawnRulesAdapter();
+                adapter = new BorrowedDawnRulesAdapter(BorrowedDawnRooms.Resolve(roomId));
             }
             catch (System.Exception e)
             {
@@ -140,8 +145,9 @@ namespace Ankhu.Bindings
 
         private void HandleZoneChanged(string previousZone, string nextZone)
         {
-            if (pendingPlacement || adapter == null)
+            if (pendingPlacement || adapter == null || adapter.IsSolved)
             {
+                // A solved teaching room accepts no more moves. Let Ankhu walk while Anpu speaks.
                 return;
             }
 

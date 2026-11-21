@@ -4,7 +4,9 @@
     "references": [
         "Ankhu.Integration",
         "Ankhu.Runtime",
-        "Ankhu.BorrowedDawn"
+        "Ankhu.BorrowedDawn",
+        "Unity.InputSystem",
+        "UnityEngine.UI"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -14,6 +14,7 @@
     <Compile Include="$(AnkhuRoot)Runtime/Integration/**/*.cs" />
     <Compile Include="$(AnkhuRoot)../../Packages/com.ankhu.borrowed-dawn/Runtime/**/*.cs" />
     <Compile Include="$(AnkhuRoot)Bindings/BorrowedDawnRulesAdapter.cs" />
+    <Compile Include="$(AnkhuRoot)Bindings/BorrowedDawnRooms.cs" />
   </ItemGroup>
   <Import Project="PureFiles.g.props" Condition="Exists('PureFiles.g.props')" />
   <ItemGroup>

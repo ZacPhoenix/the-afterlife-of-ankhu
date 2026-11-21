@@ -42,6 +42,12 @@ namespace Ankhu.Bindings
 
         public event Action<RoomSnapshot, RoomSnapshot> StateChanged;
 
+        /// <summary>
+        /// Every command the rules evaluated, accepted or not, with the library's own outcome. Lets
+        /// presentation react to specific refusals, such as Anpu's nudges in the teaching rooms.
+        /// </summary>
+        public event Action<Rules.CommandResult> RulesResolved;
+
         public RoomSnapshot Current => current;
 
         /// <summary>The rules location (one of ZoneIds) after the last accepted change.</summary>
@@ -49,7 +55,18 @@ namespace Ankhu.Bindings
 
         public PuzzleSession Session => session;
 
+        /// <summary>The room being played: vocabulary, goal and start state.</summary>
+        public RoomDefinition Room => session.Room;
+
+        /// <summary>True once the room's goal holds.</summary>
+        public bool IsSolved => session.IsSolved;
+
         public BorrowedDawnRulesAdapter() : this(new PuzzleSession(RuleProfile.Greybox))
+        {
+        }
+
+        /// <summary>Plays one room of the sequence, for example a teaching room.</summary>
+        public BorrowedDawnRulesAdapter(RoomDefinition room) : this(new PuzzleSession(room ?? throw new ArgumentNullException(nameof(room))))
         {
         }
 
@@ -58,6 +75,7 @@ namespace Ankhu.Bindings
             session = puzzleSession ?? throw new ArgumentNullException(nameof(puzzleSession));
             current = ToSnapshot(session.State);
             session.StateChanged += HandleSessionChanged;
+            session.CommandResolved += HandleCommandResolved;
         }
 
         public CommandResult Speak(string rawText, PlayerContext context)
@@ -105,14 +123,14 @@ namespace Ankhu.Bindings
             RoomState state = session.State;
             if (state.Location != zone)
             {
-                Rules.CommandResult move = RoomRules.Apply(state, Command.MoveTo(zone), session.Profile);
+                Rules.CommandResult move = session.Room.Apply(state, Command.MoveTo(zone));
                 if (!move.Accepted)
                 {
                     return FromExecution(move);
                 }
                 state = move.State;
             }
-            return FromExecution(RoomRules.Apply(state, command, session.Profile));
+            return FromExecution(session.Room.Apply(state, command));
         }
 
         /// <summary>
@@ -153,6 +171,16 @@ namespace Ankhu.Bindings
         public string Hint(PlayerContext context)
         {
             RoomState s = session.State;
+            RoomDefinition room = session.Room;
+            if (room.Id != BorrowedDawnRooms.BorrowedDawnId)
+            {
+                if (session.IsSolved)
+                {
+                    return room.AnpuOnSolve;
+                }
+                IReadOnlyList<string> intro = room.AnpuIntro;
+                return intro.Count == 0 ? room.Lesson : intro[intro.Count - 1];
+            }
             if (s.Won)
             {
                 return "The morning has returned.";
@@ -280,6 +308,11 @@ namespace Ankhu.Bindings
         {
             if (items.Count == 1) return items[0];
             return string.Join(", ", items.GetRange(0, items.Count - 1)) + " and " + items[items.Count - 1];
+        }
+
+        private void HandleCommandResolved(Rules.CommandResult result)
+        {
+            RulesResolved?.Invoke(result);
         }
 
         private void HandleSessionChanged(RoomState before, RoomState after)
