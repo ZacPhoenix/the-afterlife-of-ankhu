@@ -320,8 +320,8 @@ namespace Ankhu.Realms.EditorTools
             Transform b = Group(name, parent, pos);
             Shape(PrimitiveType.Cylinder, "Stand", b, new Vector3(0f, 0.55f, 0f), new Vector3(0.12f, 0.55f, 0.12f), Basalt, true);
             Shape(PrimitiveType.Cylinder, "Foot", b, new Vector3(0f, 0.04f, 0f), new Vector3(0.6f, 0.04f, 0.6f), Basalt);
-            Shape(PrimitiveType.Sphere, "Bowl", b, new Vector3(0f, 1.18f, 0f), new Vector3(0.75f, 0.32f, 0.75f), Gold);
-            Shape(PrimitiveType.Sphere, "Embers", b, new Vector3(0f, 1.3f, 0f), new Vector3(0.55f, 0.12f, 0.55f), Emissive("Embers", new Color(0.6f, 0.2f, 0.05f), new Color(5f, 1.6f, 0.3f)));
+            Shape(PrimitiveType.Sphere, "Bowl", b, new Vector3(0f, 1.18f, 0f), new Vector3(0.75f, 0.32f, 0.75f), Lit("AgedBronze", new Color(0.36f, 0.26f, 0.14f), 0.45f, 0.8f));
+            Shape(PrimitiveType.Sphere, "Embers", b, new Vector3(0f, 1.3f, 0f), new Vector3(0.55f, 0.12f, 0.55f), Emissive("Embers", new Color(0.35f, 0.1f, 0.03f), new Color(2.4f, 0.55f, 0.08f)));
             Fire(b, new Vector3(0f, 1.32f, 0f), 1f);
             var lgo = new GameObject("Light");
             lgo.transform.SetParent(b, false);

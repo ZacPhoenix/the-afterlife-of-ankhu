@@ -486,6 +486,11 @@ namespace Ankhu.Realms.EditorTools
             for (int i = 0; i < 6; i++)
                 RealmKit.Box("Dyke" + i, w, new Vector3(9f + i * 1.8f, 0.05f, -3f), new Vector3(1.7f, 0.1f, 2.4f), RealmKit.Limestone, false);
 
+            // A small reed-post gateway marks the way on at the end of the dyke.
+            RealmKit.Column("DykePostN", w, new Vector3(17.2f, 0f, -1.4f), 3.2f, 0.22f, RealmKit.Sandstone);
+            RealmKit.Column("DykePostS", w, new Vector3(17.2f, 0f, -4.6f), 3.2f, 0.22f, RealmKit.Sandstone);
+            RealmKit.Box("DykeLintel", w, new Vector3(17.2f, 3.35f, -3f), new Vector3(0.5f, 0.3f, 3.8f), RealmKit.Sandstone, false);
+            RealmKit.Brazier("DykeLamp", w, new Vector3(16.2f, 0f, -0.6f), 8f, 2.0f);
             RealmKit.Blocker(w, new Vector3(0f, 2f, -9f), new Vector3(36f, 4f, 1f));
             RealmKit.Blocker(w, new Vector3(-11f, 2f, 0f), new Vector3(1f, 4f, 20f));
             RealmKit.Blocker(w, new Vector3(0f, 2f, 7.8f), new Vector3(30f, 4f, 0.6f));

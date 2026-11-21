@@ -63,8 +63,10 @@ namespace Ankhu.Realms
 
         private readonly List<Slot> slots = new List<Slot>();
         private readonly List<Fx> fx = new List<Fx>();
-        private readonly MaterialPropertyBlock block = new MaterialPropertyBlock();
-        private readonly MaterialPropertyBlock rimBlock = new MaterialPropertyBlock();
+        private MaterialPropertyBlock blockStore;
+        private MaterialPropertyBlock rimBlockStore;
+        private MaterialPropertyBlock block => blockStore ??= new MaterialPropertyBlock();
+        private MaterialPropertyBlock rimBlock => rimBlockStore ??= new MaterialPropertyBlock();
         private Transform fxRoot;
         private Light glowLight;
         private bool active;
