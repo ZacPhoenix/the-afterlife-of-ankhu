@@ -492,13 +492,17 @@ namespace Ankhu.EditorTools
             Block("GateLedgeSlab_West", parent, L.GateLedgeMinX, slabBottom, L.DeflectorX - 0.15f, L.UpperY, "UpperSlab");
             Block("GateLedgeSlab_East", parent, L.DeflectorX + 0.15f, slabBottom, L.GateLedgeMaxX, L.UpperY, "UpperSlab");
 
-            // Light-well grille: bars across the opening so the sun passes between them.
-            int bars = 5;
+            // Light well: a real opening in the slab, framed in gold so it reads as a hole the sun
+            // passes through. Three thin bronze bars form the walkable grille (the walk collider is
+            // continuous). The opening is wider than the beam's footprint at slab height.
+            Block("LightWellLip_West", parent, L.LightWellMinX - 0.08f, slabBottom - 0.05f, L.LightWellMinX, L.UpperY + 0.02f, "Bronze");
+            Block("LightWellLip_East", parent, L.LightWellMaxX, slabBottom - 0.05f, L.LightWellMaxX + 0.08f, L.UpperY + 0.02f, "Bronze");
+            int bars = 3;
             float span = L.LightWellMaxX - L.LightWellMinX;
             for (int i = 0; i < bars; i++)
             {
-                float x = L.LightWellMinX + span * (i + 0.5f) / bars;
-                Block("LightWellBar_" + i, parent, x - 0.03f, slabBottom, x + 0.03f, L.UpperY, "StoneDark");
+                float x = L.LightWellMinX + span * (i + 1f) / (bars + 1f);
+                Block("LightWellBar_" + i, parent, x - 0.02f, L.UpperY - 0.06f, x + 0.02f, L.UpperY, "Bronze");
             }
 
             // Foreground framing pillars, no colliders.

@@ -19,6 +19,11 @@ namespace Ankhu.Player
         public const string CanvasName = "Ankhu UI";
 
         private static readonly Color BubbleColor = new Color(0.96f, 0.92f, 0.82f, 0.96f);
+        private static readonly Color LogPanelColor = new Color(0.04f, 0.035f, 0.03f, 0.78f);
+        private const float LogPanelWidth = 900f;
+        private static readonly Color RimLightColor = new Color(0.72f, 0.84f, 1f);
+        private const float RimLightIntensity = 2.2f;
+        private const float RimLightRange = 2.6f;
         private static readonly Color StripColor = new Color(0.05f, 0.04f, 0.03f, 0.55f);
         private static readonly Color HudTextColor = new Color(0.95f, 0.90f, 0.78f);
         private static readonly Color LegendColor = new Color(0.80f, 0.76f, 0.66f);
@@ -58,6 +63,8 @@ namespace Ankhu.Player
             visualGo.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
             var visual = visualGo.AddComponent<AnkhuVisual>();
 
+            AddRimLights(player.transform);
+
             var controller = player.AddComponent<PlayerController2D>();
             controller.Configure(spawn, visual);
             var tracker = player.AddComponent<PlayerZoneTracker>();
@@ -85,18 +92,33 @@ namespace Ankhu.Player
             Text legend = AnkhuUi.CreateText("Legend", strip.rectTransform, 19, TextAnchor.LowerLeft, LegendColor, true);
             AnkhuUi.Stretch(legend.rectTransform, new Vector2(14f, 8f), new Vector2(-14f, 0f));
 
-            // Feedback log, bottom-left, oldest line on top.
-            RectTransform logRoot = AnkhuUi.CreateRect("Feedback Log", canvasRect);
-            const float lineHeight = 34f;
-            AnkhuUi.Place(logRoot, Vector2.zero, Vector2.zero, new Vector2(24f, 20f), new Vector2(1400f, lineHeight * FeedbackLog.LineCount));
+            // Feedback log, bottom-left on a backing panel, oldest line on top. Lines wrap at the panel
+            // width and the panel grows upward to fit them.
+            Image logPanel = AnkhuUi.CreateImage("Feedback Log", canvasRect, LogPanelColor);
+            RectTransform logRoot = logPanel.rectTransform;
+            AnkhuUi.Place(logRoot, Vector2.zero, Vector2.zero, new Vector2(16f, 16f), new Vector2(LogPanelWidth, 0f));
+            var layout = logRoot.gameObject.AddComponent<VerticalLayoutGroup>();
+            layout.padding = new RectOffset(16, 16, 10, 10);
+            layout.spacing = 6f;
+            layout.childAlignment = TextAnchor.LowerLeft;
+            layout.childControlWidth = true;
+            layout.childControlHeight = true;
+            layout.childForceExpandWidth = true;
+            layout.childForceExpandHeight = false;
+            var fitter = logRoot.gameObject.AddComponent<ContentSizeFitter>();
+            fitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+            fitter.horizontalFit = ContentSizeFitter.FitMode.Unconstrained;
             var lines = new Text[FeedbackLog.LineCount];
             for (int i = 0; i < lines.Length; i++)
             {
-                Text line = AnkhuUi.CreateText("Line " + (i + 1), logRoot, 24, TextAnchor.MiddleLeft, HudTextColor, true);
-                float y = (lines.Length - 1 - i) * lineHeight;
-                AnkhuUi.Place(line.rectTransform, Vector2.zero, Vector2.zero, new Vector2(0f, y), new Vector2(1400f, lineHeight));
+                Text line = AnkhuUi.CreateText("Line " + (i + 1), logRoot, 22, TextAnchor.UpperLeft, HudTextColor, true);
+                line.horizontalOverflow = HorizontalWrapMode.Wrap;
+                line.verticalOverflow = VerticalWrapMode.Overflow;
+                line.lineSpacing = 1.05f;
+                line.gameObject.SetActive(false);
                 lines[i] = line;
             }
+            logPanel.gameObject.SetActive(false);
 
             // Interaction prompt, positioned above the head every frame.
             Text prompt = AnkhuUi.CreateText("Interaction Prompt", canvasRect, 26, TextAnchor.LowerCenter, PromptColor, true);
@@ -122,7 +144,7 @@ namespace Ankhu.Player
             var bubble = canvasGo.AddComponent<SpeechBubbleController>();
             bubble.Configure(camera, player.transform, tracker, canvasRect, bubbleRoot, panel.rectTransform, input, reply);
             var log = canvasGo.AddComponent<FeedbackLog>();
-            log.Configure(lines);
+            log.Configure(lines, logPanel.gameObject);
             var hud = canvasGo.AddComponent<RoomHud>();
             hud.Configure(status, legend, controller, tracker);
             status.text = RoomHud.BuildStatus(null, Ankhu.Integration.ZoneIds.Floor);
@@ -145,6 +167,30 @@ namespace Ankhu.Player
             }
 
             return player;
+        }
+
+        /// <summary>
+        /// Two cool point lights behind Ankhu, one on each side, so his silhouette separates from dark
+        /// stone and from bright painted backgrounds. They follow the root, not the visual, so they do
+        /// not flip when he turns. No shadows, to keep the cost to two additional lights.
+        /// </summary>
+        private static void AddRimLights(Transform playerRoot)
+        {
+            var rig = new GameObject("RimLights");
+            rig.transform.SetParent(playerRoot, false);
+            for (int side = -1; side <= 1; side += 2)
+            {
+                var go = new GameObject(side < 0 ? "Rim_West" : "Rim_East");
+                go.transform.SetParent(rig.transform, false);
+                go.transform.localPosition = new Vector3(0.75f * side, BorrowedDawnLayout.AnkhuHeight * 0.75f, 0.8f);
+                var light = go.AddComponent<Light>();
+                light.type = LightType.Point;
+                light.color = RimLightColor;
+                light.intensity = RimLightIntensity;
+                light.range = RimLightRange;
+                light.shadows = LightShadows.None;
+                light.renderMode = LightRenderMode.ForcePixel;
+            }
         }
     }
 }

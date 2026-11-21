@@ -201,5 +201,45 @@ namespace Ankhu.Tests
             StringAssert.Contains("sun", hint);
             StringAssert.Contains("a name", hint);
         }
+
+        [Test]
+        public void PreviewRefusesInstallWhileTheMirrorIsStillOnTheRaft()
+        {
+            int changes = 0;
+            adapter.StateChanged += (a, b) => changes++;
+            RoomSnapshot before = adapter.Current;
+
+            CommandResult preview = adapter.Preview(InteractionIds.InstallMirror, At(ZoneIds.Floor));
+
+            Assert.AreEqual(CommandOutcome.Rejected, preview.Outcome);
+            Assert.AreSame(before, adapter.Current);
+            Assert.AreEqual(0, changes);
+        }
+
+        [Test]
+        public void PreviewAcceptsTakeMirrorFromTheHeldLiftWithoutChangingAnything()
+        {
+            Say(ZoneIds.Floor, "flow west");
+            Walk(ZoneIds.Lift);
+            Say(ZoneIds.Lift, "flow east");
+            Say(ZoneIds.Lift, "bind elevator");
+            Say(ZoneIds.Lift, "flow west");
+            int changes = 0;
+            adapter.StateChanged += (a, b) => changes++;
+            RoomSnapshot before = adapter.Current;
+
+            Assert.AreEqual(CommandOutcome.Success, adapter.Preview(InteractionIds.TakeMirror, At(ZoneIds.Lift)).Outcome);
+            Assert.AreEqual(CommandOutcome.Rejected, adapter.Preview(InteractionIds.TakeMirror, At(ZoneIds.Gallery)).Outcome);
+            Assert.AreSame(before, adapter.Current);
+            Assert.AreEqual(0, changes);
+            Assert.AreEqual(ZoneIds.Lift, adapter.RulesZoneId, "Preview must not move the rules location");
+        }
+
+        [Test]
+        public void PreviewFromAnUnreachableZoneIsRefused()
+        {
+            Assert.AreEqual(CommandOutcome.Rejected, adapter.Preview(InteractionIds.ReadInscription, At(ZoneIds.Gallery)).Outcome);
+            Assert.AreEqual(ZoneIds.Floor, adapter.RulesZoneId);
+        }
     }
 }

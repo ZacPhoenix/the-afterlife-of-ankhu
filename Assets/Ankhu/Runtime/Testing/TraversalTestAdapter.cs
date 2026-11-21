@@ -77,6 +77,11 @@ namespace Ankhu.Testing
                 "Rules library not connected. Requested: " + (interactionId ?? string.Empty) + " in zone " + (context.ZoneId ?? "none"));
         }
 
+        public CommandResult Preview(string interactionId, PlayerContext context)
+        {
+            return new CommandResult(CommandOutcome.NotConnected, "Rules library not connected.");
+        }
+
         public CommandResult Undo()
         {
             if (undoStack.Count == 0)

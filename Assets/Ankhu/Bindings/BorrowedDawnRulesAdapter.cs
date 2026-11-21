@@ -91,6 +91,30 @@ namespace Ankhu.Bindings
             return FromExecution(session.Execute(command));
         }
 
+        public CommandResult Preview(string interactionId, PlayerContext context)
+        {
+            if (interactionId == null || !InteractionToCommand.TryGetValue(interactionId, out Command command))
+            {
+                return new CommandResult(CommandOutcome.InvalidTarget, "Nothing here responds to that.");
+            }
+            if (context.ZoneId == null || !ZoneToLocation.TryGetValue(context.ZoneId, out Location zone))
+            {
+                return new CommandResult(CommandOutcome.Rejected, "Ankhu is somewhere the chamber does not recognise.");
+            }
+
+            RoomState state = session.State;
+            if (state.Location != zone)
+            {
+                Rules.CommandResult move = RoomRules.Apply(state, Command.MoveTo(zone), session.Profile);
+                if (!move.Accepted)
+                {
+                    return FromExecution(move);
+                }
+                state = move.State;
+            }
+            return FromExecution(RoomRules.Apply(state, command, session.Profile));
+        }
+
         /// <summary>
         /// Moves the rules location to the given zone. Returns null when the rules already agree or
         /// accepted the move. Returns the rejection otherwise, and the rules state is unchanged.
