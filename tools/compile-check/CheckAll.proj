@@ -1,0 +1,16 @@
+<Project>
+  <!-- Builds every asmdef mirror in parallel; the Player-define build of Ankhu.Runtime is a separate invocation in compile-check.sh. -->
+  <ItemGroup>
+    <P Include="selftest/SelfTest.csproj" />
+    <P Include="Ankhu.Integration/Ankhu.Integration.csproj" />
+    <P Include="Ankhu.Runtime/Ankhu.Runtime.csproj" />
+    <P Include="Ankhu.Editor/Ankhu.Editor.csproj" />
+    <P Include="Ankhu.Tests.EditMode/Ankhu.Tests.EditMode.csproj" />
+  </ItemGroup>
+  <Target Name="Build">
+    <MSBuild Projects="@(P)" Targets="Build" BuildInParallel="true" ContinueOnError="true" />
+  </Target>
+  <Target Name="Restore">
+    <MSBuild Projects="@(P)" Targets="Restore" BuildInParallel="true" />
+  </Target>
+</Project>

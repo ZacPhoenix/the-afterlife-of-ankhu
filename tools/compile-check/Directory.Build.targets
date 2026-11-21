@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup Condition="'$(UsesUnityEngine)' == 'true'">
+    <DefineConstants>$(DefineConstants);$(UnityDefines)</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(UsesUnityEngine)' == 'true'">
+    <UnityRefDll Include="$(UnityRefDir)*.dll" />
+    <!-- Full paths: resolved by ResolveAssemblyReference's {RawFileName} search (equivalent to HintPath). -->
+    <Reference Include="@(UnityRefDll)" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(UsesUnityEditor)' == 'true' and '$(Variant)' == 'Editor'">
+    <Reference Include="UnityEditor" HintPath="$(UnityEditorRefDir)UnityEditor.dll" />
+  </ItemGroup>
+</Project>

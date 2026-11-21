@@ -1,0 +1,36 @@
+<Project>
+  <!-- Shared settings for the Unity 6 compile-check projects. Nothing here writes under Assets/. -->
+  <PropertyGroup>
+    <AnkhuRoot>$(MSBuildThisFileDirectory)../../Assets/Ankhu/</AnkhuRoot>
+    <UnityRefDir>$(MSBuildThisFileDirectory)refs/unity6/</UnityRefDir>
+    <UnityEditorRefDir>$(MSBuildThisFileDirectory)refs/editor/</UnityEditorRefDir>
+    <!-- Variant=Editor (default) mirrors the Unity editor compile (UNITY_EDITOR defined);
+         Variant=Player mirrors a standalone player build. -->
+    <Variant Condition="'$(Variant)' == ''">Editor</Variant>
+    <BaseOutputPath>$(MSBuildThisFileDirectory).build/bin/$(MSBuildProjectName)/$(Variant)/</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory).build/obj/$(MSBuildProjectName)/</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Variant)/</IntermediateOutputPath>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <Deterministic>true</Deterministic>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- Unity's own compiler does not report these; keep the noise down. -->
+    <NoWarn>$(NoWarn);CS1591;CS0649;MSB3277;MSB3243</NoWarn>
+    <UnityDefines>UNITY_6000_0_OR_NEWER;UNITY_6000_0;UNITY_6000;UNITY_2023_3_OR_NEWER;UNITY_2023_2_OR_NEWER;UNITY_2023_1_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_3_OR_NEWER;UNITY_64;UNITY_STANDALONE;UNITY_STANDALONE_WIN;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;ENABLE_MONO;ENABLE_INPUT_SYSTEM;NET_STANDARD_2_1;NET_STANDARD;NET_4_6;NET_UNITY_4_8;CSHARP_7_3_OR_NEWER;UNITY_POST_PROCESSING_STACK_V2</UnityDefines>
+    <UnityDefines Condition="'$(Variant)' == 'Editor'">$(UnityDefines);UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_LINUX;DEVELOPMENT_BUILD;UNITY_ASSERTIONS</UnityDefines>
+  </PropertyGroup>
+
+  <!-- Opt-in per project: <UsesUnityEngine>true</UsesUnityEngine>, <UsesUnityEditor>true</UsesUnityEditor>. -->
+  <ItemDefinitionGroup>
+    <Reference><Private>false</Private></Reference>
+  </ItemDefinitionGroup>
+</Project>

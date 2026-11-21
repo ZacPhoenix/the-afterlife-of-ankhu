@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Mirrors Assets/Ankhu/Editor/Ankhu.Editor.asmdef (Editor platform only). -->
+  <PropertyGroup>
+    <AssemblyName>Ankhu.Editor</AssemblyName>
+    <RootNamespace>Ankhu.EditorTools</RootNamespace>
+    <UsesUnityEngine>true</UsesUnityEngine>
+    <UsesUnityEditor>true</UsesUnityEditor>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(AnkhuRoot)Editor/**/*.cs" />
+    <ProjectReference Include="../Ankhu.Integration/Ankhu.Integration.csproj" />
+    <ProjectReference Include="../Ankhu.Runtime/Ankhu.Runtime.csproj" />
+  </ItemGroup>
+</Project>

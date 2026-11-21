@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Mirrors Assets/Ankhu/Runtime/Integration/Ankhu.Integration.asmdef (noEngineReferences: true). -->
+  <PropertyGroup>
+    <AssemblyName>Ankhu.Integration</AssemblyName>
+    <RootNamespace>Ankhu.Integration</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(AnkhuRoot)Runtime/Integration/**/*.cs" />
+  </ItemGroup>
+</Project>

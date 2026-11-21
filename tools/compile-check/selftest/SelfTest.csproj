@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <UsesUnityEngine>true</UsesUnityEngine>
+    <UsesUnityEditor>true</UsesUnityEditor>
+  </PropertyGroup>
+  <ItemGroup><Compile Include="SelfTest.cs" /></ItemGroup>
+</Project>

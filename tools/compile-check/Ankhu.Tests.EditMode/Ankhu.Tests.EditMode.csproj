@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Mirrors Assets/Ankhu/Tests/EditMode (Editor platform, NUnit). Unity ships NUnit 3.5 (com.unity.ext.nunit);
+       NUnit 3.14 from nuget.org is API-compatible for attributes/asserts. UnityEngine.TestRunner
+       (UnityEngine.TestTools: [UnityTest], LogAssert) is NOT available, so tests using it will fail here. -->
+  <PropertyGroup>
+    <AssemblyName>Ankhu.Tests.EditMode</AssemblyName>
+    <RootNamespace>Ankhu.Tests</RootNamespace>
+    <UsesUnityEngine>true</UsesUnityEngine>
+    <UsesUnityEditor>true</UsesUnityEditor>
+    <DefineConstants>$(DefineConstants);UNITY_INCLUDE_TESTS</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(AnkhuRoot)Tests/EditMode/**/*.cs" />
+    <ProjectReference Include="../Ankhu.Integration/Ankhu.Integration.csproj" />
+    <ProjectReference Include="../Ankhu.Runtime/Ankhu.Runtime.csproj" />
+    <ProjectReference Include="../Ankhu.Editor/Ankhu.Editor.csproj" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+  </ItemGroup>
+</Project>

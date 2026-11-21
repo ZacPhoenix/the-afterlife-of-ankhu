@@ -1,0 +1,43 @@
+# Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+crashlytics-buildid.txt
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# IDEs
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+
+# Exceptions: the offline compile-check projects are hand-written
+!/tools/compile-check/**/*.csproj
+
+# .NET builds outside Unity
+**/bin/
+**/obj/
+/tools/compile-check/refs/
+/tools/compile-check/.cache/
+/tools/compile-check/.build/
+
+# OS
+.DS_Store
+Thumbs.db

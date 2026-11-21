@@ -1,0 +1,4 @@
+.build/
+.cache/
+refs/
+Ankhu.Tests.Pure/PureFiles.g.props

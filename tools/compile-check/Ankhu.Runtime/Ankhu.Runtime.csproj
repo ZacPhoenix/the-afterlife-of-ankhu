@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Mirrors Assets/Ankhu/Runtime/Ankhu.Runtime.asmdef: references Ankhu.Integration, Unity.InputSystem
+       (+ implicit UnityEngine modules / uGUI / TMP). Runtime/Integration is its own assembly. -->
+  <PropertyGroup>
+    <AssemblyName>Ankhu.Runtime</AssemblyName>
+    <RootNamespace>Ankhu</RootNamespace>
+    <UsesUnityEngine>true</UsesUnityEngine>
+    <!-- Runtime code may reference UnityEditor inside #if UNITY_EDITOR, which Unity allows in the editor compile. -->
+    <UsesUnityEditor>true</UsesUnityEditor>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(AnkhuRoot)Runtime/**/*.cs" Exclude="$(AnkhuRoot)Runtime/Integration/**" />
+    <ProjectReference Include="../Ankhu.Integration/Ankhu.Integration.csproj" />
+  </ItemGroup>
+</Project>
