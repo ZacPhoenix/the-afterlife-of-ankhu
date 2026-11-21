@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Ankhu/Generated/Scenes/Teach1_Cistern.unity
+    guid: 9577b3e6021df794cab008bc1ab52c34
+  - enabled: 1
+    path: Assets/Ankhu/Generated/Scenes/Teach2_HeldStep.unity
+    guid: c759ca51bdb117b45a5634100a794eb7
+  - enabled: 1
+    path: Assets/Ankhu/Generated/Scenes/Teach3_LingeringShadow.unity
+    guid: ceac574355e071a4991184ca741a39b7
+  - enabled: 1
     path: Assets/Ankhu/Generated/Scenes/BorrowedDawn_Greybox.unity
     guid: 9c6e4a5d1fd78b742bce90be2215154c
+  - enabled: 1
+    path: Assets/Ankhu/Generated/Scenes/Terrace_Parallax.unity
+    guid: ffebda7d7f94e944193926eed8e97c80
   m_configObjects: {}

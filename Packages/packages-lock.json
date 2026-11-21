@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.ankhu.borrowed-dawn": {
+      "version": "file:com.ankhu.borrowed-dawn",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.burst": {
       "version": "2.0.0",
       "depth": 2,
