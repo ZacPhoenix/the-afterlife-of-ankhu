@@ -40,6 +40,7 @@ Batch mode: `Unity -batchmode -projectPath . -executeMethod Ankhu.EditorTools.Bo
 | U, H, hold R | Undo, hint, reset |
 | F1 | Debug state panel (toggle any snapshot field while no rules library is installed) |
 | F2 | Switch camera between perspective and orthographic |
+| F3 | Skip to the next room (teaching rooms only, development shortcut) |
 
 ## Offline compile check
 

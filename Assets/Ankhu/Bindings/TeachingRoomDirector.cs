@@ -15,7 +15,7 @@ namespace Ankhu.Bindings
     /// shows a nudge the first time Ankhu hits each refusal the room has a nudge for, and when the
     /// room's goal holds, shows Anpu's closing line and loads the next scene in the sequence.
     /// Anpu's lines are provisional greybox dialogue from the rules library, not final script.
-    /// F2 skips to the next room (development shortcut).
+    /// F3 skips to the next room (development shortcut).
     /// </summary>
     [RequireComponent(typeof(BorrowedDawnRulesInstaller))]
     public sealed class TeachingRoomDirector : MonoBehaviour
@@ -91,7 +91,7 @@ namespace Ankhu.Bindings
             }
 
             Keyboard keyboard = Keyboard.current;
-            if (keyboard != null && keyboard.f2Key.wasPressedThisFrame && !Ankhu.Core.InputGate.TextEntryActive)
+            if (keyboard != null && keyboard.f3Key.wasPressedThisFrame && !Ankhu.Core.InputGate.TextEntryActive)
             {
                 LoadNext();
             }

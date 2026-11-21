@@ -16,7 +16,7 @@ namespace Ankhu.Player
     public sealed class RoomHud : MonoBehaviour
     {
         public const float ResetHoldSeconds = 1f;
-        public const string Legend = "A/D walk    W/S climb    E use    Q inspect    Enter speak    U undo    H hint    hold R reset    F2 camera";
+        public const string Legend = "A/D walk    W/S climb    E use    Q inspect    Enter speak    U undo    H hint    hold R reset    F2 camera    F3 skip lesson";
 
         [SerializeField] private Text statusText;
         [SerializeField] private Text legendText;
