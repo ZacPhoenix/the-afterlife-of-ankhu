@@ -1,0 +1,20 @@
+Reference images attached: (1) anpu_A_divine_booth.png is the chosen base design, keep its identity, proportions, colours and render style exactly; (2) anpu_B_upon_his_mountain.png, borrow ONLY its gilded gold inner ears, gold eye rims and gold brow lines; (3) ref_ankhu_sheet.png sets the render style and sheet layout.
+
+Subject: Anpu, a tall slender jackal-headed Egyptian god about 2.05 m.
+Anpu exactly as in anpu_A_divine_booth.png, with these changes:
+- Inner ears gilded gold (as in B). Eyes white calcite with black obsidian pupils, gold eye rims and gold brow lines (as in B).
+- The lapis-blue tripartite wig is shorter: its back panel ends ABOVE the broad collar with a clear visible gap of bare black neck between wig hem and collar, and the two front lappets end above the collarbones with a visible gap to the chest. The wig is a solid rigid sculpted form with thin gold bands, no hair strands.
+- Slender, lean, dignified body, less muscle definition than A, no visible abs, long limbs.
+- Broad wesekh collar of gold and lapis rows flush on the chest. Gold armbands on both upper arms, gold wristbands. Small silver claws on fingertips.
+- White starched pleated shendyt kilt with stiff trapezoid front panel, white belt with small gold buckle, hem above the knee and flaring away from the thighs with a visible gap.
+- Bare feet. Hands empty.
+
+
+IMAGE: Character turnaround sheet.
+Four full-body views left to right, same size, feet on one baseline: FRONT, LEFT SIDE profile facing left, BACK, and THREE-QUARTER front facing left.
+
+STYLE: Sculpted Dream style, character model sheet for a stylized 3D game, soft sculpted forms like a hand-crafted miniature at heroic scale, matte painted materials, even neutral studio lighting from the front with soft ambient occlusion, no dramatic glow, no rim light, same rendering style as the reference Ankhu sheet.
+LAYOUT: flat plain uniform mid grey background (#7F7F7F), no floor texture, no shadows on the background, every figure full body from top of ears to soles with generous margin, all figures the same size and with feet on one shared baseline, orthographic views, no overlapping figures.
+POSE: A-pose, arms straight and angled down about 45 degrees away from the body with a clear gap between arms and torso, hands open with fingers slightly apart, legs straight and apart at hip width with a clear gap between the legs, standing on flat feet, looking straight ahead, mouth closed.
+CONSTRUCTION (critical, the image will be converted to a 3D model): every garment edge stands away from the skin, the kilt is stiff starched linen that flares outward like a rigid triangle and ends above the knee with a clear visible gap between kilt hem and both thighs, nothing hangs between the legs, no long ribbons, no tassels, no fringe, no loose straps, no capes or cloaks, no long hair, ears are tall rigid upright triangles, jewellery is solid and flush to the body (broad collar, armbands, wristbands), hands are EMPTY (no staff, no weapon, no object of any kind in any view).
+BANNED: text, labels, hieroglyph-like writing, watermark, border, props in hands, cape, crook, flail, long robe, transparent fabric, motion blur, glow, fire, background scenery, extra characters, chibi proportions, bodybuilder anatomy.
