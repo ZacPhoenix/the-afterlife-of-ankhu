@@ -5,6 +5,7 @@
         "Ankhu.Runtime",
         "Ankhu.Integration",
         "Ankhu.Bindings",
+        "Ankhu.BorrowedDawn",
         "UnityEngine.TestRunner"
     ],
     "includePlatforms": [],

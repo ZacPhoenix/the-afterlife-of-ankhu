@@ -108,6 +108,10 @@ namespace Ankhu.EditorTools
                 cam.orthographicSize = orthoSize;
                 cam.farClipPlane = 200f;
                 cam.targetTexture = rt;
+                // In batch mode the first render after opening a scene can skip the large
+                // terrace_far and terrace_mid plates (their textures are not resident yet).
+                // A throwaway render first makes every capture complete.
+                cam.Render();
                 cam.Render();
                 RenderTexture.active = rt;
                 image.ReadPixels(new Rect(0, 0, Width, Height), 0, 0);
