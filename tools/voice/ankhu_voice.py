@@ -4,7 +4,7 @@
 Standard library only, so it runs on any machine with Python 3.9+ (Windows included).
 
     python tools/voice/ankhu_voice.py expand                      # list every take the library needs
-    python tools/voice/ankhu_voice.py candidates                  # voice design previews + one account voice
+    python tools/voice/ankhu_voice.py candidates [--set anpu]     # voice design previews + one account voice
     python tools/voice/ankhu_voice.py save-voice --generated-id ID --name "Ankhu"
     python tools/voice/ankhu_voice.py batch [--only PREFIX] [--force]
     python tools/voice/ankhu_voice.py asr DIR [--out FILE]        # speech-to-text round trip (Scribe)
@@ -79,6 +79,42 @@ VOICE_DESCRIPTIONS = {
         "gentle conviction rather than command." + _STUDIO
     ),
 }
+
+# Anpu (Anubis). Test text is his real draft dialogue: the Spell 25 cinematic line and the first
+# teaching-room nudge (borrowed-dawn TEACHING_ROOMS.md).
+ANPU_TEXT = (
+    "Rise... Ankhu. "
+    "Your voice has come back to you, Ankhu. Here, words are the only hands you have. "
+    "Water listens to a direction."
+)
+ANPU_DESCRIPTIONS = {
+    "P1_gravel_colossus": (
+        "An ancient god of the dead, guardian of the threshold. Extremely deep bass voice with enormous "
+        "gravitas, gravelly and husky, slow and hushed, every word heavy and final. Epic but restrained, "
+        "never shouting." + _STUDIO
+    ),
+    "P2_whispering_guide": (
+        "A vast, ancient jackal-headed god guiding a newly dead soul. Very deep, husky, half-whispered "
+        "bass, close and intimate, breath audible in the low gravel. Slow and patient, immense calm "
+        "authority, kind beneath the weight." + _STUDIO
+    ),
+    "P3_cavern_herald": (
+        "A towering primordial god speaking from deep in the chest. Huge, resonant, gravelly basso "
+        "profundo, slow, deliberate, hushed but monumental, like stone moving. Epic gravitas, solemn, "
+        "timeless." + _STUDIO
+    ),
+    "P4_weathered_eternal": (
+        "An eternal god who has walked the dead for ten thousand years. Deep, weathered, rasping, husky "
+        "low voice, very slow with long pauses, hushed and grave, tired but unshakable, enormous "
+        "presence without volume." + _STUDIO
+    ),
+}
+
+CANDIDATE_SETS = {
+    "ankhu": (CANDIDATE_TEXT, VOICE_DESCRIPTIONS),
+    "anpu": (ANPU_TEXT, ANPU_DESCRIPTIONS),
+}
+
 
 # ----------------------------------------------------------------------------------------------- key, http
 
@@ -213,6 +249,9 @@ def cmd_expand(args):
             print(f"  {t['key']}#{t['variant']}: {t['text']!r}  prev={t['previous_text']!r} next={t['next_text']!r}")
 
 
+_ALLOWED_RATE = None
+
+
 def tts(voice_id, profile, text, prev=None, nxt=None, seed=None):
     body = {
         "text": text,
@@ -227,22 +266,35 @@ def tts(voice_id, profile, text, prev=None, nxt=None, seed=None):
         body["next_text"] = nxt
     if seed is not None:
         body["seed"] = seed
-    return request("POST", f"/v1/text-to-speech/{voice_id}/with-timestamps?output_format=pcm_{SAMPLE_RATE}", body)
+    # pcm_44100 needs the Pro tier. Fall back to pcm_24000 on lower plans and report the rate used.
+    global _ALLOWED_RATE
+    for rate in ((_ALLOWED_RATE,) if _ALLOWED_RATE else (SAMPLE_RATE, 24000)):
+        try:
+            res = request("POST", f"/v1/text-to-speech/{voice_id}/with-timestamps?output_format=pcm_{rate}", body)
+            res["_rate"] = rate
+            _ALLOWED_RATE = rate
+            return res
+        except RuntimeError as err:
+            if "output_format_not_allowed" not in str(err) or rate == 24000:
+                raise
+            print(f"pcm_{rate} not allowed on this plan, falling back to pcm_24000", file=sys.stderr)
 
 
 def cmd_candidates(args):
-    out = os.path.join(OUT, "candidates")
+    text, descriptions = CANDIDATE_SETS[args.set]
+    out = os.path.join(OUT, "candidates" if args.set == "ankhu" else "candidates_" + args.set)
     os.makedirs(out, exist_ok=True)
     profile = load_profile()
-    report = {"text": CANDIDATE_TEXT, "designed": [], "account": []}
+    report = {"text": text, "designed": [], "account": []}
+    json_path = os.path.join(out, "candidates.json")
 
-    for label, description in VOICE_DESCRIPTIONS.items():
-        body = {"voice_description": description, "text": CANDIDATE_TEXT, "model_id": "eleven_multilingual_ttv_v2", "seed": 7}
+    for label, description in descriptions.items():
+        body = {"voice_description": description, "text": text, "model_id": "eleven_multilingual_ttv_v2", "seed": 7}
         try:
             result = request("POST", "/v1/text-to-voice/design", body)
         except RuntimeError as err:
             print(f"design endpoint failed ({err}); trying create-previews", file=sys.stderr)
-            body = {"voice_description": description, "text": CANDIDATE_TEXT}
+            body = {"voice_description": description, "text": text}
             result = request("POST", "/v1/text-to-voice/create-previews", body)
         for i, preview in enumerate(result.get("previews", [])):
             name = label if i == 0 else f"{label}_alt{i}"
@@ -254,6 +306,8 @@ def cmd_candidates(args):
                 "generated_voice_id": preview.get("generated_voice_id"), "duration_secs": preview.get("duration_secs"),
             })
             print(f"wrote {path}")
+        with open(json_path, "w", encoding="utf-8") as fh:  # save ids as we go, so a later crash loses nothing
+            json.dump(report, fh, indent=2)
 
     # One voice already in the account (premade or owned), chosen by its labels, for a baseline.
     voices = request("GET", "/v2/voices?page_size=100").get("voices", [])
@@ -268,32 +322,34 @@ def cmd_candidates(args):
         s -= 3 if any(w in desc for w in ("energetic", "excited", "upbeat", "child")) else 0
         return s
 
-    ranked = sorted(voices, key=score, reverse=True)[: args.account_voices]
+    ranked = sorted(voices, key=score, reverse=True)[: args.account_voices] if args.account_voices else []
     for v in ranked:
-        res = tts(v["voice_id"], profile, CANDIDATE_TEXT, seed=7)
+        res = tts(v["voice_id"], profile, text, seed=7)
         name = "C_account_" + "".join(ch for ch in v.get("name", "voice") if ch.isalnum())
         path = os.path.join(out, name + ".wav")
-        write_wav(path, base64.b64decode(res["audio_base64"]))
+        write_wav(path, base64.b64decode(res["audio_base64"]), res["_rate"])
         report["account"].append({"name": name, "file": os.path.basename(path), "voice_id": v["voice_id"],
-                                  "voice_name": v.get("name"), "labels": v.get("labels"), "category": v.get("category")})
+                                  "voice_name": v.get("name"), "labels": v.get("labels"), "category": v.get("category"), "sample_rate": res["_rate"]})
         print(f"wrote {path}")
 
-    with open(os.path.join(out, "candidates.json"), "w", encoding="utf-8") as fh:
+    with open(json_path, "w", encoding="utf-8") as fh:
         json.dump(report, fh, indent=2)
     print("candidates.json written")
 
 
 def cmd_save_voice(args):
-    description = args.description or VOICE_DESCRIPTIONS.get(args.label or "", "Ankhu, priest of ancient Egypt")
+    all_desc = dict(VOICE_DESCRIPTIONS, **ANPU_DESCRIPTIONS)
+    description = args.description or all_desc.get(args.label or "", args.name)
     res = request("POST", "/v1/text-to-voice", {
         "voice_name": args.name, "voice_description": description, "generated_voice_id": args.generated_id})
+    path = args.profile or PROFILE
     profile = load_profile()
     profile["voice_id"] = res["voice_id"]
     profile["voice_name"] = args.name
-    with open(PROFILE, "w", encoding="utf-8") as fh:
+    with open(path, "w", encoding="utf-8") as fh:
         json.dump(profile, fh, indent=2)
         fh.write("\n")
-    print(f"saved voice {args.name} as {res['voice_id']} in voice_profile.json")
+    print(f"saved voice {args.name} as {res['voice_id']} in {os.path.basename(path)}")
 
 
 def cmd_use_voice(args):
@@ -326,7 +382,7 @@ def cmd_batch(args):
                     skipped += 1
                     continue
         res = tts(profile["voice_id"], profile, t["text"], t["previous_text"], t["next_text"], t["seed"])
-        write_wav(wav_path, base64.b64decode(res["audio_base64"]))
+        write_wav(wav_path, base64.b64decode(res["audio_base64"]), res["_rate"])
         meta = dict(t, hash=h, voice_id=profile["voice_id"], model_id=profile["model_id"],
                     voice_settings=profile["voice_settings"], alignment=res.get("alignment"),
                     normalized_alignment=res.get("normalized_alignment"))
@@ -370,9 +426,11 @@ def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
     e = sub.add_parser("expand"); e.add_argument("-v", "--verbose", action="store_true"); e.set_defaults(fn=cmd_expand)
-    c = sub.add_parser("candidates"); c.add_argument("--account-voices", type=int, default=1); c.set_defaults(fn=cmd_candidates)
+    c = sub.add_parser("candidates"); c.add_argument("--account-voices", type=int, default=1)
+    c.add_argument("--set", choices=sorted(CANDIDATE_SETS), default="ankhu"); c.set_defaults(fn=cmd_candidates)
     s = sub.add_parser("save-voice"); s.add_argument("--generated-id", required=True); s.add_argument("--name", default="Ankhu")
-    s.add_argument("--label"); s.add_argument("--description"); s.set_defaults(fn=cmd_save_voice)
+    s.add_argument("--label"); s.add_argument("--description"); s.add_argument("--profile")
+    s.set_defaults(fn=cmd_save_voice)
     u = sub.add_parser("use-voice"); u.add_argument("--voice-id", required=True); u.add_argument("--name"); u.set_defaults(fn=cmd_use_voice)
     b = sub.add_parser("batch"); b.add_argument("--only"); b.add_argument("--force", action="store_true"); b.set_defaults(fn=cmd_batch)
     a = sub.add_parser("asr"); a.add_argument("dir"); a.add_argument("--out"); a.set_defaults(fn=cmd_asr)
