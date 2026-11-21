@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "speaker": "keeper",
+  "source": "Assets/Ankhu/Realms/Core/Content/WernesScripts.cs",
+  "lines": [
+    {
+      "key": "dialogue.keeper.arit1.1",
+      "text": "Someone knows my name. I lift my face.",
+      "context": "Face-downward, the keeper of the first gate, a stone figure lying on its face. Deep, slow, waking from long silence. Scene: The First Gate."
+    }
+  ]
+}

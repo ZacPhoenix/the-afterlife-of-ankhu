@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "speaker": "neferet",
+  "source": "Assets/Ankhu/Realms/Core/Content/WernesScripts.cs",
+  "lines": [
+    {
+      "key": "dialogue.neferet.field.1",
+      "text": "Bring him back before dark. He will not sleep if he sees the stars come out.",
+      "context": "Neferet, Ankhu's young wife, calling from the riverbank at sunset, warm and amused. A memory. Scene: The Field That Waits. This line is a memory, heard as if from far away."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "speaker": "announcer",
+  "source": "Assets/Ankhu/Realms/Core/Content/WernesScripts.cs",
+  "lines": [
+    {
+      "key": "dialogue.announcer.arit1.1",
+      "text": "Who comes? Who comes to the gate in the night?",
+      "context": "Sad of Voice, the announcer of the first gate of the Duat. A low, mournful, carrying voice, slow, like a lament. Scene: The First Gate."
+    },
+    {
+      "key": "dialogue.announcer.arit1.2",
+      "text": "I know you now. I will announce you as I announce them all.",
+      "context": "Sad of Voice, the announcer of the first gate of the Duat. A low, mournful, carrying voice, slow, like a lament. Scene: The First Gate."
+    },
+    {
+      "key": "dialogue.announcer.arit1.3",
+      "text": "Ankhu comes, who wore the face of Anpu over the dead.",
+      "context": "Sad of Voice, the announcer of the first gate of the Duat. A low, mournful, carrying voice, slow, like a lament. Scene: The First Gate."
+    }
+  ]
+}

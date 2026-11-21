@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "speaker": "guardian",
+  "source": "Assets/Ankhu/Realms/Core/Content/WernesScripts.cs",
+  "lines": [
+    {
+      "key": "dialogue.guardian.arit1.1",
+      "text": "A son. A father. A husband. A man who stopped speaking.",
+      "context": "Eavesdropper, the guardian of the first gate. A dry, close, whispering voice that has heard everything. Scene: The First Gate."
+    },
+    {
+      "key": "dialogue.guardian.arit1.2",
+      "text": "Called by name. I listen for you now.",
+      "context": "Eavesdropper, the guardian of the first gate. A dry, close, whispering voice that has heard everything. Scene: The First Gate."
+    }
+  ]
+}
