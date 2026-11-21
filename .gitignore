@@ -44,3 +44,5 @@ Thumbs.db
 
 # Voice pipeline working files (raw TTS output stays on the generating machine)
 /tools/voice/out/
+__pycache__/
+*.pyc
