@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Mirrors Assets/Ankhu/Bindings/Ankhu.Bindings.asmdef: references Ankhu.Integration, Ankhu.Runtime, Ankhu.BorrowedDawn. -->
+  <PropertyGroup>
+    <AssemblyName>Ankhu.Bindings</AssemblyName>
+    <RootNamespace>Ankhu.Bindings</RootNamespace>
+    <UsesUnityEngine>true</UsesUnityEngine>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(AnkhuRoot)Bindings/**/*.cs" />
+    <ProjectReference Include="../Ankhu.Integration/Ankhu.Integration.csproj" />
+    <ProjectReference Include="../Ankhu.Runtime/Ankhu.Runtime.csproj" />
+    <ProjectReference Include="../Ankhu.BorrowedDawn/Ankhu.BorrowedDawn.csproj" />
+  </ItemGroup>
+</Project>

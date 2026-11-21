@@ -28,6 +28,7 @@ namespace Ankhu.Player
         private ContactFilter2D filter;
         private Rigidbody2D body;
         private Interactable focus;
+        private bool focusUseAvailable;
 
         public Interactable Focus => focus;
 
@@ -63,13 +64,21 @@ namespace Ankhu.Player
         private void Update()
         {
             focus = FindFocus();
+            focusUseAvailable = focus != null && IsUseAvailable(focus);
             if (focus == null)
             {
                 return;
             }
             if (GameplayKeys.Pressed(Key.E))
             {
-                Use(focus);
+                if (focusUseAvailable)
+                {
+                    Use(focus);
+                }
+                else
+                {
+                    Inspect(focus);
+                }
             }
             else if (GameplayKeys.Pressed(Key.Q))
             {
@@ -83,7 +92,7 @@ namespace Ankhu.Player
             {
                 return;
             }
-            bool show = focus != null && !InputGate.TextEntryActive;
+            bool show = focus != null && !InputGate.TextEntryActive && !Ankhu.Speech.SpeechBubbleController.AnyVisible;
             Vector2 local = Vector2.zero;
             if (show)
             {
@@ -98,7 +107,7 @@ namespace Ankhu.Player
             {
                 return;
             }
-            string prompt = BuildPrompt(focus);
+            string prompt = BuildPrompt(focus, focusUseAvailable);
             if (promptText.text != prompt)
             {
                 promptText.text = prompt;
@@ -106,11 +115,34 @@ namespace Ankhu.Player
             promptText.rectTransform.anchoredPosition = local;
         }
 
-        public static string BuildPrompt(Interactable target)
+        /// <summary>
+        /// Asks the rules, without changing anything, whether using the target would succeed from
+        /// here. Only a definite refusal hides the prompt. Adapters that cannot evaluate rules keep it.
+        /// </summary>
+        private bool IsUseAvailable(Interactable target)
+        {
+            if (!target.HasUse)
+            {
+                return false;
+            }
+            RoomRulesHost host = RoomRulesHost.Instance;
+            if (host == null || host.Adapter == null)
+            {
+                return true;
+            }
+            PlayerContext context = zoneTracker != null ? zoneTracker.Context : new PlayerContext(ZoneIds.Floor, false, false);
+            CommandResult preview = host.Adapter.Preview(target.InteractionId, context);
+            return preview == null ||
+                   (preview.Outcome != CommandOutcome.Rejected &&
+                    preview.Outcome != CommandOutcome.InvalidTarget &&
+                    preview.Outcome != CommandOutcome.NoChange);
+        }
+
+        public static string BuildPrompt(Interactable target, bool useAvailable)
         {
             string name = LowerFirst(string.IsNullOrEmpty(target.DisplayName) ? "it" : target.DisplayName);
             string inspect = "Q  Inspect " + name;
-            if (!target.HasUse)
+            if (!target.HasUse || !useAvailable)
             {
                 return inspect;
             }

@@ -4,6 +4,9 @@
     "references": [
         "Ankhu.Runtime",
         "Ankhu.Integration",
+        "Ankhu.Editor",
+        "Ankhu.Bindings",
+        "Ankhu.BorrowedDawn",
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner"
     ],

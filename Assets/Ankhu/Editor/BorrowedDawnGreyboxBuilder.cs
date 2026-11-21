@@ -30,6 +30,38 @@ namespace Ankhu.EditorTools
         public const string PrefabsFolder = GeneratedRoot + "/Prefabs";
         public const string ScenesFolder = GeneratedRoot + "/Scenes";
         public const string ScenePath = ScenesFolder + "/BorrowedDawn_Greybox.unity";
+        public const string TeachingDirectorTypeName = "Ankhu.Bindings.TeachingRoomDirector, Ankhu.Bindings";
+
+        /// <summary>
+        /// One playable scene of the sequence. Teaching rooms reuse the full Borrowed Dawn kit, so the
+        /// geometry is identical. Only the rules room, Ankhu's spawn and an optional seal differ.
+        /// </summary>
+        public sealed class RoomSceneSpec
+        {
+            public string SceneName;
+            public string RoomId;
+            public Vector2 Spawn;
+            /// <summary>Seals the upper walkway at the east end of the gallery so the lesson stays in view.</summary>
+            public bool SealGalleryEast;
+
+            public string ScenePath => ScenesFolder + "/" + SceneName + ".unity";
+        }
+
+        /// <summary>Play order. Scene names must match Ankhu.Bindings.BorrowedDawnRooms.</summary>
+        public static readonly RoomSceneSpec[] Sequence =
+        {
+            new RoomSceneSpec { SceneName = "Teach1_Cistern", RoomId = "teach-1-cistern", Spawn = L.Spawn, SealGalleryEast = true },
+            new RoomSceneSpec
+            {
+                SceneName = "Teach2_HeldStep", RoomId = "teach-2-held-step",
+                Spawn = new Vector2((L.ShaftMinX + L.ShaftMaxX) * 0.5f, L.PlatformHighY), SealGalleryEast = true,
+            },
+            new RoomSceneSpec { SceneName = "Teach3_LingeringShadow", RoomId = "teach-3-lingering-shadow", Spawn = L.Spawn },
+            new RoomSceneSpec { SceneName = "BorrowedDawn_Greybox", RoomId = "borrowed-dawn", Spawn = L.Spawn },
+        };
+
+        /// <summary>The first teaching room, opened after a build so pressing Play starts at the beginning.</summary>
+        public static string FirstScenePath => Sequence[0].ScenePath;
 
         // Cosmetic sizes that are not part of the layout contract.
         private const float PedestalHeight = 0.3f;
@@ -51,7 +83,7 @@ namespace Ankhu.EditorTools
                 return;
             }
             Build();
-            Debug.Log("Borrowed Dawn greybox built at " + ScenePath);
+            Debug.Log("Borrowed Dawn greybox built at " + ScenePath + ", with Anpu's teaching rooms. Press Play to start at " + Sequence[0].SceneName + ".");
         }
 
         /// <summary>Entry point for -executeMethod Ankhu.EditorTools.BorrowedDawnGreyboxBuilder.BuildFromCommandLine.</summary>
@@ -70,6 +102,10 @@ namespace Ankhu.EditorTools
             }
         }
 
+        /// <summary>
+        /// Builds every scene of the sequence (three teaching rooms, then Borrowed Dawn), puts them in
+        /// Build Settings in play order, and leaves the first teaching room open.
+        /// </summary>
         public static void Build()
         {
             Debug.Log(UniversalPipelineSetup.EnsureUniversalPipeline());
@@ -80,6 +116,18 @@ namespace Ankhu.EditorTools
             EnsureFolder(ScenesFolder);
             CreateMaterials();
 
+            foreach (RoomSceneSpec spec in Sequence)
+            {
+                BuildRoomScene(spec);
+            }
+            SetBuildSettingsOrder();
+            AssetDatabase.SaveAssets();
+            AssetDatabase.Refresh();
+            EditorSceneManager.OpenScene(FirstScenePath, OpenSceneMode.Single);
+        }
+
+        private static void BuildRoomScene(RoomSceneSpec spec)
+        {
             Scene scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
 
             Transform room = new GameObject("Room").transform;
@@ -107,22 +155,67 @@ namespace Ankhu.EditorTools
             PendulumBridge bridge = BuildBridge(movers);
             BuildChainBarriers(movers, bridge);
             BuildGate(props, interactables);
+            if (spec.SealGalleryEast)
+            {
+                BuildLessonSeal(structure);
+            }
             BuildLighting();
 
-            new GameObject("RoomRulesHost").AddComponent<RoomRulesHost>();
+            GameObject hostObject = new GameObject("RoomRulesHost");
+            hostObject.AddComponent<RoomRulesHost>();
+            AddRulesInstaller(hostObject, spec.RoomId);
+            if (spec.RoomId != "borrowed-dawn")
+            {
+                AddByName(hostObject, TeachingDirectorTypeName);
+            }
             new GameObject("Debug").AddComponent<TraversalDebugPanel>();
 
-            Camera camera = BuildCamera();
-            Ankhu.Player.PlayerRigFactory.Create(L.Spawn, camera);
+            Camera camera = BuildCamera(spec.Spawn);
+            Ankhu.Player.PlayerRigFactory.Create(spec.Spawn, camera);
 
             EditorSceneManager.MarkSceneDirty(scene);
-            if (!EditorSceneManager.SaveScene(scene, ScenePath))
+            if (!EditorSceneManager.SaveScene(scene, spec.ScenePath))
             {
-                throw new InvalidOperationException("Could not save scene at " + ScenePath);
+                throw new InvalidOperationException("Could not save scene at " + spec.ScenePath);
             }
-            AddSceneToBuildSettings();
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
+        }
+
+        /// <summary>A stone wall across the upper walkway at the gallery's east end.</summary>
+        private static void BuildLessonSeal(Transform parent)
+        {
+            Solid("Lesson Seal", parent, L.GalleryMaxX - 0.4f, L.UpperY, L.GalleryMaxX, L.CeilingY, "StoneDark");
+        }
+
+        public const string RulesInstallerTypeName = "Ankhu.Bindings.BorrowedDawnRulesInstaller, Ankhu.Bindings";
+
+        /// <summary>
+        /// Adds the rules library binding. The greybox is not useful without it, so a missing binding
+        /// fails the build loudly instead of silently producing a scene that answers no spells.
+        /// Reflection keeps this editor assembly free of a compile-time reference to the rules package.
+        /// </summary>
+        private static void AddRulesInstaller(GameObject hostObject, string roomId)
+        {
+            Component installer = AddByName(hostObject, RulesInstallerTypeName);
+            var serialized = new SerializedObject(installer);
+            SerializedProperty room = serialized.FindProperty("roomId");
+            if (room == null)
+            {
+                throw new InvalidOperationException("BorrowedDawnRulesInstaller has no serialized roomId field.");
+            }
+            room.stringValue = roomId;
+            serialized.ApplyModifiedPropertiesWithoutUndo();
+        }
+
+        private static Component AddByName(GameObject target, string assemblyQualifiedName)
+        {
+            Type type = Type.GetType(assemblyQualifiedName);
+            if (type == null)
+            {
+                throw new InvalidOperationException(
+                    "Ankhu.Bindings is not compiled, so the greybox would have no rules. Check the Console for compile errors " +
+                    "in Assets/Ankhu/Bindings or Packages/com.ankhu.borrowed-dawn, fix them, then build again.");
+            }
+            return target.AddComponent(type);
         }
 
         // Materials
@@ -475,13 +568,17 @@ namespace Ankhu.EditorTools
             Block("GateLedgeSlab_West", parent, L.GateLedgeMinX, slabBottom, L.DeflectorX - 0.15f, L.UpperY, "UpperSlab");
             Block("GateLedgeSlab_East", parent, L.DeflectorX + 0.15f, slabBottom, L.GateLedgeMaxX, L.UpperY, "UpperSlab");
 
-            // Light-well grille: bars across the opening so the sun passes between them.
-            int bars = 5;
+            // Light well: a real opening in the slab, framed in gold so it reads as a hole the sun
+            // passes through. Three thin bronze bars form the walkable grille (the walk collider is
+            // continuous). The opening is wider than the beam's footprint at slab height.
+            Block("LightWellLip_West", parent, L.LightWellMinX - 0.08f, slabBottom - 0.05f, L.LightWellMinX, L.UpperY + 0.02f, "Bronze");
+            Block("LightWellLip_East", parent, L.LightWellMaxX, slabBottom - 0.05f, L.LightWellMaxX + 0.08f, L.UpperY + 0.02f, "Bronze");
+            int bars = 3;
             float span = L.LightWellMaxX - L.LightWellMinX;
             for (int i = 0; i < bars; i++)
             {
-                float x = L.LightWellMinX + span * (i + 0.5f) / bars;
-                Block("LightWellBar_" + i, parent, x - 0.03f, slabBottom, x + 0.03f, L.UpperY, "StoneDark");
+                float x = L.LightWellMinX + span * (i + 1f) / (bars + 1f);
+                Block("LightWellBar_" + i, parent, x - 0.02f, L.UpperY - 0.06f, x + 0.02f, L.UpperY, "Bronze");
             }
 
             // Foreground framing pillars, no colliders.
@@ -986,7 +1083,7 @@ namespace Ankhu.EditorTools
             spot.shadows = LightShadows.Soft;
         }
 
-        private static Camera BuildCamera()
+        private static Camera BuildCamera(Vector2 spawn)
         {
             GameObject go = new GameObject("Main Camera");
             go.tag = "MainCamera";
@@ -999,27 +1096,30 @@ namespace Ankhu.EditorTools
             float halfWidth = L.CameraOrthoSize * 16f / 9f;
             float minX = L.RoomMinX + halfWidth;
             float maxX = L.RoomMaxX - halfWidth;
-            float x = minX <= maxX ? Mathf.Clamp(L.Spawn.x, minX, maxX) : (L.RoomMinX + L.RoomMaxX) * 0.5f;
+            float x = minX <= maxX ? Mathf.Clamp(spawn.x, minX, maxX) : (L.RoomMinX + L.RoomMaxX) * 0.5f;
             go.transform.position = new Vector3(x, L.CameraFixedY, -10f);
             return camera;
         }
 
         // Assets and settings
 
-        private static void AddSceneToBuildSettings()
+        /// <summary>Puts the sequence first in Build Settings, in play order, and keeps any other scenes after it.</summary>
+        private static void SetBuildSettingsOrder()
         {
-            EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
-            for (int i = 0; i < scenes.Length; i++)
+            var list = new List<EditorBuildSettingsScene>();
+            var ours = new HashSet<string>();
+            foreach (RoomSceneSpec spec in Sequence)
             {
-                if (scenes[i].path == ScenePath)
+                list.Add(new EditorBuildSettingsScene(spec.ScenePath, true));
+                ours.Add(spec.ScenePath);
+            }
+            foreach (EditorBuildSettingsScene existing in EditorBuildSettings.scenes)
+            {
+                if (!ours.Contains(existing.path))
                 {
-                    return;
+                    list.Add(existing);
                 }
             }
-            List<EditorBuildSettingsScene> list = new List<EditorBuildSettingsScene>(scenes)
-            {
-                new EditorBuildSettingsScene(ScenePath, true)
-            };
             EditorBuildSettings.scenes = list.ToArray();
         }
 

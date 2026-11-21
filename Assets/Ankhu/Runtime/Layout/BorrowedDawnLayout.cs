@@ -69,8 +69,8 @@ namespace Ankhu.Layout
 
         // Sun and beam
         public static readonly Vector2 ClerestoryPoint = new Vector2(8.6f, 10f);
-        public const float LightWellMinX = 9.9f;      // grille in the gallery slab the sun passes through
-        public const float LightWellMaxX = 11f;
+        public const float LightWellMinX = 9.6f;      // opening in the gallery slab the sun passes through
+        public const float LightWellMaxX = 11.3f;
         public const float SocketX = 11.5f;
         public const float BeamY = 1.4f;              // horizontal beam height on the floor tier
         public const float BearerAlcoveX = 9.6f;      // west of the socket, outside the beam

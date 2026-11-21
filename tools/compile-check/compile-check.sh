@@ -24,7 +24,7 @@ mkdir -p "$LOGS"; rm -f "$LOGS"/*.log
 "$HERE/fetch-refs.sh" || { echo "could not fetch Unity reference assemblies" >&2; exit 2; }
 
 # asmdef boundary sanity: these projects assume exactly these asmdefs.
-known="Editor/Ankhu.Editor.asmdef Runtime/Ankhu.Runtime.asmdef Runtime/Integration/Ankhu.Integration.asmdef"
+known="Bindings/Ankhu.Bindings.asmdef Editor/Ankhu.Editor.asmdef Runtime/Ankhu.Runtime.asmdef Runtime/Integration/Ankhu.Integration.asmdef"
 while IFS= read -r a; do
   rel="${a#$ASSETS/}"
   case " $known " in *" $rel "*) continue;; esac

@@ -5,6 +5,8 @@
     <P Include="Ankhu.Integration/Ankhu.Integration.csproj" />
     <P Include="Ankhu.Runtime/Ankhu.Runtime.csproj" />
     <P Include="Ankhu.Editor/Ankhu.Editor.csproj" />
+    <P Include="Ankhu.BorrowedDawn/Ankhu.BorrowedDawn.csproj" />
+    <P Include="Ankhu.Bindings/Ankhu.Bindings.csproj" />
     <P Include="Ankhu.Tests.EditMode/Ankhu.Tests.EditMode.csproj" />
   </ItemGroup>
   <Target Name="Build">
