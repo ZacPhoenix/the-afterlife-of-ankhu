@@ -1,0 +1,1230 @@
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 38924)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 34104)
+VBCSCompiler prewarm took 16.78 ms
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Channel LicenseClient-zaclu doesn't exist
+Built from '6000.6/staging' branch; Version is '6000.6.3f1 (45d8eee7de74) revision 4577518'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26300) Core' Language: 'en' Physical Memory: 98043 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-11-25T07:38:29Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 40232)
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Unity.exe
+-batchmode
+-projectPath
+D:\TheAfterlifeofAnkhu
+-executeMethod
+Ankhu.Realms.EditorTools.RealmSceneBuilder.BuildRosetauCli
+-logFile
+D:\TheAfterlifeofAnkhu\art_gen\rosetau\logs\build2.log
+Successfully changed project path to: D:\TheAfterlifeofAnkhu
+D:/TheAfterlifeofAnkhu
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=1"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.
+Player connection [19364]  Target information:
+
+Player connection [19364]  * "[IP] 192.168.1.231 [Port] 55504 [Flags] 2 [Guid] 3961357407 [EditorId] 3961357407 [Version] 1048832 [Id] WindowsEditor(7,ZacLenovo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [19364]  * "[IP] 172.24.0.1 [Port] 55504 [Flags] 2 [Guid] 3961357407 [EditorId] 3961357407 [Version] 1048832 [Id] WindowsEditor(7,ZacLenovo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [19364] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [19364] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Starting IPC server.
+Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-zaclu, press Ctrl-C to exit.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-zaclu" at "2026-11-25T07:38:29.5308582Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 40232, path: "C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              6e3da71260224d3798ae2d3798e26f0a
+  Correlation Id:          6d41033fb54f3a83317ac8a7ecac55ee
+  External correlation Id: 6477086671270257381
+  Machine Id:              75cw/7rfqwpPgCb3W3AB1gXGriU=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-zaclu" (connect: 0.37s, validation: 0.06s, handshake: 0.07s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-zaclu-notifications" at "2026-11-25T07:38:29.6636512Z"
+[Licensing::Module] Connected to LicensingClient (PId: 40232, launch time: 0.00, total connection time: 0.51s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 2475338760178-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Package Manager] Connected to IPC stream "Upm-12656" after 0.3 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.54s
+[Licensing::Module] Licensing is initialized (took 0.00s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+Initialising UDS system complete:
+  - System type: Client
+  - Resource namespace: 0ee2fab501261e53eff613af4acc6586
+  - Shared memory size: 1073741824
+  - Command buffer id: 1052576
+  - Command buffer size: 8192
+  - Hashmap size: 4194304
+  - Service connected: false
+Launching Unity Data Store - C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Tools/Unity.DataStore.exe 
+Unity Data Store artifact dir = Library/DataStore, working dir = D:/TheAfterlifeofAnkhuUnity Data Store running and initialised
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.6.3f1 (45d8eee7de74)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/TheAfterlifeofAnkhu/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 4080 Laptop GPU (ID=0x27e0)
+    Vendor:          NVIDIA
+    VRAM:            11995 MB
+    App VRAM Budget: 11227 MB
+    Driver:          32.0.16.1742
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56656
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.001810 seconds.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Licensing::Client] Successfully resolved entitlement details
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  1.214 seconds
+Domain Reload Profiling: 1632ms
+	BeginReloadAssembly (107ms)
+		CreateAndSetChildDomain (14ms)
+	RebuildCommonClasses (4ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (244ms)
+		LoadAssemblies (91ms)
+		TypeCache.Refresh (162ms)
+			TypeCache.ScanAssembly (152ms)
+		AnalyzeDomain (0ms)
+	FinalizeReload (1215ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (28ms)
+			BeforeProcessingInitializeOnLoad (76ms)
+			ProcessInitializeOnLoadAttributes (67ms)
+			ProcessInitializeOnLoadMethodAttributes (851ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 54 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.inputsystem@1.20.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.inputsystem@7a4e1a2a8194)
+    com.unity.searcher@4.9.5 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.searcher@a463122f2c00)
+    com.unity.profiling.core@1.0.3 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.profiling.core@8a49f7027d06)
+    com.unity.nuget.mono-cecil@1.11.6 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+  Built-in packages:
+    com.unity.render-pipelines.universal@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.render-pipelines.universal@327d93d1cbc8)
+    com.unity.test-framework@1.8.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.test-framework@80f691d4262b)
+    com.unity.ugui@2.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.ugui@0727b404f3a0)
+    com.unity.modules.accessibility@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tetgen@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.tetgen)
+    com.unity.modules.tilemap@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.timelinefoundation@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.timelinefoundation)
+    com.unity.modules.ui@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.ext.nunit@0198eae3b53e)
+    com.unity.render-pipelines.core@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.render-pipelines.core@02d75770e4b3)
+    com.unity.shadergraph@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.shadergraph@1dd0fd24b57e)
+    com.unity.render-pipelines.universal-config@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.render-pipelines.universal-config@561422b74439)
+    com.unity.graph-authoring@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.graph-authoring@cfd2588851ee)
+    com.unity.burst@2.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.burst@626e66ab421b)
+    com.unity.collections@6.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.collections@10fff0607388)
+    com.unity.test-framework.performance@6.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.test-framework.performance@b6023decb532)
+  Embedded packages:
+    com.ankhu.borrowed-dawn@file:D:\TheAfterlifeofAnkhu\Packages\com.ankhu.borrowed-dawn (location: D:\TheAfterlifeofAnkhu\Packages\com.ankhu.borrowed-dawn)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/TheAfterlifeofAnkhu
+DisplayProgressbar: Compiling Scripts
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll"
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.componentmodel.composition has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.ComponentModel.Composition.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ComponentModel.Composition.dll"
+ExitCode: 0 Duration: 3s606ms
+[673/871    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[863/871    1s] Csc Library/Bee/artifacts/1900b0aE.dag/Ankhu.Realms.Editor.dll (+2 others)
+Assets\Ankhu\Realms\Editor\PaintedRoomAudit.cs(51,112): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\PaintedRoomAudit.cs(51,36): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(76,83): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(76,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(85,77): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(85,32): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\PlayOrderCheck.cs(116,101): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\PlayOrderCheck.cs(116,20): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(116,71): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(116,26): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(637,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(637,35): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(640,74): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(640,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(642,100): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(642,47): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(643,85): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(643,40): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesCards.cs(24,105): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesCards.cs(24,39): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesCards.cs(31,102): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesCards.cs(31,37): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(22,102): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(22,37): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(186,128): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(186,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(313,126): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(313,43): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(320,117): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(320,39): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(344,96): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(344,20): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(449,93): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(449,39): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(452,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(452,31): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(454,104): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(454,51): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(455,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(455,44): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\PlayOrderCheck.cs(106,36): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
+
+Assets\Ankhu\Realms\Editor\GlyphCoverageCheck.cs(187,36): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
+[864/871    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Ankhu.Realms.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Ankhu.Realms.Editor.dll, with 147 defines and 311 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[865/871    0s] CopyFiles Library/ScriptAssemblies/Ankhu.Realms.Editor.dll
+[866/871    0s] CopyFiles Library/ScriptAssemblies/Ankhu.Realms.Editor.pdb
+[867/871    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+[868/871    1s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll, with 149 defines and 344 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[869/871    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[870/871    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+*** Tundra build success (3.57 seconds), 9 items updated, 871 evaluated
+Assets\Ankhu\Realms\Editor\PaintedRoomAudit.cs(51,112): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\PaintedRoomAudit.cs(51,36): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(76,83): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(76,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(85,77): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(85,32): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\PlayOrderCheck.cs(116,101): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\PlayOrderCheck.cs(116,20): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(116,71): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(116,26): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(637,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(637,35): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(640,74): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(640,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(642,100): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(642,47): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(643,85): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(643,40): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesCards.cs(24,105): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesCards.cs(24,39): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesCards.cs(31,102): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesCards.cs(31,37): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(22,102): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(22,37): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(186,128): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(186,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(313,126): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(313,43): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(320,117): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(320,39): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(344,96): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(344,20): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(449,93): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(449,39): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(452,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(452,31): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(454,104): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(454,51): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(455,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(455,44): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\PlayOrderCheck.cs(106,36): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
+Assets\Ankhu\Realms\Editor\GlyphCoverageCheck.cs(187,36): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
+AssetDatabase: script compilation time: 4.066497s
+Begin MonoManager ReloadAssembly
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.578 seconds
+Domain Reload Profiling: 1213ms
+	BeginReloadAssembly (270ms)
+		DisableScriptedObjects (17ms)
+		CreateAndSetChildDomain (135ms)
+	RebuildCommonClasses (7ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (312ms)
+		LoadAssemblies (196ms)
+		TypeCache.Refresh (62ms)
+			TypeCache.ScanAssembly (55ms)
+		AnalyzeDomain (32ms)
+			BuildScriptInfoCaches (26ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (578ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (103ms)
+			ProcessInitializeOnLoadMethodAttributes (176ms)
+			AfterProcessingInitializeOnLoad (6ms)
+		AwakeInstancesAfterBackupRestoration (27ms)
+Starting new worker id: 0 with log in D:/TheAfterlifeofAnkhu/Logs/AssetImportWorkerHW0.log
+Importing 'GUID: 9849d4b2845c2284f871501f71ff76bf - Path: Assets/Ankhu/Realms/Art/Glyphs/_tools/make_glyphs.py' with importer (DefaultImporter)
+Imported 'GUID: 9849d4b2845c2284f871501f71ff76bf' -> (Import Result ID: '24433bb1f7a8c902eda3f0980afd213c') in 0.027 seconds [static dependencies only]. Details - ImportResultOutputID=776031a15eb51aeddbfcda2b7acd71d1 DependenciesID=51c665095f65073869af015c745044c4 StaticDependenciesID=eff61210b7c2abd364e49a072cf91636 
+Importing 'GUID: 01ccdbc9f2b77a94dbc5e6e78aceb3ee - Path: Assets/Ankhu/Realms/Art/Glyphs/Resources/RealmGlyphs/A28.png' with importer (TextureImporter)
+Imported 'GUID: 01ccdbc9f2b77a94dbc5e6e78aceb3ee' -> (Import Result ID: '8935ae2b66a4fc9dc5fa68244350fa3d') in 0.014 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3bce2c790f2b1edf473c22e0d248071f DependenciesID=4b288de7e6b13bedefe22bee3962c596 StaticDependenciesID=f238879364862aa0d16ede257facdacd 
+Importing 'GUID: 13c1680e2aac71242998499839cbb7ed - Path: Assets/Ankhu/Realms/Art/Glyphs/Resources/RealmGlyphs/U32.png' with importer (TextureImporter)
+Imported 'GUID: 13c1680e2aac71242998499839cbb7ed' -> (Import Result ID: 'b8d3b31a404eee0eccb8e1c7ffeb93a5') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c96e66beaf4764030e22de148b53881f DependenciesID=c5827bfd389b8c0eb3a2cbe5c1a07901 StaticDependenciesID=a09c2aea340547017fff5bc7a18ab160 
+Importing 'GUID: 539140681ea83ff47abb5ee9ce9f61f4 - Path: Assets/Ankhu/Realms/Art/Glyphs/Resources/RealmGlyphs/O9.png' with importer (TextureImporter)
+Imported 'GUID: 539140681ea83ff47abb5ee9ce9f61f4' -> (Import Result ID: '8b569d768114a5a6afb94445089ad4dc') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=457d14100f0777944cd46aeda561f7ec DependenciesID=e017501190f220dc7ef1b7a39d70f255 StaticDependenciesID=50bac064f27055d0f1073bf277770b4c 
+Importing 'GUID: 73bf0f97f7a03204e81fa5471784efbe - Path: Assets/Ankhu/Realms/Art/Memories/Resources/RealmMemories/pm_news.png' with importer (TextureImporter)
+Imported 'GUID: 73bf0f97f7a03204e81fa5471784efbe' -> (Import Result ID: '686fe7a95552ed22050f4c090f98abff') in 0.057 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c1c3c74261d327c8f603c557da162388 DependenciesID=3f9b0f9801a1fa1a192360c85d8fd3d5 StaticDependenciesID=b86ca4767a8b2b30a4b2dc12e4eb79d0 
+Importing 'GUID: 842de48a68c5ccc47bd8485be89bebe3 - Path: Assets/Ankhu/Realms/Art/Glyphs/Resources/RealmGlyphs/A28_glow.png' with importer (TextureImporter)
+Imported 'GUID: 842de48a68c5ccc47bd8485be89bebe3' -> (Import Result ID: '06349fada5a5f92b8ee0335eb3a49a05') in 0.003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dbcfb3ca454a85ef05886247e8715cc3 DependenciesID=034c86521cb1e8126d47c3ed812aee9a StaticDependenciesID=1e78178d5029ba7d008d7b7a56f16a0b 
+Importing 'GUID: 96dea9a1195b7f043bda8fd23be50aa0 - Path: Assets/Ankhu/Realms/Art/Glyphs/Resources/RealmGlyphs/F32.png' with importer (TextureImporter)
+Imported 'GUID: 96dea9a1195b7f043bda8fd23be50aa0' -> (Import Result ID: '6e0fe71f4e9544fce439bb5bd7f0bce8') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0fd7ca2479c2cf4b4bf83676d3dd3e14 DependenciesID=19fb40d16d905109243c73895a6f7948 StaticDependenciesID=f6062f27976d80c00fafc846da9a4db9 
+Importing 'GUID: e6ac3140d0e45ca4fae2a264fe92f594 - Path: Assets/Ankhu/Realms/Art/Memories/Resources/RealmMemories/pm_leaving.png' with importer (TextureImporter)
+Imported 'GUID: e6ac3140d0e45ca4fae2a264fe92f594' -> (Import Result ID: '941535dab8a324399caca4f6ea1c910c') in 0.056 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=633702526c880baa43d72cf07f90e8db DependenciesID=724b6afa5b675c391a26c59e657d12e5 StaticDependenciesID=214eb9a8b6631488884936c9f454c2f5 
+Importing 'GUID: 29f97cddde3e171459226ce14823282b - Path: Assets/Ankhu/Realms/Art/Memories/Resources/RealmMemories/pm_old_mother.png' with importer (TextureImporter)
+Imported 'GUID: 29f97cddde3e171459226ce14823282b' -> (Import Result ID: '3f872eb66082b19f558c927d9226aedd') in 0.058 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=befbe15be317fb50034175523ebd4497 DependenciesID=9b6273348067ba2b88b9c811d6e14ac5 StaticDependenciesID=3352d60e164b16c033d5f7113d6db7ca 
+Importing 'GUID: 3abd9674c0f22ac44b2d2d5317af3e53 - Path: Assets/Ankhu/Realms/Art/Glyphs/Resources/RealmGlyphs/G14_glow.png' with importer (TextureImporter)
+Imported 'GUID: 3abd9674c0f22ac44b2d2d5317af3e53' -> (Import Result ID: 'e894248c0b6d87473f9f2913dfdbf2d2') in 0.003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=91e071b83bf88324c851cc6d1a4a723d DependenciesID=9b03aae2f6fc9ef3797d2e148e58ea69 StaticDependenciesID=a082abe7f8bcadc6dc75c69d95f11369 
+Importing 'GUID: caa987ac79305ac4e909b92734b62ad2 - Path: Assets/Ankhu/Realms/Art/Glyphs/Resources/RealmGlyphs/G14.png' with importer (TextureImporter)
+Imported 'GUID: caa987ac79305ac4e909b92734b62ad2' -> (Import Result ID: '918d39b257be1873ddabdb3e3f435bc0') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=04385482605f90d50bc4e27a8411b8b4 DependenciesID=74749762faec6670e6cb63610ab82818 StaticDependenciesID=b6642ce83333cd02a8959742a45a8f6e 
+Importing 'GUID: ab164063030045541a19dc6005fb1ab5 - Path: Assets/Ankhu/Realms/Art/Glyphs/Resources/RealmGlyphs/F32_glow.png' with importer (TextureImporter)
+Imported 'GUID: ab164063030045541a19dc6005fb1ab5' -> (Import Result ID: 'c1318574a56d044b2552efe9beabb936') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cb17b8eb2c196fbcf19a9cf7ca4ea472 DependenciesID=4edc1fc72e5d20dbdb9f489b752dca5a StaticDependenciesID=5dc2695eadc2afa154be319ed69b9499 
+Importing 'GUID: ed2a1e504c6533f4fb3772c1f4e7a07a - Path: Assets/Ankhu/Realms/Art/Memories/Resources/RealmMemories/pm_hush.png' with importer (TextureImporter)
+Imported 'GUID: ed2a1e504c6533f4fb3772c1f4e7a07a' -> (Import Result ID: '9b2d9ff74906dc0a0250280c414c8e9d') in 0.054 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a10be4f5756ee4f13964c9ad25e56e12 DependenciesID=49a11cd795ba900286417174a7362d1c StaticDependenciesID=c0b371c836fca1567fa4a5e7bd46d239 
+Importing 'GUID: 9f13431e84bcf7f4bae39d1bcd915fb8 - Path: Assets/Ankhu/Realms/Art/Glyphs/Resources/RealmGlyphs/U32_glow.png' with importer (TextureImporter)
+Imported 'GUID: 9f13431e84bcf7f4bae39d1bcd915fb8' -> (Import Result ID: '3dfce68fc7fe03a700a2557ec4fe72c8') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=54b5c583def507c5cbfcdbba7085d7af DependenciesID=9836b9b68517cbe53531251abed36109 StaticDependenciesID=f939288f08065d3bed1271396b9a12f5 
+Importing 'GUID: ef8faac1f28a926429cf05872a6cbd66 - Path: Assets/Ankhu/Realms/Art/Glyphs/Resources/RealmGlyphs/O9_glow.png' with importer (TextureImporter)
+Imported 'GUID: ef8faac1f28a926429cf05872a6cbd66' -> (Import Result ID: '0311c97274aa8732030d3947b8946f80') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=068bfda8cf1d584d2763a196b4c3140e DependenciesID=49cf15c15b88a3cfa7aea165951bf9c4 StaticDependenciesID=6c39556777a99b585ba4f63651a8160b 
+Importing 'GUID: 8de875f427d9513429442bdfcbba7b5e - Path: Assets/Ankhu/Realms/Art/Glyphs/Resources/RealmGlyphs/glyph_table.json' with importer (TextScriptImporter)
+Imported 'GUID: 8de875f427d9513429442bdfcbba7b5e' -> (Import Result ID: '5c3ec68849640e3378dd2f22bf901f3f') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=297ea504e3d56ff8001989d7a4851633 DependenciesID=4b697c5f358a9195d30186cc72066cad StaticDependenciesID=9f1a3add18882be1a7617a9914e3c55b 
+
+Asset Pipeline Refresh (id=d0223115b3dc3c0498cca4028a81512f): Total: 6.014 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=16 (actual=16, local cache=0, cache server=0)
+		Asset DB Process Time: managed=4 ms, native=1102 ms
+		Asset DB Callback time: managed=116 ms, native=26 ms
+		Scripting: domain reloads=1, domain reload time=667 ms, compile time=4068 ms, other=28 ms
+		Project Asset Count: scripts=1085, non-scripts=3284
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 26.037ms
+	ApplyChangesToAssetFolders: 0.651ms
+	Scan: 55.882ms
+	Collect global state as custom dependencies: 12.482ms
+	OnSourceAssetsModified: 0.472ms
+	CategorizeScriptCompilationAssets: 12.835ms
+	ProcessAssetsWithTransientArtifactChanges: 29.151ms
+	CategorizeAssets: 39.205ms
+	CompileScripts: 4068.189ms
+	ImportOutOfDateAssets: 881.065ms (580.643ms without children)
+		ImportManagerImport: 290.915ms (1.338ms without children)
+			UpdateCategorizedAssets: 0.118ms
+		UnloadImportedAssets: 1.504ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.401ms
+		ImportSchedulerStart: 7.572ms
+	PostProcessAllAssets: 116.373ms
+		ShaderAssetModifiedCallback 0.054ms
+		MonoPostProcessAllAssets: 115.646ms
+			AssetPostprocessor.OnPostprocessAllAssets 65.481ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 11.282ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 11.010ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 6.080ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.791ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.321ms
+			AssetChangedListener.OnPostprocessAllAssets 1.288ms
+			SpellVoiceLibraryBuilder.OnPostprocessAllAssets 1.206ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.200ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 1.083ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.947ms
+			SyncVS.PostprocessSyncProject 0.796ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.594ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.582ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.547ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.411ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.399ms
+			PostProcessor.OnPostprocessAllAssets 0.301ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.285ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.235ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.218ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.212ms
+			AssetEvents.OnPostprocessAllAssets 0.208ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.184ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.132ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.115ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.113ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.106ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.101ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.091ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.085ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.055ms
+	PostAssetChangesProfiler: 1.540ms
+	UnloadStreamsBegin: 1.108ms
+	PersistCurrentRevisions: 0.173ms
+	GenerateScriptTypeHashes: 1.058ms
+	GenerateScriptTypeSerializationHashes: 1.936ms
+	Untracked: 767.042ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Scanning for USB devices : 3.479ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-TheAfterlifeofAnkhu
+Unloading 74 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3847 unused Assets / (10.2 MB). Loaded Objects now: 4802.
+Memory consumption went from 347.6 MB to 337.3 MB.
+Total: 7.594000 ms (FindLiveObjects: 0.699300 ms CreateObjectMapping: 0.172700 ms MarkObjects: 4.560200 ms  DeleteObjects: 1.988900 ms)
+
+Importing 'GUID: b80082c8e2534e5479d4154ee2a943a4 - Path: Assets/Ankhu/Realms/Art/Rosetau' with importer (DefaultImporter)
+Imported 'GUID: b80082c8e2534e5479d4154ee2a943a4' -> (Import Result ID: '9e3a8f87660ef6a701f47c1542d354ce') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=31fadaa584a16a0182c7232a7a65b716 DependenciesID=b3e7d7d872eefafea7bc7ebe7e2b8142 StaticDependenciesID=b3c67b02b1155993f8d16aa3cb958dfa 
+Asset Pipeline Refresh (id=5106c8fb5ed51b2429e76440c3b0c0b5): Total: 0.052 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 4752e5e28f92e444688312f9b9242b19 - Path: Assets/Ankhu/Realms/Art/Rosetau/Sprites' with importer (DefaultImporter)
+Imported 'GUID: 4752e5e28f92e444688312f9b9242b19' -> (Import Result ID: '103175e3a19431ae53eae5fa487d0b85') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=540408c18c5966b41bb4521958054cdf DependenciesID=bff09f0fc0f488e8cec2e8a009e0f471 StaticDependenciesID=0afbfc5b17ad38200498c57febfc5e76 
+Asset Pipeline Refresh (id=ebfd3e08a19eb0f4182df33027d6c3fd): Total: 0.023 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 2613bceb9de348a4a9b5a425692c08df - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials' with importer (DefaultImporter)
+Imported 'GUID: 2613bceb9de348a4a9b5a425692c08df' -> (Import Result ID: '50d1fc2e60bd595aeac5298b4c15acbe') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=bb7321f3953b25beadafb3f42d2bb47c DependenciesID=e6eebf1d86f50fa1739a1df53bda0bc8 StaticDependenciesID=e5c11d2efc45e4675c9056dd80a83357 
+Asset Pipeline Refresh (id=ba87c48c408c575489d1f3f8b179833d): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1 unused Assets / (Unknown). Loaded Objects now: 4802.
+Memory consumption went from 324.2 MB to 324.2 MB.
+Total: 4.962100 ms (FindLiveObjects: 0.228100 ms CreateObjectMapping: 0.064100 ms MarkObjects: 4.487000 ms  DeleteObjects: 0.014500 ms)
+
+Asset Pipeline Refresh (id=3f4316c9f91c18a42bc605bb3c0fd88c): Total: 0.001 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 07e4a1a3c557c6e43a9d8aa1383196ee - Path: Assets/Ankhu/Realms/Generated/Rosetau_A_Laugh_Volume.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 07e4a1a3c557c6e43a9d8aa1383196ee' -> (Import Result ID: '20b76c49dbb959c3b0de3f3df8e1444a') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=a7779725585bf24587389b0a16211124 DependenciesID=cf08a3df2cd3cfdb18ce5e34cbcff493 StaticDependenciesID=abfb771ad5115c965d3fab822a223a25 
+Asset Pipeline Refresh (id=524ea2bb54fd46b4b8c83fbbff9aeef4): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: b6f6d7b4482dfd24fbf04f537c2f8b0f - Path: Assets/Ankhu/Realms/Generated/Materials/StarAdd.mat' with importer (NativeFormatImporter)
+Imported 'GUID: b6f6d7b4482dfd24fbf04f537c2f8b0f' -> (Import Result ID: '8b2f5cd4ce5784fa4ed80a433bb1533f') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=f52700dfcc12c169952ac6443b9b4536 DependenciesID=1ab0df3df65cdb6e14d4c932d2079e13 StaticDependenciesID=623a1aa39d82a49b1b7be9ce4234efa3 
+Importing 'GUID: 193366007e7c11b41aba45fc4ae5e839 - Path: Assets/Ankhu/Realms/Generated/Materials/Moon.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 193366007e7c11b41aba45fc4ae5e839' -> (Import Result ID: 'a5e126629ecb47af5f1a1bcc8c2ce50f') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=57b87f3bc9d17feb040daf055b7e7d73 DependenciesID=6b8d43bbe8f48751a2662a601d215207 StaticDependenciesID=a00babb87d05e62b22f7c58631928d9a 
+Importing 'GUID: 07e4a1a3c557c6e43a9d8aa1383196ee - Path: Assets/Ankhu/Realms/Generated/Rosetau_A_Laugh_Volume.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 07e4a1a3c557c6e43a9d8aa1383196ee' -> (Import Result ID: '1200480051529fb860498012e7620b1a') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=a7779725585bf24587389b0a16211124 DependenciesID=e837d287e81c55e3f458160a6a5d5057 StaticDependenciesID=6cc37170e4d0d5038356e7c488638456 
+Asset Pipeline Refresh (id=67a3b678827632140aa866ab78897256): Total: 0.025 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 82963872cb8f49d439ab41bc67a28c12 - Path: Assets/Ankhu/Realms/Generated/Textures/rosetaurock.png' with importer (TextureImporter)
+Imported 'GUID: 82963872cb8f49d439ab41bc67a28c12' -> (Import Result ID: '1db21e1fb6874e747f43acbd29ffc49f') in 0.008 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2eaf1198045c67af8b52eea118cf8ab8 DependenciesID=3343dc94b191b1837ccc5a363ad1ca2e StaticDependenciesID=2f6bf277db7a593abf80cd653927bf3d 
+Asset Pipeline Refresh (id=b3dc69e2f4ce53a4584bfb1520e84048): Total: 0.030 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 82963872cb8f49d439ab41bc67a28c12 - Path: Assets/Ankhu/Realms/Generated/Textures/rosetaurock.png' with importer (TextureImporter)
+Imported 'GUID: 82963872cb8f49d439ab41bc67a28c12' -> (Import Result ID: '068834c8755bc000bf921652470d6814') in 0.007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9d4c21c8ff2e315d48b4b23e24ae2849 DependenciesID=4be2a969fff569752372db92b061451b StaticDependenciesID=5fcc46b42e29f834fdbdbe6749a439ce 
+Asset Pipeline Refresh (id=4aa5bb8629df52b42af5c590d44116dc): Total: 0.030 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 2151634a8cdf10b41981317e5486f1ad - Path: Assets/Ankhu/Realms/Generated/Materials/RosetauRock.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 2151634a8cdf10b41981317e5486f1ad' -> (Import Result ID: '6b38e7cd7c051f45a55b62bb36a386ad') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=3028e3f8c03c44af55578752b5e168ee DependenciesID=875696be208b59fee3b3e7d2e0cf7517 StaticDependenciesID=1289ca15c8396b33f6facbdacfe5b7a0 
+Asset Pipeline Refresh (id=ed9254fa9268f694fa11c3ad5fa343f3): Total: 0.023 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 964e906f677e138458b50d5972346106 - Path: Assets/Ankhu/Realms/Generated/Materials/Glyph_D21.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 964e906f677e138458b50d5972346106' -> (Import Result ID: 'fbee49820787359f7bd559c797202441') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=43b1f8abbd7243dfac2f4ba3fba4360a DependenciesID=05b9880557884ed2d9e7884b8b7d78c0 StaticDependenciesID=4551cf123a13caa75b194d7e758accc7 
+Asset Pipeline Refresh (id=c897bf7ffb249604da0ad7ad8001d1c7): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: a69d62a69caaa814590de1c194690ae7 - Path: Assets/Ankhu/Realms/Generated/Materials/Glyph_O34.mat' with importer (NativeFormatImporter)
+Imported 'GUID: a69d62a69caaa814590de1c194690ae7' -> (Import Result ID: 'd938d665e210d0e72d0c4953167141ee') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=ecfaf3866f404ec6a1b08296e0ba17a1 DependenciesID=dbb6f07c255a06c64f3930b0e3e9c7b9 StaticDependenciesID=2c3cbcefd843e508a2f01ec49eb02583 
+Asset Pipeline Refresh (id=0b35b250f978ca94588b5f75c8cb4bba): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: b855016fa7609564ca45f5ef6014f2af - Path: Assets/Ankhu/Realms/Generated/Materials/Glyph_G1.mat' with importer (NativeFormatImporter)
+Imported 'GUID: b855016fa7609564ca45f5ef6014f2af' -> (Import Result ID: '8750a901064f8521091f487776781b01') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=c56af7b68dd1de3c83825272ed4d0ad5 DependenciesID=4c581f14042fe0015feafbf664d4650f StaticDependenciesID=e50857358c504c61ae7ce2f7d5dbd10e 
+Asset Pipeline Refresh (id=694dfa39236588341a5570ce18ef9db2): Total: 0.023 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 7ecddbf4cd149414e9a64349b2c52f86 - Path: Assets/Ankhu/Realms/Art/Wernes/Sprites/FX/fx_glow.png' with importer (TextureImporter)
+Imported 'GUID: 7ecddbf4cd149414e9a64349b2c52f86' -> (Import Result ID: '862e451ee4c12c5ff32a125487e73b09') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cb4b76d66e7df1aadc2152855a29184a DependenciesID=7de52aed68d6f9200644ae078bef8476 StaticDependenciesID=f66fd9940440ce820f8a7d085b35113c 
+Asset Pipeline Refresh (id=6b9db9b5e8487b4429112ca9c3dd6c25): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: deb5ade6af7d172499624b61196da20e - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_a_door_glow.mat' with importer (NativeFormatImporter)
+Imported 'GUID: deb5ade6af7d172499624b61196da20e' -> (Import Result ID: 'b694ebdef33296c5e5ee176447cd62c2') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=7e65277d8ad41cedada1f301e32626c5 DependenciesID=c35e377e8c4c023d3926b896715bd68e StaticDependenciesID=62e076cf8ccc76ea24e7597f4c036cce 
+Asset Pipeline Refresh (id=4eb51a56237d5034ba82c6340d1a4a07): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Rosetau] missing card a_chamber_knuckle
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RFigure (UnityEngine.Transform,string,string,UnityEngine.Vector3,single) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:118)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildLaughA () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:295)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:39)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+[Rosetau] missing card a_chamber_top
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RFigure (UnityEngine.Transform,string,string,UnityEngine.Vector3,single) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:118)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildLaughA () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:295)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:39)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+[Rosetau] missing card a_chamber_sandal
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RFigure (UnityEngine.Transform,string,string,UnityEngine.Vector3,single) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:118)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildLaughA () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:295)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:39)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+Importing 'GUID: 1706e17584c891c4e9fb90adf9ac1bfc - Path: Assets/Ankhu/Realms/Art/Wernes/Sprites/FX/fx_glint.png' with importer (TextureImporter)
+Imported 'GUID: 1706e17584c891c4e9fb90adf9ac1bfc' -> (Import Result ID: 'fb1ca11d1e334f12b6440c7deb902235') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4096e5ce0499a3e2e67a549d4feecb17 DependenciesID=a11d20da2794c4190acf551893423010 StaticDependenciesID=371fc815ccebc78bd6ddb3f5f79cf66b 
+Asset Pipeline Refresh (id=ddcb3744339d75e45bf5b9a4a66487f9): Total: 0.009 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: fa2cefee1a1144f4aa64e20c0a22652b - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_a_laugh_glint.mat' with importer (NativeFormatImporter)
+Imported 'GUID: fa2cefee1a1144f4aa64e20c0a22652b' -> (Import Result ID: '262a35cb3270a0317a4b49b0942815b1') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=24c09afd0f1b9facc8acb825fa7a9006 DependenciesID=ee7da8104c3bb2f462075138b4d8c326 StaticDependenciesID=52cd4c3f3588bcdd6c36d034ad7397ab 
+Asset Pipeline Refresh (id=8d47d75cba2fe9b44b7c01ba8214f8d6): Total: 0.021 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 1706e17584c891c4e9fb90adf9ac1bfc - Path: Assets/Ankhu/Realms/Art/Wernes/Sprites/FX/fx_glint.png' with importer (TextureImporter)
+Imported 'GUID: 1706e17584c891c4e9fb90adf9ac1bfc' -> (Import Result ID: 'fb1ca11d1e334f12b6440c7deb902235') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4096e5ce0499a3e2e67a549d4feecb17 DependenciesID=a11d20da2794c4190acf551893423010 StaticDependenciesID=371fc815ccebc78bd6ddb3f5f79cf66b 
+Asset Pipeline Refresh (id=f9286f1f01eb0284585639d71dbc2f04): Total: 0.009 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: a0647cfbb93a4934baf80c1bb596fae7 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_a_laugh_glint_dim.mat' with importer (NativeFormatImporter)
+Imported 'GUID: a0647cfbb93a4934baf80c1bb596fae7' -> (Import Result ID: '0de281f4465014b30e7365ee14e55e82') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=bf2d7cd584a3cfa7d3e0454211fdb86e DependenciesID=2757b03481e03c550781e16ab5fb18f2 StaticDependenciesID=38b1fcae3a785303c51a9a2cd781ad80 
+Asset Pipeline Refresh (id=1ef2a956d0dae544fa8b8ef4941d60f2): Total: 0.021 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: e22ca5e848b45344c9c232f2a2ffac1d - Path: Assets/Ankhu/Realms/Art/Wernes/Sprites/FX/fx_bead_cyan.png' with importer (TextureImporter)
+Imported 'GUID: e22ca5e848b45344c9c232f2a2ffac1d' -> (Import Result ID: '6db97dcc9667e45c51ef556f16d0f26c') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=691433c6e39d9a36fb3fb54fcbc06af9 DependenciesID=7c00abab844fbe49a69fafb3d583f065 StaticDependenciesID=9b8071a03e95822e0e0b575796b4c3cb 
+Asset Pipeline Refresh (id=9328ab6401bda6842a47f0bafccca2ee): Total: 0.008 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 427a0ce1655cbf746928ac1cb718ddc6 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_a_laugh_held.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 427a0ce1655cbf746928ac1cb718ddc6' -> (Import Result ID: '5011555ccf5364cd70461534bf31febe') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=9d78fe0dd5e576b0486689b85dea3d51 DependenciesID=5002172668e57c31da5440bea473bcbf StaticDependenciesID=d99165d2f2e3754fb6c453514b6cab45 
+Asset Pipeline Refresh (id=8a2db6bc85633c34ea4941bdf02e8a33): Total: 0.021 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Rosetau] missing card a_child_finger
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RFigure (UnityEngine.Transform,string,string,UnityEngine.Vector3,single) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:118)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildLaughA () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:326)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:39)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+[Rosetau] missing card a_child_falcon
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RFigure (UnityEngine.Transform,string,string,UnityEngine.Vector3,single) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:118)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildLaughA () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:327)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:39)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+Importing 'GUID: 250acc97c3727874c9a26f04611369f0 - Path: Assets/Ankhu/Realms/Art/Wernes/Sprites/abc_falcon.png' with importer (TextureImporter)
+Imported 'GUID: 250acc97c3727874c9a26f04611369f0' -> (Import Result ID: '92ffd8a01788ee78f872073276c10f20') in 0.003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2ea1217cdc801be254ac6cffa91879ca DependenciesID=8cabfe54f8cf9c406aaf3bdf47533559 StaticDependenciesID=335140103577d9f245f5b3687598193a 
+Asset Pipeline Refresh (id=fe743722434b0644898a9cc4acdceb98): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 6f6c3edca13593b46a3b65f58cf0620a - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/card_r_abc_falcon.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 6f6c3edca13593b46a3b65f58cf0620a' -> (Import Result ID: 'c0fd82030284dd62d05a2b70c571c003') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=bea5b1062577e643425fb09c18cdb31c DependenciesID=fcd7dd9f8ba0890ffd4d169a2781ee6f StaticDependenciesID=a2662dd1bdffef886e28236435a2c8a0 
+Asset Pipeline Refresh (id=14dd5337f2fefa140a5ec6ac5f708bb7): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Rosetau] Rosetau_A_Laugh: no paintings yet, greybox only
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:ApplyRosetauPaint (Ankhu.Realms.EditorTools.RealmSceneBuilder/Ctx,string,Ankhu.Realms.EditorTools.RealmSceneBuilder/Rect4[]) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:207)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildLaughA () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:361)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:39)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 207)
+
+Importing 'GUID: a0647cfbb93a4934baf80c1bb596fae7 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_a_laugh_glint_dim.mat' with importer (NativeFormatImporter)
+Imported 'GUID: a0647cfbb93a4934baf80c1bb596fae7' -> (Import Result ID: 'a8f696b2ffda28f1b648f18ac063a729') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=bf2d7cd584a3cfa7d3e0454211fdb86e DependenciesID=1ed17ad15aeabe1bfb323c2897c15b4f StaticDependenciesID=0d087b6bcd577714841fe0fcee9c59bf 
+Importing 'GUID: 2151634a8cdf10b41981317e5486f1ad - Path: Assets/Ankhu/Realms/Generated/Materials/RosetauRock.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 2151634a8cdf10b41981317e5486f1ad' -> (Import Result ID: '8675255412bf9bf5f34b46a5f7511257') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=3028e3f8c03c44af55578752b5e168ee DependenciesID=c9fd47bcf9c0853922fe160f417059ad StaticDependenciesID=b69411333e19e1d620db1ab9fc25ab14 
+Importing 'GUID: 617ce8253447ce847ab4946f4fa0c071 - Path: Assets/Ankhu/Realms/Generated/Materials/Glyph_O1.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 617ce8253447ce847ab4946f4fa0c071' -> (Import Result ID: 'f0892c4494e7cf19deca960bdccc7d71') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=ee2dd861d83e9c6f6eae67d24956b682 DependenciesID=90481a55a8756366ab81375d06e2e975 StaticDependenciesID=d0df1f6e3be87e1f513d55f7d3d9f492 
+Importing 'GUID: 12b06869cfc2bed4491fe21ed2a0802d - Path: Assets/Ankhu/Realms/Generated/Materials/Embers.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 12b06869cfc2bed4491fe21ed2a0802d' -> (Import Result ID: 'b58cd67f19fcbb670c7f187fac276fe7') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=6515fc91e53622b1073aa70f8bf697e8 DependenciesID=c01b6ff7301f00e5351386b9e9cb3263 StaticDependenciesID=2955258a1129eff79fac80fb1a79cb6d 
+Importing 'GUID: 427a0ce1655cbf746928ac1cb718ddc6 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_a_laugh_held.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 427a0ce1655cbf746928ac1cb718ddc6' -> (Import Result ID: '1f36bdcfba23e6cdd47af1be9896cc28') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=9d78fe0dd5e576b0486689b85dea3d51 DependenciesID=ced0c3e6bbd8af4e09432f3188331c75 StaticDependenciesID=39bf24e40107be6044aca3038e223fda 
+Importing 'GUID: e28036e884829d74e9a5377201d2e3a8 - Path: Assets/Ankhu/Realms/Generated/Materials/Basalt.mat' with importer (NativeFormatImporter)
+Imported 'GUID: e28036e884829d74e9a5377201d2e3a8' -> (Import Result ID: '4d2daf9c6ad50fbdc5d556b023017d40') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=735188d6ba1dd1f4f667265805a20e46 DependenciesID=6f61d5aefd6b648bdf5906c12550b928 StaticDependenciesID=96299199adbce8c3d10e22fe939f82a3 
+Importing 'GUID: a372d1f8a7a203847a1151bf3704baae - Path: Assets/Ankhu/Realms/Generated/Materials/Limestone.mat' with importer (NativeFormatImporter)
+Imported 'GUID: a372d1f8a7a203847a1151bf3704baae' -> (Import Result ID: '897f1ac6df4bff5b8c25375b36b0746b') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=e4b33d38b8c52b8c1ef77053dd14b0d8 DependenciesID=1d77c32957e46dbc903389f0cba41be3 StaticDependenciesID=da200edbccef427511e79c7d4e336ece 
+Importing 'GUID: 964e906f677e138458b50d5972346106 - Path: Assets/Ankhu/Realms/Generated/Materials/Glyph_D21.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 964e906f677e138458b50d5972346106' -> (Import Result ID: '59f7036ac8ddf0ed80109fb7a316c90e') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=43b1f8abbd7243dfac2f4ba3fba4360a DependenciesID=1d3be09e07e71326c40190801cc75bd1 StaticDependenciesID=5b6d0bbfa039a3817d4ab987b1b5f5a6 
+Importing 'GUID: a69d62a69caaa814590de1c194690ae7 - Path: Assets/Ankhu/Realms/Generated/Materials/Glyph_O34.mat' with importer (NativeFormatImporter)
+Imported 'GUID: a69d62a69caaa814590de1c194690ae7' -> (Import Result ID: '585ea9dd59ab23dd424052325ea4d995') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=ecfaf3866f404ec6a1b08296e0ba17a1 DependenciesID=3c0ada19e566b6dfb962065d19739695 StaticDependenciesID=61b38f306e15060a16db21b315cb104a 
+Importing 'GUID: a62ea4c1418c01d4fb7574ce18157407 - Path: Assets/Ankhu/Realms/Generated/Materials/FireAdd.mat' with importer (NativeFormatImporter)
+Imported 'GUID: a62ea4c1418c01d4fb7574ce18157407' -> (Import Result ID: 'a8df0b83e257e5660acc5cdbf57714f7') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=7c7fb9e05887e7af56ee0222295f4610 DependenciesID=f8b770473804eb6079162ee68ef4391f StaticDependenciesID=810f788d04e64085297d0f67470153b3 
+Importing 'GUID: 278d2d15044c3c6409460b9f6f76f526 - Path: Assets/Ankhu/Realms/Generated/Materials/Glyph_X1.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 278d2d15044c3c6409460b9f6f76f526' -> (Import Result ID: 'f73f5cd4a92214754ea6f30dd6400bcd') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=9240aedbce4b5b1dbd5f936719dd99f2 DependenciesID=69d95cd3e6244770555cf9ad5e83101d StaticDependenciesID=e3b8be9a700ebf247605cc26a0827b67 
+Importing 'GUID: 67b86a1e48212944bb4976ab7dc7c0ac - Path: Assets/Ankhu/Realms/Generated/Materials/BlobShade.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 67b86a1e48212944bb4976ab7dc7c0ac' -> (Import Result ID: '6f943bfcb6e10b6cf821852f20405f9f') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=31a727719b9b6d8db22134c0091049d8 DependenciesID=983dcd3406ee4b19610ee8d2e918bd1b StaticDependenciesID=7dfd0802ec29e5d0664a674fdc01996f 
+Importing 'GUID: b855016fa7609564ca45f5ef6014f2af - Path: Assets/Ankhu/Realms/Generated/Materials/Glyph_G1.mat' with importer (NativeFormatImporter)
+Imported 'GUID: b855016fa7609564ca45f5ef6014f2af' -> (Import Result ID: '4d038ade1aed7960e4c109392e64979c') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=c56af7b68dd1de3c83825272ed4d0ad5 DependenciesID=acc12fb168b2f33a8b354ce69232305a StaticDependenciesID=c5eae5f9910160ee039cc8d8f0216807 
+Importing 'GUID: fa2cefee1a1144f4aa64e20c0a22652b - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_a_laugh_glint.mat' with importer (NativeFormatImporter)
+Imported 'GUID: fa2cefee1a1144f4aa64e20c0a22652b' -> (Import Result ID: '11bd3275d3b897c214c6e5250a436c67') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=24c09afd0f1b9facc8acb825fa7a9006 DependenciesID=3299a2dfb01eb0ca4b3834a8c845686e StaticDependenciesID=e946b54d7716d9c35ae5428d0837ccc6 
+Importing 'GUID: 3bca840ab516f8144834715e9c217618 - Path: Assets/Ankhu/Realms/Generated/Materials/MoteAdd.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 3bca840ab516f8144834715e9c217618' -> (Import Result ID: '6ff355491c256dc78ad308b49d3706e1') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=ac632184189de5a128d04f239b437d3a DependenciesID=8f99a30522dfcd9e9fecd28f6461626e StaticDependenciesID=67ca1dc07d0837a78c93b75cdc81e399 
+Importing 'GUID: bc34a9a9dab6e6247a45fda5a094d4e7 - Path: Assets/Ankhu/Realms/Generated/Materials/AgedBronze.mat' with importer (NativeFormatImporter)
+Imported 'GUID: bc34a9a9dab6e6247a45fda5a094d4e7' -> (Import Result ID: '32f466fc5e344014f27008ff714f8d50') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=8d8f2a63bc7c0c565deb7e1c46cf6016 DependenciesID=5d6fd0313e0472039214748f8b6d76f2 StaticDependenciesID=621ba6b7cd00e49a22a256862773b0c4 
+Importing 'GUID: edb4cfe1f96a5404b84c3cad939f83b8 - Path: Assets/Ankhu/Realms/Generated/Materials/Glyph_N35.mat' with importer (NativeFormatImporter)
+Imported 'GUID: edb4cfe1f96a5404b84c3cad939f83b8' -> (Import Result ID: '9b39c0bf982da5d9dab7360aa3843e90') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=eb47b0809faa8f8c8792aa8aa4fda220 DependenciesID=73b7c1fcccf2d2c47c9fa5c79a3aa19f StaticDependenciesID=4560d9cc8cfb23444545c02a07927951 
+Importing 'GUID: 4ede4b59781dd9945bfc226c61b86d6b - Path: Assets/Ankhu/Realms/Generated/Materials/Shadow.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 4ede4b59781dd9945bfc226c61b86d6b' -> (Import Result ID: 'c5ede8f0b939a2aa94fd6238ebd1d7c1') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=3ac7df966437fa98676d727a099abecb DependenciesID=0d7641777ca2de15e52b20577168ec46 StaticDependenciesID=ad71564955253fb61ccb82d64fc3047b 
+Importing 'GUID: deb5ade6af7d172499624b61196da20e - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_a_door_glow.mat' with importer (NativeFormatImporter)
+Imported 'GUID: deb5ade6af7d172499624b61196da20e' -> (Import Result ID: '758b82b2e0f49b8501ae7fe7a394cb8d') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=7e65277d8ad41cedada1f301e32626c5 DependenciesID=43f7b3c4d053401424cb9df4bf43e7c8 StaticDependenciesID=4a192187e87326ba685f45884dd9eec1 
+Importing 'GUID: 6f6c3edca13593b46a3b65f58cf0620a - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/card_r_abc_falcon.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 6f6c3edca13593b46a3b65f58cf0620a' -> (Import Result ID: '4f0589b9e5f392c9fe806e1b9485ca4a') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=bea5b1062577e643425fb09c18cdb31c DependenciesID=1241d865a57454e452a1b1758504a165 StaticDependenciesID=18e4b3e4130bc03fba6a07b83513f4c1 
+Asset Pipeline Refresh (id=73854828c40ea9b41925a65ed9ed9376): Total: 0.034 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 64635426805b30e40aadaa8fa20d7937 - Path: Assets/Ankhu/Realms/Generated/Scenes/Rosetau_A_Laugh.unity' with importer (DefaultImporter)
+Imported 'GUID: 64635426805b30e40aadaa8fa20d7937' -> (Import Result ID: '19abe9af196e875a2cfff4aabc559605') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=7cf901e05e25f0766c48f36a95dab34a DependenciesID=3a58be687124492242a3bdf009833fb3 StaticDependenciesID=9ac1d130d75580e6d1ec1f4502af8137 
+Asset Pipeline Refresh (id=60fe1a4b5b699e74c9012f6b2e1bfce7): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Realms] Saved Assets/Ankhu/Realms/Generated/Scenes/Rosetau_A_Laugh.unity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:Finish (Ankhu.Realms.EditorTools.RealmSceneBuilder/Ctx,string) (at Assets/Ankhu/Realms/Editor/RealmSceneBuilder.cs:206)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildLaughA () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:362)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:39)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RealmSceneBuilder.cs Line: 206)
+
+Unloading 24 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 710 unused Assets / (4.1 MB). Loaded Objects now: 4843.
+Memory consumption went from 361.9 MB to 357.7 MB.
+Total: 5.634800 ms (FindLiveObjects: 0.442800 ms CreateObjectMapping: 0.072900 ms MarkObjects: 4.374300 ms  DeleteObjects: 0.574100 ms)
+
+Asset Pipeline Refresh (id=bfd8964713031014996d1bd93cd147cf): Total: 0.001 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 6f521ff26a185bf48bba7ed8688dbe31 - Path: Assets/Ankhu/Realms/Generated/Rosetau_B_Mourners_Volume.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 6f521ff26a185bf48bba7ed8688dbe31' -> (Import Result ID: '58beceaf8ba105945307d2fa5819631d') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=fd58de2dc4b6893ba2b2c57f7d921f4a DependenciesID=b7ba1878a4d41347ebffba3fb942c032 StaticDependenciesID=2b6a19191171e91f05973ef6b80d9612 
+Asset Pipeline Refresh (id=d8f794b418247ba48be14b93295a4570): Total: 0.023 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 193366007e7c11b41aba45fc4ae5e839 - Path: Assets/Ankhu/Realms/Generated/Materials/Moon.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 193366007e7c11b41aba45fc4ae5e839' -> (Import Result ID: 'a5e126629ecb47af5f1a1bcc8c2ce50f') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=57b87f3bc9d17feb040daf055b7e7d73 DependenciesID=6b8d43bbe8f48751a2662a601d215207 StaticDependenciesID=a00babb87d05e62b22f7c58631928d9a 
+Importing 'GUID: 6f521ff26a185bf48bba7ed8688dbe31 - Path: Assets/Ankhu/Realms/Generated/Rosetau_B_Mourners_Volume.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 6f521ff26a185bf48bba7ed8688dbe31' -> (Import Result ID: 'f147a8e787d531762776b91a318831dc') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=fd58de2dc4b6893ba2b2c57f7d921f4a DependenciesID=399f8bd207f8ee40810bc4a344e2ae83 StaticDependenciesID=cab1ad780e3e54705b3c4f2a6a908217 
+Asset Pipeline Refresh (id=49c1bbb225bfd064489c972954bf8343): Total: 0.023 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 534ccb31b799be840aed39f7b8fc50b8 - Path: Assets/Ankhu/Realms/Generated/Materials/TombPlaster.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 534ccb31b799be840aed39f7b8fc50b8' -> (Import Result ID: '1fe1b354427d08f2adf8cdb99a3f4e41') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=881146bb2935c70a86e3e977dc326264 DependenciesID=d11b5817fa596a4ea216005ba91a780e StaticDependenciesID=f478ab10e50644c35ea17a6679f2f5cb 
+Asset Pipeline Refresh (id=68c4c996d1ffe164f940f5652c430d78): Total: 0.021 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: ff57340c97ee36b49931c700f9853e71 - Path: Assets/Ankhu/Realms/Generated/Materials/BierBlack.mat' with importer (NativeFormatImporter)
+Imported 'GUID: ff57340c97ee36b49931c700f9853e71' -> (Import Result ID: '74e923f4c323f214ce35c39f742c2089') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=7102d0c3601358919b782e60658b3b43 DependenciesID=964e19a4e3959bcb88cf12703f41297c StaticDependenciesID=a524c4a1b551e88d12e6b99357a6df49 
+Asset Pipeline Refresh (id=699ebc2041580704eb15aa92f938f4a6): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 793818fb016188445a3f82fc54dfacce - Path: Assets/Ankhu/Realms/Generated/Materials/Glyph_W19.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 793818fb016188445a3f82fc54dfacce' -> (Import Result ID: 'f2f6be5170fa7c5ec48190f3c091632c') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=c4b33b44f31657a751bf5ab11ccd0656 DependenciesID=aa3aca52a5a5dde5fe9618fc8ff0bf79 StaticDependenciesID=e40a9d11729b5252ae3646bc55c4f1c0 
+Asset Pipeline Refresh (id=947470e6f3775e9429b3ed9c90652264): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: f16c7303f3632e44284003d3f8dc008f - Path: Assets/Ankhu/Realms/Generated/Materials/Glyph_V31.mat' with importer (NativeFormatImporter)
+Imported 'GUID: f16c7303f3632e44284003d3f8dc008f' -> (Import Result ID: 'c8d6187e42f51a547457d21d0e67e9f2') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=3f6fca533474811c1988737abb2f31ff DependenciesID=a9b054b534d2542fb2fd2ac30c5678e3 StaticDependenciesID=f803fced00d840ca346823b03eb98d78 
+Asset Pipeline Refresh (id=f8ee77d70eba57846bab01c77cee736a): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Rosetau] missing card b_auset_bound
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RFigure (UnityEngine.Transform,string,string,UnityEngine.Vector3,single) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:118)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMournersB () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:406)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:40)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+[Rosetau] missing card b_auset_keen
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RFigure (UnityEngine.Transform,string,string,UnityEngine.Vector3,single) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:118)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMournersB () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:407)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:40)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+[Rosetau] missing card b_auset_quiet
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RFigure (UnityEngine.Transform,string,string,UnityEngine.Vector3,single) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:118)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMournersB () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:408)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:40)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+Importing 'GUID: e4847a498e9a1d447bae94055218ebb9 - Path: Assets/Ankhu/Realms/Art/Wernes/Sprites/FX/fx_streak.png' with importer (TextureImporter)
+Imported 'GUID: e4847a498e9a1d447bae94055218ebb9' -> (Import Result ID: '05df13d4bbc94b633dcdf16d5d71252f') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=63c2f048f9c0319a8d3c0ae0b21ef564 DependenciesID=f25256cadeb1909986bfd83368afce0b StaticDependenciesID=f1719c67c9d58e59f88a79abe9e86ec0 
+Asset Pipeline Refresh (id=ee9435f6654d6d84f8303a9b4eab9343): Total: 0.009 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 504fe338a84cb20498196c57698edb67 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_b_voice_0.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 504fe338a84cb20498196c57698edb67' -> (Import Result ID: '31943091cfdf62cce58abbf367a864d4') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=aadbe291e998f1afcc4c5cab8ee9a20e DependenciesID=70aa29240f7c493b3f2f39b3c54f3ff9 StaticDependenciesID=efecbaa1173935da70696fd0d547c324 
+Asset Pipeline Refresh (id=dab3737461262d04a8c9577603261c10): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Rosetau] missing card b_nebet_bound
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RFigure (UnityEngine.Transform,string,string,UnityEngine.Vector3,single) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:118)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMournersB () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:406)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:40)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+[Rosetau] missing card b_nebet_keen
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RFigure (UnityEngine.Transform,string,string,UnityEngine.Vector3,single) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:118)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMournersB () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:407)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:40)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+[Rosetau] missing card b_nebet_quiet
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RFigure (UnityEngine.Transform,string,string,UnityEngine.Vector3,single) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:118)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMournersB () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:408)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:40)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+Importing 'GUID: e4847a498e9a1d447bae94055218ebb9 - Path: Assets/Ankhu/Realms/Art/Wernes/Sprites/FX/fx_streak.png' with importer (TextureImporter)
+Imported 'GUID: e4847a498e9a1d447bae94055218ebb9' -> (Import Result ID: '05df13d4bbc94b633dcdf16d5d71252f') in 0.003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=63c2f048f9c0319a8d3c0ae0b21ef564 DependenciesID=f25256cadeb1909986bfd83368afce0b StaticDependenciesID=f1719c67c9d58e59f88a79abe9e86ec0 
+Asset Pipeline Refresh (id=a3240ede7a24b8b40b99357fb1fd7e93): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 0fb57d0d53d537341849239028d40404 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_b_voice_1.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 0fb57d0d53d537341849239028d40404' -> (Import Result ID: '67e2a2310bd17b2f9ba89981910a3fa4') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=e95d5b05f882f2b51ff3b9de3a438bcb DependenciesID=e7db217e84e0a573171e6e3ffad91e96 StaticDependenciesID=f1f8530f4b4c8fd528964e6ca2a305f5 
+Asset Pipeline Refresh (id=c436eaedeeb1ea649bb4169e36ca2cd9): Total: 0.021 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: e4847a498e9a1d447bae94055218ebb9 - Path: Assets/Ankhu/Realms/Art/Wernes/Sprites/FX/fx_streak.png' with importer (TextureImporter)
+Imported 'GUID: e4847a498e9a1d447bae94055218ebb9' -> (Import Result ID: '05df13d4bbc94b633dcdf16d5d71252f') in 0.002 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=63c2f048f9c0319a8d3c0ae0b21ef564 DependenciesID=f25256cadeb1909986bfd83368afce0b StaticDependenciesID=f1719c67c9d58e59f88a79abe9e86ec0 
+Asset Pipeline Refresh (id=e104967eb7a23a44a83fe7b816377fd7): Total: 0.010 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: ccb4136b4b38fa64cb24d1925b01662e - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_b_lament.mat' with importer (NativeFormatImporter)
+Imported 'GUID: ccb4136b4b38fa64cb24d1925b01662e' -> (Import Result ID: '4216c2123311da28ff172b304d077849') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=6d498d52ab0f1d75aed4a2150c64141a DependenciesID=d3a3ed41002f62313ca4e99384044784 StaticDependenciesID=eac64d064743101f8cc7a30d55fb61f4 
+Asset Pipeline Refresh (id=ad0482c44c42bb5499930eb0111e7c97): Total: 0.020 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 76e296941acf83f42b9a8420a270cf45 - Path: Assets/Ankhu/Realms/Art/Wernes/Sprites/FX/fx_ember.png' with importer (TextureImporter)
+Imported 'GUID: 76e296941acf83f42b9a8420a270cf45' -> (Import Result ID: 'b0a600097ff47a10bcf24baa208b0396') in 0.003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f11dfee0390dacfde9521cb7c9c9c063 DependenciesID=87a1a2eb7a2f9de0b1fa62f245323d01 StaticDependenciesID=aa5a620478bc6afafb095228c117b262 
+Asset Pipeline Refresh (id=391ceb18c22b3b54ab7096818591b654): Total: 0.009 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: e38c15c7872c7404986fd55dff71b5b9 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_b_flame.mat' with importer (NativeFormatImporter)
+Imported 'GUID: e38c15c7872c7404986fd55dff71b5b9' -> (Import Result ID: 'd0782c1eda8f424839d739044b0e62c3') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=21f92970c50fa397f35ef49c585fd36a DependenciesID=4bc6d6fe46bfb8e441faf914d6bf2692 StaticDependenciesID=f56f31aa91036f9ced5c4e6038d30b45 
+Asset Pipeline Refresh (id=03b3aba0264a0274e9a7ea4f8327c356): Total: 0.021 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 7ecddbf4cd149414e9a64349b2c52f86 - Path: Assets/Ankhu/Realms/Art/Wernes/Sprites/FX/fx_glow.png' with importer (TextureImporter)
+Imported 'GUID: 7ecddbf4cd149414e9a64349b2c52f86' -> (Import Result ID: '862e451ee4c12c5ff32a125487e73b09') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cb4b76d66e7df1aadc2152855a29184a DependenciesID=7de52aed68d6f9200644ae078bef8476 StaticDependenciesID=f66fd9940440ce820f8a7d085b35113c 
+Asset Pipeline Refresh (id=2b943a9284a5ce7429cd20c923ab7970): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 3881ae034126aaf409d2f79af451f571 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_b_breath.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 3881ae034126aaf409d2f79af451f571' -> (Import Result ID: 'c55a70da3457ffc6c691c8d11c100a3d') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=f8d392ea31f6e5271ebeb2361979eec4 DependenciesID=2480e9792d1498dedbdb69599e55d016 StaticDependenciesID=3655dcdb02308a4751ea27f8450b9149 
+Asset Pipeline Refresh (id=4bf29d97864b8bf44a9304c2f8ffe458): Total: 0.021 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Rosetau] missing card b_door_sealed
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RFigure (UnityEngine.Transform,string,string,UnityEngine.Vector3,single) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:118)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMournersB () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:464)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:40)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+Importing 'GUID: 7ecddbf4cd149414e9a64349b2c52f86 - Path: Assets/Ankhu/Realms/Art/Wernes/Sprites/FX/fx_glow.png' with importer (TextureImporter)
+Imported 'GUID: 7ecddbf4cd149414e9a64349b2c52f86' -> (Import Result ID: '862e451ee4c12c5ff32a125487e73b09') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cb4b76d66e7df1aadc2152855a29184a DependenciesID=7de52aed68d6f9200644ae078bef8476 StaticDependenciesID=f66fd9940440ce820f8a7d085b35113c 
+Asset Pipeline Refresh (id=3fefc7dcb4395c94ebb28e4657f25329): Total: 0.013 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: cf9839e71d1a9914fa0ae5ad0324af37 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_b_beyond.mat' with importer (NativeFormatImporter)
+Imported 'GUID: cf9839e71d1a9914fa0ae5ad0324af37' -> (Import Result ID: '14d598f0365bbb177eaac9572a234afc') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=154e2a70b37a19d5db996f702c321737 DependenciesID=8a0579db9b76b2c4df616549aba26b21 StaticDependenciesID=8479085c2a48bd200c47c79943bb2108 
+Asset Pipeline Refresh (id=7cfed200d40fa5342ba65b54d851b491): Total: 0.020 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Rosetau] Rosetau_B_Mourners: no paintings yet, greybox only
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:ApplyRosetauPaint (Ankhu.Realms.EditorTools.RealmSceneBuilder/Ctx,string,Ankhu.Realms.EditorTools.RealmSceneBuilder/Rect4[]) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:207)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMournersB () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:489)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:40)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 207)
+
+Importing 'GUID: 504fe338a84cb20498196c57698edb67 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_b_voice_0.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 504fe338a84cb20498196c57698edb67' -> (Import Result ID: '301e911562c25210d7aebf4133630004') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=aadbe291e998f1afcc4c5cab8ee9a20e DependenciesID=cfc0dd2d3788e2c5f90765ee894981ba StaticDependenciesID=8f6a6a2c1e52694a7d2febc7e6ea60bf 
+Importing 'GUID: c0f280bb91ebc264aad395394615bb54 - Path: Assets/Ankhu/Realms/Generated/Materials/LapisPaint.mat' with importer (NativeFormatImporter)
+Imported 'GUID: c0f280bb91ebc264aad395394615bb54' -> (Import Result ID: '57de978169b0d8f477f7e1ef16414d56') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=0baa92f80a7e110770be682293fa2bfd DependenciesID=e4d07e69b92f2e7fd7db965628fd8592 StaticDependenciesID=722772c0a01ef02b461738ca3c46d8b9 
+Importing 'GUID: f16c7303f3632e44284003d3f8dc008f - Path: Assets/Ankhu/Realms/Generated/Materials/Glyph_V31.mat' with importer (NativeFormatImporter)
+Imported 'GUID: f16c7303f3632e44284003d3f8dc008f' -> (Import Result ID: 'c94172218ca5ffc28b8475fa137c8492') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=3f6fca533474811c1988737abb2f31ff DependenciesID=94633c2b1aaa37a61bfee87ea3bf25e5 StaticDependenciesID=039270a0737e7dda6ac26a58ace7a626 
+Importing 'GUID: 12b06869cfc2bed4491fe21ed2a0802d - Path: Assets/Ankhu/Realms/Generated/Materials/Embers.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 12b06869cfc2bed4491fe21ed2a0802d' -> (Import Result ID: 'b58cd67f19fcbb670c7f187fac276fe7') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=6515fc91e53622b1073aa70f8bf697e8 DependenciesID=c01b6ff7301f00e5351386b9e9cb3263 StaticDependenciesID=2955258a1129eff79fac80fb1a79cb6d 
+Importing 'GUID: 534ccb31b799be840aed39f7b8fc50b8 - Path: Assets/Ankhu/Realms/Generated/Materials/TombPlaster.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 534ccb31b799be840aed39f7b8fc50b8' -> (Import Result ID: 'd9316b42d5b37a045863f61790386178') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=881146bb2935c70a86e3e977dc326264 DependenciesID=c1644fa97fdf08f8cb5671da9a14f3cc StaticDependenciesID=31f2c9728e4d9b009e3cd41d37f12e0a 
+Importing 'GUID: e38c15c7872c7404986fd55dff71b5b9 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_b_flame.mat' with importer (NativeFormatImporter)
+Imported 'GUID: e38c15c7872c7404986fd55dff71b5b9' -> (Import Result ID: '9a9babb06ed2d25c5c46e5d28f899e41') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=21f92970c50fa397f35ef49c585fd36a DependenciesID=84dd05737d11c9db30c77c0db4d065ce StaticDependenciesID=b1713f8ea3559cd60d340b24717bba11 
+Importing 'GUID: 15be9fa3def9b714580e9fe6f0baece5 - Path: Assets/Ankhu/Realms/Generated/Materials/GoldLeaf.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 15be9fa3def9b714580e9fe6f0baece5' -> (Import Result ID: 'ce4bed3241f1dc4f8017afda670c884e') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=c08c30710c4340fa0aeed32d92f5abc3 DependenciesID=f1c9cc1b14ee7376442779de2eadd9de StaticDependenciesID=67c64815473bd970bdaa8a58b6f8017b 
+Importing 'GUID: 756b11d5162ecec46a0bb51c814ae30b - Path: Assets/Ankhu/Realms/Generated/Materials/RedOchre.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 756b11d5162ecec46a0bb51c814ae30b' -> (Import Result ID: '583f33299bf236a4f637578bbd31a020') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=d80b6f1e649445fda430c1f4ebab4cb0 DependenciesID=32022a75195f015c41bdcc859a72b08b StaticDependenciesID=ef80f9d74698a4d893dc9224e1d2c46f 
+Importing 'GUID: 3881ae034126aaf409d2f79af451f571 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_b_breath.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 3881ae034126aaf409d2f79af451f571' -> (Import Result ID: '5df82f6a9918341e6bdc2c6425cedce8') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=f8d392ea31f6e5271ebeb2361979eec4 DependenciesID=2377c7723370017947b344e4f33c2b55 StaticDependenciesID=bd78b2500dd45c6d1c573ac42379ba3d 
+Importing 'GUID: 58fdcccb55cfe1146bb90af70877c542 - Path: Assets/Ankhu/Realms/Generated/Materials/Linen.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 58fdcccb55cfe1146bb90af70877c542' -> (Import Result ID: '3e139f85d44995140789149cfaa5accc') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=dd75d7e496ccb97fc4f524bfffc8be7a DependenciesID=9af17835ac8061e2313b3391c89768d5 StaticDependenciesID=6ce59c747e425e952462c07dc49cf8c1 
+Importing 'GUID: 793818fb016188445a3f82fc54dfacce - Path: Assets/Ankhu/Realms/Generated/Materials/Glyph_W19.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 793818fb016188445a3f82fc54dfacce' -> (Import Result ID: 'fb9424eefdb930f022cb9616e4eaf973') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=c4b33b44f31657a751bf5ab11ccd0656 DependenciesID=7ce79325bc3c44f3e2d646310e89f721 StaticDependenciesID=c98f8e042a12431aa08f89eb16d36131 
+Importing 'GUID: ccb4136b4b38fa64cb24d1925b01662e - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_b_lament.mat' with importer (NativeFormatImporter)
+Imported 'GUID: ccb4136b4b38fa64cb24d1925b01662e' -> (Import Result ID: '0b91eb6c8cd8471d9a1c891d57aa56c2') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=6d498d52ab0f1d75aed4a2150c64141a DependenciesID=c9a6ecef8be55fe5dfbe64b2753261a7 StaticDependenciesID=586e38785ada4c33a8c029514f4d0e09 
+Importing 'GUID: 0edcc42ccb2089b48a09a02b34cd6554 - Path: Assets/Ankhu/Realms/Generated/Materials/Cedar.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 0edcc42ccb2089b48a09a02b34cd6554' -> (Import Result ID: 'b97f8ac669b399de05360831bfd22127') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=42467e3e913847be3d6a76101603e323 DependenciesID=5c21f9b7fed89e14a42e1c7eded7fbb2 StaticDependenciesID=1ab3e27e92219c3ab2faedfc0a231cf0 
+Importing 'GUID: 0fb57d0d53d537341849239028d40404 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_b_voice_1.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 0fb57d0d53d537341849239028d40404' -> (Import Result ID: 'd5782dfdba592b791218aa788ef5fd3a') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=e95d5b05f882f2b51ff3b9de3a438bcb DependenciesID=a24d9bca5b5768f43b150e8902893275 StaticDependenciesID=f2c9906715c2e996b6abd8249ea86a32 
+Importing 'GUID: cf9839e71d1a9914fa0ae5ad0324af37 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_b_beyond.mat' with importer (NativeFormatImporter)
+Imported 'GUID: cf9839e71d1a9914fa0ae5ad0324af37' -> (Import Result ID: 'badeee16d9fdb189d89210decea8a824') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=154e2a70b37a19d5db996f702c321737 DependenciesID=d191e6326f3454ef218dcd6d8cd5aa74 StaticDependenciesID=62dafcb31eaa2f973e2a5cc041a33406 
+Importing 'GUID: ff57340c97ee36b49931c700f9853e71 - Path: Assets/Ankhu/Realms/Generated/Materials/BierBlack.mat' with importer (NativeFormatImporter)
+Imported 'GUID: ff57340c97ee36b49931c700f9853e71' -> (Import Result ID: '0461ec2b7854c2874167a75b7a4f6e6c') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=7102d0c3601358919b782e60658b3b43 DependenciesID=ef31204980fc2d8dc09bf8806f30c7de StaticDependenciesID=5d1a6df7f2c7958b666dd76f9aefeba8 
+Asset Pipeline Refresh (id=4e8d7fb99b9ff814ba77e155556cb8c3): Total: 0.033 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: efbfec16b7d7a424d8496fe766ceeff7 - Path: Assets/Ankhu/Realms/Generated/Scenes/Rosetau_B_Mourners.unity' with importer (DefaultImporter)
+Imported 'GUID: efbfec16b7d7a424d8496fe766ceeff7' -> (Import Result ID: 'fb8ffdc4db465d28a1443015083c67d1') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=0ecb91978bc3387e9edeaaa04e6a7a99 DependenciesID=3833e0ae6c25d51fa150fef0522063a2 StaticDependenciesID=b8065c365d7fb2a4a01198928957b7e6 
+Asset Pipeline Refresh (id=a7e33a98782b3b34889d7effeeacf986): Total: 0.024 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Realms] Saved Assets/Ankhu/Realms/Generated/Scenes/Rosetau_B_Mourners.unity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:Finish (Ankhu.Realms.EditorTools.RealmSceneBuilder/Ctx,string) (at Assets/Ankhu/Realms/Editor/RealmSceneBuilder.cs:206)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMournersB () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:490)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:40)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RealmSceneBuilder.cs Line: 206)
+
+Unloading 22 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 693 unused Assets / (7.2 MB). Loaded Objects now: 4856.
+Memory consumption went from 362.6 MB to 355.3 MB.
+Total: 5.471200 ms (FindLiveObjects: 0.442500 ms CreateObjectMapping: 0.075000 ms MarkObjects: 4.311700 ms  DeleteObjects: 0.387800 ms)
+
+Asset Pipeline Refresh (id=3c5c55cd9bd7fd44a88f7a5ff43daf96): Total: 0.001 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: dd51ccdede5aea94bb833b805016a88b - Path: Assets/Ankhu/Realms/Generated/Rosetau_C_Mother_Volume.asset' with importer (NativeFormatImporter)
+Imported 'GUID: dd51ccdede5aea94bb833b805016a88b' -> (Import Result ID: '3eac8210ec8801b0c7cdff9c636be81b') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=bad3301947e82d757e0d77b0fcfc256f DependenciesID=cfe1ffad776d8b6dca33f7911d9701fc StaticDependenciesID=7139d441ca362ff8837f8d0eddafd697 
+Asset Pipeline Refresh (id=ae87343964ffe0f40af29e79b4a4370f): Total: 0.024 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 193366007e7c11b41aba45fc4ae5e839 - Path: Assets/Ankhu/Realms/Generated/Materials/Moon.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 193366007e7c11b41aba45fc4ae5e839' -> (Import Result ID: 'a5e126629ecb47af5f1a1bcc8c2ce50f') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=57b87f3bc9d17feb040daf055b7e7d73 DependenciesID=6b8d43bbe8f48751a2662a601d215207 StaticDependenciesID=a00babb87d05e62b22f7c58631928d9a 
+Importing 'GUID: dd51ccdede5aea94bb833b805016a88b - Path: Assets/Ankhu/Realms/Generated/Rosetau_C_Mother_Volume.asset' with importer (NativeFormatImporter)
+Imported 'GUID: dd51ccdede5aea94bb833b805016a88b' -> (Import Result ID: '397b6579c685b57b89d2151253a7f9d3') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=bad3301947e82d757e0d77b0fcfc256f DependenciesID=6086b641b57954be43a3e12c9f0ac175 StaticDependenciesID=7d2ee5d71bd5a44620552fe4a6f968dd 
+Asset Pipeline Refresh (id=38e773a87646f0846ba70379f90f999f): Total: 0.021 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 10594ea182d58b548b0cd88a1893ddf6 - Path: Assets/Ankhu/Realms/Generated/Materials/LoomThread.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 10594ea182d58b548b0cd88a1893ddf6' -> (Import Result ID: '4f8befbec138c3a59f97dc00b73402fb') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=c80d4d528f3d852093a2c6a47ca239d6 DependenciesID=55f7a7e16eb0e1d7cee387a263c1b690 StaticDependenciesID=4e1f35943fad286cea063348609146e4 
+Asset Pipeline Refresh (id=670704d38727e8a4bafa586096ee03c8): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Rosetau] missing card c_shuttle
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMotherC () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:537)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:41)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+[Rosetau] missing card c_mother_weep
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RFigure (UnityEngine.Transform,string,string,UnityEngine.Vector3,single) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:118)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMotherC () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:549)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:41)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+[Rosetau] missing card c_mother_listen
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RFigure (UnityEngine.Transform,string,string,UnityEngine.Vector3,single) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:118)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMotherC () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:550)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:41)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+[Rosetau] missing card c_mother_remembered
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RFigure (UnityEngine.Transform,string,string,UnityEngine.Vector3,single) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:118)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMotherC () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:551)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:41)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+Importing 'GUID: 7ecddbf4cd149414e9a64349b2c52f86 - Path: Assets/Ankhu/Realms/Art/Wernes/Sprites/FX/fx_glow.png' with importer (TextureImporter)
+Imported 'GUID: 7ecddbf4cd149414e9a64349b2c52f86' -> (Import Result ID: '862e451ee4c12c5ff32a125487e73b09') in 0.005 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cb4b76d66e7df1aadc2152855a29184a DependenciesID=7de52aed68d6f9200644ae078bef8476 StaticDependenciesID=f66fd9940440ce820f8a7d085b35113c 
+Asset Pipeline Refresh (id=5489b146e03a34f4e9672eaa118c6e1c): Total: 0.011 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 458c5a21be4fe0542985c5331320e12f - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_c_warm.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 458c5a21be4fe0542985c5331320e12f' -> (Import Result ID: '8fd5a40999d16278c9209f2aacbffe72') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=afe796d4c45ccbcaa0c6f7eea59b632f DependenciesID=07f67188d95d261616c2475ef7e6861d StaticDependenciesID=4d7718edcff10b916f838503d650e830 
+Asset Pipeline Refresh (id=3720e67b4b24a774c8ee1b06f3610dcf): Total: 0.021 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Rosetau] missing card c_quern_stone
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RCard (string,single&) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:78)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMotherC () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:570)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:41)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 78)
+
+Importing 'GUID: be92d1815e971144da6990c1c341b9ed - Path: Assets/Ankhu/Realms/Art/Wernes/Sprites/FX/fx_mote.png' with importer (TextureImporter)
+Imported 'GUID: be92d1815e971144da6990c1c341b9ed' -> (Import Result ID: '96259a4568d237c919c2c19adb118ef3') in 0.001 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a3fdd3a4a6492cfe1427e9ae8842f44b DependenciesID=1358988a1570d4894777111eaeda8e50 StaticDependenciesID=2b8a09431dd8185c260df698cbb52bbc 
+Asset Pipeline Refresh (id=ee44952b979e0a3429460227f95005f5): Total: 0.007 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 1bb84cbbb158b1c4298f21354f1e8a38 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_c_flour.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 1bb84cbbb158b1c4298f21354f1e8a38' -> (Import Result ID: '8181b5a7389329a0bc6e6e686914616a') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=e1b53f11404dc3c655962d3b5f97cfd0 DependenciesID=89c580b5b7a01fc82890d18bc708c2f9 StaticDependenciesID=74954f85dec37dfb96344b4a4c67be78 
+Asset Pipeline Refresh (id=e0f5d39769e6ec24d8f749799755db72): Total: 0.021 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 76e296941acf83f42b9a8420a270cf45 - Path: Assets/Ankhu/Realms/Art/Wernes/Sprites/FX/fx_ember.png' with importer (TextureImporter)
+Imported 'GUID: 76e296941acf83f42b9a8420a270cf45' -> (Import Result ID: 'b0a600097ff47a10bcf24baa208b0396') in 0.003 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f11dfee0390dacfde9521cb7c9c9c063 DependenciesID=87a1a2eb7a2f9de0b1fa62f245323d01 StaticDependenciesID=aa5a620478bc6afafb095228c117b262 
+Asset Pipeline Refresh (id=e196e11b8e19da24994d6635563fb1b0): Total: 0.009 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 456555fec77a2294bb576567cd7a76bb - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_c_flame.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 456555fec77a2294bb576567cd7a76bb' -> (Import Result ID: '887c26066a1226250e3b6634a818b4cf') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=63f30a83acab501c24e6cf66ccd4f4c9 DependenciesID=34c2ca8e2e17f1172484923842634502 StaticDependenciesID=ea05a68e19fabace4d79ee05a478245b 
+Asset Pipeline Refresh (id=141e7b2f28791054498657e2795b1b1c): Total: 0.020 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 7ecddbf4cd149414e9a64349b2c52f86 - Path: Assets/Ankhu/Realms/Art/Wernes/Sprites/FX/fx_glow.png' with importer (TextureImporter)
+Imported 'GUID: 7ecddbf4cd149414e9a64349b2c52f86' -> (Import Result ID: '862e451ee4c12c5ff32a125487e73b09') in 0.004 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cb4b76d66e7df1aadc2152855a29184a DependenciesID=7de52aed68d6f9200644ae078bef8476 StaticDependenciesID=f66fd9940440ce820f8a7d085b35113c 
+Asset Pipeline Refresh (id=a46ffc5a75e189940851dd559658e285): Total: 0.012 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: 0cd56be6b01ee1b41a3e647268f8abf5 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_c_lampglow.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 0cd56be6b01ee1b41a3e647268f8abf5' -> (Import Result ID: 'bbff101dbb9e8ffe649aa87e68a8bcca') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=986289a1190b844c54631bca7073dd2d DependenciesID=ba42944d723faef24e69c4ef184f651e StaticDependenciesID=ac3c88d7c13bfe869c4673bab5d562ab 
+Asset Pipeline Refresh (id=2aa93a38d4967fb41bfe72c84521b681): Total: 0.021 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Rosetau] Rosetau_C_Mother: no paintings yet, greybox only
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:ApplyRosetauPaint (Ankhu.Realms.EditorTools.RealmSceneBuilder/Ctx,string,Ankhu.Realms.EditorTools.RealmSceneBuilder/Rect4[]) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:207)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMotherC () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:612)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:41)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 207)
+
+Importing 'GUID: 10594ea182d58b548b0cd88a1893ddf6 - Path: Assets/Ankhu/Realms/Generated/Materials/LoomThread.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 10594ea182d58b548b0cd88a1893ddf6' -> (Import Result ID: '187c9a2fb6b35cd19849854105cedf65') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=c80d4d528f3d852093a2c6a47ca239d6 DependenciesID=7eb494aaae62f33492a95e42195aac98 StaticDependenciesID=f5871466a0cc4a13e992f030ad1f7417 
+Importing 'GUID: 107fd3f838862804aa17e067e90fba29 - Path: Assets/Ankhu/Realms/Generated/Materials/MudBrick.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 107fd3f838862804aa17e067e90fba29' -> (Import Result ID: '1f10554446a441b1098d12ad67973991') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=39f40b6ef24c418ac12b955e8a90d9b4 DependenciesID=d6d63c70d8c40857ad50da7a018c8967 StaticDependenciesID=6d4e38181fb937c7cb806f66489775d8 
+Importing 'GUID: a1687a138706f0248b984a53cd3beb13 - Path: Assets/Ankhu/Realms/Generated/Materials/RiverMud.mat' with importer (NativeFormatImporter)
+Imported 'GUID: a1687a138706f0248b984a53cd3beb13' -> (Import Result ID: 'cade45b2450c4d41414355325af82039') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=1015ad16f222ab6dfbc6d7a39bc7a6dd DependenciesID=30ecf9fc2b6795ea8ddd46baaa01b013 StaticDependenciesID=0a43e496378027161bde37f2de04d515 
+Importing 'GUID: 12b06869cfc2bed4491fe21ed2a0802d - Path: Assets/Ankhu/Realms/Generated/Materials/Embers.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 12b06869cfc2bed4491fe21ed2a0802d' -> (Import Result ID: 'b58cd67f19fcbb670c7f187fac276fe7') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=6515fc91e53622b1073aa70f8bf697e8 DependenciesID=c01b6ff7301f00e5351386b9e9cb3263 StaticDependenciesID=2955258a1129eff79fac80fb1a79cb6d 
+Importing 'GUID: 456555fec77a2294bb576567cd7a76bb - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_c_flame.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 456555fec77a2294bb576567cd7a76bb' -> (Import Result ID: 'bdd61fb4d40ba40b820b54b9b91d2b10') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=63f30a83acab501c24e6cf66ccd4f4c9 DependenciesID=6d9885023dd4a152913dec1f9c8b7feb StaticDependenciesID=a36cb6f16638ab8e75a3b1046d143d8d 
+Importing 'GUID: 458c5a21be4fe0542985c5331320e12f - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_c_warm.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 458c5a21be4fe0542985c5331320e12f' -> (Import Result ID: 'd9f8de5ea6f3ef2493ae5ebe74855fa0') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=afe796d4c45ccbcaa0c6f7eea59b632f DependenciesID=042071b1303c12390a563f901bb56e8a StaticDependenciesID=35be516c316644de16fe4f323490d4e3 
+Importing 'GUID: 27d010a7d22ea17468fc651f33fa199f - Path: Assets/Ankhu/Realms/Generated/Materials/Sandstone.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 27d010a7d22ea17468fc651f33fa199f' -> (Import Result ID: 'dce7d7c114a99e67a422292cb94d11a3') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=f9a009553dd309ee00583ce89d099e4a DependenciesID=6032b809b8a2688707bb151d45bb754e StaticDependenciesID=4c0c6182efbc6dac2872660064651cfa 
+Importing 'GUID: 1bb84cbbb158b1c4298f21354f1e8a38 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_c_flour.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 1bb84cbbb158b1c4298f21354f1e8a38' -> (Import Result ID: 'bd18176f8f8640e5e16935476a186835') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=e1b53f11404dc3c655962d3b5f97cfd0 DependenciesID=d421e05f54392f6355a31ebc75e54f05 StaticDependenciesID=5502821e3fd9d8787ca3f88d28810316 
+Importing 'GUID: 0cd56be6b01ee1b41a3e647268f8abf5 - Path: Assets/Ankhu/Realms/Art/Rosetau/Materials/fx_r_c_lampglow.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 0cd56be6b01ee1b41a3e647268f8abf5' -> (Import Result ID: '0662cbb8c974661b639c8fe9a1059b10') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=986289a1190b844c54631bca7073dd2d DependenciesID=5849117229ca34adb4ef161a321dc147 StaticDependenciesID=9e72800d7cce7951d25e178b28bb019b 
+Importing 'GUID: 6d79e334b493e9b48b47a0ae559f1ec1 - Path: Assets/Ankhu/Realms/Generated/Materials/ReedDry.mat' with importer (NativeFormatImporter)
+Imported 'GUID: 6d79e334b493e9b48b47a0ae559f1ec1' -> (Import Result ID: '3fb27f258eec536e2dda49a243732489') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=c562532436be93a3f056bf00ac77e326 DependenciesID=ae88fb5be9af39c6771459b68c6553cf StaticDependenciesID=2436df2f4a1247157c0356c3c9fe5153 
+Importing 'GUID: cfccce9e39e53ba45a5d2bd1a29e570c - Path: Assets/Ankhu/Realms/Generated/Materials/Plaster.mat' with importer (NativeFormatImporter)
+Imported 'GUID: cfccce9e39e53ba45a5d2bd1a29e570c' -> (Import Result ID: '4ec45c0d23965bf30c6b2f6155036770') in 0.000 seconds [static dependencies only]. Details - ImportResultOutputID=6feb2033eddf2d82f39955280bfdf968 DependenciesID=1abe83032f7d45c323da7acc5ce8a341 StaticDependenciesID=2393181648b9434fad64ba6e1de324a8 
+Asset Pipeline Refresh (id=c75298a90c705c84498b03ddf924d5e9): Total: 0.028 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: dedd9bf75d0fef247a928678a212197b - Path: Assets/Ankhu/Realms/Generated/Scenes/Rosetau_C_Mother.unity' with importer (DefaultImporter)
+Imported 'GUID: dedd9bf75d0fef247a928678a212197b' -> (Import Result ID: 'ff4d07625cd2b03de01dc4aed1e61b82') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=0f5cc5ddb0654f30737e4abde695c277 DependenciesID=741a653e6bca51c026d92a4f347c2db2 StaticDependenciesID=cd4d0304dfb6624b5476e59bffe88460 
+Asset Pipeline Refresh (id=0d0a10c46c372094298c86be6e7c543d): Total: 0.022 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Realms] Saved Assets/Ankhu/Realms/Generated/Scenes/Rosetau_C_Mother.unity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:Finish (Ankhu.Realms.EditorTools.RealmSceneBuilder/Ctx,string) (at Assets/Ankhu/Realms/Editor/RealmSceneBuilder.cs:206)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildMotherC () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:613)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:41)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RealmSceneBuilder.cs Line: 206)
+
+AcceleratorClientConnectionCallback - disconnected - :0
+Importing 'GUID: 0000000000000000b000000000000000 - Path: ProjectSettings/EditorBuildSettings.asset' with importer (LibraryAssetImporter)
+Imported 'GUID: 0000000000000000b000000000000000' -> (Import Result ID: '65effe3504adb82e0e98199974811c0f') in 0.001 seconds [static dependencies only]. Details - ImportResultOutputID=0a89a5c5f492143e0fa186859e17ba6f DependenciesID=b5ae201140ae9c9029e26ea0fa2c65bf StaticDependenciesID=3ef524bcb376e3d3d897db78603566c0 
+Asset Pipeline Refresh (id=459be150fc3fa6049823f2f06d6e9191): Total: 0.021 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Rosetau] scenes built.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetau () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:44)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:RunCli (System.Action) (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:49)
+Ankhu.Realms.EditorTools.RealmSceneBuilder:BuildRosetauCli () (at Assets/Ankhu/Realms/Editor/RosetauBuilder.cs:31)
+
+(Filename: Assets/Ankhu/Realms/Editor/RosetauBuilder.cs Line: 44)
+
+MonoPathRemapper: Attempts to remap: 8709; Successful remaps: 12
+Serialized file version minimum: 22, current 23
+Worker ready: AssetImportWorkerHW0 0
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-zaclu-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-zaclu channel disconnected successfully.
+Shut down.
+Lingering sessions upon destruction of worker manager
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+Shut down UDS service system complete
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+abort_threads: Failed aborting id: 00000000000090B4, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000000C418, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 00000000000090B4, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000000C418, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 5224
+VBCSCompilerPreWarmer: requested VBCSCompiler shutdown
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1795592323609,"processId":12656,"allocatedMemory":15612549,"memoryLabels":[{"Default":215445},{"Permanent":15516},{"NewDelete":86367},{"Thread":4205720},{"Manager":51293},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":847671},{"Material":68},{"GfxDevice":58008},{"Audio":408},{"FreeType":8},{"FontEngine":736},{"Physics":1970},{"Physics2D":16},{"Serialization":20464},{"Input":42840},{"JobScheduler":256},{"TextLib":336},{"Mono":48},{"MonoCode":64},{"ScriptingNativeRuntime":1243480},{"BaseObject":49776},{"Resource":1252},{"Renderer":2376},{"Transform":4685},{"File":13323},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":596019},{"StaticString":3808},{"Utility":2676982},{"Curl":2579},{"PoolAlloc":2264},{"AI":80},{"TypeTree":20749},{"ScriptManager":12656},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":6808},{"CloudService":7296},{"WebRequest":8647},{"VR":49650},{"SceneManager":608},{"Video":64},{"LazyScriptCache":32},{"Camera":729},{"Secure":2377},{"SerializationCache":9256},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":592},{"Hierarchy":1188},{"UIElements":40},{"CoreStats":14456},{"Identifiers":7152},{"Gui":128},{"EditorUtility":116699},{"VersionControl":8},{"Undo":931},{"AssetDatabase":4783211},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":40441},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":96},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3600},{"Windowing":456},{"Licensing":1264},{"AssetReference":32},{"IPCStream":32}]}
+~StackAllocator(ALLOC_TEMP_MAIN) m_LastAlloc not NULL. Did you forget to call FreeAllStackAllocations()? To get more information, run app with -diag-temp-memory-leak-validation cmd line argument

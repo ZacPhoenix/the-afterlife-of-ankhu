@@ -1,0 +1,596 @@
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 49900)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 17212)
+VBCSCompiler prewarm took 16.81 ms
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Channel LicenseClient-zaclu doesn't exist
+Built from '6000.6/staging' branch; Version is '6000.6.3f1 (45d8eee7de74) revision 4577518'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26300) Core' Language: 'en' Physical Memory: 98043 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-11-25T07:45:30Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 8300)
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Unity.exe
+-batchmode
+-quit
+-nographics
+-projectPath
+D:/TheAfterlifeofAnkhu
+-executeMethod
+Ankhu.Realms.EditorTools.GlyphCoverageCheck.CheckCli
+-logFile
+art_gen/rosetau/logs/glyphs.log
+Successfully changed project path to: D:/TheAfterlifeofAnkhu
+D:/TheAfterlifeofAnkhu
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=1"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.
+Player connection [42240]  Target information:
+
+Player connection [42240]  * "[IP] 192.168.1.231 [Port] 55504 [Flags] 2 [Guid] 3272370569 [EditorId] 3272370569 [Version] 1048832 [Id] WindowsEditor(7,ZacLenovo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [42240]  * "[IP] 172.24.0.1 [Port] 55504 [Flags] 2 [Guid] 3272370569 [EditorId] 3272370569 [Version] 1048832 [Id] WindowsEditor(7,ZacLenovo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [42240] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [42240] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Starting IPC server.
+Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-zaclu, press Ctrl-C to exit.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-zaclu" at "2026-11-25T07:45:30.7995946Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 8300, path: "C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              fa09e5aea7704ff7afe6c70f8bd8bd7c
+  Correlation Id:          2c7abff3f8b603f353827c041ced3a01
+  External correlation Id: 1837548795027534422
+  Machine Id:              75cw/7rfqwpPgCb3W3AB1gXGriU=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-zaclu" (connect: 0.37s, validation: 0.06s, handshake: 0.07s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-zaclu-notifications" at "2026-11-25T07:45:30.9312442Z"
+[Licensing::Module] Connected to LicensingClient (PId: 8300, launch time: 0.00, total connection time: 0.51s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 2475338760178-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.55s
+[Package Manager] Connected to IPC stream "Upm-3552" after 0.3 seconds.
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+Initialising UDS system complete:
+  - System type: Client
+  - Resource namespace: 0ee2fab501261e53eff613af4acc6586
+  - Shared memory size: 1073741824
+  - Command buffer id: 1052576
+  - Command buffer size: 8192
+  - Hashmap size: 4194304
+  - Service connected: false
+Launching Unity Data Store - C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Tools/Unity.DataStore.exe 
+Unity Data Store artifact dir = Library/DataStore, working dir = D:/TheAfterlifeofAnkhuUnity Data Store running and initialised
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.6.3f1 (45d8eee7de74)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/TheAfterlifeofAnkhu/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56552
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.002057 seconds.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Licensing::Client] Successfully resolved entitlement details
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  1.211 seconds
+Domain Reload Profiling: 1618ms
+	BeginReloadAssembly (103ms)
+		CreateAndSetChildDomain (16ms)
+	RebuildCommonClasses (4ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (50ms)
+	LoadAllAssembliesAndSetupDomain (238ms)
+		LoadAssemblies (84ms)
+		TypeCache.Refresh (158ms)
+			TypeCache.ScanAssembly (147ms)
+		AnalyzeDomain (0ms)
+	FinalizeReload (1212ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (29ms)
+			BeforeProcessingInitializeOnLoad (76ms)
+			ProcessInitializeOnLoadAttributes (66ms)
+			ProcessInitializeOnLoadMethodAttributes (856ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 54 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.inputsystem@1.20.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.inputsystem@7a4e1a2a8194)
+    com.unity.searcher@4.9.5 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.searcher@a463122f2c00)
+    com.unity.profiling.core@1.0.3 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.profiling.core@8a49f7027d06)
+    com.unity.nuget.mono-cecil@1.11.6 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+  Built-in packages:
+    com.unity.render-pipelines.universal@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.render-pipelines.universal@327d93d1cbc8)
+    com.unity.test-framework@1.8.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.test-framework@80f691d4262b)
+    com.unity.ugui@2.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.ugui@0727b404f3a0)
+    com.unity.modules.accessibility@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tetgen@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.tetgen)
+    com.unity.modules.tilemap@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.timelinefoundation@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.timelinefoundation)
+    com.unity.modules.ui@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.ext.nunit@0198eae3b53e)
+    com.unity.render-pipelines.core@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.render-pipelines.core@02d75770e4b3)
+    com.unity.shadergraph@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.shadergraph@1dd0fd24b57e)
+    com.unity.render-pipelines.universal-config@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.render-pipelines.universal-config@561422b74439)
+    com.unity.graph-authoring@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.graph-authoring@cfd2588851ee)
+    com.unity.burst@2.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.burst@626e66ab421b)
+    com.unity.collections@6.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.collections@10fff0607388)
+    com.unity.test-framework.performance@6.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.test-framework.performance@b6023decb532)
+  Embedded packages:
+    com.ankhu.borrowed-dawn@file:D:\TheAfterlifeofAnkhu\Packages\com.ankhu.borrowed-dawn (location: D:\TheAfterlifeofAnkhu\Packages\com.ankhu.borrowed-dawn)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.03 seconds
+Starting: C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/TheAfterlifeofAnkhu
+DisplayProgressbar: Compiling Scripts
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll"
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.componentmodel.composition has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.ComponentModel.Composition.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ComponentModel.Composition.dll"
+ExitCode: 0 Duration: 0s286ms
+[675/871    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra build success (0.25 seconds), 1 items updated, 871 evaluated
+AssetDatabase: script compilation time: 0.737483s
+Begin MonoManager ReloadAssembly
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.553 seconds
+Domain Reload Profiling: 1204ms
+	BeginReloadAssembly (285ms)
+		DisableScriptedObjects (16ms)
+		CreateAndSetChildDomain (150ms)
+	RebuildCommonClasses (7ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (313ms)
+		LoadAssemblies (195ms)
+		TypeCache.Refresh (64ms)
+			TypeCache.ScanAssembly (57ms)
+		AnalyzeDomain (32ms)
+			BuildScriptInfoCaches (26ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (554ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (100ms)
+			ProcessInitializeOnLoadMethodAttributes (165ms)
+			AfterProcessingInitializeOnLoad (6ms)
+		AwakeInstancesAfterBackupRestoration (25ms)
+Starting new worker id: 0 with log in D:/TheAfterlifeofAnkhu/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=b49239b2b9552e74ca1a315fe269083a): Total: 2.299 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=799 ms
+		Asset DB Callback time: managed=22 ms, native=26 ms
+		Scripting: domain reloads=1, domain reload time=681 ms, compile time=739 ms, other=29 ms
+		Project Asset Count: scripts=1088, non-scripts=3315
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 27.726ms
+	ApplyChangesToAssetFolders: 0.516ms
+	Scan: 63.697ms
+	Collect global state as custom dependencies: 12.191ms
+	CategorizeScriptCompilationAssets: 12.941ms
+	ProcessAssetsWithTransientArtifactChanges: 29.307ms
+	CategorizeAssets: 37.093ms
+	CompileScripts: 739.203ms
+	ImportOutOfDateAssets: 565.407ms (555.831ms without children)
+		UnloadImportedAssets: 1.538ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.426ms
+		ImportSchedulerStart: 7.580ms
+	PostProcessAllAssets: 22.247ms
+		MonoPostProcessAllAssets: 22.204ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 10.649ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.233ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.165ms
+			SyncVS.PostprocessSyncProject 0.791ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.605ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.498ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.403ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.195ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.191ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.136ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.117ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.111ms
+	UnloadStreamsBegin: 1.025ms
+	PersistCurrentRevisions: 0.098ms
+	GenerateScriptTypeHashes: 0.933ms
+	GenerateScriptTypeSerializationHashes: 1.734ms
+	Untracked: 785.792ms
+
+Application.AssetDatabase Initial Refresh End
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Scanning for USB devices : 3.386ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-TheAfterlifeofAnkhu
+Unloading 74 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3847 unused Assets / (6.2 MB). Loaded Objects now: 4798.
+Memory consumption went from 336.1 MB to 329.9 MB.
+Total: 7.739800 ms (FindLiveObjects: 0.666000 ms CreateObjectMapping: 0.159500 ms MarkObjects: 4.847600 ms  DeleteObjects: 1.884300 ms)
+
+# Glyph coverage check
+
+Run 2026-11-25 02:45. PASS, 216 words, every one has its signs.
+
+## Every word checked
+
+| Where | Word | Signs | Status |
+|---|---|---|---|
+| Lexicon verb | open | E34 N35 O31 | ok |
+| Lexicon verb | seal | Aa1 X1 G17 S20 | ok |
+| Lexicon verb | wake | D21 O34 D4 | ok |
+| Lexicon verb | still | R4 X1 Q3 | ok |
+| Lexicon verb | name | D21 N35 | ok |
+| Lexicon verb | flow | D58 D36 V28 N35A | ok |
+| Lexicon verb | bind | S24 O34 | ok |
+| Lexicon verb | release | P4 D36 V1 D40 | ok |
+| Lexicon verb | recall | S29 Aa1 M12 G1 | ok |
+| Lexicon verb | echo | G43 N37 D58 A2 | ok |
+| Lexicon verb | sleep | O34 M36 D21 A55 | ok |
+| Lexicon verb | strike | V28 G43 D40 | ok |
+| Lexicon verb | read | N37 D46 Y1 | ok |
+| Lexicon verb | see | U2 G1 D4 | ok |
+| Lexicon verb | calm | N29 D58 D58 N35A | ok |
+| Lexicon verb | ward | V17 | ok |
+| Lexicon verb | become | L1 D21 | ok |
+| Lexicon verb | weigh | U38 | ok |
+| Lexicon verb | give | D21 D37 | ok |
+| Lexicon verb | rise | G43 D58 N35 N5 | ok |
+| Lexicon verb | remember | S29 Aa1 M12 G1 | ok |
+| Lexicon name | ankhu | S34 N35 Aa1 G43 | ok |
+| Lexicon name | anpu | M17 N35 Q3 G43 E15 | ok |
+| Lexicon name | hori | G5 D21 M17 | ok |
+| Lexicon name | neferet | F35 X1 B1 | ok |
+| Lexicon name | ausar | Q1 D4 A40 | ok |
+| Lexicon name | heru | G5 | ok |
+| Lexicon name | auset | Q1 X1 B1 | ok |
+| Lexicon name | isis | Q1 X1 B1 | ok |
+| Lexicon name | nebethet | O9 X1 B1 | ok |
+| Lexicon name | nephthys | O9 X1 B1 | ok |
+| Lexicon noun or direction | west | R14 X1 N25 | ok |
+| Lexicon noun or direction | east | R15 X1 N25 | ok |
+| Lexicon noun or direction | w | R14 X1 N25 | ok |
+| Lexicon noun or direction | e | R15 X1 N25 | ok |
+| Lexicon noun or direction | bearer | X1 G43 X1 A53 | ok |
+| Lexicon noun or direction | statue | X1 G43 X1 A53 | ok |
+| Lexicon noun or direction | bell | Y8 X1 | ok |
+| Lexicon noun or direction | resonator | Y8 X1 | ok |
+| Lexicon noun or direction | elevator | I9 G1 A9 | ok |
+| Lexicon noun or direction | lift | I9 G1 A9 | ok |
+| Lexicon noun or direction | shadow | N37 G43 X1 S35 | ok |
+| Lexicon noun or direction | bridge | N36 O1 | ok |
+| Lexicon noun or direction | pendulum | N36 O1 | ok |
+| Lexicon noun or direction | inscription | Y3 Y1 | ok |
+| Lexicon noun or direction | inscriptions | Y3 Y1 | ok |
+| Lexicon noun or direction | gallery | D36 X1 O1 | ok |
+| Lexicon noun or direction | laugh | O34 D58 V13 A2 | ok |
+| Lexicon noun or direction | laughter | O34 D58 V13 A2 | ok |
+| Lexicon noun or direction | child | F32 D21 D46 A17 | ok |
+| Lexicon noun or direction | boy | F32 D21 D46 A17 | ok |
+| Lexicon noun or direction | falcon | G5 | ok |
+| Lexicon noun or direction | door | D36 G1 O31 | ok |
+| Lexicon noun or direction | doorway | D36 G1 O31 | ok |
+| Lexicon noun or direction | linen | Y5 N35 Aa1 X1 S28 | ok |
+| Lexicon noun or direction | band | Y5 N35 Aa1 X1 S28 | ok |
+| Lexicon noun or direction | lament | M17 G1 V31 D58 A28 | ok |
+| Lexicon noun or direction | keen | M17 G1 V31 D58 A28 | ok |
+| Lexicon noun or direction | weeping | M17 G1 V31 D58 A28 | ok |
+| Lexicon noun or direction | lamp | Aa1 D58 S29 Q7 | ok |
+| Lexicon noun or direction | lamps | Aa1 D58 S29 Q7 | ok |
+| Lexicon noun or direction | loom | O34 Aa1 X1 S28 | ok |
+| Lexicon noun or direction | quern | N35 I10 U32 | ok |
+| Lexicon noun or direction | mother | G14 X1 B1 | ok |
+| Wernes_Terrace | name hori | G5 D21 M17 | ok |
+| Wernes_Hub | name ankhu | S34 N35 Aa1 G43 | ok |
+| Wernes_A_Field | bind | S24 O34 | ok |
+| Wernes_A_Field | open | E34 N35 O31 | ok |
+| Wernes_A_Field | release | P4 D36 V1 D40 | ok |
+| Wernes_A_Field | seal | Aa1 X1 G17 S20 | ok |
+| Wernes_A_Field | still | R4 X1 Q3 | ok |
+| Wernes_A_Field | wake | D21 O34 D4 | ok |
+| Wernes_A_Field | shaduf beam (beam, shaduf, arm, shaduf beam, pole, sweep) | M3 | ok |
+| Wernes_A_Field | shabti at the trough (shabti, shabti a, first shabti, trough shabti, worker, servant) | A53 | ok |
+| Wernes_A_Field | shabti at the shaduf (shabti, shabti b, second shabti, shaduf shabti, worker, servant) | A53 | ok |
+| Wernes_A_Field | sluice (sluice, sluice gate, gate, canal gate, canal) | O31 N36 | ok |
+| Wernes_B_Shabti | bind | S24 O34 | ok |
+| Wernes_B_Shabti | open | E34 N35 O31 | ok |
+| Wernes_B_Shabti | release | P4 D36 V1 D40 | ok |
+| Wernes_B_Shabti | still | R4 X1 Q3 | ok |
+| Wernes_B_Shabti | wake | D21 O34 D4 | ok |
+| Wernes_B_Shabti | footbridge (bridge, footbridge, planks, plank bridge) | N36 O1 | ok |
+| Wernes_B_Shabti | shabti with your name (ankhu, painted shabti, named shabti, far shabti, fine shabti, my shabti, shabti ankhu, ankhu shabti) | S34 N35 Aa1 G43 | ok |
+| Wernes_B_Shabti | first shabti (shabti, worker, servant, shabti 1, first shabti, blank shabti) | A53 | ok |
+| Wernes_B_Shabti | second shabti (shabti, worker, servant, shabti 2, second shabti, blank shabti) | A53 | ok |
+| Wernes_B_Shabti | third shabti (shabti, worker, servant, shabti 3, third shabti, blank shabti) | A53 | ok |
+| Wernes_B_Shabti | first sluice (sluice, gate, sluice gate, sluice 1, first sluice, sluice first) | O31 N36 | ok |
+| Wernes_B_Shabti | second sluice (sluice, gate, sluice gate, sluice 2, second sluice, sluice second) | O31 N36 | ok |
+| Wernes_B_Shabti | third sluice (sluice, gate, sluice gate, sluice 3, third sluice, sluice third) | O31 N36 | ok |
+| Wernes_C_House | bind | S24 O34 | ok |
+| Wernes_C_House | open | E34 N35 O31 | ok |
+| Wernes_C_House | release | P4 D36 V1 D40 | ok |
+| Wernes_C_House | seal | Aa1 X1 G17 S20 | ok |
+| Wernes_C_House | still | R4 X1 Q3 | ok |
+| Wernes_C_House | wake | D21 O34 D4 | ok |
+| Wernes_C_House | ditch sluice (ditch, ditch sluice, ditch gate, drain) | O31 N36 | ok |
+| Wernes_C_House | door (door, front door, house door, plank door, doorway) | O31 | ok |
+| Wernes_C_House | lower sluice (lower, lower sluice, lower gate, sluice, gate) | O31 N36 | ok |
+| Wernes_D_Bricks | bind | S24 O34 | ok |
+| Wernes_D_Bricks | echo | G43 N37 D58 A2 | ok |
+| Wernes_D_Bricks | flow | D58 D36 V28 N35A | ok |
+| Wernes_D_Bricks | open | E34 N35 O31 | ok |
+| Wernes_D_Bricks | release | P4 D36 V1 D40 | ok |
+| Wernes_D_Bricks | seal | Aa1 X1 G17 S20 | ok |
+| Wernes_D_Bricks | still | R4 X1 Q3 | ok |
+| Wernes_D_Bricks | wake | D21 O34 D4 | ok |
+| Wernes_D_Bricks | basin (basin, dry basin, bowl, water basin) | N37 | ok |
+| Wernes_D_Bricks | midwife's basket (basket, midwife's basket, midwife basket, lid) | V30 | ok |
+| Wernes_D_Bricks | the bricks (bricks, birth bricks, all the bricks, the bricks) | F31 S29 Aa1 N35 X1 | ok |
+| Wernes_D_Bricks | cry (cry, voice, her voice, shout, wail, sound) | S29 D58 V28 A2 | ok |
+| Wernes_D_Bricks | Meskhenet (meskhenet, goddess, painted goddess, woman, painted woman, her) | F31 S29 Aa1 N35 X1 B1 | ok |
+| Wernes_D_Bricks | quail chick (quail, chick, quail chick, bird, snare, reed snare) | G43 | ok |
+| Realm_01_Arit1 | name sad of voice | A2 P8 | ok |
+| Realm_01_Arit1 | name sad-of-voice | A2 P8 | ok |
+| Realm_01_Arit1 | name of voice | A2 P8 | ok |
+| Realm_01_Arit1 | name eavesdropper | F21 G17 | ok |
+| Realm_01_Arit1 | name eaves-dropper | F21 G17 | ok |
+| Realm_01_Arit1 | name eaves dropper | F21 G17 | ok |
+| Realm_01_Arit1 | name face-downward | D2 D21 N35A | ok |
+| Realm_01_Arit1 | name face downward | D2 D21 N35A | ok |
+| Realm_01_Arit1 | name numerous of shapes | D2 D21 N35A | ok |
+| Realm_01_Arit1 | name face-downward numerous of shapes | D2 D21 N35A | ok |
+| Realm_01_Arit1 | name face downward numerous of shapes | D2 D21 N35A | ok |
+| Realm_01_Arit1 | name ankhu | S34 N35 Aa1 G43 | ok |
+| Realm_02_Wernes_Field | open | E34 N35 O31 | ok |
+| Realm_02_Wernes_Field | still | R4 X1 Q3 | ok |
+| Realm_02_Wernes_Field | wake | D21 O34 D4 | ok |
+| Realm_02_Wernes_Field | basin (basin, water, pool, bowl) | N35A | ok |
+| Realm_02_Wernes_Field | lotus (lotus, bud, flower, lotus bud) | M9 | ok |
+| Realm_02_Wernes_Field | shabti (shabti, worker, figure, servant, clay figure, clay man, ushabti) | A1 Z1 | ok |
+| Realm_02_Wernes_Field | sluice (sluice, sluice gate, floodgate, gate, canal, channel) | O31 N35A | ok |
+| Realm_03_Wernes_House | open | E34 N35 O31 | ok |
+| Realm_03_Wernes_House | seal | Aa1 X1 G17 S20 | ok |
+| Realm_03_Wernes_House | still | R4 X1 Q3 | ok |
+| Realm_03_Wernes_House | wake | D21 O34 D4 | ok |
+| Realm_03_Wernes_House | false door (false door, door, stela) | O31 | ok |
+| Realm_03_Wernes_House | lower sluice (lower sluice, lower, bottom sluice, low sluice, lower gate, drain) | O31 N35A | ok |
+| Realm_03_Wernes_House | plot (plot, field, seedlings, garden, seeds) | M20 | ok |
+| Realm_03_Wernes_House | upper sluice (upper sluice, upper, top sluice, high sluice, upper gate, jammed sluice) | O31 N35A | ok |
+| Realm_04_Wernes_Row | open | E34 N35 O31 | ok |
+| Realm_04_Wernes_Row | seal | Aa1 X1 G17 S20 | ok |
+| Realm_04_Wernes_Row | still | R4 X1 Q3 | ok |
+| Realm_04_Wernes_Row | wake | D21 O34 D4 | ok |
+| Realm_04_Wernes_Row | painted shabti (ankhu, shabti, worker, figure, painted shabti, fine shabti, fifth shabti, last shabti, painted worker, fifth, ushabti) | S34 N35 Aa1 G43 | ok |
+| Realm_04_Wernes_Row | first plot (plot, field, furrows, earth, seedbed, first plot, first field) | M20 | ok |
+| Realm_04_Wernes_Row | second plot (plot, field, furrows, earth, seedbed, second plot, second field) | M20 | ok |
+| Realm_04_Wernes_Row | third plot (plot, field, furrows, earth, seedbed, third plot, third field) | M20 | ok |
+| Realm_04_Wernes_Row | first shabti (shabti, worker, clay worker, figure, clay figure, first shabti, first worker, blank shabti, ushabti) | A1 Z1 | ok |
+| Realm_04_Wernes_Row | second shabti (shabti, worker, clay worker, figure, clay figure, second shabti, second worker, blank shabti, ushabti) | A1 Z1 | ok |
+| Realm_04_Wernes_Row | third shabti (shabti, worker, clay worker, figure, clay figure, third shabti, third worker, blank shabti, ushabti) | A1 Z1 | ok |
+| Realm_04_Wernes_Row | first sluice (sluice, gate, sluice gate, first sluice, first gate) | O31 N35A | ok |
+| Realm_04_Wernes_Row | second sluice (sluice, gate, sluice gate, second sluice, second gate) | O31 N35A | ok |
+| Realm_04_Wernes_Row | third sluice (sluice, gate, sluice gate, third sluice, third gate) | O31 N35A | ok |
+| Rosetau_A_Laugh | echo | G43 N37 D58 A2 | ok |
+| Rosetau_A_Laugh | give | D21 D37 | ok |
+| Rosetau_A_Laugh | open | E34 N35 O31 | ok |
+| Rosetau_A_Laugh | release | P4 D36 V1 D40 | ok |
+| Rosetau_A_Laugh | still | R4 X1 Q3 | ok |
+| Rosetau_A_Laugh | wake | D21 O34 D4 | ok |
+| Rosetau_A_Laugh | child (child, boy, heru, young heru, heru the child, hori, son, kid) | F32 D21 D46 A17 | ok |
+| Rosetau_A_Laugh | clay falcon (falcon, clay falcon, toy, bird, hori's falcon) | G5 | ok |
+| Rosetau_A_Laugh | laugh (laugh, laughter, laughing, giggle, voice, sound, child's laugh) | O34 D58 V13 A2 | ok |
+| Rosetau_A_Laugh | left doorway (door, doorway, mouth, passage, opening, left door, left doorway, left mouth, left passage) | D36 G1 O31 | ok |
+| Rosetau_A_Laugh | middle doorway (door, doorway, mouth, passage, opening, middle door, middle doorway, middle mouth, middle passage) | D36 G1 O31 | ok |
+| Rosetau_A_Laugh | right doorway (door, doorway, mouth, passage, opening, right door, right doorway, right mouth, right passage) | D36 G1 O31 | ok |
+| Rosetau_B_Mourners | echo | G43 N37 D58 A2 | ok |
+| Rosetau_B_Mourners | give | D21 D37 | ok |
+| Rosetau_B_Mourners | open | E34 N35 O31 | ok |
+| Rosetau_B_Mourners | release | P4 D36 V1 D40 | ok |
+| Rosetau_B_Mourners | still | R4 X1 Q3 | ok |
+| Rosetau_B_Mourners | wake | D21 O34 D4 | ok |
+| Rosetau_B_Mourners | Auset (auset, isis, mourner, first mourner, woman, kneeling woman, sister, kite, her, mourner at the head, aset) | Q1 X1 B1 | ok |
+| Rosetau_B_Mourners | linen band (band, bands, linen, gag, knot, wrapping, bandage) | Y5 N35 Aa1 X1 S28 | ok |
+| Rosetau_B_Mourners | door (door, far door, doorway, seal) | D36 G1 O31 | ok |
+| Rosetau_B_Mourners | lament (lament, keen, keening, mourning, wail, wailing, voices, song, cry) | M17 G1 V31 D58 A28 | ok |
+| Rosetau_B_Mourners | Nebet-Het (nebet-het, nebet het, nebethet, nephthys, mourner, second mourner, woman, kneeling woman, sister, kite, her, mourner at the feet) | O9 X1 B1 | ok |
+| Rosetau_C_Mother | echo | G43 N37 D58 A2 | ok |
+| Rosetau_C_Mother | give | D21 D37 | ok |
+| Rosetau_C_Mother | open | E34 N35 O31 | ok |
+| Rosetau_C_Mother | release | P4 D36 V1 D40 | ok |
+| Rosetau_C_Mother | remember | S29 Aa1 M12 G1 | ok |
+| Rosetau_C_Mother | still | R4 X1 Q3 | ok |
+| Rosetau_C_Mother | wake | D21 O34 D4 | ok |
+| Rosetau_C_Mother | lamp (lamp, light, oil lamp, wick) | Aa1 D58 S29 Q7 | ok |
+| Rosetau_C_Mother | loom (loom, weaving, warp, shuttle, cloth, thread) | O34 Aa1 X1 S28 | ok |
+| Rosetau_C_Mother | mother (mother, mum, mama, mut, woman, her, my mother, weeping woman, weaver) | G14 X1 B1 | ok |
+| Rosetau_C_Mother | quern (quern, grindstone, millstone, grain, stone) | N35 I10 U32 | ok |
+| Rosetau_C_Mother | weeping (weeping, crying, grief, sobbing, tears, lament, voice) | M17 G1 V31 D58 A28 | ok |
+| BorrowedDawn and Teach (spell verb (wake)) | awaken | D21 O34 D4 | ok |
+| BorrowedDawn and Teach (object of wake) | bearer | X1 G43 X1 A53 | ok |
+| BorrowedDawn and Teach (object of recall) | bell | Y8 X1 | ok |
+| BorrowedDawn and Teach (spell verb (bind)) | bind | S24 O34 | ok |
+| BorrowedDawn and Teach (bind or release target) | bridge | N36 O1 | ok |
+| BorrowedDawn and Teach (direction for flow) | e | R15 X1 N25 | ok |
+| BorrowedDawn and Teach (direction for flow) | east | R15 X1 N25 | ok |
+| BorrowedDawn and Teach (spell verb (echo)) | echo | G43 N37 D58 A2 | ok |
+| BorrowedDawn and Teach (bind or release target) | elevator | I9 G1 A9 | ok |
+| BorrowedDawn and Teach (spell verb (flow)) | flow | D58 D36 V28 N35A | ok |
+| BorrowedDawn and Teach (object of read) | gallery | D36 X1 O1 | ok |
+| BorrowedDawn and Teach (object of read) | inscription | Y3 Y1 | ok |
+| BorrowedDawn and Teach (object of read) | inscriptions | Y3 Y1 | ok |
+| BorrowedDawn and Teach (bind or release target) | lift | I9 G1 A9 | ok |
+| BorrowedDawn and Teach (bind or release target) | pendulum | N36 O1 | ok |
+| BorrowedDawn and Teach (spell verb (read)) | read | N37 D46 Y1 | ok |
+| BorrowedDawn and Teach (spell verb (recall)) | recall | S29 Aa1 M12 G1 | ok |
+| BorrowedDawn and Teach (spell verb (release)) | release | P4 D36 V1 D40 | ok |
+| BorrowedDawn and Teach (object of recall) | resonator | Y8 X1 | ok |
+| BorrowedDawn and Teach (spell verb (strike)) | ring | V28 G43 D40 | ok |
+| BorrowedDawn and Teach (bind or release target) | shadow | N37 G43 X1 S35 | ok |
+| BorrowedDawn and Teach (spell verb (sleep)) | sleep | O34 M36 D21 A55 | ok |
+| BorrowedDawn and Teach (object of wake) | statue | X1 G43 X1 A53 | ok |
+| BorrowedDawn and Teach (spell verb (strike)) | strike | V28 G43 D40 | ok |
+| BorrowedDawn and Teach (spell verb (release)) | unbind | P4 D36 V1 D40 | ok |
+| BorrowedDawn and Teach (direction for flow) | w | R14 X1 N25 | ok |
+| BorrowedDawn and Teach (spell verb (wake)) | wake | D21 O34 D4 | ok |
+| BorrowedDawn and Teach (direction for flow) | west | R14 X1 N25 | ok |
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Ankhu.Realms.EditorTools.GlyphCoverageCheck:CheckCli () (at Assets/Ankhu/Realms/Editor/GlyphCoverageCheck.cs:56)
+
+(Filename: Assets/Ankhu/Realms/Editor/GlyphCoverageCheck.cs Line: 56)
+
+MonoPathRemapper: Attempts to remap: 9844; Successful remaps: 12
+Serialized file version minimum: 23, current 23
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-zaclu-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-zaclu channel disconnected successfully.
+Shut down.
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+Shut down UDS service system complete
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+abort_threads: Failed aborting id: 000000000000AA14, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 00000000000069E8, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000000AA14, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 00000000000069E8, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 3716
+VBCSCompilerPreWarmer: requested VBCSCompiler shutdown
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1795592736672,"processId":3552,"allocatedMemory":15445657,"memoryLabels":[{"Default":202417},{"Permanent":15516},{"NewDelete":85743},{"Thread":4198064},{"Manager":51293},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":847671},{"Material":68},{"GfxDevice":55968},{"Animation":952},{"Audio":1272},{"FreeType":8},{"FontEngine":736},{"Physics":1970},{"Physics2D":16},{"Serialization":16576},{"Input":42840},{"JobScheduler":256},{"TextLib":336},{"Mono":48},{"MonoCode":64},{"ScriptingNativeRuntime":1243480},{"BaseObject":48912},{"Resource":1252},{"Renderer":2376},{"Transform":4685},{"File":4416},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":467974},{"StaticString":3808},{"Utility":2676982},{"Curl":2579},{"PoolAlloc":2264},{"AI":80},{"TypeTree":20749},{"ScriptManager":12656},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":7296},{"WebRequest":8531},{"VR":49650},{"SceneManager":608},{"Video":64},{"LazyScriptCache":32},{"Camera":729},{"Secure":2377},{"SerializationCache":9256},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":592},{"Hierarchy":1188},{"UIElements":40},{"CoreStats":14456},{"Identifiers":7152},{"Gui":128},{"EditorUtility":110443},{"VersionControl":8},{"Undo":931},{"AssetDatabase":4782971},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":40441},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":96},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3620},{"Windowing":456},{"Licensing":1264},{"AssetReference":32},{"IPCStream":32}]}
+~StackAllocator(ALLOC_TEMP_MAIN) m_LastAlloc not NULL. Did you forget to call FreeAllStackAllocations()? To get more information, run app with -diag-temp-memory-leak-validation cmd line argument

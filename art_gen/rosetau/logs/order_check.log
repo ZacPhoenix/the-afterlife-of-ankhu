@@ -1,0 +1,943 @@
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 28172)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 39608)
+VBCSCompiler prewarm took 15.93 ms
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.6/staging' branch; Version is '6000.6.3f1 (45d8eee7de74) revision 4577518'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Channel LicenseClient-zaclu doesn't exist
+OS: 'Windows 11  (10.0.26300) Core' Language: 'en' Physical Memory: 98043 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-11-25T07:45:01Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 38920)
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Unity.exe
+-batchmode
+-quit
+-nographics
+-projectPath
+D:/TheAfterlifeofAnkhu
+-executeMethod
+Ankhu.Realms.EditorTools.PlayOrderCheck.CheckCli
+-logFile
+art_gen/rosetau/logs/order_check.log
+Successfully changed project path to: D:/TheAfterlifeofAnkhu
+D:/TheAfterlifeofAnkhu
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=1"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.
+Player connection [4112]  Target information:
+
+Player connection [4112]  * "[IP] 192.168.1.231 [Port] 55504 [Flags] 2 [Guid] 600263626 [EditorId] 600263626 [Version] 1048832 [Id] WindowsEditor(7,ZacLenovo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [4112]  * "[IP] 172.24.0.1 [Port] 55504 [Flags] 2 [Guid] 600263626 [EditorId] 600263626 [Version] 1048832 [Id] WindowsEditor(7,ZacLenovo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [4112] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [4112] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Starting IPC server.
+Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-zaclu, press Ctrl-C to exit.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-zaclu" at "2026-11-25T07:45:01.6240877Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 38920, path: "C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              ae8408f01d1f4f17be9bc17faebc00d5
+  Correlation Id:          abe418e02d10db00ec3a329be82a9107
+  External correlation Id: 9027920337850574795
+  Machine Id:              75cw/7rfqwpPgCb3W3AB1gXGriU=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-zaclu" (connect: 0.37s, validation: 0.06s, handshake: 0.07s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-zaclu-notifications" at "2026-11-25T07:45:01.7578009Z"
+[Licensing::Module] Connected to LicensingClient (PId: 38920, launch time: 0.00, total connection time: 0.51s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 2475338760178-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.57s
+[Package Manager] Connected to IPC stream "Upm-32876" after 0.3 seconds.
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+Initialising UDS system complete:
+  - System type: Client
+  - Resource namespace: 0ee2fab501261e53eff613af4acc6586
+  - Shared memory size: 1073741824
+  - Command buffer id: 1052576
+  - Command buffer size: 8192
+  - Hashmap size: 4194304
+  - Service connected: false
+Launching Unity Data Store - C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Tools/Unity.DataStore.exe 
+Unity Data Store artifact dir = Library/DataStore, working dir = D:/TheAfterlifeofAnkhuUnity Data Store running and initialised
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.6.3f1 (45d8eee7de74)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/TheAfterlifeofAnkhu/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56876
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.001676 seconds.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Licensing::Client] Successfully resolved entitlement details
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  1.370 seconds
+Domain Reload Profiling: 1779ms
+	BeginReloadAssembly (98ms)
+		CreateAndSetChildDomain (11ms)
+	RebuildCommonClasses (3ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (243ms)
+		LoadAssemblies (84ms)
+		TypeCache.Refresh (160ms)
+			TypeCache.ScanAssembly (150ms)
+		AnalyzeDomain (1ms)
+	FinalizeReload (1372ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (27ms)
+			BeforeProcessingInitializeOnLoad (75ms)
+			ProcessInitializeOnLoadAttributes (69ms)
+			ProcessInitializeOnLoadMethodAttributes (1014ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 54 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.inputsystem@1.20.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.inputsystem@7a4e1a2a8194)
+    com.unity.searcher@4.9.5 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.searcher@a463122f2c00)
+    com.unity.profiling.core@1.0.3 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.profiling.core@8a49f7027d06)
+    com.unity.nuget.mono-cecil@1.11.6 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+  Built-in packages:
+    com.unity.render-pipelines.universal@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.render-pipelines.universal@327d93d1cbc8)
+    com.unity.test-framework@1.8.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.test-framework@80f691d4262b)
+    com.unity.ugui@2.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.ugui@0727b404f3a0)
+    com.unity.modules.accessibility@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tetgen@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.tetgen)
+    com.unity.modules.tilemap@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.timelinefoundation@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.timelinefoundation)
+    com.unity.modules.ui@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.ext.nunit@0198eae3b53e)
+    com.unity.render-pipelines.core@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.render-pipelines.core@02d75770e4b3)
+    com.unity.shadergraph@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.shadergraph@1dd0fd24b57e)
+    com.unity.render-pipelines.universal-config@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.render-pipelines.universal-config@561422b74439)
+    com.unity.graph-authoring@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.graph-authoring@cfd2588851ee)
+    com.unity.burst@2.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.burst@626e66ab421b)
+    com.unity.collections@6.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.collections@10fff0607388)
+    com.unity.test-framework.performance@6.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.test-framework.performance@b6023decb532)
+  Embedded packages:
+    com.ankhu.borrowed-dawn@file:D:\TheAfterlifeofAnkhu\Packages\com.ankhu.borrowed-dawn (location: D:\TheAfterlifeofAnkhu\Packages\com.ankhu.borrowed-dawn)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/TheAfterlifeofAnkhu
+DisplayProgressbar: Compiling Scripts
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll"
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.componentmodel.composition has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.ComponentModel.Composition.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ComponentModel.Composition.dll"
+ExitCode: 0 Duration: 3s400ms
+[666/871    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[835/871    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Ankhu.Opening.dll (+2 others)
+Assets\Ankhu\Opening\Runtime\OpeningAutoCapture.cs(108,58): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Opening\Runtime\OpeningAutoCapture.cs(108,32): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+[836/871    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Ankhu.Opening.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Ankhu.Opening.dll, with 149 defines and 296 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[837/871    0s] CopyFiles Library/ScriptAssemblies/Ankhu.Opening.pdb
+[838/871    0s] CopyFiles Library/ScriptAssemblies/Ankhu.Opening.dll
+[839/871    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Ankhu.Bindings.dll (+2 others)
+Assets\Ankhu\Bindings\MemoryFlicker.cs(73,37): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
+[842/871    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Ankhu.Tests.EditMode.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Ankhu.Tests.EditMode.dll, with 147 defines and 306 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[843/871    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Ankhu.Tests.PlayMode.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Ankhu.Tests.PlayMode.dll, with 149 defines and 294 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[844/871    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Ankhu.Bindings.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Ankhu.Bindings.dll, with 149 defines and 300 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[849/871    0s] CopyFiles Library/ScriptAssemblies/Ankhu.Bindings.pdb
+[850/871    0s] CopyFiles Library/ScriptAssemblies/Ankhu.Bindings.dll
+[851/871    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Ankhu.Opening.Editor.dll (+2 others)
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1150,29): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1189,98): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1189,48): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1191,115): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1191,57): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1201,95): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1201,46): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1235,87): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1235,38): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+[852/871    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Ankhu.Opening.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Ankhu.Opening.Editor.dll, with 147 defines and 308 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[853/871    0s] CopyFiles Library/ScriptAssemblies/Ankhu.Opening.Editor.dll
+[854/871    0s] CopyFiles Library/ScriptAssemblies/Ankhu.Opening.Editor.pdb
+[855/871    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Ankhu.Realms.dll (+2 others)
+Assets\Ankhu\Realms\Runtime\Director\SpellPlayerCheck.cs(150,64): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Runtime\Director\SpellPlayerCheck.cs(150,38): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Runtime\Director\SpellPlayerCheck.cs(157,60): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Runtime\Director\SpellPlayerCheck.cs(157,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(50,58): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(50,26): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(51,56): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(51,25): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(52,46): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(52,23): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(53,57): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(53,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(54,48): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(54,24): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Runtime\Codex\CodexRollSheets.cs(13,27): warning UAC1001: Field 'Entry' type 'Ankhu.Realms.Core.CodexEntry' is skipped by serialization (missing the [Serializable] attribute). Refer to the Serialization rules analyzer reference. (https://docs.unity3d.com/6000.6/Documentation/Manual/script-serialization-analyzer.html#uac1001)
+
+Assets\Ankhu\Realms\Runtime\Codex\CodexRollSheets.cs(18,36): warning UAC1001: Field 'Heading' type 'Ankhu.Realms.CodexArt.GlyphGroup' is skipped by serialization (missing the [Serializable] attribute). Refer to the Serialization rules analyzer reference. (https://docs.unity3d.com/6000.6/Documentation/Manual/script-serialization-analyzer.html#uac1001)
+
+Assets\Ankhu\Realms\Runtime\Director\RealmSceneDirector.cs(458,22): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
+[857/871    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Ankhu.Spellcast.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Ankhu.Spellcast.dll, with 149 defines and 302 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[860/871    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Ankhu.Realms.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Ankhu.Realms.dll, with 149 defines and 301 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[861/871    0s] CopyFiles Library/ScriptAssemblies/Ankhu.Realms.pdb
+[862/871    0s] CopyFiles Library/ScriptAssemblies/Ankhu.Realms.dll
+[863/871    1s] Csc Library/Bee/artifacts/1900b0aE.dag/Ankhu.Realms.Editor.dll (+2 others)
+Assets\Ankhu\Realms\Editor\PaintedRoomAudit.cs(51,112): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\PaintedRoomAudit.cs(51,36): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(76,83): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(76,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(85,77): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(85,32): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\PlayOrderCheck.cs(116,101): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\PlayOrderCheck.cs(116,20): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(116,71): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(116,26): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(637,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(637,35): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(640,74): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(640,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(642,100): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(642,47): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(643,85): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(643,40): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesCards.cs(24,105): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesCards.cs(24,39): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesCards.cs(31,102): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesCards.cs(31,37): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(22,102): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(22,37): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(186,128): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(186,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(313,126): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(313,43): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(320,117): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(320,39): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(344,96): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(344,20): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(449,93): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(449,39): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(452,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(452,31): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(454,104): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(454,51): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(455,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(455,44): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Ankhu\Realms\Editor\PlayOrderCheck.cs(106,36): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
+
+Assets\Ankhu\Realms\Editor\GlyphCoverageCheck.cs(187,36): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
+[864/871    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Ankhu.Realms.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Ankhu.Realms.Editor.dll, with 147 defines and 311 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[865/871    0s] CopyFiles Library/ScriptAssemblies/Ankhu.Realms.Editor.pdb
+[866/871    0s] CopyFiles Library/ScriptAssemblies/Ankhu.Realms.Editor.dll
+[867/871    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+[868/871    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll, with 149 defines and 344 references
+
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[869/871    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[870/871    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+*** Tundra build success (3.37 seconds), 28 items updated, 871 evaluated
+Assets\Ankhu\Opening\Runtime\OpeningAutoCapture.cs(108,58): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Opening\Runtime\OpeningAutoCapture.cs(108,32): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Bindings\MemoryFlicker.cs(73,37): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1150,29): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1189,98): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1189,48): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1191,115): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1191,57): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1201,95): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1201,46): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1235,87): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Opening\Editor\OpeningSceneBuilder.cs(1235,38): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Runtime\Director\SpellPlayerCheck.cs(150,64): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Runtime\Director\SpellPlayerCheck.cs(150,38): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Runtime\Director\SpellPlayerCheck.cs(157,60): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Runtime\Director\SpellPlayerCheck.cs(157,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(50,58): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(50,26): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(51,56): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(51,25): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(52,46): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(52,23): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(53,57): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(53,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(54,48): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Runtime\Director\GiftPlayerCheck.cs(54,24): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Runtime\Codex\CodexRollSheets.cs(13,27): warning UAC1001: Field 'Entry' type 'Ankhu.Realms.Core.CodexEntry' is skipped by serialization (missing the [Serializable] attribute). Refer to the Serialization rules analyzer reference. (https://docs.unity3d.com/6000.6/Documentation/Manual/script-serialization-analyzer.html#uac1001)
+Assets\Ankhu\Realms\Runtime\Codex\CodexRollSheets.cs(18,36): warning UAC1001: Field 'Heading' type 'Ankhu.Realms.CodexArt.GlyphGroup' is skipped by serialization (missing the [Serializable] attribute). Refer to the Serialization rules analyzer reference. (https://docs.unity3d.com/6000.6/Documentation/Manual/script-serialization-analyzer.html#uac1001)
+Assets\Ankhu\Realms\Runtime\Director\RealmSceneDirector.cs(458,22): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
+Assets\Ankhu\Realms\Editor\PaintedRoomAudit.cs(51,112): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\PaintedRoomAudit.cs(51,36): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(76,83): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(76,29): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(85,77): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(85,32): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\PlayOrderCheck.cs(116,101): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\PlayOrderCheck.cs(116,20): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(116,71): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\RealmCapture.cs(116,26): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(637,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(637,35): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(640,74): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(640,27): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(642,100): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(642,47): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(643,85): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\RosetauBuilder.cs(643,40): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesCards.cs(24,105): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesCards.cs(24,39): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesCards.cs(31,102): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesCards.cs(31,37): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(22,102): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(22,37): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(186,128): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintMovers.cs(186,50): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(313,126): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(313,43): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(320,117): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(320,39): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(344,96): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(344,20): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(449,93): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(449,39): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(452,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(452,31): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(454,104): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(454,51): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(455,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Ankhu\Realms\Editor\WernesPaintedBuilder.cs(455,44): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Ankhu\Realms\Editor\PlayOrderCheck.cs(106,36): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
+Assets\Ankhu\Realms\Editor\GlyphCoverageCheck.cs(187,36): warning UAC0005: AppDomain.GetAssemblies() in Unity may return already unloaded assemblies and result in errors or leaks. Use Unity APIs instead, such as 'CurrentAssemblies.GetLoadedAssemblies()' or 'TypeCache.GetTypesDerivedFrom()'.
+AssetDatabase: script compilation time: 3.861535s
+Begin MonoManager ReloadAssembly
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.569 seconds
+Domain Reload Profiling: 1231ms
+	BeginReloadAssembly (296ms)
+		DisableScriptedObjects (16ms)
+		CreateAndSetChildDomain (152ms)
+	RebuildCommonClasses (7ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (313ms)
+		LoadAssemblies (203ms)
+		TypeCache.Refresh (62ms)
+			TypeCache.ScanAssembly (55ms)
+		AnalyzeDomain (32ms)
+			BuildScriptInfoCaches (26ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (569ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (104ms)
+			ProcessInitializeOnLoadMethodAttributes (171ms)
+			AfterProcessingInitializeOnLoad (6ms)
+		AwakeInstancesAfterBackupRestoration (26ms)
+Starting new worker id: 0 with log in D:/TheAfterlifeofAnkhu/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=98193b589e5ed69499b496a913f3c99f): Total: 5.567 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=841 ms
+		Asset DB Callback time: managed=112 ms, native=27 ms
+		Scripting: domain reloads=1, domain reload time=693 ms, compile time=3863 ms, other=29 ms
+		Project Asset Count: scripts=1088, non-scripts=3315
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 26.318ms
+	ApplyChangesToAssetFolders: 0.401ms
+	Scan: 91.236ms
+	Collect global state as custom dependencies: 12.394ms
+	OnSourceAssetsModified: 0.448ms
+	CategorizeScriptCompilationAssets: 12.828ms
+	ProcessAssetsWithTransientArtifactChanges: 28.986ms
+	CategorizeAssets: 38.672ms
+	CompileScripts: 3863.196ms
+	ImportOutOfDateAssets: 580.207ms (571.803ms without children)
+		UnloadImportedAssets: 1.639ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.463ms
+		ImportSchedulerStart: 6.273ms
+	PostProcessAllAssets: 112.881ms
+		VCAutoAddAssetPostprocess 0.681ms
+		XRBuildSystem.XRAssetImported 0.055ms
+		MonoPostProcessAllAssets: 111.846ms
+			AssetPostprocessor.OnPostprocessAllAssets 67.211ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 10.976ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 9.643ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 4.112ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 1.341ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.296ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.265ms
+			AssetChangedListener.OnPostprocessAllAssets 1.154ms
+			SpellVoiceLibraryBuilder.OnPostprocessAllAssets 0.990ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.987ms
+			SyncVS.PostprocessSyncProject 0.801ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.573ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.542ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.495ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.426ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.379ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.300ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.265ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.257ms
+			PostProcessor.OnPostprocessAllAssets 0.213ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.205ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.200ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.189ms
+			AssetEvents.OnPostprocessAllAssets 0.165ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.139ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.122ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.118ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.108ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.107ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.093ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.086ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.052ms
+	PostAssetChangesProfiler: 0.816ms
+	UnloadStreamsBegin: 0.989ms
+	PersistCurrentRevisions: 0.099ms
+	GenerateScriptTypeHashes: 1.065ms
+	GenerateScriptTypeSerializationHashes: 1.952ms
+	Untracked: 795.699ms
+
+Application.AssetDatabase Initial Refresh End
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Scanning for USB devices : 2.964ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-TheAfterlifeofAnkhu
+Unloading 74 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3847 unused Assets / (6.2 MB). Loaded Objects now: 4798.
+Memory consumption went from 337.6 MB to 331.4 MB.
+Total: 8.094000 ms (FindLiveObjects: 0.682500 ms CreateObjectMapping: 0.154600 ms MarkObjects: 5.211300 ms  DeleteObjects: 1.858000 ms)
+
+Opening scene 'Assets/Ankhu/Generated/Scenes/Opening/Opening_Title.unity'
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Generated/Scenes/Opening/Opening_Title.unity'
+	Deserialize:            24.465 ms
+	Integration:            5.321 ms
+	Integration of assets:  0.041 ms
+	Thread Wait Time:       0.101 ms
+	Total Operation Time:   29.928 ms
+Unloading 1 unused Assets / (1.0 KB). Loaded Objects now: 4816.
+Memory consumption went from 356.2 MB to 356.2 MB.
+Total: 4.698700 ms (FindLiveObjects: 0.239900 ms CreateObjectMapping: 0.054000 ms MarkObjects: 4.202400 ms  DeleteObjects: 0.019600 ms)
+
+Opening scene 'Assets/Ankhu/Generated/Scenes/Opening/Opening_Cinematic.unity'
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Generated/Scenes/Opening/Opening_Cinematic.unity'
+	Deserialize:            1.049 ms
+	Integration:            3.268 ms
+	Integration of assets:  0.044 ms
+	Thread Wait Time:       0.046 ms
+	Total Operation Time:   4.407 ms
+Unloading 10 unused Assets / (28.0 MB). Loaded Objects now: 4811.
+Memory consumption went from 356.2 MB to 328.2 MB.
+Total: 4.635200 ms (FindLiveObjects: 0.238900 ms CreateObjectMapping: 0.053100 ms MarkObjects: 4.110800 ms  DeleteObjects: 0.052200 ms)
+
+Opening scene 'Assets/Ankhu/Generated/Scenes/Opening/Opening_WalkDuat.unity'
+Unloading 23 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Generated/Scenes/Opening/Opening_WalkDuat.unity'
+	Deserialize:            24.417 ms
+	Integration:            21.860 ms
+	Integration of assets:  0.603 ms
+	Thread Wait Time:       7.208 ms
+	Total Operation Time:   54.087 ms
+Unloading 6 unused Assets / (11.6 KB). Loaded Objects now: 6450.
+Memory consumption went from 355.7 MB to 355.7 MB.
+Total: 4.379000 ms (FindLiveObjects: 0.273700 ms CreateObjectMapping: 0.050100 ms MarkObjects: 3.835200 ms  DeleteObjects: 0.026300 ms)
+
+Opening scene 'Assets/Ankhu/Realms/Generated/Scenes/Realm_01_Arit1.unity'
+Unloading 21 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Realms/Generated/Scenes/Realm_01_Arit1.unity'
+	Deserialize:            19.509 ms
+	Integration:            6.290 ms
+	Integration of assets:  0.348 ms
+	Thread Wait Time:       0.114 ms
+	Total Operation Time:   26.260 ms
+Unloading 16 unused Assets / (10.6 MB). Loaded Objects now: 6526.
+Memory consumption went from 354.8 MB to 344.2 MB.
+Total: 4.706300 ms (FindLiveObjects: 0.258500 ms CreateObjectMapping: 0.077700 ms MarkObjects: 3.991200 ms  DeleteObjects: 0.166400 ms)
+
+Opening scene 'Assets/Ankhu/Generated/Scenes/Teach1_Cistern.unity'
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Generated/Scenes/Teach1_Cistern.unity'
+	Deserialize:            12.090 ms
+	Integration:            21.348 ms
+	Integration of assets:  0.196 ms
+	Thread Wait Time:       0.038 ms
+	Total Operation Time:   33.672 ms
+Unloading 31 unused Assets / (3.8 MB). Loaded Objects now: 6421.
+Memory consumption went from 346.7 MB to 342.9 MB.
+Total: 4.815600 ms (FindLiveObjects: 0.324500 ms CreateObjectMapping: 0.084000 ms MarkObjects: 4.090600 ms  DeleteObjects: 0.122100 ms)
+
+Opening scene 'Assets/Ankhu/Generated/Scenes/Teach2_HeldStep.unity'
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Generated/Scenes/Teach2_HeldStep.unity'
+	Deserialize:            5.180 ms
+	Integration:            5.745 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       0.124 ms
+	Total Operation Time:   11.052 ms
+Unloading 8 unused Assets / (3.7 MB). Loaded Objects now: 6421.
+Memory consumption went from 346.6 MB to 342.9 MB.
+Total: 5.532000 ms (FindLiveObjects: 0.319800 ms CreateObjectMapping: 0.106900 ms MarkObjects: 4.828700 ms  DeleteObjects: 0.030900 ms)
+
+Opening scene 'Assets/Ankhu/Generated/Scenes/Teach3_LingeringShadow.unity'
+Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Generated/Scenes/Teach3_LingeringShadow.unity'
+	Deserialize:            5.133 ms
+	Integration:            5.131 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.102 ms
+	Total Operation Time:   10.368 ms
+Unloading 8 unused Assets / (3.7 MB). Loaded Objects now: 6416.
+Memory consumption went from 346.5 MB to 342.9 MB.
+Total: 4.805200 ms (FindLiveObjects: 0.323300 ms CreateObjectMapping: 0.143000 ms MarkObjects: 4.125200 ms  DeleteObjects: 0.020700 ms)
+
+Opening scene 'Assets/Ankhu/Generated/Scenes/BorrowedDawn_Painted.unity'
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Generated/Scenes/BorrowedDawn_Painted.unity'
+	Deserialize:            10.736 ms
+	Integration:            18.948 ms
+	Integration of assets:  0.087 ms
+	Thread Wait Time:       0.104 ms
+	Total Operation Time:   29.875 ms
+Unloading 31 unused Assets / (93.6 KB). Loaded Objects now: 7324.
+Memory consumption went from 356.9 MB to 356.8 MB.
+Total: 4.718700 ms (FindLiveObjects: 0.325400 ms CreateObjectMapping: 0.086200 ms MarkObjects: 4.079500 ms  DeleteObjects: 0.035500 ms)
+
+Opening scene 'Assets/Ankhu/Realms/Generated/Scenes/Wernes_Terrace.unity'
+Unloading 48 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Realms/Generated/Scenes/Wernes_Terrace.unity'
+	Deserialize:            9.453 ms
+	Integration:            6.154 ms
+	Integration of assets:  0.541 ms
+	Thread Wait Time:       0.008 ms
+	Total Operation Time:   16.157 ms
+Unloading 449 unused Assets / (4.3 MB). Loaded Objects now: 6107.
+Memory consumption went from 356.5 MB to 352.2 MB.
+Total: 5.058000 ms (FindLiveObjects: 0.324000 ms CreateObjectMapping: 0.089000 ms MarkObjects: 4.136900 ms  DeleteObjects: 0.302500 ms)
+
+Opening scene 'Assets/Ankhu/Realms/Generated/Scenes/Wernes_Hub.unity'
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Realms/Generated/Scenes/Wernes_Hub.unity'
+	Deserialize:            8.501 ms
+	Integration:            4.094 ms
+	Integration of assets:  0.090 ms
+	Thread Wait Time:       0.101 ms
+	Total Operation Time:   12.785 ms
+Unloading 1 unused Assets / (1.0 KB). Loaded Objects now: 6050.
+Memory consumption went from 346.3 MB to 346.3 MB.
+Total: 4.507500 ms (FindLiveObjects: 0.284600 ms CreateObjectMapping: 0.054900 ms MarkObjects: 3.954900 ms  DeleteObjects: 0.014200 ms)
+
+Opening scene 'Assets/Ankhu/Realms/Generated/Scenes/Wernes_A_Field.unity'
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Realms/Generated/Scenes/Wernes_A_Field.unity'
+	Deserialize:            26.247 ms
+	Integration:            5.321 ms
+	Integration of assets:  0.091 ms
+	Thread Wait Time:       0.087 ms
+	Total Operation Time:   31.746 ms
+Unloading 1 unused Assets / (2.8 KB). Loaded Objects now: 8604.
+Memory consumption went from 348.9 MB to 348.9 MB.
+Total: 4.812800 ms (FindLiveObjects: 0.369200 ms CreateObjectMapping: 0.096100 ms MarkObjects: 4.102600 ms  DeleteObjects: 0.021900 ms)
+
+Opening scene 'Assets/Ankhu/Realms/Generated/Scenes/Wernes_B_Shabti.unity'
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Realms/Generated/Scenes/Wernes_B_Shabti.unity'
+	Deserialize:            38.393 ms
+	Integration:            6.433 ms
+	Integration of assets:  0.110 ms
+	Thread Wait Time:       0.075 ms
+	Total Operation Time:   45.012 ms
+Unloading 1 unused Assets / (1.7 KB). Loaded Objects now: 10425.
+Memory consumption went from 350.8 MB to 350.8 MB.
+Total: 5.054900 ms (FindLiveObjects: 0.357200 ms CreateObjectMapping: 0.079800 ms MarkObjects: 4.358000 ms  DeleteObjects: 0.020400 ms)
+
+Opening scene 'Assets/Ankhu/Realms/Generated/Scenes/Wernes_C_House.unity'
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Realms/Generated/Scenes/Wernes_C_House.unity'
+	Deserialize:            26.144 ms
+	Integration:            5.479 ms
+	Integration of assets:  0.090 ms
+	Thread Wait Time:       0.080 ms
+	Total Operation Time:   31.792 ms
+Unloading 1 unused Assets / (2.6 KB). Loaded Objects now: 8683.
+Memory consumption went from 349.3 MB to 349.3 MB.
+Total: 4.958900 ms (FindLiveObjects: 0.377000 ms CreateObjectMapping: 0.082300 ms MarkObjects: 4.235400 ms  DeleteObjects: 0.044900 ms)
+
+Opening scene 'Assets/Ankhu/Realms/Generated/Scenes/Wernes_D_Bricks.unity'
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Realms/Generated/Scenes/Wernes_D_Bricks.unity'
+	Deserialize:            19.082 ms
+	Integration:            4.673 ms
+	Integration of assets:  0.131 ms
+	Thread Wait Time:       0.022 ms
+	Total Operation Time:   23.908 ms
+Unloading 1 unused Assets / (0.7 KB). Loaded Objects now: 7467.
+Memory consumption went from 348.1 MB to 348.1 MB.
+Total: 4.792000 ms (FindLiveObjects: 0.303200 ms CreateObjectMapping: 0.103300 ms MarkObjects: 4.152600 ms  DeleteObjects: 0.018800 ms)
+
+Opening scene 'Assets/Ankhu/Realms/Generated/Scenes/Rosetau_A_Laugh.unity'
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Realms/Generated/Scenes/Rosetau_A_Laugh.unity'
+	Deserialize:            8.471 ms
+	Integration:            4.075 ms
+	Integration of assets:  0.097 ms
+	Thread Wait Time:       0.099 ms
+	Total Operation Time:   12.742 ms
+Unloading 2 unused Assets / (1.3 MB). Loaded Objects now: 6051.
+Memory consumption went from 348.6 MB to 347.3 MB.
+Total: 4.824100 ms (FindLiveObjects: 0.261400 ms CreateObjectMapping: 0.056300 ms MarkObjects: 4.270600 ms  DeleteObjects: 0.032100 ms)
+
+Opening scene 'Assets/Ankhu/Realms/Generated/Scenes/Rosetau_B_Mourners.unity'
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Realms/Generated/Scenes/Rosetau_B_Mourners.unity'
+	Deserialize:            7.469 ms
+	Integration:            3.835 ms
+	Integration of assets:  0.109 ms
+	Thread Wait Time:       0.030 ms
+	Total Operation Time:   11.443 ms
+Unloading 2 unused Assets / (1.3 MB). Loaded Objects now: 5974.
+Memory consumption went from 349.2 MB to 347.9 MB.
+Total: 4.599300 ms (FindLiveObjects: 0.258800 ms CreateObjectMapping: 0.055400 ms MarkObjects: 4.054500 ms  DeleteObjects: 0.035600 ms)
+
+Opening scene 'Assets/Ankhu/Realms/Generated/Scenes/Rosetau_C_Mother.unity'
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Realms/Generated/Scenes/Rosetau_C_Mother.unity'
+	Deserialize:            6.933 ms
+	Integration:            3.870 ms
+	Integration of assets:  0.104 ms
+	Thread Wait Time:       0.037 ms
+	Total Operation Time:   10.944 ms
+Unloading 3 unused Assets / (2.7 MB). Loaded Objects now: 5917.
+Memory consumption went from 350.8 MB to 348.1 MB.
+Total: 4.554600 ms (FindLiveObjects: 0.296900 ms CreateObjectMapping: 0.055500 ms MarkObjects: 3.978800 ms  DeleteObjects: 0.029800 ms)
+
+Opening scene 'Assets/Ankhu/Realms/Generated/Scenes/Wernes_Hub.unity'
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Ankhu/Realms/Generated/Scenes/Wernes_Hub.unity'
+	Deserialize:            8.417 ms
+	Integration:            4.203 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       0.034 ms
+	Total Operation Time:   12.658 ms
+Unloading 2 unused Assets / (1.3 MB). Loaded Objects now: 6099.
+Memory consumption went from 349.8 MB to 348.5 MB.
+Total: 4.815900 ms (FindLiveObjects: 0.328800 ms CreateObjectMapping: 0.066900 ms MarkObjects: 4.171700 ms  DeleteObjects: 0.040100 ms)
+
+# Play order check
+
+Run 2026-11-25 02:45. FAIL, 2 problems.
+
+| # | Scene | Exit owner | Exit goes to | Play order expects | Plays inside | Status |
+|---|---|---|---|---|---|---|
+| 1 | Opening_Title | TitleMenu | Opening_Cinematic | Opening_Cinematic |  | wired |
+| 2 | Opening_Cinematic | OpeningCinematic | Opening_WalkDuat | Opening_WalkDuat |  | wired |
+| 3 | Opening_WalkDuat | WalkSequence | Realm_01_Arit1 | Realm_01_Arit1 |  | wired |
+| 4 | Realm_01_Arit1 | RealmSceneDirector | Teach1_Cistern | Teach1_Cistern | codex lore.codex, codex lore.gate_one, codex clue.announcer_name, codex word.name, codex clue.guardian_name, codex clue.keeper_name, codex lore.known_at_gate | wired |
+| 5 | Teach1_Cistern | TeachingRoomDirector (teach-1-cistern) | Teach2_HeldStep | Teach2_HeldStep | film flick_f1_river | wired |
+| 6 | Teach2_HeldStep | TeachingRoomDirector (teach-2-held-step) | Teach3_LingeringShadow | Teach3_LingeringShadow | film flick_f2_hands | wired |
+| 7 | Teach3_LingeringShadow | TeachingRoomDirector (teach-3-lingering-shadow) | BorrowedDawn_Painted | BorrowedDawn_Painted | film flick_f3_shadow, Anpu farewell | wired |
+| 8 | BorrowedDawn_Painted | BorrowedDawnExit (added at runtime) | Wernes_Terrace | Wernes_Terrace | film mem0_dawn_name, Anpu exit lines | wired |
+| 9 | Wernes_Terrace | RealmSceneDirector | Wernes_Hub | Wernes_Hub | codex name.hori | wired |
+| 10 | Wernes_Hub | RealmSceneDirector | Wernes_A_Field | Wernes_A_Field |  | wired |
+| 11 | Wernes_A_Field | RealmSceneDirector | Wernes_Hub | Wernes_Hub | film tease_basin, codex lore.field_waits | wired |
+| 12 | Wernes_B_Shabti | RealmSceneDirector | Wernes_Hub | Wernes_Hub | film memA_river_sunset, codex memory.shoulders, codex lore.shabti_row | wired |
+| 13 | Wernes_C_House | RealmSceneDirector | Wernes_Hub | Wernes_Hub | film memB_door_dawn, codex memory.door_dawn, film sting_khetem_seedlings, codex lore.one_door | wired |
+| 14 | Wernes_D_Bricks | RealmSceneDirector | Wernes_Hub | Wernes_Hub | still mem_naming, codex memory.naming, codex lore.birth_bricks | wired |
+| 15 | Wernes_Finale |  |  | Rosetau_A_Laugh |  | UNWIRED: scene file missing |
+| 16 | Rosetau_A_Laugh | RealmSceneDirector | Rosetau_B_Mourners | Rosetau_B_Mourners | still pm_news, codex memory.news | wired |
+| 17 | Rosetau_B_Mourners | RealmSceneDirector | Rosetau_C_Mother | Rosetau_C_Mother | still pm_hush, codex memory.hush, still pm_leaving, codex memory.leaving | wired |
+| 18 | Rosetau_C_Mother | RealmSceneDirector | Opening_Title | Opening_Title (end of built content) | still pm_old_mother, codex memory.old_mother | wired |
+| 19 | Wernes_Hub (return 1, done A) | RealmSceneDirector | Wernes_B_Shabti | Wernes_B_Shabti |  | wired |
+| 20 | Wernes_Hub (return 2, done AB) | RealmSceneDirector | Wernes_C_House | Wernes_C_House |  | wired |
+| 21 | Wernes_Hub (return 3, done ABC) | RealmSceneDirector | Wernes_D_Bricks | Wernes_D_Bricks |  | wired |
+| 22 | Wernes_Hub (return 4, done ABCD) | RealmSceneDirector | Rosetau_A_Laugh | Wernes_Finale |  | UNWIRED: hub exit goes to Rosetau_A_Laugh, expected Wernes_Finale |
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Ankhu.Realms.EditorTools.PlayOrderCheck:CheckCli () (at Assets/Ankhu/Realms/Editor/PlayOrderCheck.cs:53)
+
+(Filename: Assets/Ankhu/Realms/Editor/PlayOrderCheck.cs Line: 53)
+
+MonoPathRemapper: Attempts to remap: 8921; Successful remaps: 12
+Serialized file version minimum: 23, current 23
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-zaclu-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-zaclu channel disconnected successfully.
+Shut down.
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+Shut down UDS service system complete
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+abort_threads: Failed aborting id: 000000000000B24C, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 00000000000020D4, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000009934, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000000B24C, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 00000000000020D4, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000009934, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 3732
+VBCSCompilerPreWarmer: requested VBCSCompiler shutdown
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1795592711292,"processId":32876,"allocatedMemory":15586041,"memoryLabels":[{"Default":202425},{"Permanent":15516},{"NewDelete":85743},{"Thread":4198024},{"Manager":52285},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":847671},{"Material":68},{"GfxDevice":55968},{"Animation":6848},{"FreeType":8},{"FontEngine":736},{"Physics":1970},{"Physics2D":16},{"Serialization":39440},{"Input":42840},{"JobScheduler":256},{"TextLib":336},{"Mono":48},{"MonoCode":64},{"ScriptingNativeRuntime":1243480},{"BaseObject":48912},{"Resource":1252},{"Renderer":2376},{"Transform":4685},{"File":55041},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":536097},{"StaticString":3808},{"Utility":2676982},{"Curl":2579},{"PoolAlloc":2264},{"AI":80},{"TypeTree":20749},{"ScriptManager":12656},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":1104},{"CloudService":7296},{"WebRequest":4567},{"VR":49650},{"SceneManager":608},{"Video":64},{"LazyScriptCache":32},{"Camera":729},{"Secure":2377},{"SerializationCache":9256},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":592},{"Hierarchy":1188},{"UIElements":40},{"CoreStats":14456},{"Identifiers":7152},{"Gui":128},{"EditorUtility":118699},{"VersionControl":8},{"Undo":931},{"AssetDatabase":4782971},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":40441},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":96},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3620},{"Windowing":456},{"Licensing":1264},{"AssetReference":32},{"IPCStream":32}]}
+~StackAllocator(ALLOC_TEMP_MAIN) m_LastAlloc not NULL. Did you forget to call FreeAllStackAllocations()? To get more information, run app with -diag-temp-memory-leak-validation cmd line argument

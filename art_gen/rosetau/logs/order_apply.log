@@ -1,0 +1,403 @@
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 22836)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 27292)
+VBCSCompiler prewarm took 16.40 ms
+[Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Channel LicenseClient-zaclu doesn't exist
+Built from '6000.6/staging' branch; Version is '6000.6.3f1 (45d8eee7de74) revision 4577518'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26300) Core' Language: 'en' Physical Memory: 98043 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-11-25T07:44:54Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 33960)
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Unity.exe
+-batchmode
+-quit
+-nographics
+-projectPath
+D:/TheAfterlifeofAnkhu
+-executeMethod
+Ankhu.Realms.EditorTools.PlayOrderCheck.ApplyBuildOrderCli
+-logFile
+art_gen/rosetau/logs/order_apply.log
+Successfully changed project path to: D:/TheAfterlifeofAnkhu
+D:/TheAfterlifeofAnkhu
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=1"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.
+Player connection [50804]  Target information:
+
+Player connection [50804]  * "[IP] 192.168.1.231 [Port] 55504 [Flags] 2 [Guid] 6415348 [EditorId] 6415348 [Version] 1048832 [Id] WindowsEditor(7,ZacLenovo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [50804]  * "[IP] 172.24.0.1 [Port] 55504 [Flags] 2 [Guid] 6415348 [EditorId] 6415348 [Version] 1048832 [Id] WindowsEditor(7,ZacLenovo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [50804] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [50804] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Starting IPC server.
+Waiting for clients to connect on \\.\pipe\Unity-LicenseClient-zaclu, press Ctrl-C to exit.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-zaclu" at "2026-11-25T07:44:54.9603755Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 33960, path: "C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              05d97d8b358e4ec7900f8bafbe0bb7db
+  Correlation Id:          4585c9694c128fa042b1eaa97ad60746
+  External correlation Id: 5336388861733917800
+  Machine Id:              75cw/7rfqwpPgCb3W3AB1gXGriU=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-zaclu" (connect: 0.37s, validation: 0.06s, handshake: 0.07s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-zaclu-notifications" at "2026-11-25T07:44:55.0902294Z"
+[Licensing::Module] Connected to LicensingClient (PId: 33960, launch time: 0.00, total connection time: 0.50s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 2475338760178-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.55s
+[Package Manager] Connected to IPC stream "Upm-47488" after 0.3 seconds.
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+Initialising UDS system complete:
+  - System type: Client
+  - Resource namespace: 0ee2fab501261e53eff613af4acc6586
+  - Shared memory size: 1073741824
+  - Command buffer id: 1052576
+  - Command buffer size: 8192
+  - Hashmap size: 4194304
+  - Service connected: false
+Launching Unity Data Store - C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Tools/Unity.DataStore.exe 
+Unity Data Store artifact dir = Library/DataStore, working dir = D:/TheAfterlifeofAnkhuUnity Data Store running and initialised
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.6.3f1 (45d8eee7de74)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/TheAfterlifeofAnkhu/Assets
+Forcing GfxDevice: Null
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+NullGfxDevice:
+    Version:  NULL 1.0 [1.0]
+    Renderer: Null Device
+    Vendor:   Unity Technologies
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56488
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.3f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.001671 seconds.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Licensing::Client] Successfully resolved entitlement details
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  1.253 seconds
+Domain Reload Profiling: 1651ms
+	BeginReloadAssembly (90ms)
+	RebuildCommonClasses (4ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (245ms)
+		LoadAssemblies (85ms)
+		TypeCache.Refresh (163ms)
+			TypeCache.ScanAssembly (152ms)
+		AnalyzeDomain (0ms)
+	FinalizeReload (1254ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (27ms)
+			BeforeProcessingInitializeOnLoad (76ms)
+			ProcessInitializeOnLoadAttributes (66ms)
+			ProcessInitializeOnLoadMethodAttributes (900ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 54 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.inputsystem@1.20.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.inputsystem@7a4e1a2a8194)
+    com.unity.searcher@4.9.5 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.searcher@a463122f2c00)
+    com.unity.profiling.core@1.0.3 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.profiling.core@8a49f7027d06)
+    com.unity.nuget.mono-cecil@1.11.6 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.nuget.mono-cecil@ecb9724e46ff)
+  Built-in packages:
+    com.unity.render-pipelines.universal@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.render-pipelines.universal@327d93d1cbc8)
+    com.unity.test-framework@1.8.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.test-framework@80f691d4262b)
+    com.unity.ugui@2.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.ugui@0727b404f3a0)
+    com.unity.modules.accessibility@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.accessibility)
+    com.unity.modules.adaptiveperformance@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.adaptiveperformance)
+    com.unity.modules.ai@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.ai)
+    com.unity.modules.androidjni@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.androidjni)
+    com.unity.modules.animation@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.animation)
+    com.unity.modules.assetbundle@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.assetbundle)
+    com.unity.modules.audio@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.cloth@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.cloth)
+    com.unity.modules.director@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.director)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.particlesystem@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.physics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.physics2d@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.physics2d)
+    com.unity.modules.physicscore2d@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.physicscore2d)
+    com.unity.modules.screencapture@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.terrain@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.terrain)
+    com.unity.modules.terrainphysics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.terrainphysics)
+    com.unity.modules.tetgen@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.tetgen)
+    com.unity.modules.tilemap@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.tilemap)
+    com.unity.modules.timelinefoundation@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.timelinefoundation)
+    com.unity.modules.ui@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.ui)
+    com.unity.modules.uielements@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.uielements)
+    com.unity.modules.umbra@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.umbra)
+    com.unity.modules.unityanalytics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unityanalytics)
+    com.unity.modules.unitywebrequest@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequest)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequestaudio)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequesttexture)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.unitywebrequestwww)
+    com.unity.modules.vectorgraphics@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.vectorgraphics)
+    com.unity.modules.vehicles@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.vehicles)
+    com.unity.modules.video@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.video)
+    com.unity.modules.wind@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.wind)
+    com.unity.modules.xr@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.xr)
+    com.unity.modules.subsystems@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.subsystems)
+    com.unity.modules.hierarchycore@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.modules.hierarchycore)
+    com.unity.ext.nunit@2.1.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.ext.nunit@0198eae3b53e)
+    com.unity.render-pipelines.core@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.render-pipelines.core@02d75770e4b3)
+    com.unity.shadergraph@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.shadergraph@1dd0fd24b57e)
+    com.unity.render-pipelines.universal-config@17.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.render-pipelines.universal-config@561422b74439)
+    com.unity.graph-authoring@1.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.graph-authoring@cfd2588851ee)
+    com.unity.burst@2.0.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.burst@626e66ab421b)
+    com.unity.collections@6.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.collections@10fff0607388)
+    com.unity.test-framework.performance@6.6.0 (location: D:\TheAfterlifeofAnkhu\Library\PackageCache\com.unity.test-framework.performance@b6023decb532)
+  Embedded packages:
+    com.ankhu.borrowed-dawn@file:D:\TheAfterlifeofAnkhu\Packages\com.ankhu.borrowed-dawn (location: D:\TheAfterlifeofAnkhu\Packages\com.ankhu.borrowed-dawn)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+Starting: C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/TheAfterlifeofAnkhu
+DisplayProgressbar: Compiling Scripts
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.runtime.interopservices.windowsruntime has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.WindowsRuntime.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll"
+warn: Unity.ILPP.Runner.PostProcessingAssemblyLoadContext[0]
+      Assembly system.componentmodel.composition has duplicate hint path. Ignoring "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.ComponentModel.Composition.dll" in favor of "C:\Program Files\Unity\Hub\Editor\6000.6.3f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ComponentModel.Composition.dll"
+ExitCode: 0 Duration: 0s290ms
+[675/871    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+*** Tundra build success (0.26 seconds), 1 items updated, 871 evaluated
+AssetDatabase: script compilation time: 0.730683s
+Begin MonoManager ReloadAssembly
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.559 seconds
+Domain Reload Profiling: 1189ms
+	BeginReloadAssembly (270ms)
+		DisableScriptedObjects (16ms)
+		CreateAndSetChildDomain (133ms)
+	RebuildCommonClasses (7ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (307ms)
+		LoadAssemblies (198ms)
+		TypeCache.Refresh (61ms)
+			TypeCache.ScanAssembly (54ms)
+		AnalyzeDomain (31ms)
+			BuildScriptInfoCaches (25ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (559ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (102ms)
+			ProcessInitializeOnLoadMethodAttributes (167ms)
+			AfterProcessingInitializeOnLoad (5ms)
+		AwakeInstancesAfterBackupRestoration (25ms)
+Starting new worker id: 0 with log in D:/TheAfterlifeofAnkhu/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=bc2a8307dbe71e14ead35460cd521d06): Total: 2.269 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=797 ms
+		Asset DB Callback time: managed=22 ms, native=26 ms
+		Scripting: domain reloads=1, domain reload time=661 ms, compile time=732 ms, other=28 ms
+		Project Asset Count: scripts=1088, non-scripts=3315
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 27.265ms
+	ApplyChangesToAssetFolders: 0.520ms
+	Scan: 58.893ms
+	Collect global state as custom dependencies: 12.186ms
+	CategorizeScriptCompilationAssets: 12.634ms
+	ProcessAssetsWithTransientArtifactChanges: 29.203ms
+	CategorizeAssets: 37.903ms
+	CompileScripts: 732.334ms
+	ImportOutOfDateAssets: 570.719ms (561.318ms without children)
+		UnloadImportedAssets: 1.489ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.433ms
+		ImportSchedulerStart: 7.448ms
+	PostProcessAllAssets: 22.813ms
+		MonoPostProcessAllAssets: 22.770ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 10.993ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.291ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.226ms
+			SyncVS.PostprocessSyncProject 0.794ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.674ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.507ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.396ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.206ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.185ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.153ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.119ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.119ms
+	UnloadStreamsBegin: 1.148ms
+	PersistCurrentRevisions: 0.107ms
+	GenerateScriptTypeHashes: 1.024ms
+	GenerateScriptTypeSerializationHashes: 1.936ms
+	Untracked: 760.556ms
+
+Application.AssetDatabase Initial Refresh End
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Scanning for USB devices : 3.049ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-TheAfterlifeofAnkhu
+Unloading 74 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3847 unused Assets / (6.4 MB). Loaded Objects now: 4798.
+Memory consumption went from 336.0 MB to 329.6 MB.
+Total: 7.481900 ms (FindLiveObjects: 0.701600 ms CreateObjectMapping: 0.146100 ms MarkObjects: 4.490000 ms  DeleteObjects: 1.942200 ms)
+
+AcceleratorClientConnectionCallback - disconnected - :0
+Importing 'GUID: 0000000000000000b000000000000000 - Path: ProjectSettings/EditorBuildSettings.asset' with importer (LibraryAssetImporter)
+Imported 'GUID: 0000000000000000b000000000000000' -> (Import Result ID: 'aa0851d256354626931fddf2fa2d36e8') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=0a89a5c5f492143e0fa186859e17ba6f DependenciesID=65e4b7a412cfddbd21f6d73a51f9bdbb StaticDependenciesID=6371f909e480bc6734baa53f35952f1e 
+Asset Pipeline Refresh (id=b4fd998e9539e734c9aeb064e59dd60c): Total: 0.108 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[PlayOrder] Build Settings now:
+0 Assets/Ankhu/Generated/Scenes/Opening/Opening_Title.unity
+1 Assets/Ankhu/Generated/Scenes/Opening/Opening_Cinematic.unity
+2 Assets/Ankhu/Generated/Scenes/Opening/Opening_WalkDuat.unity
+3 Assets/Ankhu/Realms/Generated/Scenes/Realm_01_Arit1.unity
+4 Assets/Ankhu/Generated/Scenes/Teach1_Cistern.unity
+5 Assets/Ankhu/Generated/Scenes/Teach2_HeldStep.unity
+6 Assets/Ankhu/Generated/Scenes/Teach3_LingeringShadow.unity
+7 Assets/Ankhu/Generated/Scenes/BorrowedDawn_Painted.unity
+8 Assets/Ankhu/Realms/Generated/Scenes/Wernes_Terrace.unity
+9 Assets/Ankhu/Realms/Generated/Scenes/Wernes_Hub.unity
+10 Assets/Ankhu/Realms/Generated/Scenes/Wernes_A_Field.unity
+11 Assets/Ankhu/Realms/Generated/Scenes/Wernes_B_Shabti.unity
+12 Assets/Ankhu/Realms/Generated/Scenes/Wernes_C_House.unity
+13 Assets/Ankhu/Realms/Generated/Scenes/Wernes_D_Bricks.unity
+14 Assets/Ankhu/Realms/Generated/Scenes/Rosetau_A_Laugh.unity
+15 Assets/Ankhu/Realms/Generated/Scenes/Rosetau_B_Mourners.unity
+16 Assets/Ankhu/Realms/Generated/Scenes/Rosetau_C_Mother.unity
+17 Assets/Ankhu/Generated/Scenes/BorrowedDawn_Greybox.unity
+18 Assets/Ankhu/Realms/Generated/Scenes/Realm_02_Wernes_Field.unity
+19 Assets/Ankhu/Realms/Generated/Scenes/Realm_03_Wernes_House.unity
+20 Assets/Ankhu/Realms/Generated/Scenes/Realm_04_Wernes_Row.unity
+21 Assets/Ankhu/Generated/Scenes/Terrace_Parallax.unity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+Ankhu.Realms.EditorTools.PlayOrderCheck:ApplyBuildOrder () (at Assets/Ankhu/Realms/Editor/PlayOrderCheck.cs:83)
+Ankhu.Realms.EditorTools.PlayOrderCheck:ApplyBuildOrderCli () (at Assets/Ankhu/Realms/Editor/PlayOrderCheck.cs:89)
+
+(Filename: Assets/Ankhu/Realms/Editor/PlayOrderCheck.cs Line: 83)
+
+MonoPathRemapper: Attempts to remap: 8426; Successful remaps: 12
+Serialized file version minimum: 23, current 23
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-zaclu-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-zaclu channel disconnected successfully.
+Shut down.
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+Shut down UDS service system complete
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+abort_threads: Failed aborting id: 000000000000DAC8, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000000C178, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000003B2C, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000000DAC8, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 000000000000C178, mono_thread_manage will ignore it
+
+abort_threads: Failed aborting id: 0000000000003B2C, mono_thread_manage will ignore it
+
+debugger-agent: Unable to listen on 3728
+VBCSCompilerPreWarmer: requested VBCSCompiler shutdown
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1795592700765,"processId":47488,"allocatedMemory":15418878,"memoryLabels":[{"Default":202417},{"Permanent":15516},{"NewDelete":85743},{"Thread":4198064},{"Manager":51293},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":847671},{"Material":68},{"GfxDevice":55968},{"Animation":952},{"Audio":1272},{"FreeType":8},{"FontEngine":736},{"Physics":1970},{"Physics2D":16},{"Serialization":16576},{"Input":42840},{"JobScheduler":256},{"TextLib":336},{"Mono":48},{"MonoCode":64},{"ScriptingNativeRuntime":1243480},{"BaseObject":48912},{"Resource":1252},{"Renderer":2376},{"Transform":4685},{"File":4416},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":441178},{"StaticString":3808},{"Utility":2676982},{"Curl":2579},{"PoolAlloc":2264},{"AI":80},{"TypeTree":20749},{"ScriptManager":12656},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":7296},{"WebRequest":8468},{"VR":49650},{"SceneManager":608},{"Video":64},{"LazyScriptCache":32},{"Camera":729},{"Secure":2377},{"SerializationCache":9256},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":592},{"Hierarchy":1188},{"UIElements":40},{"CoreStats":14456},{"Identifiers":7152},{"Gui":128},{"EditorUtility":110443},{"VersionControl":8},{"Undo":931},{"AssetDatabase":4783051},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":40441},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":96},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3620},{"Windowing":456},{"Licensing":1264},{"AssetReference":32},{"IPCStream":32}]}
+~StackAllocator(ALLOC_TEMP_MAIN) m_LastAlloc not NULL. Did you forget to call FreeAllStackAllocations()? To get more information, run app with -diag-temp-memory-leak-validation cmd line argument
