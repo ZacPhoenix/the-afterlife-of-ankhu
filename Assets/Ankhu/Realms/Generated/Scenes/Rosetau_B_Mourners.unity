@@ -1726,7 +1726,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
       cycleCount: 1
-      repeatInterval: 0.0001
+      repeatInterval: 0.01
       probability: 1
   SizeModule:
     enabled: 0
@@ -21207,8 +21207,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6216633063644814352}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00000013783574, y: -0.00000017881393, z: -0.4778352}
+  m_LocalRotation: {x: 0.80069596, y: 0.59907097, z: 0.000000027474, w: -0.00000023841844}
+  m_LocalPosition: {x: 0.023118734, y: -0.030898308, z: 0.11342812}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
