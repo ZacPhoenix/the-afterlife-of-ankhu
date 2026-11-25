@@ -78,7 +78,7 @@ namespace Ankhu.Realms.Core
                 "A ferry with a carved figure at the prow, who wakes only when the water is calm. It asked who woke it. When I answered, it said I woke it gently.",
                 "Wernes");
             yield return Lore("lore.gate_one", "The seven gates", "O31 O1",
-                "Anpu says there are seven gates (arits) on the road. Each is kept by three: a keeper, a guardian and an announcer. The old book says: know them and know their names. (Allen, Spell 144: \"Osiris N. knows you and knows your names.\")",
+                "Anpu says there are seven gates (arits) on the road. Each is kept by three: a keeper, a guardian and an announcer. As it is written: \"Ausar Ankhu knows you, and knows your names.\"",
                 "Wernes");
             yield return Lore("lore.known_at_gate", "Known at the first gate", "A2",
                 "Once I had named all three, the gate opened and the announcer spoke my name: Ankhu, who wore the face of Anpu over the dead. A gate is not opened by force. It is opened by being known. Anpu says he can give me this gate and no other.",
@@ -92,11 +92,11 @@ namespace Ankhu.Realms.Core
             yield return Clue("clue.shabti_chest", "The name on its chest", "S34 N35 Aa1 G43",
                 "The painted shabti at the end of the row has a cartouche on its chest, and the name in it is mine. Anpu says it was put in my tomb to answer for me when the fields call. It does not answer to \"shabti\". It answers to Ankhu.");
             yield return Clue("clue.keeper_name", "The first pillar", "D2 D21 N35A",
-                "The keeper of the first gate: Face-downward, Numerous of Shapes. A figure carved lying on its face, the way I lay at the pool when I woke. Anpu said we have met. (Allen, Spell 144.)");
+                "The keeper of the first gate: Face-downward, Numerous of Shapes. A figure carved lying on its face, the way I lay at the pool when I woke. Anpu said we have met.");
             yield return Clue("clue.guardian_name", "The second pillar", "F21 G17",
-                "The guardian of the first gate: Eavesdropper. His name was cut in his plinth. He repeated Anpu's words from the road in my own hearing: a son, a father, a husband, a man who stopped speaking. (Allen, Spell 144.)");
+                "The guardian of the first gate: Eavesdropper. His name was cut in his plinth. He repeated Anpu's words from the road in my own hearing: a son, a father, a husband, a man who stopped speaking.");
             yield return Clue("clue.announcer_name", "The third pillar", "A2 P8",
-                "The announcer of the first gate: Sad of Voice. He called out as I came near. Anpu says he announces everyone the same way. (Allen, Spell 144. The word sad is Allen's restoration.)");
+                "The announcer of the first gate: Sad of Voice. He called out as I came near. Anpu says he announces everyone the same way.");
 
             // ------------------------------------------------------------ memories
             yield return Memory("memory.mother_sand", "Mother teaches me my name", "S34",
@@ -117,7 +117,7 @@ namespace Ankhu.Realms.Core
 
             // Rosetau (2026-11-25). The mother's rooms. Design: docs/ROSETAU_DESIGN.md.
             yield return Lore("lore.rosetau", "Rosetau", "D21 G43 O1",
-                "The place of passages, where the roads of the dead go down by water and by land. Spell 117 of the Book of the Dead is the spell for taking the way here. Anpu brings the dead as far as the first step and no further.",
+                "The place of passages, where the roads of the dead go down by water and by land. As it is written: \"Spell for taking the way to Rosetau.\" Anpu brings the dead as far as the first step and no further.",
                 "Rosetau");
             yield return Lore("lore.mothers_house", "The house in Abdju", "O1 G14 X1 B1",
                 "One room of mud brick, a loom, a quern, a lamp. My mother wove for other women and ground grain for us. She kept a faience of the young Heru over the bread oven, the one with his finger at his lips.",
@@ -137,10 +137,11 @@ namespace Ankhu.Realms.Core
 
             // Rosetau D and E (2026-11-25). The father's rooms.
             yield return Lore("lore.two_ways", "The Book of Two Ways", "N31 N31",
-                "A map of the hereafter painted on the floor boards of coffins from the Hare nome at el-Bersha, in the Middle Kingdom. A black road of water and a blue road of land, with a channel of fire between them. It is part of the Coffin Texts, spells 1029 to 1130 (Lesko, The Ancient Egyptian Book of Two Ways, 1972).",
+                "A map of the hereafter painted on the floor boards of the old coffins of the Hare nome. A black road of water and a blue road of land, with a channel of fire between them.",
                 "Rosetau");
+            // Vignette source: Papyrus of Hunefer, British Museum EA 9901/5.
             yield return Lore("lore.opening_of_the_mouth", "The Opening of the Mouth", "D21 Z1",
-                "The rite that lets the dead eat, drink and speak. A priest touches the mouth of the mummy or the statue with an adze. In the Papyrus of Hunefer (British Museum EA 9901) Anpu holds the mummy upright at the tomb door while the women mourn in front of it. I served at hundreds.",
+                "The rite that lets the dead eat, drink and speak. A priest touches the mouth of the mummy or the statue with an adze. In the book of the scribe Hunefer, Anpu holds the mummy upright at the tomb door while the women mourn in front of it. I served at hundreds.",
                 "Rosetau");
             yield return Lore("lore.abdju_stela", "The stelae of Abdju", "O1 G14",
                 "Abdju is the town of Ausar, and families who buried their dead somewhere else, or never got the body back, set up a stela there so the dead could share the god's offerings. The usual words are the offering formula: an offering which the king gives, of bread and beer, oxen and fowl.",

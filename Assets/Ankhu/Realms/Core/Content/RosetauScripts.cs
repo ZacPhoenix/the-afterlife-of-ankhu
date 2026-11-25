@@ -184,7 +184,7 @@ namespace Ankhu.Realms.Core.Content
 
             // Book of the Dead spell 117, its title (Faulkner, The Ancient Egyptian Book of the Dead, 1985, p. 113).
             s.Beats.Add(new Beat("read_lintel", TriggerKind.Use, "read_lintel",
-                Step.Caption("\"Spell for taking the way to Rosetau.\" (Book of the Dead, spell 117)"),
+                Step.Caption("As it is written: \"Spell for taking the way to Rosetau.\""),
                 L.S(Speaker.Ankhu, "We cut that over plenty of tomb doors. I never once thought about who'd walk under it.")) { Once = false });
 
             s.Beats.Add(new Beat("first_laugh", TriggerKind.Event, "first_laugh",
@@ -334,7 +334,7 @@ namespace Ankhu.Realms.Core.Content
 
             // The refrain of the Lamentations of Isis and Nephthys, Papyrus Bremner-Rhind (British Museum EA 10188), col. 1.
             s.Beats.Add(new Beat("read_wall", TriggerKind.Use, "read_wall",
-                Step.Caption("\"Come to your house, come to your house.\" (The Lamentations of Isis and Nephthys, Papyrus Bremner-Rhind)"),
+                Step.Caption("As it is written: \"Come to your house, come to your house.\""),
                 L.S(Speaker.Ankhu, "The two kites. Priestesses sang this over the dead. Two of them, one at each end.")) { Once = false });
 
             s.Beats.Add(new Beat("hush", TriggerKind.Event, "hush_refused",
@@ -598,7 +598,7 @@ namespace Ankhu.Realms.Core.Content
 
             // Coffin Texts spell 1130, from the Book of Two Ways (Lichtheim, Ancient Egyptian Literature I, 1973, p. 131).
             s.Beats.Add(new Beat("read_floor", TriggerKind.Use, "read_floor",
-                Step.Caption("\"I made the four winds, that every man might breathe in his time.\" (Coffin Texts, spell 1130)"),
+                Step.Caption("As it is written: \"I made the four winds, that every man might breathe in his time.\""),
                 L.S(Speaker.Ankhu, "Every man. It says every man, not every man with a tomb.")) { Once = false });
 
             s.Beats.Add(new Beat("fire_low", TriggerKind.Event, "fire_low",
