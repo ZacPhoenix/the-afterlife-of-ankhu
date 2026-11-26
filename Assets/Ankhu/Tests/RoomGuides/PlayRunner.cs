@@ -126,7 +126,18 @@ namespace Ankhu.Tests.RoomGuides
         private bool Busy()
         {
             SpellPresenter p = Presenter;
-            return Running || Pending > 0 || (p != null && p.Busy) || MemoryFlashback.IsPlaying || CodexBook.IsOpen;
+            return Running || Pending > 0 || (p != null && p.Busy) || MemoryFlashback.IsPlaying || CodexBook.IsOpen || Riding();
+        }
+
+        private static readonly FieldInfo RideRun = typeof(RealmRide).GetField("run", BindingFlags.Instance | BindingFlags.NonPublic);
+
+        /// <summary>A ride (beam, bridge, door) carries Ankhu along its marks in real time. Wait for it to set him down.</summary>
+        private static bool Riding()
+        {
+            if (RideRun == null) return false;
+            foreach (RealmRide r in UnityEngine.Object.FindObjectsByType<RealmRide>(FindObjectsSortMode.None))
+                if (RideRun.GetValue(r) != null) return true;
+            return false;
         }
 
         /// <summary>Waits for beats, films, the bubble and the roll to settle. Closes presented codex moments as a player would.</summary>
