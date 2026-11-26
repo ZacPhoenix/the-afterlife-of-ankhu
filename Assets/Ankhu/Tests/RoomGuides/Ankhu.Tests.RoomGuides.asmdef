@@ -1,0 +1,29 @@
+{
+    "name": "Ankhu.Tests.RoomGuides",
+    "rootNamespace": "Ankhu.Tests.RoomGuides",
+    "references": [
+        "Ankhu.Realms.Core",
+        "Ankhu.Realms",
+        "Ankhu.Opening",
+        "Ankhu.Runtime",
+        "Ankhu.Integration",
+        "Ankhu.Bindings",
+        "Ankhu.BorrowedDawn",
+        "Ankhu.Memories",
+        "Unity.InputSystem",
+        "UnityEngine.TestRunner"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
