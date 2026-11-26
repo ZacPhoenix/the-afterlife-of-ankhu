@@ -215,7 +215,7 @@ say still fire => Success [AC-3]
 expect fire=low [AC-3]
 beat fire_low [AC-3]
 nobeat fire_low_again [AC-10]
-# fails today: fire_low_again fires with the first still, see 13.2
+# fixed 2026-11-26, this used to fail: fire_low_again fires with the first still, see 13.2
 say echo => Success [AC-5]
 expect shade_paser=heard [AC-5]
 beat heard_paser [AC-5]
@@ -257,7 +257,7 @@ say echo => Success
 expect shade_paser=heard
 expect fire=roaring [AC-3]
 say nakht => Refused | Nobody turns to that name. [AC-8]
-# fails today: NoChange "This time, nothing has changed.", see 13.1
+# fixed 2026-11-26, this used to fail: NoChange "This time, nothing has changed.", see 13.1
 say paser => Refused | Quiet it [AC-7]
 say still fire => Success
 say paser => Success

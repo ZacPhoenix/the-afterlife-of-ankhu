@@ -269,7 +269,7 @@ at feet
 say wake nebethet => Refused | not asleep
 say release nebethet => Success
 say release nebethet => NoChange | This time, nothing has changed. [AC-11]
-# fails today: message is "The Nebet-Het is already keening." See guide 17, 13.1
+# fixed 2026-11-26, this used to fail: message is "The Nebet-Het is already keening." See guide 17, 13.1
 expect lamps=0
 say echo => Success
 expect lamps=1

@@ -189,7 +189,7 @@ beat shelf [AC-2]
 say still her => Refused | No. Not again. [AC-3]
 beat hush_again [AC-3]
 say echo => Success [AC-10]
-# fails today: Incomplete "Echo what? Name the thing.", see 13.3
+# fixed 2026-11-26, this used to fail: Incomplete "Echo what? Name the thing.", see 13.3
 expect mother=listening [AC-5]
 expect weeping=answered [AC-5]
 beat answered [AC-5]

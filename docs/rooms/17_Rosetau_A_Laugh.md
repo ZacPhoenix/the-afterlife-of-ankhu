@@ -271,7 +271,7 @@ expect child=seen [AC-10]
 beat child [AC-10]
 verb give [AC-10]
 codexhas word.give [AC-14]
-# fails today: no word.give in the codex catalog, see 13.3
+# fixed 2026-11-26, this used to fail: no word.give in the codex catalog, see 13.3
 say give falcon => Success [AC-11]
 expect falcon=given [AC-11]
 expect child=holding [AC-11]
@@ -315,6 +315,6 @@ say open => Success
 expect mouth2=open
 nobeat found2
 say open => NoChange | This time, nothing has changed. [AC-8]
-# fails today: see 13.1 (returns Refused "Only stone" and fires wrong again)
+# fixed 2026-11-26, this used to fail: see 13.1 (returns Refused "Only stone" and fires wrong again)
 expect round=2
 ```

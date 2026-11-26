@@ -217,7 +217,7 @@ expect holder=holding [AC-6]
 beat wrapped [AC-6]
 beat anpu [AC-6]
 say bind shield => NoChange | This time, nothing has changed. [AC-11]
-# fails today: Refused "The word finds nothing to hold.", see 13.3
+# fixed 2026-11-26, this used to fail: Refused "The word finds nothing to hold.", see 13.3
 say open mouth => Refused | Not yet [AC-4]
 at street
 say still mother => Refused | Not ever again [AC-7]
