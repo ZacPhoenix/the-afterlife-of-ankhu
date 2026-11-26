@@ -1,0 +1,5 @@
+{"run":"run13","build":25,"judge":"B","scores":{"art":7.5,"continuity":6,"cinematography":6.5,"motion_fx":4.5,"grounding":5,"game_feel":5.5,"ui_title":7.5,"audio":6.5},"mean":6.1,
+"defects":[
+{"axis":"grounding","frames":"019, 021, 030, 037, 040","what":"cast looks pasted on, Anpu lower body black and featureless, shadows blobby, 037 dust a dark smudge"},
+{"axis":"continuity","frames":"011, 014 vs 019-030","what":"attendants lose film collars and belts, film ankh oversized, film sceptre not bronze"},
+{"axis":"motion_fx","frames":"024, 030, 034, 040","what":"Ankhu same open-armed pose every shot, attendants in unison"}]}

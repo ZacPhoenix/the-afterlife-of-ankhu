@@ -1,0 +1,102 @@
+{
+ "dialogue.anpu.spell25.rise__0.wav": {
+  "text": "Rise and rule",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-1-cistern.intro.1__0.wav": {
+  "text": "Your voice has come back to you, Ankou. Here, words are the only hands you have",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-1-cistern.intro.2__0.wav": {
+  "text": "Water listens to a direction. Say flow, then west or east.",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-1-cistern.intro.3__0.wav": {
+  "text": "The gallery is above us. Watch what the water carries before you ask it to move",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-1-cistern.nudge.ElevatorNotHere__0.wav": {
+  "text": "The platform rides on the water. Where must the water go for it to come down to you?",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-1-cistern.nudge.LadderRaised__0.wav": {
+  "text": "The ladder is rolled up above. There is another way to rise",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-1-cistern.nudge.NoLandingAtThisHeight__0.wav": {
+  "text": "You stand between floors. Let the water choose your height",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-1-cistern.nudge.NotYetTaught__0.wav": {
+  "text": "That word has no power here yet. In this room, only the water listens.",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-1-cistern.solve__0.wav": {
+  "text": "You did not climb. You asked, and the water carried you",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-2-held-step.intro.1__0.wav": {
+  "text": "The mirror floats on the western raft. The raft rises only when the water goes west, and then your platform sinks",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-2-held-step.intro.2__0.wav": {
+  "text": "Some things must stay where they are after their support is gone. Say bind, then the thing you would hold",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-2-held-step.intro.3__0.wav": {
+  "text": "Bring the mirror to the gallery and leave nothing bound behind you",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-2-held-step.nudge.BindingBearsLoad__0.wav": {
+  "text": "That thread carries the whole platform now. Give its weight back to the water first",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-2-held-step.nudge.ElevatorNotReachable__0.wav": {
+  "text": "You can only hold the platform while you stand on it, high in the shaft",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-2-held-step.nudge.MirrorNotReachable__0.wav": {
+  "text": "The raft rises only with the water in the west. Can your platform stay high without the water?",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-2-held-step.nudge.NotYetTaught__0.wav": {
+  "text": "That word has no power here yet. Hold. Release and move the water",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-2-held-step.solve__0.wav": {
+  "text": "You held only as long as you needed to. Remember the feeling of letting go.",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-3-lingering-shadow.intro.1__0.wav": {
+  "text": "The far seal wants light. The near seal wants shadow. The gate ahead will ask for both at once",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-3-lingering-shadow.intro.2__0.wav": {
+  "text": "The sleeper stands in the beam and casts the shadow. Wake him, and he walks out of the light. His shadow follows him",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-3-lingering-shadow.intro.3__0.wav": {
+  "text": "Unless you hold it first, and you still hold two threads from before. Your voice can carry no more than two",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-3-lingering-shadow.nudge.BindingBearsLoad__0.wav": {
+  "text": "That thread carries the platform. Give its weight to the water first",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-3-lingering-shadow.nudge.BindingCapacityFull__0.wav": {
+  "text": "Your voice already holds two threads. Which one do you still need?",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-3-lingering-shadow.nudge.NoShadowToBind__0.wav": {
+  "text": "There is no shadow to hold. Perhaps its owner should rest again.",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-3-lingering-shadow.nudge.NotYetTaught__0.wav": {
+  "text": "That word has no power here yet. Hold, release, wake, sleep, and move the water",
+  "audio_events": []
+ },
+ "dialogue.anpu.teach-3-lingering-shadow.solve__0.wav": {
+  "text": "The shadow stays, though its owner has gone. You will need this again",
+  "audio_events": []
+ }
+}

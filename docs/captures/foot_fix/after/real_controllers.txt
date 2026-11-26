@@ -1,0 +1,53 @@
+clamp type found: True
+Assets/Characters/Ankhu/Ankhu.controller Locomotion iKOnFeet=True ikPass=True clamp=False
+f00 L[yaw4 pitch0 flex96 roll-1 toeBend0 footY0.067] R[yaw2 pitch-11 flex60 roll3 toeBend0 footY0.119] Lloc(277, 193, 167) Rloc(301, 356, 355) LtoeLoc(346, 358, 1) RtoeLoc(334, 2, 359) soleL-0.041 soleR-0.006
+f01 L[yaw5 pitch-13 flex90 roll-2 toeBend0 footY0.088] R[yaw6 pitch-13 flex63 roll-2 toeBend0 footY0.117] Lloc(270, 223, 134) Rloc(299, 7, 339) LtoeLoc(333, 358, 1) RtoeLoc(334, 2, 359) soleL-0.013 soleR-0.005
+f02 L[yaw9 pitch-55 flex72 roll2 toeBend0 footY0.159] R[yaw4 pitch-29 flex63 roll1 toeBend0 footY0.104] Lloc(288, 352, 11) Rloc(297, 360, 353) LtoeLoc(307, 357, 2) RtoeLoc(334, 2, 359) soleL0.002 soleR-0.002
+f03 L[yaw2 pitch-52 flex75 roll0 toeBend0 footY0.186] R[yaw4 pitch-30 flex68 roll1 toeBend0 footY0.104] Lloc(285, 355, 6) Rloc(293, 9, 346) LtoeLoc(334, 358, 1) RtoeLoc(334, 2, 359) soleL0.003 soleR-0.004
+f04 L[yaw-2 pitch-16 flex78 roll1 toeBend0 footY0.119] R[yaw7 pitch-30 flex69 roll0 toeBend0 footY0.107] Lloc(282, 357, 8) Rloc(294, 21, 335) LtoeLoc(337, 358, 1) RtoeLoc(334, 2, 359) soleL-0.001 soleR-0.001
+f05 L[yaw4 pitch21 flex89 roll1 toeBend0 footY0.110] R[yaw9 pitch-33 flex65 roll-1 toeBend0 footY0.106] Lloc(276, 100, 279) Rloc(296, 14, 345) LtoeLoc(336, 358, 1) RtoeLoc(333, 2, 359) soleL-0.016 soleR-0.012
+f06 L[yaw6 pitch14 flex84 roll-3 toeBend0 footY0.085] R[yaw10 pitch-48 flex71 roll3 toeBend0 footY0.137] Lloc(276, 8, 6) Rloc(290, 14, 347) LtoeLoc(337, 358, 1) RtoeLoc(320, 3, 359) soleL-0.042 soleR-0.013
+f07 L[yaw5 pitch-1 flex78 roll0 toeBend0 footY0.065] R[yaw85 pitch-87 flex50 roll10 toeBend0 footY0.213] Lloc(283, 360, 8) Rloc(310, 355, 3) LtoeLoc(340, 358, 1) RtoeLoc(301, 4, 358) soleL-0.056 soleR-0.008
+f08 L[yaw4 pitch0 flex86 roll0 toeBend0 footY0.063] R[yaw-2 pitch-75 flex58 roll10 toeBend0 footY0.226] Lloc(274, 351, 12) Rloc(303, 349, 11) LtoeLoc(343, 358, 1) RtoeLoc(326, 3, 359) soleL-0.051 soleR0.000
+f09 L[yaw5 pitch1 flex94 roll0 toeBend0 footY0.065] R[yaw0 pitch-35 flex65 roll5 toeBend0 footY0.139] Lloc(274, 178, 181) Rloc(296, 348, 11) LtoeLoc(345, 358, 1) RtoeLoc(334, 2, 359) soleL-0.045 soleR-0.014
+f10 L[yaw5 pitch-3 flex97 roll-2 toeBend0 footY0.072] R[yaw5 pitch-1 flex60 roll3 toeBend0 footY0.123] Lloc(277, 193, 166) Rloc(300, 352, 4) LtoeLoc(343, 358, 1) RtoeLoc(334, 2, 359) soleL-0.033 soleR-0.009
+f11 L[yaw6 pitch-29 flex77 roll0 toeBend0 footY0.113] R[yaw6 pitch-25 flex61 roll-1 toeBend0 footY0.109] Lloc(283, 350, 11) Rloc(300, 4, 346) LtoeLoc(316, 357, 1) RtoeLoc(334, 2, 359) soleL0.008 soleR-0.001
+Assets/Ankhu/Opening/Generated/Anpu_Escort.controller Locomotion iKOnFeet=True ikPass=False clamp=False
+f00 L[yaw19 pitch0 flex101 roll-1 toeBend0 footY0.076] R[yaw16 pitch-12 flex61 roll3 toeBend0 footY0.135] Lloc(296, 262, 116) Rloc(316, 30, 313) LtoeLoc(347, 26, 346) RtoeLoc(335, 331, 15) soleL-0.047 soleR-0.034
+f01 L[yaw20 pitch-12 flex95 roll-2 toeBend0 footY0.099] R[yaw21 pitch-12 flex73 roll-2 toeBend0 footY0.133] Lloc(294, 271, 102) Rloc(311, 45, 297) LtoeLoc(334, 29, 345) RtoeLoc(335, 331, 15) soleL-0.022 soleR-0.057
+f02 L[yaw33 pitch-52 flex73 roll2 toeBend0 footY0.182] R[yaw21 pitch-28 flex67 roll1 toeBend0 footY0.119] Lloc(303, 313, 58) Rloc(309, 38, 309) LtoeLoc(309, 40, 338) RtoeLoc(335, 331, 15) soleL0.005 soleR-0.037
+f03 L[yaw24 pitch-50 flex77 roll0 toeBend0 footY0.212] R[yaw20 pitch-29 flex72 roll1 toeBend0 footY0.119] Lloc(301, 308, 63) Rloc(307, 47, 302) LtoeLoc(335, 29, 345) RtoeLoc(335, 331, 15) soleL0.020 soleR-0.004
+f04 L[yaw13 pitch-16 flex81 roll1 toeBend0 footY0.136] R[yaw24 pitch-28 flex76 roll0 toeBend0 footY0.121] Lloc(297, 304, 70) Rloc(308, 56, 293) LtoeLoc(338, 28, 346) RtoeLoc(335, 331, 15) soleL0.000 soleR0.000
+f05 L[yaw19 pitch19 flex90 roll1 toeBend0 footY0.123] R[yaw26 pitch-31 flex68 roll-1 toeBend0 footY0.121] Lloc(290, 305, 89) Rloc(309, 48, 306) LtoeLoc(337, 29, 345) RtoeLoc(334, 330, 15) soleL0.008 soleR-0.011
+f06 L[yaw21 pitch13 flex87 roll-3 toeBend0 footY0.096] R[yaw31 pitch-46 flex75 roll3 toeBend0 footY0.156] Lloc(297, 304, 83) Rloc(302, 54, 299) LtoeLoc(338, 28, 346) RtoeLoc(322, 326, 17) soleL-0.024 soleR-0.012
+f07 L[yaw19 pitch-1 flex81 roll0 toeBend0 footY0.073] R[yaw99 pitch-72 flex52 roll10 toeBend0 footY0.243] Lloc(300, 307, 72) Rloc(318, 27, 327) LtoeLoc(341, 28, 346) RtoeLoc(303, 316, 25) soleL-0.053 soleR0.005
+f08 L[yaw19 pitch0 flex90 roll0 toeBend0 footY0.072] R[yaw48 pitch-71 flex59 roll10 toeBend0 footY0.258] Lloc(295, 287, 90) Rloc(309, 30, 324) LtoeLoc(344, 27, 346) RtoeLoc(328, 328, 16) soleL-0.052 soleR0.026
+f09 L[yaw19 pitch1 flex98 roll0 toeBend0 footY0.074] R[yaw18 pitch-35 flex67 roll5 toeBend0 footY0.158] Lloc(294, 266, 109) Rloc(303, 35, 316) LtoeLoc(346, 26, 346) RtoeLoc(335, 331, 15) soleL-0.049 soleR-0.019
+f10 L[yaw19 pitch-3 flex101 roll-2 toeBend0 footY0.082] R[yaw19 pitch-2 flex60 roll3 toeBend0 footY0.140] Lloc(296, 261, 117) Rloc(311, 31, 321) LtoeLoc(344, 27, 346) RtoeLoc(335, 331, 15) soleL-0.041 soleR-0.047
+f11 L[yaw22 pitch-28 flex81 roll0 toeBend0 footY0.129] R[yaw22 pitch-23 flex66 roll-1 toeBend0 footY0.124] Lloc(298, 300, 71) Rloc(312, 38, 307) LtoeLoc(318, 35, 342) RtoeLoc(335, 331, 15) soleL0.009 soleR-0.052
+Assets/Characters/Ankhu/Ankhu.controller Locomotion iKOnFeet=True ikPass=True clamp=True
+f00 L[yaw4 pitch0 flex107 roll-1 toeBend0 footY0.105] R[yaw2 pitch-11 flex60 roll3 toeBend0 footY0.119] Lloc(294, 232, 137) Rloc(301, 356, 355) LtoeLoc(346, 358, 1) RtoeLoc(334, 2, 359) soleL0.005 soleR-0.006
+f01 L[yaw5 pitch-13 flex92 roll-2 toeBend0 footY0.105] R[yaw6 pitch-13 flex63 roll-2 toeBend0 footY0.117] Lloc(282, 268, 101) Rloc(299, 7, 339) LtoeLoc(333, 358, 1) RtoeLoc(334, 2, 359) soleL0.004 soleR-0.005
+f02 L[yaw9 pitch-55 flex72 roll2 toeBend0 footY0.159] R[yaw4 pitch-29 flex64 roll1 toeBend0 footY0.105] Lloc(288, 352, 11) Rloc(296, 354, 0) LtoeLoc(307, 357, 2) RtoeLoc(334, 2, 359) soleL0.002 soleR-0.001
+f03 L[yaw2 pitch-52 flex75 roll0 toeBend0 footY0.186] R[yaw4 pitch-30 flex70 roll1 toeBend0 footY0.105] Lloc(285, 355, 6) Rloc(290, 3, 354) LtoeLoc(334, 358, 1) RtoeLoc(334, 2, 359) soleL0.003 soleR-0.003
+f04 L[yaw-2 pitch-16 flex78 roll1 toeBend0 footY0.119] R[yaw7 pitch-30 flex69 roll0 toeBend0 footY0.107] Lloc(282, 357, 8) Rloc(294, 21, 335) LtoeLoc(337, 358, 1) RtoeLoc(334, 2, 359) soleL-0.001 soleR-0.001
+f05 L[yaw4 pitch21 flex89 roll1 toeBend0 footY0.110] R[yaw9 pitch-33 flex65 roll-1 toeBend0 footY0.106] Lloc(276, 100, 279) Rloc(296, 14, 345) LtoeLoc(336, 358, 1) RtoeLoc(333, 2, 359) soleL-0.016 soleR-0.012
+f06 L[yaw6 pitch14 flex97 roll-3 toeBend0 footY0.105] R[yaw10 pitch-48 flex71 roll3 toeBend0 footY0.137] Lloc(277, 208, 169) Rloc(290, 14, 347) LtoeLoc(337, 358, 1) RtoeLoc(320, 3, 359) soleL-0.012 soleR-0.013
+f07 L[yaw5 pitch-1 flex92 roll0 toeBend0 footY0.105] R[yaw85 pitch-87 flex50 roll10 toeBend0 footY0.213] Lloc(281, 270, 103) Rloc(310, 355, 3) LtoeLoc(340, 358, 1) RtoeLoc(301, 4, 358) soleL-0.005 soleR-0.008
+f08 L[yaw4 pitch0 flex100 roll0 toeBend0 footY0.105] R[yaw-2 pitch-75 flex58 roll10 toeBend0 footY0.226] Lloc(286, 237, 131) Rloc(303, 349, 11) LtoeLoc(343, 358, 1) RtoeLoc(326, 3, 359) soleL-0.004 soleR0.000
+f09 L[yaw5 pitch1 flex106 roll0 toeBend0 footY0.105] R[yaw0 pitch-35 flex65 roll5 toeBend0 footY0.139] Lloc(291, 226, 140) Rloc(296, 348, 11) LtoeLoc(345, 358, 1) RtoeLoc(334, 2, 359) soleL0.004 soleR0.009
+f10 L[yaw5 pitch-3 flex104 roll-2 toeBend0 footY0.105] R[yaw5 pitch-1 flex60 roll3 toeBend0 footY0.123] Lloc(292, 240, 130) Rloc(300, 352, 4) LtoeLoc(343, 358, 1) RtoeLoc(334, 2, 359) soleL0.005 soleR-0.009
+f11 L[yaw6 pitch-29 flex77 roll0 toeBend0 footY0.113] R[yaw6 pitch-25 flex61 roll-1 toeBend0 footY0.109] Lloc(283, 350, 11) Rloc(300, 4, 346) LtoeLoc(316, 357, 1) RtoeLoc(334, 2, 359) soleL0.008 soleR-0.001
+Assets/Ankhu/Opening/Generated/Anpu_Escort.controller Locomotion iKOnFeet=True ikPass=False clamp=True
+f00 L[yaw19 pitch0 flex101 roll-1 toeBend0 footY0.076] R[yaw16 pitch-12 flex61 roll3 toeBend0 footY0.135] Lloc(296, 262, 116) Rloc(316, 30, 313) LtoeLoc(347, 26, 346) RtoeLoc(335, 331, 15) soleL-0.047 soleR-0.034
+f01 L[yaw20 pitch-12 flex95 roll-2 toeBend0 footY0.099] R[yaw21 pitch-12 flex73 roll-2 toeBend0 footY0.133] Lloc(294, 271, 102) Rloc(311, 45, 297) LtoeLoc(334, 29, 345) RtoeLoc(335, 331, 15) soleL-0.022 soleR-0.057
+f02 L[yaw33 pitch-52 flex73 roll2 toeBend0 footY0.182] R[yaw21 pitch-28 flex67 roll1 toeBend0 footY0.119] Lloc(303, 313, 58) Rloc(309, 38, 309) LtoeLoc(309, 40, 338) RtoeLoc(335, 331, 15) soleL0.005 soleR-0.037
+f03 L[yaw24 pitch-50 flex77 roll0 toeBend0 footY0.212] R[yaw20 pitch-29 flex72 roll1 toeBend0 footY0.119] Lloc(301, 308, 63) Rloc(307, 47, 302) LtoeLoc(335, 29, 345) RtoeLoc(335, 331, 15) soleL0.020 soleR-0.004
+f04 L[yaw13 pitch-16 flex81 roll1 toeBend0 footY0.136] R[yaw24 pitch-28 flex76 roll0 toeBend0 footY0.121] Lloc(297, 304, 70) Rloc(308, 56, 293) LtoeLoc(338, 28, 346) RtoeLoc(335, 331, 15) soleL0.000 soleR0.000
+f05 L[yaw19 pitch19 flex90 roll1 toeBend0 footY0.123] R[yaw26 pitch-31 flex68 roll-1 toeBend0 footY0.121] Lloc(290, 305, 89) Rloc(309, 48, 306) LtoeLoc(337, 29, 345) RtoeLoc(334, 330, 15) soleL0.008 soleR-0.011
+f06 L[yaw21 pitch13 flex87 roll-3 toeBend0 footY0.096] R[yaw31 pitch-46 flex75 roll3 toeBend0 footY0.156] Lloc(297, 304, 83) Rloc(302, 54, 299) LtoeLoc(338, 28, 346) RtoeLoc(322, 326, 17) soleL-0.024 soleR-0.012
+f07 L[yaw19 pitch-1 flex81 roll0 toeBend0 footY0.073] R[yaw99 pitch-72 flex52 roll10 toeBend0 footY0.243] Lloc(300, 307, 72) Rloc(318, 27, 327) LtoeLoc(341, 28, 346) RtoeLoc(303, 316, 25) soleL-0.053 soleR0.005
+f08 L[yaw19 pitch0 flex90 roll0 toeBend0 footY0.072] R[yaw48 pitch-71 flex59 roll10 toeBend0 footY0.258] Lloc(295, 287, 90) Rloc(309, 30, 324) LtoeLoc(344, 27, 346) RtoeLoc(328, 328, 16) soleL-0.052 soleR0.026
+f09 L[yaw19 pitch1 flex98 roll0 toeBend0 footY0.074] R[yaw18 pitch-35 flex67 roll5 toeBend0 footY0.158] Lloc(294, 266, 109) Rloc(303, 35, 316) LtoeLoc(346, 26, 346) RtoeLoc(335, 331, 15) soleL-0.049 soleR-0.019
+f10 L[yaw19 pitch-3 flex101 roll-2 toeBend0 footY0.082] R[yaw19 pitch-2 flex60 roll3 toeBend0 footY0.140] Lloc(296, 261, 117) Rloc(311, 31, 321) LtoeLoc(344, 27, 346) RtoeLoc(335, 331, 15) soleL-0.041 soleR-0.047
+f11 L[yaw22 pitch-28 flex81 roll0 toeBend0 footY0.129] R[yaw22 pitch-23 flex66 roll-1 toeBend0 footY0.124] Lloc(298, 300, 71) Rloc(312, 38, 307) LtoeLoc(318, 35, 342) RtoeLoc(335, 331, 15) soleL0.009 soleR-0.052

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "speaker": "ankhu",
+  "source": "docs/opening/OVERNIGHT_PLAN.md (DRAFT lines)",
+  "lines": [
+    {
+      "key": "dialogue.ankhu.walk.cam2.a",
+      "text": "I served your house for forty years. I wore your face over the dead.",
+      "context": "Walking beside Anpu on a moonlit road out of the temple, just after death. Quiet, humble, a little wondering."
+    },
+    {
+      "key": "dialogue.ankhu.walk.cam3.a",
+      "text": "Then you know what I was before that.",
+      "context": "Walking, quiet, a confession with old grief under it."
+    },
+    {
+      "key": "dialogue.ankhu.walk.cam4.a",
+      "text": "Will I see them?",
+      "context": "Walking, almost afraid to ask. Hushed hope."
+    },
+    {
+      "key": "dialogue.ankhu.walk.cam5.a",
+      "text": "What does it ask?",
+      "context": "Walking, steady, ready to listen."
+    }
+  ]
+}

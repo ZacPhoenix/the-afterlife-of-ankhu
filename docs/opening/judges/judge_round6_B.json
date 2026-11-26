@@ -1,0 +1,6 @@
+{"run":"run9","build":21,"judge":"B","scores":{"art":7,"continuity":5,"cinematography":6,"motion_fx":4,"grounding":5,"game_feel":5,"ui_title":7,"audio":6},"mean":5.6,
+"defects":[
+{"axis":"continuity","frames":"025-043","what":"no ankh visible in Anpu's left hand in walk, plain black body and olive kilt vs film's gold-and-blue collar, sceptre angle drifts"},
+{"axis":"cinematography/grounding","frames":"033-036","what":"high wide cam4/cam5 makes party tiny, Anpu fuses with the foreground statue, attendants lean back"},
+{"axis":"game_feel/grounding","frames":"037-043","what":"Ankhu hidden behind attendants and merged with Anpu at the gate, sandals do not read"}],
+"note":"paint filter read as low-res blockiness on walk backdrops"}

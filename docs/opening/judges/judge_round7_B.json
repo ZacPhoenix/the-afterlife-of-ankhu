@@ -1,0 +1,5 @@
+{"run":"run11","build":23,"judge":"B","scores":{"art":7,"continuity":4,"cinematography":7,"motion_fx":5,"grounding":4,"game_feel":5,"ui_title":6,"audio":7},"mean":5.6,
+"defects":[
+{"axis":"grounding","frames":"037-039","what":"cast half hidden behind or inside the statue base in the cam5 high shot, Ankhu and Anpu merge"},
+{"axis":"continuity","frames":"014-017","what":"film: oversized ankh, jackal-headed sceptre, gold props (film stills, not fixable without rerolls)"},
+{"axis":"motion_fx","frames":"024, 033, 035","what":"feet appear to dangle above paving, green glow smear under the group at 035"}]}

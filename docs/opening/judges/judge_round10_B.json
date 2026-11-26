@@ -1,0 +1,5 @@
+{"run":"run14","build":26,"judge":"B","scores":{"art":7,"continuity":6,"cinematography":6,"motion_fx":5,"grounding":5,"game_feel":6,"ui_title":8,"audio":7},"mean":6.25,
+"defects":[
+{"axis":"art","frames":"019, 021, 025, 030, 037","what":"3D cast flatter than painted plates, Anpu reads as black silhouette with unreadable ankh and sceptre head"},
+{"axis":"grounding","frames":"037, 040, 044","what":"clipping into torches, plinths and gate, green dust smear at Anpu's feet, cam4/cam5 attendants occlude or float"},
+{"axis":"cinematography","frames":"037, 040","what":"cam4 too high and wide so group is tiny, cam5 attendant's back covers Ankhu and Anpu during a line"}]}

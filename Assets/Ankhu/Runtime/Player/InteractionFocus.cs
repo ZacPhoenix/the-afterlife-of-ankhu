@@ -32,6 +32,9 @@ namespace Ankhu.Player
 
         public Interactable Focus => focus;
 
+        /// <summary>Raised after Ankhu uses a target and the rules answered. Presentation only (animation).</summary>
+        public event System.Action<Interactable, CommandResult> Used;
+
         public void Configure(PlayerZoneTracker tracker, Camera cameraForPrompt, RectTransform canvas, Text prompt)
         {
             zoneTracker = tracker;
@@ -59,6 +62,8 @@ namespace Ankhu.Player
             {
                 promptText.gameObject.SetActive(false);
             }
+            if (slipGroup != null) slipGroup.alpha = 0f;
+            if (glintGroup != null) glintGroup.alpha = 0f;
         }
 
         private void Update()
@@ -103,6 +108,7 @@ namespace Ankhu.Player
             {
                 promptText.gameObject.SetActive(show);
             }
+            UpdatePaintedPrompt(show, local);
             if (!show)
             {
                 return;
@@ -113,6 +119,117 @@ namespace Ankhu.Player
                 promptText.text = prompt;
             }
             promptText.rectTransform.anchoredPosition = local;
+        }
+
+        // ------------------------------------------------------------------ painted glint first
+        // Zac 2026-11-25, prompts pick B: a soft gold glint marks an interactable when Ankhu is near it, and only
+        // when he stands at it does a papyrus slip with the keycaps and verbs appear. The plain promptText stays
+        // as the data source (BuildPrompt, tests) but is drawn transparent once the slip is built.
+        private const float NearReach = 2.4f;
+        private const float GlintSize = 48f;
+        private RectTransform slip;
+        private RectTransform slipRow;
+        private CanvasGroup slipGroup;
+        private string slipShown;
+        private RectTransform glint;
+        private CanvasGroup glintGroup;
+        private Image glintStar;
+        private readonly List<Collider2D> nearOverlaps = new List<Collider2D>(16);
+
+        private void BuildPaintedPrompt()
+        {
+            if (slip != null || canvasRect == null || !PapyrusKit.Painted) return;
+            glint = PapyrusKit.Rect("Interact Glint", canvasRect);
+            glint.anchorMin = glint.anchorMax = glint.pivot = new Vector2(0.5f, 0.5f);
+            glint.sizeDelta = new Vector2(GlintSize, GlintSize);
+            glintGroup = glint.gameObject.AddComponent<CanvasGroup>();
+            glintGroup.alpha = 0f;
+            Image halo = PapyrusKit.Image("Halo", glint, PapyrusKit.Plain("fx_mote"), new Color(1f, 0.78f, 0.36f, 0.35f));
+            PapyrusKit.Stretch(halo.rectTransform, -GlintSize * 0.25f);
+            Sprite star = PapyrusKit.Plain("fx_flare");
+            glintStar = PapyrusKit.Image("Star", glint, star != null ? star : PapyrusKit.Plain("fx_spark"), PapyrusKit.GoldBright);
+            PapyrusKit.Stretch(glintStar.rectTransform);
+
+            slip = PapyrusKit.Rect("Interact Slip", canvasRect);
+            slip.anchorMin = slip.anchorMax = new Vector2(0.5f, 0.5f);
+            slip.pivot = new Vector2(0.5f, 0f);
+            slipGroup = slip.gameObject.AddComponent<CanvasGroup>();
+            slipGroup.alpha = 0f;
+            RectTransform sheet = PapyrusKit.Sheet("Slip", slip, 14f);
+            PapyrusKit.Stretch(sheet);
+            slipRow = PapyrusKit.Rect("Row", slip);
+            slipRow.anchorMin = slipRow.anchorMax = slipRow.pivot = new Vector2(0.5f, 0.5f);
+            slipRow.anchoredPosition = new Vector2(0f, 1f);
+        }
+
+        private void UpdatePaintedPrompt(bool show, Vector2 local)
+        {
+            BuildPaintedPrompt();
+            if (slip == null) return;
+            Color c = promptText.color;
+            if (c.a > 0f) promptText.color = new Color(c.r, c.g, c.b, 0f);
+            float dt = Time.unscaledDeltaTime;
+            if (show)
+            {
+                var pairs = new List<string>(4);
+                string name = LowerFirst(string.IsNullOrEmpty(focus.DisplayName) ? "it" : focus.DisplayName);
+                if (focus.HasUse && focusUseAvailable)
+                {
+                    pairs.Add("E");
+                    pairs.Add(string.IsNullOrEmpty(focus.UsePrompt) ? "Use " + name : focus.UsePrompt);
+                }
+                pairs.Add("Q");
+                pairs.Add("Inspect " + name);
+                string key = string.Join("|", pairs);
+                if (key != slipShown)
+                {
+                    slipShown = key;
+                    float w = PapyrusKit.KeyRow(slipRow, pairs, 30f, 22, 22f);
+                    slip.sizeDelta = new Vector2(w + 40f, 54f);
+                }
+                slip.anchoredPosition = local;
+            }
+            slipGroup.alpha = Mathf.MoveTowards(slipGroup.alpha, show ? 1f : 0f, dt * 6f);
+            float k = slipGroup.alpha;
+            slip.localScale = new Vector3(1f, Mathf.Lerp(0.6f, 1f, 1f - (1f - k) * (1f - k)), 1f);
+
+            // The glint: the nearest interactable within reach that Ankhu is not already standing at.
+            bool glintOn = false;
+            if (!show && !InputGate.TextEntryActive && !Ankhu.Speech.SpeechBubbleController.AnyVisible)
+            {
+                Vector2 feet = body != null ? body.position : (Vector2)transform.position;
+                var center = new Vector2(feet.x, feet.y + BorrowedDawnLayout.AnkhuHeight * 0.5f);
+                var size = new Vector2(BorrowedDawnLayout.AnkhuWidth + NearReach * 2f, BorrowedDawnLayout.AnkhuHeight + NearReach);
+                int count = Physics2D.OverlapBox(center, size, 0f, filter, nearOverlaps);
+                float best = float.PositiveInfinity;
+                Vector3 mark = Vector3.zero;
+                for (int i = 0; i < count; i++)
+                {
+                    Collider2D col = nearOverlaps[i];
+                    if (col == null || !col.isTrigger) continue;
+                    Interactable it = col.GetComponent<Interactable>();
+                    if (it == null || !it.isActiveAndEnabled) continue;
+                    float d = Vector2.Distance(center, col.bounds.center);
+                    if (d < best)
+                    {
+                        best = d;
+                        Bounds b = col.bounds;
+                        mark = new Vector3(b.center.x, Mathf.Min(b.max.y, b.min.y + BorrowedDawnLayout.AnkhuHeight), transform.position.z);
+                    }
+                }
+                if (best < float.PositiveInfinity && AnkhuUi.WorldToCanvas(worldCamera, canvasRect, mark, out Vector2 g))
+                {
+                    glint.anchoredPosition = g;
+                    glintOn = true;
+                }
+            }
+            glintGroup.alpha = Mathf.MoveTowards(glintGroup.alpha, glintOn ? 1f : 0f, dt * 3f);
+            if (glintGroup.alpha > 0f)
+            {
+                float t = Time.unscaledTime;
+                glintStar.rectTransform.localScale = Vector3.one * (0.82f + 0.18f * Mathf.Sin(t * 2.6f));
+                glintStar.rectTransform.localRotation = Quaternion.Euler(0f, 0f, t * 18f);
+            }
         }
 
         /// <summary>
@@ -219,6 +336,7 @@ namespace Ankhu.Player
             {
                 return;
             }
+            Used?.Invoke(target, result);
             FeedbackBus.Publish(FeedbackSource.Interaction, result.Outcome, result.Message);
         }
 

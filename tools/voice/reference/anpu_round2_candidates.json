@@ -1,0 +1,90 @@
+{
+  "text": "Rise... Ankhu. Your voice has come back to you, Ankhu. Here, words are the only hands you have. Water listens to a direction.",
+  "designed": [
+    {
+      "name": "Q1_rolling_ancient",
+      "file": "Q1_rolling_ancient.mp3",
+      "description": "An ancient god of the dead. Very deep, gravelly, husky bass, slow and hushed, enormous gravitas. An unusual old-world accent that belongs to no living country: rolled r's, long open vowels, consonants pressed forward, a faint lilt at the ends of phrases. Voice only: no background sound, no music, no sound effects, no echo, no room ambience. Clean studio recording, completely dry.",
+      "generated_voice_id": "1ejWqc0RxCeSfowluX8G",
+      "duration_secs": 11.365083333333333
+    },
+    {
+      "name": "Q1_rolling_ancient_alt1",
+      "file": "Q1_rolling_ancient_alt1.mp3",
+      "description": "An ancient god of the dead. Very deep, gravelly, husky bass, slow and hushed, enormous gravitas. An unusual old-world accent that belongs to no living country: rolled r's, long open vowels, consonants pressed forward, a faint lilt at the ends of phrases. Voice only: no background sound, no music, no sound effects, no echo, no room ambience. Clean studio recording, completely dry.",
+      "generated_voice_id": "plk5i6UYKrwOP9CJPB0h",
+      "duration_secs": 9.849958333333333
+    },
+    {
+      "name": "Q1_rolling_ancient_alt2",
+      "file": "Q1_rolling_ancient_alt2.mp3",
+      "description": "An ancient god of the dead. Very deep, gravelly, husky bass, slow and hushed, enormous gravitas. An unusual old-world accent that belongs to no living country: rolled r's, long open vowels, consonants pressed forward, a faint lilt at the ends of phrases. Voice only: no background sound, no music, no sound effects, no echo, no room ambience. Clean studio recording, completely dry.",
+      "generated_voice_id": "gQf5qGSlYoX99rlEEoSY",
+      "duration_secs": 14.238541666666666
+    },
+    {
+      "name": "Q2_nile_south",
+      "file": "Q2_nile_south.mp3",
+      "description": "A towering jackal-headed god guiding the dead. Deep, husky, gravelly bass, slow, hushed and grave, immense calm authority. A distinctive accent with a soft Nubian and Sudanese colour: warm rounded vowels, gently tapped r's, unhurried musical rhythm. Voice only: no background sound, no music, no sound effects, no echo, no room ambience. Clean studio recording, completely dry.",
+      "generated_voice_id": "w7r2Y2s8S9bIxi8q1yft",
+      "duration_secs": 10.633666666666667
+    },
+    {
+      "name": "Q2_nile_south_alt1",
+      "file": "Q2_nile_south_alt1.mp3",
+      "description": "A towering jackal-headed god guiding the dead. Deep, husky, gravelly bass, slow, hushed and grave, immense calm authority. A distinctive accent with a soft Nubian and Sudanese colour: warm rounded vowels, gently tapped r's, unhurried musical rhythm. Voice only: no background sound, no music, no sound effects, no echo, no room ambience. Clean studio recording, completely dry.",
+      "generated_voice_id": "XbZ973iDWpMZVeO4QfYb",
+      "duration_secs": 10.163458333333333
+    },
+    {
+      "name": "Q2_nile_south_alt2",
+      "file": "Q2_nile_south_alt2.mp3",
+      "description": "A towering jackal-headed god guiding the dead. Deep, husky, gravelly bass, slow, hushed and grave, immense calm authority. A distinctive accent with a soft Nubian and Sudanese colour: warm rounded vowels, gently tapped r's, unhurried musical rhythm. Voice only: no background sound, no music, no sound effects, no echo, no room ambience. Clean studio recording, completely dry.",
+      "generated_voice_id": "PceDlvHBoLVHx0KW4Z1k",
+      "duration_secs": 14.996083333333333
+    },
+    {
+      "name": "Q3_liturgical",
+      "file": "Q3_liturgical.mp3",
+      "description": "An eternal god speaking in the cadence of a Coptic liturgical chanter. Very deep, resonant, gravelly and husky, slow, hushed, every word weighed. An unusual accent with deep guttural consonants, stretched vowels and a ceremonial sing-song rise and fall. Voice only: no background sound, no music, no sound effects, no echo, no room ambience. Clean studio recording, completely dry.",
+      "generated_voice_id": "30se1GviUCAB9qUaxm60",
+      "duration_secs": 12.070375
+    },
+    {
+      "name": "Q3_liturgical_alt1",
+      "file": "Q3_liturgical_alt1.mp3",
+      "description": "An eternal god speaking in the cadence of a Coptic liturgical chanter. Very deep, resonant, gravelly and husky, slow, hushed, every word weighed. An unusual accent with deep guttural consonants, stretched vowels and a ceremonial sing-song rise and fall. Voice only: no background sound, no music, no sound effects, no echo, no room ambience. Clean studio recording, completely dry.",
+      "generated_voice_id": "OZn7sCDbSUqj2qzHdE1H",
+      "duration_secs": 10.163458333333333
+    },
+    {
+      "name": "Q3_liturgical_alt2",
+      "file": "Q3_liturgical_alt2.mp3",
+      "description": "An eternal god speaking in the cadence of a Coptic liturgical chanter. Very deep, resonant, gravelly and husky, slow, hushed, every word weighed. An unusual accent with deep guttural consonants, stretched vowels and a ceremonial sing-song rise and fall. Voice only: no background sound, no music, no sound effects, no echo, no room ambience. Clean studio recording, completely dry.",
+      "generated_voice_id": "fsUX2RXw0u2FojsWjCC9",
+      "duration_secs": 15.178958333333334
+    },
+    {
+      "name": "Q4_stone_whisper",
+      "file": "Q4_stone_whisper.mp3",
+      "description": "A vast primordial god, half whispering. Deep, rasping, husky bass with heavy gravel, very slow, hushed, enormous presence without volume. A strange, hard-to-place accent: clipped consonants, dark rounded vowels, slight Eastern Mediterranean colour, foreign to modern English. Voice only: no background sound, no music, no sound effects, no echo, no room ambience. Clean studio recording, completely dry.",
+      "generated_voice_id": "oyuHcgPsDg9q9IUO0txI",
+      "duration_secs": 10.111208333333334
+    },
+    {
+      "name": "Q4_stone_whisper_alt1",
+      "file": "Q4_stone_whisper_alt1.mp3",
+      "description": "A vast primordial god, half whispering. Deep, rasping, husky bass with heavy gravel, very slow, hushed, enormous presence without volume. A strange, hard-to-place accent: clipped consonants, dark rounded vowels, slight Eastern Mediterranean colour, foreign to modern English. Voice only: no background sound, no music, no sound effects, no echo, no room ambience. Clean studio recording, completely dry.",
+      "generated_voice_id": "WuJl4YpoYBg0uojgmn5P",
+      "duration_secs": 12.723458333333333
+    },
+    {
+      "name": "Q4_stone_whisper_alt2",
+      "file": "Q4_stone_whisper_alt2.mp3",
+      "description": "A vast primordial god, half whispering. Deep, rasping, husky bass with heavy gravel, very slow, hushed, enormous presence without volume. A strange, hard-to-place accent: clipped consonants, dark rounded vowels, slight Eastern Mediterranean colour, foreign to modern English. Voice only: no background sound, no music, no sound effects, no echo, no room ambience. Clean studio recording, completely dry.",
+      "generated_voice_id": "3ARKDoiG0jhGkaARVmOL",
+      "duration_secs": 13.925083333333333
+    }
+  ],
+  "account": []
+}

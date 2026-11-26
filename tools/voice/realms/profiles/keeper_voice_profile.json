@@ -1,0 +1,28 @@
+{
+  "voice_id": "wzVFxVZCBIi6KBxNhQDI",
+  "voice_name": "keeper",
+  "model_id": "eleven_multilingual_v2",
+  "language_code": "en",
+  "voice_settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.8,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.8
+  },
+  "pronunciation_dictionary_locators": [
+    {
+      "name": "Ankhu names",
+      "pronunciation_dictionary_id": "jkUtFYXxMWcETpw5TQoE",
+      "version_id": "CndSfnesDXf7HEkQWiH8",
+      "replaces": [
+        "ANKHU",
+        "Ankhu",
+        "Ankhu's",
+        "ankhu"
+      ]
+    }
+  ],
+  "account_voice_name": "Jonas - deep and cool",
+  "chosen_by": "machine session 2026-11-21, audition in tools/voice/out/realms_audition"
+}

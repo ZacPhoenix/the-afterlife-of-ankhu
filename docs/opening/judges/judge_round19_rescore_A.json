@@ -1,0 +1,56 @@
+{
+ "scores": {
+  "art": 7,
+  "continuity": 6,
+  "cinematography_cuts": 7,
+  "motion_fx": 5,
+  "character_grounding": 6,
+  "game_feel": 6,
+  "ui_title": 7,
+  "audio_dialogue": 6
+ },
+ "evidence": {
+  "art": "The film stills (005_film through 018_film) are strong painted work with a coherent amber/indigo palette and good light. 013_film and 015_film are the best. The 3D walk characters in 023_walk and 030_walk_cut3 are plasticky, with marbled skin and flat shading, so they clash with the painted set.",
+  "continuity": "Ankhu wears brown sandals in every shot where his feet show (004_title_out, 008_film, 019_walk to 048_walk). Anpu and the ankh are dark bronze as required. Anpu's ankh reads oversized in 013_film to 015_film, about 0.5 m rather than 0.32 m. Anpu's jackal head and gold collar disappear in the walk shots (020_walk, 042_walk), so he reads as a black figure with a blue hood. The attendants' build and kilts differ between film and walk.",
+  "cinematography_cuts": "The film framing and shot order read clearly and are well composed (007_film, 012_film, 015_film). The cuts at 021_walk_cut1, 024_walk_cut2, 030_walk_cut3, 037_walk_cut4 and 040_walk_cut5 each land on a readable establishing shot. 025_walk and 026_walk leave the group tiny against the set, and 037_walk_cut4 is a very high angle that loses faces and the sceptre.",
+  "motion_fx": "The walk poses are varied, with stride changes visible across 033_walk to 036_walk. The attendants in 023_walk and 038_walk are stiff and mid-air-looking, and their arms hang limp. There is no visible dust or foot FX. The torch flames and light shimmer are fine. The subtitle in 034_walk flickers or fades mid-line. The poses in 044_walk to 046_walk collapse into a clump.",
+  "character_grounding": "Shadows fall consistently in 021_walk_cut1 and 024_walk_cut2. The attendant in 023_walk has crossed, floating feet and a foreground scale mismatch. In 044_walk to 046_walk Anpu is occluded by Ankhu and an attendant and merges with them. In 040_walk_cut5 the group is tiny against the pylon, but its shadows hold.",
+  "game_feel": "The route to the gate is readable thanks to the torch line and the statues (019_walk, 031_walk). The group is tiny in 034_walk to 036_walk, and in 038_walk the walk is slow with little to do. There is no on-screen indication of player control. The handover at 021_walk_cut1 into the dialogue walk is smooth. The end at 047_walk to 048_walk ends on a clean letterbox and fade.",
+  "ui_title": "000_title to 003_title have a strong gold logo, a clear 'Begin Journey' highlight, and a good menu hierarchy over the doorway composition. The menu type is a bit small and low-contrast on the left pillar. The subtitles (010_film, 025_walk) are legible but thin. The subtitle in 034_walk is too faint.",
+  "audio_dialogue": "Judged only from the on-screen subtitle script, since I did not open a timing file. The lines are well written and pace sensibly, for example 'My Lord... Anpu' and 'I know. I was there each time you lifted the mask'. Each line stays up across many frames, which suggests slow pacing. I cannot confirm voice, sync or mix."
+ },
+ "mean": 6.25,
+ "defects": [
+  {
+   "axis": "character_grounding",
+   "frames": [
+    "023_walk",
+    "044_walk",
+    "045_walk",
+    "046_walk"
+   ],
+   "what": "The 3D characters are occluded by or merged into each other, and the foreground attendant has crossed or floating feet. Anpu's jackal head and sceptre are lost, and the plasticky skin looks out of place against the painted set."
+  },
+  {
+   "axis": "motion_fx",
+   "frames": [
+    "033_walk",
+    "034_walk",
+    "038_walk",
+    "039_walk"
+   ],
+   "what": "The walk motion is stiff and slow. Arms hang and strides repeat. There is no dust or footfall FX, and the subtitle fades or flickers in 034_walk."
+  },
+  {
+   "axis": "continuity",
+   "frames": [
+    "013_film",
+    "014_film",
+    "015_film",
+    "020_walk",
+    "042_walk"
+   ],
+   "what": "Anpu's ankh is oversized in the film, and his black jackal head, collar and bronze props nearly vanish in the walk shots. The attendants also differ in build and look between the film and the walk."
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+{"run":"run14","build":26,"judge":"A","scores":{"art":7.5,"continuity":5.5,"cinematography":6.5,"motion_fx":5,"grounding":5.5,"game_feel":6,"ui_title":7.5,"audio":7},"mean":6.3,
+"defects":[
+{"axis":"continuity","frames":"009, 015 vs 025, 027, 034","what":"film Anpu and attendant costumes differ from walk models, sceptre overshoots ear height, ankh hard to see"},
+{"axis":"grounding","frames":"037, 039, 043, 046","what":"tiny smeared figures in plaza cam, green glow near brazier, attendants stack over Anpu and Ankhu in cam5"},
+{"axis":"motion_fx","frames":"020, 034, 037, 039","what":"stiff floaty gait, Anpu crouched stumble, dust nearly invisible, feet skate at cuts"}]}

@@ -1,0 +1,26 @@
+{
+  "name": "Ankhu names",
+  "notes": "Ankhu's kh is a guttural /x/ as in Bach. Zac picked alias Ahn-khoo on 2026-11-21 (take 4 of C:/Users/zaclu/Downloads/AnkhuVoice/kh_audition_new, eleven_multilingual_v2, seed 2). Rules are case sensitive, so each spelling has its own rule.",
+  "rules": [
+    {
+      "type": "alias",
+      "string_to_replace": "Ankhu",
+      "alias": "Ahn-khoo"
+    },
+    {
+      "type": "alias",
+      "string_to_replace": "ANKHU",
+      "alias": "AHN-KHOO"
+    },
+    {
+      "type": "alias",
+      "string_to_replace": "Ankhu's",
+      "alias": "Ahn-khoo's"
+    },
+    {
+      "type": "alias",
+      "string_to_replace": "ankhu",
+      "alias": "ahn-khoo"
+    }
+  ]
+}

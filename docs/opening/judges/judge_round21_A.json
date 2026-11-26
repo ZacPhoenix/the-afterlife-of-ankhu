@@ -1,0 +1,40 @@
+{
+ "scores": {
+  "art": 7.5,
+  "continuity": 4.5,
+  "cinematography_and_cuts": 6.5,
+  "motion_and_fx": 5,
+  "character_grounding": 5,
+  "game_feel": 5.5,
+  "ui_and_title": 7.5,
+  "audio_and_dialogue": 7
+ },
+ "evidence": {
+  "art": "Painted film stills (006, 016) and walk environments (021, 037, 040) are cohesive, moody and strong in palette. Marked down because the real-time characters in 019-048 read as flat clay against the paintings, and the 011/018 collar and bronze look bright gold.",
+  "continuity": "Film Anpu (014-018: blue nemes, armoured, barefoot, huge ankh) does not match walk Anpu (019-048: teal nemes, pitch-black body, flat white kilt, thin sceptre, ankh missing or unreadable). Ankhu's sandals are missing in 007, 008, 010 and one is hidden in 013, and the kilt has a torn cut-out artifact in 020, 031-033, 041-046. The attendants' glowing film eyes are absent in the walk.",
+  "cinematography_and_cuts": "Compositions are good: gate framing in 040-048, the high angle in 037-039 and the sceptre silhouette in 016. The cuts at 021, 024, 030, 037 and 040 read as clean survival-horror hard cuts. Marked down for tiny characters in a large empty foreground in 024-036 and 042-048, and for the group overlapping and hiding Ankhu in 040-041.",
+  "motion_and_fx": "Torch flicker is visible across 000-003 and 040-048, and there is some foot contact and shadow. Walk poses are stiff and exaggerated (022, 023, 041), then characters stand frozen in 043-048. No visible dust or footfall FX. The film shows only camera moves on stills.",
+  "character_grounding": "Shadows and feet are mostly plausible on the plaza (021-041). Attendants in 044-048 stand in front of the brazier pedestal, so the flame sits behind the body and reads as clipping. White kilts and skin are unlit, so they do not take the scene's warm or blue lighting and look pasted on. Scale against the set is believable.",
+  "game_feel": "Handover from film to walk is smooth, and the camera cuts follow the group toward the gate. The pace is slow and there is no sign of player input or a destination marker beyond the lit gate. The group stops and idles at the end (043-048), and the 'The First Gate' card arrives over a still tableau.",
+  "ui_and_title": "000-003 title: gold logo, menu hierarchy with BEGIN JOURNEY highlighted, legible serif. Subtitles in 016, 039-042 are legible with shadow. 'The First Gate' card (046-047) is clean. The end card 049 has a ghosted logo behind the doorway that is muddy and hard to read.",
+  "audio_and_dialogue": "Judged from the script and timing in the subtitled frames only, not from audio. Lines ('My Lord... Anpu.', 'Your name, at every gate...', 'Walk with me, Ankhu...') are well written and well timed, and subtitles are on screen for the right moments. Cannot verify mix or voice."
+ },
+ "mean": 6.1,
+ "defects": [
+  {
+   "axis": "continuity",
+   "frames": "014-018 vs 019-048",
+   "what": "Anpu changes between film and walk: nemes blue vs teal, armoured barefoot vs black-bodied with a flat white kilt, huge ankh vs missing or unreadable ankh, sceptre thin. Ankhu's sandals are missing in 007, 008, 010 and 013, and the kilt has a ragged cut-out artifact in 020, 031-033 and 041-046."
+  },
+  {
+   "axis": "character_grounding",
+   "frames": "019-048",
+   "what": "Real-time characters are unlit flat clay with unpainted white kilts and a different skin tone for the attendants. They do not match the painted film or the warm and blue scene lighting, and the attendants in 043-048 clip against the brazier pedestal."
+  },
+  {
+   "axis": "motion_and_fx",
+   "frames": "022, 023, 041, 043-048",
+   "what": "Stiff, exaggerated walk poses, then the group stands frozen at the gate with no idle animation, dust or footfall FX. Characters are tiny in a large empty foreground in 024-036 and 042-048."
+  }
+ ]
+}

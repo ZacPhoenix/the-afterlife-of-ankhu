@@ -16,6 +16,8 @@ namespace Ankhu.World
         [SerializeField] private BindingTarget target = BindingTarget.Elevator;
         [SerializeField] private Renderer[] renderers = new Renderer[0];
 
+        [Tooltip("Thread colour. The dressed room sets violet or cyan.")]
+        [SerializeField] private Color threadColor = GreyboxPalette.Violet;
         private bool shown;
 
         public BindingTarget Target => target;
@@ -53,7 +55,7 @@ namespace Ankhu.World
                 return;
             }
             float alpha = 0.65f + 0.35f * Mathf.Sin(Time.time * 4f);
-            Color c = GreyboxPalette.WithAlpha(GreyboxPalette.Violet, alpha);
+            Color c = GreyboxPalette.WithAlpha(threadColor, alpha);
             for (int i = 0; i < renderers.Length; i++)
             {
                 GreyboxRender.Tint(renderers[i], c);

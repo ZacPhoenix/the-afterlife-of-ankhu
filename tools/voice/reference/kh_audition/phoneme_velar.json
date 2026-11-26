@@ -1,0 +1,11 @@
+{
+ "name": "Ankhu kh audition phoneme_velar",
+ "rules": [
+  {
+   "type": "phoneme",
+   "string_to_replace": "Ankhu",
+   "phoneme": "ˈɑn.xu",
+   "alphabet": "ipa"
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd312a71ddfedb48912d235b239f764, type: 3}
+  m_Name: AnpuDialogueVoice
+  m_EditorClassIdentifier: Ankhu.Runtime::Ankhu.Voice.SpellVoiceLibrary
+  entries:
+  - key: dialogue.anpu.spell25.rise
+    variants:
+    - {fileID: 8300000, guid: 6e6ad35a249c0ae478478ea70ccbdf69, type: 3}
+  - key: dialogue.anpu.teach-1-cistern.intro.1
+    variants:
+    - {fileID: 8300000, guid: 46c85dab242705149a6898d67d41abd0, type: 3}
+  - key: dialogue.anpu.teach-1-cistern.intro.2
+    variants:
+    - {fileID: 8300000, guid: 95751b6bf23e82640ab2c69789fdf4e0, type: 3}
+  - key: dialogue.anpu.teach-1-cistern.intro.3
+    variants:
+    - {fileID: 8300000, guid: c0e745e57d24a5544b225f51c2afd6a2, type: 3}
+  - key: dialogue.anpu.teach-1-cistern.nudge.ElevatorNotHere
+    variants:
+    - {fileID: 8300000, guid: 13653bc1eaeacac43b8dd9d1beb18c08, type: 3}
+  - key: dialogue.anpu.teach-1-cistern.nudge.LadderRaised
+    variants:
+    - {fileID: 8300000, guid: 0a2659fac7f9b454799aec8a086ff3c4, type: 3}
+  - key: dialogue.anpu.teach-1-cistern.nudge.NoLandingAtThisHeight
+    variants:
+    - {fileID: 8300000, guid: b379602aa42f27b4787a72a679084f79, type: 3}
+  - key: dialogue.anpu.teach-1-cistern.nudge.NotYetTaught
+    variants:
+    - {fileID: 8300000, guid: 81e27d670ebeb54438e6234ccead4df8, type: 3}
+  - key: dialogue.anpu.teach-1-cistern.solve
+    variants:
+    - {fileID: 8300000, guid: 8c6c34ce003059246acf852f89d42db9, type: 3}
+  - key: dialogue.anpu.teach-2-held-step.intro.1
+    variants:
+    - {fileID: 8300000, guid: 5466cdc41578cc24bb144f49d6490713, type: 3}
+  - key: dialogue.anpu.teach-2-held-step.intro.2
+    variants:
+    - {fileID: 8300000, guid: 0376a233c527b614880f31078c13a7ab, type: 3}
+  - key: dialogue.anpu.teach-2-held-step.intro.3
+    variants:
+    - {fileID: 8300000, guid: 9930b71da3ace144b8e833c7bcb17b58, type: 3}
+  - key: dialogue.anpu.teach-2-held-step.nudge.BindingBearsLoad
+    variants:
+    - {fileID: 8300000, guid: dc95f508eb01a754e971d88ff8cc8d78, type: 3}
+  - key: dialogue.anpu.teach-2-held-step.nudge.ElevatorNotReachable
+    variants:
+    - {fileID: 8300000, guid: 6f893c300c7fe3846906f7945f8fa6eb, type: 3}
+  - key: dialogue.anpu.teach-2-held-step.nudge.MirrorNotReachable
+    variants:
+    - {fileID: 8300000, guid: 7b68baa147cdaa44a9a8d6fb438d9848, type: 3}
+  - key: dialogue.anpu.teach-2-held-step.nudge.NotYetTaught
+    variants:
+    - {fileID: 8300000, guid: a281d3882ee904a45af5e7f2c6fe4c12, type: 3}
+  - key: dialogue.anpu.teach-2-held-step.solve
+    variants:
+    - {fileID: 8300000, guid: 4f5c7c93c2988634388b20b8fca13e01, type: 3}
+  - key: dialogue.anpu.teach-3-lingering-shadow.intro.1
+    variants:
+    - {fileID: 8300000, guid: 08821743816d4aa4f8637dffa89a4080, type: 3}
+  - key: dialogue.anpu.teach-3-lingering-shadow.intro.2
+    variants:
+    - {fileID: 8300000, guid: b4c90ec256dc6c5438e241c94aac62b9, type: 3}
+  - key: dialogue.anpu.teach-3-lingering-shadow.intro.3
+    variants:
+    - {fileID: 8300000, guid: 899798e0f65729c4cbcb6d88b3c26eae, type: 3}
+  - key: dialogue.anpu.teach-3-lingering-shadow.nudge.BindingBearsLoad
+    variants:
+    - {fileID: 8300000, guid: 1b00ca6edee4c3b4e89cb48afffadb73, type: 3}
+  - key: dialogue.anpu.teach-3-lingering-shadow.nudge.BindingCapacityFull
+    variants:
+    - {fileID: 8300000, guid: 913d70a7aed76684aa7da003fcee1b6d, type: 3}
+  - key: dialogue.anpu.teach-3-lingering-shadow.nudge.NoShadowToBind
+    variants:
+    - {fileID: 8300000, guid: 628e5c60e24b58341871a9edf4210e10, type: 3}
+  - key: dialogue.anpu.teach-3-lingering-shadow.nudge.NotYetTaught
+    variants:
+    - {fileID: 8300000, guid: 840a0e65a43f7ec48b81244200835a68, type: 3}
+  - key: dialogue.anpu.teach-3-lingering-shadow.solve
+    variants:
+    - {fileID: 8300000, guid: 754512d7d943b1649b1e7fa8506a5ea7, type: 3}
+  timing:
+    ClauseGap: 0.12
+    WordGap: 0
+  targetLevelDb: -20

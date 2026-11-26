@@ -1,0 +1,5 @@
+{"run":"run12","build":24,"judge":"A","scores":{"art":7.5,"continuity":5,"cinematography":6,"motion_fx":4.5,"grounding":4.5,"game_feel":5,"ui_title":7,"audio":6.5},"mean":5.7,
+"defects":[
+{"axis":"grounding","frames":"036, 039, 025, 033, 044","what":"no depth sorting against painted statues (sceptre over statue head), clipped at edge, floating feet, party lost in cam4 framing"},
+{"axis":"continuity","frames":"008-014 vs 019-030","what":"walk Anpu does not match film Anpu (film has gold collar, striped nemes), attendants lack film belts, Ankhu kilt torn at hem"},
+{"axis":"motion_fx","frames":"025, 027, 033, 039","what":"one stiff gait reused, canned arms-out gesture, no foot plant or dust"}]}

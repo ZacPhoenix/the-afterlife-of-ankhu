@@ -1,0 +1,30 @@
+{
+  "voice_id": "HpaPE1DxbRg8OHTO1blt",
+  "voice_name": "Anpu",
+  "model_id": "eleven_multilingual_v2",
+  "language_code": "en",
+  "voice_settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.8,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 0.88
+  },
+  "account_voice_name": "Anubis",
+  "chosen_by": "Zac, 2026-11-21",
+  "previous_voice_id": "gQf5qGSlYoX99rlEEoSY",
+  "previous_voice_note": "Q1_rolling_ancient Voice Design voice, replaced because of its low hum between words",
+  "pronunciation_dictionary_locators": [
+    {
+      "name": "Ankhu names",
+      "pronunciation_dictionary_id": "jkUtFYXxMWcETpw5TQoE",
+      "version_id": "CndSfnesDXf7HEkQWiH8",
+      "replaces": [
+        "ANKHU",
+        "Ankhu",
+        "Ankhu's",
+        "ankhu"
+      ]
+    }
+  ]
+}

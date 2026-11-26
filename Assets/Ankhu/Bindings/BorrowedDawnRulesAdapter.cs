@@ -16,7 +16,7 @@ namespace Ankhu.Bindings
     /// the adapter moves the rules location to the zone the greybox reports, so reach checks run against
     /// where Ankhu physically stands. Zone changes during walking go through <see cref="SyncLocation"/>.
     /// </summary>
-    public sealed class BorrowedDawnRulesAdapter : IRoomRulesAdapter
+    public sealed class BorrowedDawnRulesAdapter : IRoomRulesAdapter, IHintTiers
     {
         private static readonly Dictionary<string, Location> ZoneToLocation = new Dictionary<string, Location>(StringComparer.Ordinal)
         {
@@ -196,6 +196,89 @@ namespace Ankhu.Bindings
                 return "Sun, shadow and sound are present. Speak the Name at the threshold.";
             }
             return "The gate still waits for " + JoinNatural(missing) + ".";
+        }
+
+        /// <summary>
+        /// The three sealed hint steps (Zac 2026-11-25). The nudge is <see cref="Hint"/>. The direction names the
+        /// thing that must change next and the answer is the next deed in its spoken form, both read from a
+        /// breadth first search of the rules from the current state. Walking steps are folded into the answer.
+        /// </summary>
+        /// <summary>
+        /// Zac 2026-11-26 (the cistern, "don't know what to do"): the next words to speak on the shortest way to the
+        /// goal, or null when the next step is a walk, the room is solved or no way is left.
+        /// </summary>
+        public string NextSpokenCommand()
+        {
+            if (session.IsSolved) return null;
+            try
+            {
+                IReadOnlyList<Command> path = Ankhu.BorrowedDawn.Analysis.StateSpace.Explore(session.Room, session.State).ShortestSolution();
+                if (path == null || path.Count == 0 || path[0].Kind == CommandKind.MoveTo) return null;
+                return path[0].ToString();
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public string[] HintTiers(PlayerContext context)
+        {
+            string nudge = Hint(context);
+            if (session.IsSolved)
+            {
+                return new[] { nudge, nudge, nudge };
+            }
+            IReadOnlyList<Command> path;
+            try
+            {
+                path = Ankhu.BorrowedDawn.Analysis.StateSpace.Explore(session.Room, session.State).ShortestSolution();
+            }
+            catch (Exception)
+            {
+                path = null;
+            }
+            if (path == null || path.Count == 0)
+            {
+                return new[] { nudge, "No way forward is left from here. Undo with U, or hold R to begin again.", "Hold R to return the room to its first dawn." };
+            }
+            Location? walkTo = null;
+            Command next = null;
+            foreach (Command c in path)
+            {
+                if (c.Kind == CommandKind.MoveTo) { walkTo = c.Destination; continue; }
+                next = c;
+                break;
+            }
+            if (next == null)
+            {
+                string place = walkTo.HasValue ? walkTo.Value.ToString().ToLowerInvariant() : "the threshold";
+                return new[] { nudge, "Only walking is left.", "Walk to the " + place + "." };
+            }
+            string where = walkTo.HasValue ? "From the " + walkTo.Value.ToString().ToLowerInvariant() + ", say: " : "Say: ";
+            return new[] { nudge, DirectionFor(next), where + next + "." };
+        }
+
+        private static string DirectionFor(Command c)
+        {
+            switch (c.Kind)
+            {
+                case CommandKind.Flow: return "The water has to move before anything else can.";
+                case CommandKind.Bind: return "Something here must be held still by a binding.";
+                case CommandKind.Release: return "A binding you placed is now in the way. Let something go.";
+                case CommandKind.WakeBearer:
+                case CommandKind.SleepBearer: return "The bearer is the key to the next step.";
+                case CommandKind.RecallBell:
+                case CommandKind.StrikeBell:
+                case CommandKind.EchoBell: return "Turn your mind to the bell and its sound.";
+                case CommandKind.TakeMirror:
+                case CommandKind.InstallMirror: return "The mirror can carry the sun where it is needed.";
+                case CommandKind.ReadInscription: return "The wall holds words you have not read yet.";
+                case CommandKind.SpeakName: return "Everything is ready. Only the Name is left to speak.";
+                case CommandKind.CrossBridge: return "The way on lies across the bridge.";
+                case CommandKind.LowerLadder: return "The ladder can bring the high place down to you.";
+                default: return "Look again at what has not changed yet.";
+            }
         }
 
         public string SaveState()

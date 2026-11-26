@@ -1,0 +1,40 @@
+{
+ "scores": {
+  "art": 7.5,
+  "continuity": 6,
+  "cinematography_cuts": 7,
+  "motion_fx": 5.5,
+  "character_grounding": 5.5,
+  "game_feel": 6.5,
+  "ui_title": 8,
+  "audio_dialogue": 7
+ },
+ "evidence": {
+  "art": "Title (000-003), film (005-018) and Unity environments (019-047) share a warm torchlight against moon-blue palette, and the painted sets are strong. 019/030 render the gate pylon and the Anpu statues at very high quality. The film stills (007, 010, 013, 018) are AAA-grade painterly work. The 3D characters are flatter and more CG than the backgrounds, which breaks painted coherence.",
+  "continuity": "The film Anpu (014-018) wears a gold-orange kilt sash and a checkered collar, with a black jackal head. The in-game Anpu (026-036) is a black-legged figure with a white skirt and no gold sash. Ankhu has sandals and a white kilt throughout, which holds. The bronze ankh and sceptre read correctly in the film (015-017). In-game, the ankh is invisible in every walk frame and the sceptre is thin (024, 027). The film attendants are bare-chested and muscular, and in-game they are similar but plain.",
+  "cinematography_cuts": "Film shot order is clear: fetal, close-up, scribe, father, grief, funeral, embalming, drowning, rising, Anpu (005-018). The walk cuts (021, 024, 030, 037, 040) land on strong compositions with the statue foreground and the pylon at the end. The 037 high angle with the huge foreground statue crops the group small. 039 to 043 stay on one static frame for many seconds.",
+  "motion_fx": "Walk poses vary across 025-029 and 038-039, with stride and leg crossing. Hip and leg bend looks stiff in 027 and 028. Attendants sprint-lunge in 039. Frames 023 and 026 show Anpu cross-legged mid-stride at odd angles. Torch flames are static. No visible dust. The end fade in 047 is clean.",
+  "character_grounding": "Shadows exist and are consistent with torch direction (024, 033). Characters at distance look fine. At the close cut 023, an attendant is oversized and clips the frame edge, and his shadow detaches. In 042-043 Ankhu and Anpu overlap and merge into the wall silhouette at the gate. In 038-040 Ankhu stands on the sunlit pylon base and seems to float without contact shadow.",
+  "game_feel": "The fixed cameras read the path to the pylon well, with the lit brazier trail leading the eye. The pace is slow and the cuts are well telegraphed. Handover pop in 021 to 022 is jarring because Anpu's scale jumps. 034-036 are long, empty with tiny figures. The player has no clear sign they are in control. 044 and 045 sit on the gate for a long time.",
+  "ui_title": "The title lockup (000-003) is clean, with a gold serif logo and legible menu type. The selected item has a subtle highlight bar and a diamond. Subtitles (022-043) are legible but small and low contrast over bright pavement in 044. The title fades out to black cleanly (004).",
+  "audio_dialogue": "Judged from subtitles and timing only (no audio provided). The lines are well written and short, and the subtitle changes match shot changes (022, 024, 030, 037, 040). The pacing seems reasonable, but the long silent walk in 034-036 suggests dead air."
+ },
+ "mean": 6.69,
+ "defects": [
+  {
+   "axis": "continuity",
+   "frames": "015-018 vs 026-036",
+   "what": "The in-game Anpu does not match the film Anpu: the gold sash and checkered collar are missing, the legs are black, the ankh is not visible, and the sceptre is thin."
+  },
+  {
+   "axis": "character_grounding",
+   "frames": "023, 042, 043",
+   "what": "Scale and overlap errors: a close attendant is oversized and clips the frame, and at the gate Ankhu and Anpu merge into one silhouette with no contact shadow."
+  },
+  {
+   "axis": "motion_fx",
+   "frames": "027, 028, 039",
+   "what": "Stiff, crossed-leg poses and sprint-lunge strides, with static flames and no foot dust, so the walk looks mechanical."
+  }
+ ]
+}

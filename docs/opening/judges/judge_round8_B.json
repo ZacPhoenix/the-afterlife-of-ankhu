@@ -1,0 +1,5 @@
+{"run":"run12","build":24,"judge":"B","scores":{"art":7.5,"continuity":6,"cinematography":6.5,"motion_fx":5,"grounding":4.5,"game_feel":5,"ui_title":7.5,"audio":6.5},"mean":5.94,
+"defects":[
+{"axis":"grounding","frames":"019, 030, 034, 036, 040","what":"cast lit and scaled differently from plates, Anpu black silhouette, cam4 party tiny and sceptre pokes through statue"},
+{"axis":"continuity","frames":"015 vs 019/030, 018 vs 048","what":"film Anpu vs walk Anpu differ, ankh unreadable, Ankhu kilt hem torn, walk ends on title room"},
+{"axis":"game_feel","frames":"034-048","what":"cam4/cam5 party specks, attendants stray, no goal cue, end returns to title"}]}

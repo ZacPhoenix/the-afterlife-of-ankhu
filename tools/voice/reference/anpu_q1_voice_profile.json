@@ -1,0 +1,16 @@
+{
+  "voice_id": "gQf5qGSlYoX99rlEEoSY",
+  "voice_name": "Anpu",
+  "model_id": "eleven_multilingual_v2",
+  "language_code": "en",
+  "voice_settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.8,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 0.88
+  },
+  "design_label": "Q1_rolling_ancient",
+  "generated_voice_id": "gQf5qGSlYoX99rlEEoSY",
+  "voice_description": "An ancient god of the dead. Very deep, gravelly, husky bass, slow and hushed, enormous gravitas. An unusual old-world accent that belongs to no living country: rolled r's, long open vowels, consonants pressed forward, a faint lilt at the ends of phrases. Voice only: no background sound, no music, no sound effects, no echo, no room ambience. Clean studio recording, completely dry."
+}

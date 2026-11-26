@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "speaker": "anpu",
+  "source": "Packages/com.ankhu.borrowed-dawn/Runtime/TeachingRooms.cs plus cinematics/spell25_beat_sheet.md",
+  "lines": [
+    {
+      "key": "dialogue.anpu.spell25.rise",
+      "text": "Rise, Ankhu.",
+      "context": "Spell 25 opening cinematic, shot 13. Spoken to Ankhu prostrate before him. First words he hears."
+    },
+    {
+      "key": "dialogue.anpu.teach-1-cistern.intro.1",
+      "text": "Your voice has come back to you, Ankhu. Here, words are the only hands you have.",
+      "context": "The Cistern: introduction, line 1"
+    },
+    {
+      "key": "dialogue.anpu.teach-1-cistern.intro.2",
+      "text": "Water listens to a direction. Say flow, then west or east.",
+      "context": "The Cistern: introduction, line 2"
+    },
+    {
+      "key": "dialogue.anpu.teach-1-cistern.intro.3",
+      "text": "The gallery is above us. Watch what the water carries before you ask it to move.",
+      "context": "The Cistern: introduction, line 3"
+    },
+    {
+      "key": "dialogue.anpu.teach-1-cistern.nudge.ElevatorNotHere",
+      "text": "The platform rides on the water. Where must the water go for it to come down to you?",
+      "context": "The Cistern: gentle hint after Ankhu fails (ElevatorNotHere)"
+    },
+    {
+      "key": "dialogue.anpu.teach-1-cistern.nudge.LadderRaised",
+      "text": "The ladder is rolled up above. There is another way to rise.",
+      "context": "The Cistern: gentle hint after Ankhu fails (LadderRaised)"
+    },
+    {
+      "key": "dialogue.anpu.teach-1-cistern.nudge.NoLandingAtThisHeight",
+      "text": "You stand between floors. Let the water choose your height.",
+      "context": "The Cistern: gentle hint after Ankhu fails (NoLandingAtThisHeight)"
+    },
+    {
+      "key": "dialogue.anpu.teach-1-cistern.nudge.NotYetTaught",
+      "text": "That word has no power here yet. In this room only the water listens.",
+      "context": "The Cistern: gentle hint after Ankhu fails (NotYetTaught)"
+    },
+    {
+      "key": "dialogue.anpu.teach-1-cistern.solve",
+      "text": "You did not climb. You asked, and the water carried you.",
+      "context": "The Cistern: quiet approval when the room is solved"
+    },
+    {
+      "key": "dialogue.anpu.teach-2-held-step.intro.1",
+      "text": "The mirror floats on the western raft. The raft rises only when the water goes west, and then your platform sinks.",
+      "context": "The Held Step: introduction, line 1"
+    },
+    {
+      "key": "dialogue.anpu.teach-2-held-step.intro.2",
+      "text": "Some things must stay where they are after their support is gone. Say bind, then the thing you would hold.",
+      "context": "The Held Step: introduction, line 2"
+    },
+    {
+      "key": "dialogue.anpu.teach-2-held-step.intro.3",
+      "text": "Bring the mirror to the gallery, and leave nothing bound behind you.",
+      "context": "The Held Step: introduction, line 3"
+    },
+    {
+      "key": "dialogue.anpu.teach-2-held-step.nudge.BindingBearsLoad",
+      "text": "That thread carries the whole platform now. Give its weight back to the water first.",
+      "context": "The Held Step: gentle hint after Ankhu fails (BindingBearsLoad)"
+    },
+    {
+      "key": "dialogue.anpu.teach-2-held-step.nudge.ElevatorNotReachable",
+      "text": "You can only hold the platform while you stand on it, high in the shaft.",
+      "context": "The Held Step: gentle hint after Ankhu fails (ElevatorNotReachable)"
+    },
+    {
+      "key": "dialogue.anpu.teach-2-held-step.nudge.MirrorNotReachable",
+      "text": "The raft rises only with the water in the west. Can your platform stay high without the water?",
+      "context": "The Held Step: gentle hint after Ankhu fails (MirrorNotReachable)"
+    },
+    {
+      "key": "dialogue.anpu.teach-2-held-step.nudge.NotYetTaught",
+      "text": "That word has no power here yet. Hold, release, and move the water.",
+      "context": "The Held Step: gentle hint after Ankhu fails (NotYetTaught)"
+    },
+    {
+      "key": "dialogue.anpu.teach-2-held-step.solve",
+      "text": "You held only as long as you needed to. Remember the feeling of letting go.",
+      "context": "The Held Step: quiet approval when the room is solved"
+    },
+    {
+      "key": "dialogue.anpu.teach-3-lingering-shadow.intro.1",
+      "text": "The far seal wants light. The near seal wants shadow. The gate ahead will ask for both at once.",
+      "context": "The Lingering Shadow: introduction, line 1"
+    },
+    {
+      "key": "dialogue.anpu.teach-3-lingering-shadow.intro.2",
+      "text": "The sleeper stands in the beam and casts the shadow. Wake him and he walks out of the light. His shadow follows him.",
+      "context": "The Lingering Shadow: introduction, line 2"
+    },
+    {
+      "key": "dialogue.anpu.teach-3-lingering-shadow.intro.3",
+      "text": "Unless you hold it first. And you still hold two threads from before. Your voice can carry no more than two.",
+      "context": "The Lingering Shadow: introduction, line 3"
+    },
+    {
+      "key": "dialogue.anpu.teach-3-lingering-shadow.nudge.BindingBearsLoad",
+      "text": "That thread carries the platform. Give its weight to the water first.",
+      "context": "The Lingering Shadow: gentle hint after Ankhu fails (BindingBearsLoad)"
+    },
+    {
+      "key": "dialogue.anpu.teach-3-lingering-shadow.nudge.BindingCapacityFull",
+      "text": "Your voice already holds two threads. Which one do you still need?",
+      "context": "The Lingering Shadow: gentle hint after Ankhu fails (BindingCapacityFull)"
+    },
+    {
+      "key": "dialogue.anpu.teach-3-lingering-shadow.nudge.NoShadowToBind",
+      "text": "There is no shadow to hold. Perhaps its owner should rest again.",
+      "context": "The Lingering Shadow: gentle hint after Ankhu fails (NoShadowToBind)"
+    },
+    {
+      "key": "dialogue.anpu.teach-3-lingering-shadow.nudge.NotYetTaught",
+      "text": "That word has no power here yet. Hold, release, wake, sleep, and move the water.",
+      "context": "The Lingering Shadow: gentle hint after Ankhu fails (NotYetTaught)"
+    },
+    {
+      "key": "dialogue.anpu.teach-3-lingering-shadow.solve",
+      "text": "The shadow stays though its owner has gone. You will need this again.",
+      "context": "The Lingering Shadow: quiet approval when the room is solved"
+    }
+  ]
+}

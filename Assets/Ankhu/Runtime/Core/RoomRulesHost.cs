@@ -22,8 +22,21 @@ namespace Ankhu.Core
         private readonly List<IWorldMover> movers = new List<IWorldMover>();
         private IRoomRulesAdapter adapter;
 
+        private int holdDepth;
+        private bool heldDirty;
+        private RoomSnapshot heldPrevious;
+        private RoomSnapshot presented;
+
         public IRoomRulesAdapter Adapter => adapter;
-        public RoomSnapshot Snapshot => adapter?.Current;
+
+        /// <summary>
+        /// The state the world is showing. While snapshots are held (<see cref="HoldSnapshots"/>) this is the state
+        /// from before the hold, so HUD and views agree with what is on screen until the spell lands.
+        /// </summary>
+        public RoomSnapshot Snapshot => holdDepth > 0 && presented != null ? presented : adapter?.Current;
+
+        /// <summary>True while a spell effect holds back world changes.</summary>
+        public bool IsHoldingSnapshots => holdDepth > 0;
 
         /// <summary>(previous, current). Previous is null on the first broadcast after Install.</summary>
         public event Action<RoomSnapshot, RoomSnapshot> SnapshotChanged;
@@ -33,6 +46,10 @@ namespace Ankhu.Core
         {
             get
             {
+                if (holdDepth > 0)
+                {
+                    return false;
+                }
                 for (int i = 0; i < movers.Count; i++)
                 {
                     if (movers[i].InTransit)
@@ -92,6 +109,10 @@ namespace Ankhu.Core
             {
                 adapter.StateChanged -= HandleStateChanged;
             }
+            holdDepth = 0;
+            heldDirty = false;
+            heldPrevious = null;
+            presented = null;
             adapter = newAdapter;
             adapter.StateChanged += HandleStateChanged;
             SnapshotChanged?.Invoke(null, adapter.Current);
@@ -110,8 +131,56 @@ namespace Ankhu.Core
             movers.Remove(mover);
         }
 
+        /// <summary>
+        /// Holds back <see cref="SnapshotChanged"/> so a spell can be seen to land before the world answers. Changes
+        /// during the hold are merged into one broadcast (first previous, latest current) when the last hold is
+        /// released. Holds nest. Every call must be matched by <see cref="ReleaseSnapshots"/>.
+        /// </summary>
+        public void HoldSnapshots()
+        {
+            if (holdDepth == 0)
+            {
+                presented = adapter?.Current;
+                heldDirty = false;
+                heldPrevious = null;
+            }
+            holdDepth++;
+        }
+
+        /// <summary>Releases one hold. The last release broadcasts any held change.</summary>
+        public void ReleaseSnapshots()
+        {
+            if (holdDepth == 0)
+            {
+                return;
+            }
+            holdDepth--;
+            if (holdDepth > 0)
+            {
+                return;
+            }
+            bool dirty = heldDirty;
+            RoomSnapshot previous = heldPrevious;
+            heldDirty = false;
+            heldPrevious = null;
+            presented = null;
+            if (dirty && adapter != null)
+            {
+                SnapshotChanged?.Invoke(previous, adapter.Current);
+            }
+        }
+
         private void HandleStateChanged(RoomSnapshot previous, RoomSnapshot current)
         {
+            if (holdDepth > 0)
+            {
+                if (!heldDirty)
+                {
+                    heldDirty = true;
+                    heldPrevious = previous;
+                }
+                return;
+            }
             SnapshotChanged?.Invoke(previous, current);
         }
     }

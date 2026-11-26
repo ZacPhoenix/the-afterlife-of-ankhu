@@ -1,0 +1,5 @@
+{"run":"run17","build":29,"judge":"B","scores":{"art":7,"continuity":5.5,"cinematography":7,"motion_fx":5.5,"grounding":5.5,"game_feel":6.5,"ui_title":7.5,"audio":7.5},"mean":6.5,
+"defects":[
+{"axis":"continuity","frames":"015,018 vs 021,030,037","what":"Anpu body, skin and collar change film vs walk, attendant skin and kilt change"},
+{"axis":"grounding","frames":"029,036,039,043","what":"attendant on brazier pedestal, shadows missing or doubled, Anpu feet float"},
+{"axis":"motion_fx","frames":"020,033,043","what":"stiff bouncy walk, no footfall dust, plastic shading, tear in Ankhu kilt"}]}

@@ -15,7 +15,7 @@ namespace Ankhu.Bindings
     /// shows a nudge the first time Ankhu hits each refusal the room has a nudge for, and when the
     /// room's goal holds, shows Anpu's closing line and loads the next scene in the sequence.
     /// Anpu's lines are provisional greybox dialogue from the rules library, not final script.
-    /// F3 skips to the next room (development shortcut).
+    /// F3 opens the dev room menu (DevRoomMenu), which jumps to any room in play order.
     /// </summary>
     [RequireComponent(typeof(BorrowedDawnRulesInstaller))]
     public sealed class TeachingRoomDirector : MonoBehaviour
@@ -24,6 +24,8 @@ namespace Ankhu.Bindings
         public const float SecondsPerIntroLine = 6f;
         public const float NudgeSeconds = 7f;
         public const float SolveSeconds = 5f;
+        /// <summary>Silence after Anpu's recorded line before the subtitle closes.</summary>
+        public const float VoiceTailSeconds = 0.6f;
 
         private static readonly Color PanelColor = new Color(0.05f, 0.04f, 0.03f, 0.78f);
         private static readonly Color TitleColor = new Color(1f, 0.82f, 0.36f);
@@ -104,11 +106,7 @@ namespace Ankhu.Bindings
                 ShowAnpu(next.Key, next.Value, SecondsPerIntroLine);
             }
 
-            Keyboard keyboard = Keyboard.current;
-            if (keyboard != null && keyboard.f3Key.wasPressedThisFrame && !Ankhu.Core.InputGate.TextEntryActive)
-            {
-                LoadNext();
-            }
+            // F3 used to skip to the next room here. It now opens the dev room menu (Ankhu.Realms.DevRoomMenu).
         }
 
         private void HandleRulesResolved(Rules.CommandResult result)
@@ -133,14 +131,95 @@ namespace Ankhu.Bindings
             }
             solved = true;
             pending.Clear();
-            ShowAnpu(Key(adapter.Room, "solve"), adapter.Room.AnpuOnSolve, SolveSeconds + 1f);
-            StartCoroutine(LoadNextAfter(SolveSeconds));
+            string solveKey = Key(adapter.Room, "solve");
+            float solveSeconds = Mathf.Max(SolveSeconds, AnpuVoiceBootstrap.DurationOf(solveKey) + VoiceTailSeconds);
+            ShowAnpu(solveKey, adapter.Room.AnpuOnSolve, solveSeconds + 1f);
+            if (BorrowedDawnRooms.NextSceneName(installer.RoomId) == BorrowedDawnRooms.SceneNameFor(BorrowedDawnRooms.BorrowedDawnId))
+            {
+                StartCoroutine(FarewellThenLoad(solveSeconds));
+            }
+            else
+            {
+                StartCoroutine(LoadNextAfter(solveSeconds));
+            }
         }
 
         private IEnumerator LoadNextAfter(float seconds)
         {
             yield return new WaitForSecondsRealtime(seconds);
+            // Wernes memory films: each teaching room leaves an 8 s flicker (F1 to F3) before the next room.
+            yield return MemoryFlicker.PlayForRoom(installer.RoomId);
             LoadNext();
+        }
+
+        /// <summary>
+        /// Zac 2026-11-24: after the last teaching room Anpu tells Ankhu the first true challenge is his alone,
+        /// and that he will be waiting on the other side. Keys dialogue.anpu.&lt;room id&gt;.farewell.&lt;n&gt;.
+        /// Then the scene fades into Borrowed Dawn.
+        /// </summary>
+        private IEnumerator FarewellThenLoad(float solveSeconds)
+        {
+            yield return new WaitForSecondsRealtime(solveSeconds);
+            yield return MemoryFlicker.PlayForRoom(installer.RoomId);
+            // Pick 9 "A door closes between them": the painted farewell plate fades up, Anpu speaks, and on the
+            // last line the great doors swing shut over Ankhu. Without the art it falls back to voice alone.
+            FarewellDoor door = FarewellDoor.Open();
+            if (door != null) yield return new WaitForSecondsRealtime(1.6f);
+            for (int i = 0; i < FarewellLines.Length; i++)
+            {
+                string key = Key(adapter.Room, "farewell." + (i + 1));
+                float hold = Mathf.Max(SecondsPerIntroLine, AnpuVoiceBootstrap.DurationOf(key) + VoiceTailSeconds);
+                ShowAnpu(key, FarewellLines[i], hold + 0.5f);
+                if (door != null && i == FarewellLines.Length - 1)
+                {
+                    // Start closing a beat into the last line so the leaves meet as it ends.
+                    float lead = Mathf.Min(1.2f, hold * 0.25f);
+                    yield return new WaitForSecondsRealtime(lead);
+                    yield return door.Close(Mathf.Max(3f, hold - lead));
+                    yield return new WaitForSecondsRealtime(1.4f);
+                }
+                else
+                {
+                    yield return new WaitForSecondsRealtime(hold);
+                }
+            }
+            if (loading)
+            {
+                yield break;
+            }
+            string next = PlayableNext();
+            if (string.IsNullOrEmpty(next) || !Application.CanStreamedLevelBeLoaded(next))
+            {
+                LoadNext();
+                yield break;
+            }
+            loading = true;
+            Ankhu.Opening.SceneFader.FadeTo(next, 2f, 1f);
+        }
+
+        /// <summary>Anpu's parting words before Borrowed Dawn. Provisional script, no recordings yet.</summary>
+        public static readonly string[] FarewellLines =
+        {
+            "The next door is yours alone, Ankhu. I cannot walk through it with you.",
+            "Go in alone, and come out to me. I will be waiting on the other side.",
+        };
+
+        /// <summary>Lets other Anpu scenes (the Borrowed Dawn exit) speak through the same voice and subtitle hook.</summary>
+        public static void RaiseAnpuLine(string key, string line)
+        {
+            AnpuLineStarted?.Invoke(key, line);
+        }
+
+        /// <summary>
+        /// The scene after this room as it plays. Zac 2026-11-24: the painted Borrowed Dawn when it is built.
+        /// Zac 2026-11-25: the painted teaching room (Teach2_HeldStep_Painted and so on) when it is built.
+        /// </summary>
+        private string PlayableNext()
+        {
+            string next = BorrowedDawnRooms.NextSceneName(installer.RoomId);
+            if (string.IsNullOrEmpty(next)) return next;
+            if (next == BorrowedDawnRooms.SceneNameFor(BorrowedDawnRooms.BorrowedDawnId)) return Ankhu.Opening.PlayOrder.BorrowedDawnScene();
+            return Ankhu.Opening.PlayOrder.PaintedOf(next);
         }
 
         private void LoadNext()
@@ -149,7 +228,7 @@ namespace Ankhu.Bindings
             {
                 return;
             }
-            string next = BorrowedDawnRooms.NextSceneName(installer.RoomId);
+            string next = PlayableNext();
             if (string.IsNullOrEmpty(next))
             {
                 return;
@@ -174,7 +253,8 @@ namespace Ankhu.Bindings
             {
                 return;
             }
-            Show("Anpu", line, seconds, LineColor);
+            // Hold the subtitle at least as long as Anpu's recorded line, so the next line never cuts his voice off.
+            Show("Anpu", line, Mathf.Max(seconds, AnpuVoiceBootstrap.DurationOf(key) + VoiceTailSeconds), LineColor);
             AnpuLineStarted?.Invoke(key, line);
         }
 

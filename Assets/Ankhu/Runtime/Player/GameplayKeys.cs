@@ -17,7 +17,7 @@ namespace Ankhu.Player
         {
             Key.A, Key.D, Key.LeftArrow, Key.RightArrow,
             Key.W, Key.S, Key.UpArrow, Key.DownArrow,
-            Key.E, Key.Q, Key.U, Key.H, Key.R, Key.F2
+            Key.E, Key.Q, Key.U, Key.H, Key.R, Key.F2, Key.L
         };
 
         private static readonly List<Key> suppressed = new List<Key>();

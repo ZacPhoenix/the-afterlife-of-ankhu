@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Text;
 using Ankhu.Core;
 using Ankhu.Integration;
@@ -16,7 +17,7 @@ namespace Ankhu.Player
     public sealed class RoomHud : MonoBehaviour
     {
         public const float ResetHoldSeconds = 1f;
-        public const string Legend = "A/D walk    W/S climb    E use    Q inspect    Enter speak    U undo    H hint    hold R reset    F2 camera    F3 skip lesson";
+        public const string Legend = "A/D walk    W/S climb    E use    Q inspect    Enter speak    U undo    H hint    hold R reset    F2 camera    F3 rooms";
 
         [SerializeField] private Text statusText;
         [SerializeField] private Text legendText;
@@ -31,6 +32,9 @@ namespace Ankhu.Player
         private bool resetArmed;
         private float resetHeld;
         private int shownResetPercent = -1;
+        private StateBoard board;
+        private HintScroll hintScroll;
+        private readonly List<StateItem> boardItems = new List<StateItem>(5);
 
         public float ResetProgress => resetArmed ? Mathf.Clamp01(resetHeld / ResetHoldSeconds) : 0f;
 
@@ -50,6 +54,28 @@ namespace Ankhu.Player
         {
             statusInitialised = false;
             shownResetPercent = -1;
+        }
+
+        /// <summary>
+        /// Zac 2026-11-25 papyrus HUD: the dark status strip and legend give way to the state cartouche, the
+        /// hold-L ledger, the one-time key scroll and the sealed hint scroll. Installed at runtime so saved
+        /// scenes pick it up without a rebuild. The old strip stays in the scene, hidden, as a fallback.
+        /// </summary>
+        private void Start()
+        {
+            var canvas = transform as RectTransform;
+            if (canvas == null)
+            {
+                return;
+            }
+            board = StateBoard.Install(canvas);
+            hintScroll = HintScroll.Install(canvas);
+            Transform strip = statusText != null ? statusText.transform.parent : null;
+            if (strip != null && strip != transform)
+            {
+                strip.gameObject.SetActive(false);
+            }
+            statusInitialised = false;
         }
 
         private void Update()
@@ -143,6 +169,13 @@ namespace Ankhu.Player
             {
                 hint = "The room offers no hint just now.";
             }
+            if (hintScroll != null)
+            {
+                string[] tiers = adapter is IHintTiers tiered ? tiered.HintTiers(CurrentContext()) : null;
+                hintScroll.SetTiers(tiers ?? new[] { hint });
+                hintScroll.BreakNext();
+                return;
+            }
             FeedbackBus.Publish(FeedbackSource.Hint, CommandOutcome.NoChange, hint);
         }
 
@@ -180,6 +213,28 @@ namespace Ankhu.Player
             shownSnapshot = snapshot;
             shownZone = zone;
             statusText.text = BuildStatus(snapshot, zone);
+            if (board != null)
+            {
+                FillItems(snapshot, boardItems);
+                board.SetItems(boardItems);
+            }
+        }
+
+        /// <summary>The cartouche signs: sun N5, shadow S35, sound Y8, name V10, bindings S24. Read from the snapshot as is.</summary>
+        public static void FillItems(RoomSnapshot snapshot, List<StateItem> into)
+        {
+            into.Clear();
+            if (snapshot == null)
+            {
+                return;
+            }
+            string shadow = snapshot.ShadowBound ? "bound" : (snapshot.ShadowPresent ? "present" : "absent");
+            into.Add(new StateItem("N5", "Sun", snapshot.SunReachesGate ? "reaches the gate" : "short of the gate", snapshot.SunReachesGate));
+            into.Add(new StateItem("S35", "Shadow", shadow, snapshot.ShadowPresent || snapshot.ShadowBound));
+            into.Add(new StateItem("Y8", "Sound", snapshot.BellEchoing ? "echoing" : "silent", snapshot.BellEchoing));
+            into.Add(new StateItem("V10", "Name", snapshot.InscriptionRead ? "known" : "unknown", snapshot.InscriptionRead));
+            string used = snapshot.BindingsUsed + "/" + snapshot.BindingCapacity;
+            into.Add(new StateItem("S24", "Bindings", used + " held", false, used));
         }
 
         /// <summary>Formats the status strip. Every value is read from the snapshot as is.</summary>
@@ -205,6 +260,10 @@ namespace Ankhu.Player
             if (legendText == null)
             {
                 return;
+            }
+            if (board != null)
+            {
+                board.SetResetProgress(ResetProgress);
             }
             int percent = resetArmed ? Mathf.FloorToInt(ResetProgress * 100f) : -1;
             if (percent == shownResetPercent && !string.IsNullOrEmpty(legendText.text))

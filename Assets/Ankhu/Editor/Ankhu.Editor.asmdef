@@ -4,7 +4,10 @@
     "references": [
         "Ankhu.Integration",
         "Ankhu.Runtime",
-        "Unity.InputSystem"
+        "Ankhu.Opening",
+        "Unity.InputSystem",
+        "Unity.RenderPipelines.Core.Runtime",
+        "Unity.RenderPipelines.Universal.Runtime"
     ],
     "includePlatforms": [
         "Editor"

@@ -195,6 +195,17 @@ namespace Ankhu.Player
                 DestroyImmediate(c);
             }
 
+            float parentScale = Mathf.Approximately(transform.lossyScale.y, 0f) ? 1f : Mathf.Abs(transform.lossyScale.y);
+            AnkhuModelMetrics metrics = instance.GetComponent<AnkhuModelMetrics>();
+            if (metrics != null)
+            {
+                // Measured sole and crown: exact, unlike skinned renderer bounds.
+                float scale = modelHeight / metrics.StandingHeight;
+                t.localScale = Vector3.one * scale;
+                t.localPosition = new Vector3(0f, -metrics.SoleY * scale, 0f);
+                return instance;
+            }
+
             if (!TryGetRendererBounds(instance, out Bounds bounds) || bounds.size.y < 1e-4f)
             {
                 Debug.LogWarning("AnkhuVisual: the model prefab has no renderer bounds, so it was not scaled.", this);
@@ -203,8 +214,7 @@ namespace Ankhu.Player
 
             // The Visual root only yaws, so the world height of the instance is its unscaled height
             // times the parent scale. Scale it so the world height equals modelHeight times that scale.
-            float parentScaleY = Mathf.Approximately(transform.lossyScale.y, 0f) ? 1f : Mathf.Abs(transform.lossyScale.y);
-            float factor = modelHeight * parentScaleY / bounds.size.y;
+            float factor = modelHeight * parentScale / bounds.size.y;
             t.localScale = Vector3.one * factor;
 
             TryGetRendererBounds(instance, out bounds);

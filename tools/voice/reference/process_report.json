@@ -1,0 +1,58 @@
+{
+ "takes": 163,
+ "asl_min": -21.68,
+ "asl_max": -19.68,
+ "truePeak_max": -1.0,
+ "lufs_measurable": 138,
+ "lufs_min": -24.57,
+ "lufs_max": -19.21,
+ "duration_total": 163.27,
+ "previews": {
+  "bind_elevator": {
+   "cues": [
+    "clause.bind_elevator.sole"
+   ],
+   "duration": 1.012,
+   "joinGapsMs": []
+  },
+  "name_gate": {
+   "cues": [
+    "clause.name_gate.sole"
+   ],
+   "duration": 1.486,
+   "joinGapsMs": []
+  },
+  "release_elevator+flow_east": {
+   "cues": [
+    "clause.release_elevator.first",
+    "clause.flow_east.final"
+   ],
+   "duration": 2.224,
+   "joinGapsMs": [
+    120
+   ]
+  },
+  "wake_bearer+recall_bell+echo_bell": {
+   "cues": [
+    "clause.wake_bearer.first",
+    "clause.recall_bell.medial",
+    "clause.echo_bell.final"
+   ],
+   "duration": 3.8,
+   "joinGapsMs": [
+    260,
+    230
+   ]
+  },
+  "release_shadow+bind_bridge": {
+   "cues": [
+    "clause.release_shadow.first",
+    "clause.bind_bridge.final"
+   ],
+   "duration": 2.57,
+   "joinGapsMs": [
+    230
+   ]
+  }
+ }
+}

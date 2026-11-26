@@ -1,0 +1,10 @@
+{
+ "name": "Ankhu kh audition alias_arabic",
+ "rules": [
+  {
+   "type": "alias",
+   "string_to_replace": "Ankhu",
+   "alias": "آنخو"
+  }
+ ]
+}

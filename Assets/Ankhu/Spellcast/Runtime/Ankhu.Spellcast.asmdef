@@ -1,0 +1,23 @@
+{
+    "name": "Ankhu.Spellcast",
+    "rootNamespace": "Ankhu.Spellcast",
+    "references": [
+        "Ankhu.Integration",
+        "Ankhu.Runtime",
+        "Ankhu.Bindings",
+        "Ankhu.BorrowedDawn",
+        "Ankhu.Realms",
+        "Ankhu.Realms.Core",
+        "Unity.InputSystem",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

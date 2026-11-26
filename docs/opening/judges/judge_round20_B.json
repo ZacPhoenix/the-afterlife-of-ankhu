@@ -1,0 +1,40 @@
+{
+ "scores": {
+  "art": 8,
+  "continuity": 6,
+  "cinematography": 7,
+  "motion_fx": 6,
+  "grounding": 6,
+  "game_feel": 6,
+  "ui_title": 8,
+  "audio": 6
+ },
+ "evidence": {
+  "art": "Painted film 005-018 and title 000-003 are rich and coherent (warm torch vs moon blue); the walk environments 019-048 hold that look well. The weak spot is the flat, plastic 3D characters set against it.",
+  "continuity": "Painted Anpu 011/016 (leopard skin, ornate collar, gold-blue) and Ankhu in 013/018 do not match the walk models 020-048. Ankhu's skin reads pink and pale in 039-041, 046 against warm bronze in film 013. Sandals are present in 021, 031 and 041. Anpu's ankh is not visible in any walk frame. Attendants' kilts change between film 014 and walk 021. Bronze props are fine.",
+  "cinematography": "Film cuts 013 to 018 are well composed, with letterbox and a clear 014 to 015 reveal, and the 018 to 000 loop closes cleanly. Walk cuts 021, 024, 030, 037 and 040 read, but 037/038 are a high overhead with tiny figures. 014/015 crop Anpu's head at the top of frame. 019 to 020 starts with Anpu cut off at the bottom.",
+  "motion_fx": "Walk poses vary and there is shadow movement in 020 and 028. The legs look stiff and the same walk cycle repeats. Anpu turns and slides in 026 to 029. The brazier flames are good. There is no visible dust at the feet. The 016 to 018 pans are clean, with no flicker. Subtitle fade in 036 is smooth.",
+  "grounding": "Feet and shadows mostly land on the stones in 020, 031 and 039. Scale is plausible against the statues. Ankhu is almost entirely hidden behind Anpu and an attendant in 043 to 048, with a pale ghost body-part at the gate in 045 to 047. Characters float slightly in 026 and 027. Anpu's silhouette against bright stone in 022 is crushed to black.",
+  "game_feel": "The ankh-pillar-lined causeway leads clearly to the pylon, and the cuts keep the group moving in one direction. The group clumps and occludes Ankhu in 043 to 048. The player is not clearly identifiable in 020 to 021 and 028. The pace is slow, with several near-duplicate frames (025 to 028, 041 to 043). It is unclear where to go inside the final gate frame.",
+  "ui_title": "Title 000-003 is strong, with a gold serif logo, clear hierarchy, a legible menu and a highlight bar. The menu type is slightly small on the left. The subtitles in 022 to 042 are legible and well placed. 036 shows a half-faded subtitle on a bright floor. The 004 fade is clean.",
+  "audio": "Judged from the subtitles only, not the audio. Lines are well paced and carry real emotion ('I know. I was there each time you lifted the mask.'). The timing matches walk beats, but 025 to 028 hold one long line over idle motion, and the gap before 'What does it ask?' in 038 is unclear."
+ },
+ "mean": 6.6,
+ "defects": [
+  {
+   "axis": "continuity",
+   "frames": "020-048 vs 011, 013, 016",
+   "what": "The 3D Anpu, Ankhu and attendants do not match the painted film versions. Ankhu's skin is pale pink, Anpu's costume is simplified (no leopard skin or collar), and the face and ankh are rarely readable."
+  },
+  {
+   "axis": "game_feel",
+   "frames": "043-048",
+   "what": "Ankhu is hidden behind Anpu and the attendants at the gate, so the player character is lost in the final shot. The group clumps and there is no clear direction through the doorway."
+  },
+  {
+   "axis": "motion_fx",
+   "frames": "026-029, 034-036, 044-046",
+   "what": "Stiff legs and a repeating walk cycle, with Anpu sliding and turning against the ground. No foot dust or contact FX anywhere, and silhouettes are crushed to flat black in backlit shots."
+  }
+ ]
+}

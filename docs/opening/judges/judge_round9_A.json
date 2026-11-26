@@ -1,0 +1,5 @@
+{"run":"run13","build":25,"judge":"A","scores":{"art":8,"continuity":5,"cinematography":6,"motion_fx":5,"grounding":5,"game_feel":5,"ui_title":7,"audio":6},"mean":5.9,
+"defects":[
+{"axis":"continuity","frames":"014-018, 019-048","what":"film Anpu bright gold and barefoot Ankhu in film, ankh and sceptre vary film vs walk, walk sets differ per cut"},
+{"axis":"grounding","frames":"037, 045, 028-033","what":"overlap, clipping into pedestals, attendant standing on a brazier plinth, inconsistent scale"},
+{"axis":"cinematography","frames":"021/025/030/037/040, 023","what":"cuts change scale and direction unmotivated, 023 crops Anpu at edge, subtitle lost in final fade"}]}

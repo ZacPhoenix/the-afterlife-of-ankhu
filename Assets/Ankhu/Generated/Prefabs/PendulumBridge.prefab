@@ -48,6 +48,7 @@ MonoBehaviour:
   target: 2
   renderers:
   - {fileID: 1817318427978578485}
+  threadColor: {r: 0.64, g: 0.32, b: 0.96, a: 1}
 --- !u!1 &3386368641851183801
 GameObject:
   m_ObjectHideFlags: 0

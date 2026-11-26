@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "speaker": "anpu",
+  "source": "docs/opening/OVERNIGHT_PLAN.md (DRAFT lines)",
+  "lines": [
+    {
+      "key": "dialogue.anpu.walk.cam2.b",
+      "text": "I know. I was there each time you lifted the mask.",
+      "context": "The god Anpu, walking beside the dead priest Ankhu. Warm, grave, kind, unhurried."
+    },
+    {
+      "key": "dialogue.anpu.walk.cam3.b",
+      "text": "A son. A father. A husband. A man who stopped speaking.",
+      "context": "Anpu, gentle, naming the man's grief without judgement."
+    },
+    {
+      "key": "dialogue.anpu.walk.cam4.b",
+      "text": "The Duat keeps what the living lose. But the road asks something first.",
+      "context": "Anpu, comforting first, then a quiet warning."
+    },
+    {
+      "key": "dialogue.anpu.walk.cam5.b",
+      "text": "Your name, at every gate. Hold it as you held it in the water.",
+      "context": "Anpu, solemn, a teaching."
+    },
+    {
+      "key": "dialogue.anpu.walk.cam6.a",
+      "text": "Walk with me, Ankhu. The night is long, and the gates are many.",
+      "context": "Anpu at a vista over the night hills, inviting, warm, the last line of the scene."
+    }
+  ]
+}

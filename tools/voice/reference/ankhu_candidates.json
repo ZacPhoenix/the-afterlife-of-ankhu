@@ -1,0 +1,107 @@
+{
+  "text": "Flow west. Bind the shadow. Wake, bearer. Release the elevator, and echo the bell. He Who Returns the Morning.",
+  "designed": [
+    {
+      "name": "A_grave_baritone",
+      "file": "A_grave_baritone.mp3",
+      "description": "A man in his mid thirties, a priest of ancient Egypt speaking words of power. Low, warm baritone, grave and intimate, close to the microphone, unhurried and deliberate. Quiet authority, never theatrical or booming. Soft, unplaceable accent. Clean studio recording, completely dry, no reverb.",
+      "generated_voice_id": "prbpIeiA8upYT2mdCWEz",
+      "duration_secs": 6.950375
+    },
+    {
+      "name": "A_grave_baritone_alt1",
+      "file": "A_grave_baritone_alt1.mp3",
+      "description": "A man in his mid thirties, a priest of ancient Egypt speaking words of power. Low, warm baritone, grave and intimate, close to the microphone, unhurried and deliberate. Quiet authority, never theatrical or booming. Soft, unplaceable accent. Clean studio recording, completely dry, no reverb.",
+      "generated_voice_id": "eRuEtVKhtXrgxNBIwq2w",
+      "duration_secs": 9.7455
+    },
+    {
+      "name": "A_grave_baritone_alt2",
+      "file": "A_grave_baritone_alt2.mp3",
+      "description": "A man in his mid thirties, a priest of ancient Egypt speaking words of power. Low, warm baritone, grave and intimate, close to the microphone, unhurried and deliberate. Quiet authority, never theatrical or booming. Soft, unplaceable accent. Clean studio recording, completely dry, no reverb.",
+      "generated_voice_id": "1WHCWJhlzkZd7OWTr4TP",
+      "duration_secs": 10.712
+    },
+    {
+      "name": "B_hushed_scribe",
+      "file": "B_hushed_scribe.mp3",
+      "description": "A soft-spoken man in his thirties, a temple scribe and priest, speaking reverently in a dim stone chamber. Light baritone, slightly breathy, almost hushed, very precise consonants, measured pace, a calm sorrow under the surface. Soft, unplaceable accent. Clean studio recording, completely dry, no reverb.",
+      "generated_voice_id": "cMqIFjF6ZGxtIJwxrjxc",
+      "duration_secs": 6.271208333333333
+    },
+    {
+      "name": "B_hushed_scribe_alt1",
+      "file": "B_hushed_scribe_alt1.mp3",
+      "description": "A soft-spoken man in his thirties, a temple scribe and priest, speaking reverently in a dim stone chamber. Light baritone, slightly breathy, almost hushed, very precise consonants, measured pace, a calm sorrow under the surface. Soft, unplaceable accent. Clean studio recording, completely dry, no reverb.",
+      "generated_voice_id": "IAor92BFemsQW4ynWHRT",
+      "duration_secs": 7.655708333333333
+    },
+    {
+      "name": "B_hushed_scribe_alt2",
+      "file": "B_hushed_scribe_alt2.mp3",
+      "description": "A soft-spoken man in his thirties, a temple scribe and priest, speaking reverently in a dim stone chamber. Light baritone, slightly breathy, almost hushed, very precise consonants, measured pace, a calm sorrow under the surface. Soft, unplaceable accent. Clean studio recording, completely dry, no reverb.",
+      "generated_voice_id": "OpOXDvQZ8KJf3iJdW3Hk",
+      "duration_secs": 8.439375
+    },
+    {
+      "name": "C_resonant_chanter",
+      "file": "C_resonant_chanter.mp3",
+      "description": "A man in his late thirties, a lector priest trained to chant. Deep, resonant chest voice with a slightly rough, weathered texture. Slow, rhythmic, ceremonial cadence, each word weighed, solemn but human, not a narrator. Soft, unplaceable accent. Clean studio recording, completely dry, no reverb.",
+      "generated_voice_id": "2oyYy7zFk6Z0e2W4oD71",
+      "duration_secs": 6.689166666666667
+    },
+    {
+      "name": "C_resonant_chanter_alt1",
+      "file": "C_resonant_chanter_alt1.mp3",
+      "description": "A man in his late thirties, a lector priest trained to chant. Deep, resonant chest voice with a slightly rough, weathered texture. Slow, rhythmic, ceremonial cadence, each word weighed, solemn but human, not a narrator. Soft, unplaceable accent. Clean studio recording, completely dry, no reverb.",
+      "generated_voice_id": "VkiRq4GQKWeUZTmQxGMG",
+      "duration_secs": 8.857333333333333
+    },
+    {
+      "name": "C_resonant_chanter_alt2",
+      "file": "C_resonant_chanter_alt2.mp3",
+      "description": "A man in his late thirties, a lector priest trained to chant. Deep, resonant chest voice with a slightly rough, weathered texture. Slow, rhythmic, ceremonial cadence, each word weighed, solemn but human, not a narrator. Soft, unplaceable accent. Clean studio recording, completely dry, no reverb.",
+      "generated_voice_id": "cH37aLG8IazVuTNNpxbQ",
+      "duration_secs": 10.267916666666666
+    },
+    {
+      "name": "D_earnest_seeker",
+      "file": "D_earnest_seeker.mp3",
+      "description": "A man in his early thirties, newly dead and finding his way, speaking ancient words he half remembers. Clear, warm mid-range voice, earnest and a little vulnerable, steady and sincere, gentle conviction rather than command. Soft, unplaceable accent. Clean studio recording, completely dry, no reverb.",
+      "generated_voice_id": "eQGPBUzJ4exlIdioNirZ",
+      "duration_secs": 6.715291666666666
+    },
+    {
+      "name": "D_earnest_seeker_alt1",
+      "file": "D_earnest_seeker_alt1.mp3",
+      "description": "A man in his early thirties, newly dead and finding his way, speaking ancient words he half remembers. Clear, warm mid-range voice, earnest and a little vulnerable, steady and sincere, gentle conviction rather than command. Soft, unplaceable accent. Clean studio recording, completely dry, no reverb.",
+      "generated_voice_id": "YxHHBRBZKlIXZ4CW9uB1",
+      "duration_secs": 8.387125
+    },
+    {
+      "name": "D_earnest_seeker_alt2",
+      "file": "D_earnest_seeker_alt2.mp3",
+      "description": "A man in his early thirties, newly dead and finding his way, speaking ancient words he half remembers. Clear, warm mid-range voice, earnest and a little vulnerable, steady and sincere, gentle conviction rather than command. Soft, unplaceable accent. Clean studio recording, completely dry, no reverb.",
+      "generated_voice_id": "nhJqRQGs9QaTzpyNHMlD",
+      "duration_secs": 7.525083333333333
+    }
+  ],
+  "account": [
+    {
+      "name": "C_account_ChrisFathersLegacy",
+      "file": "C_account_ChrisFathersLegacy.wav",
+      "voice_id": "aKQdyEogZx5VoND0oujS",
+      "voice_name": "Chris - Father's Legacy",
+      "labels": {
+        "gender": "male",
+        "descriptive": "calm",
+        "use_case": "narrative_story",
+        "language": "en",
+        "age": "middle_aged",
+        "accent": "welsh"
+      },
+      "category": "professional",
+      "sample_rate": 24000
+    }
+  ]
+}

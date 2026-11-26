@@ -57,7 +57,33 @@ namespace Ankhu.Speech
         private string spokenText = string.Empty;
         private bool layoutDirty = true;
 
+        private bool suppressed;
+
         public bool IsOpen => isOpen;
+
+        /// <summary>The camera the bubble projects Ankhu's head through.</summary>
+        public Camera WorldCamera => worldCamera;
+        /// <summary>Ankhu's root transform (the bubble anchors at <see cref="BorrowedDawnLayout.AnkhuHeight"/> above it).</summary>
+        public Transform Speaker => speaker;
+        public PlayerZoneTracker ZoneTracker => zoneTracker;
+
+        /// <summary>
+        /// True while another front end owns typing (the painted bubble in Ankhu.Spellcast). Enter then does not open
+        /// this flat bubble, but <see cref="SpeakExternal"/> still runs the same speak path, so voice, animation and
+        /// history keep working through <see cref="Spoken"/>.
+        /// </summary>
+        public bool Suppressed
+        {
+            get => suppressed;
+            set
+            {
+                suppressed = value;
+                if (!value) return;
+                if (isOpen) Close();
+                replyTimer = 0f;
+                layoutDirty = true;
+            }
+        }
 
         /// <summary>True while the bubble or its reply is on screen. The interaction prompt hides then so the two never overlap.</summary>
         public static bool AnyVisible { get; private set; }
@@ -110,7 +136,7 @@ namespace Ankhu.Speech
             {
                 UpdateOpen(keyboard);
             }
-            else if (keyboard != null && InputGate.GameplayInputAllowed &&
+            else if (!suppressed && keyboard != null && InputGate.GameplayInputAllowed &&
                      (keyboard.enterKey.wasPressedThisFrame || keyboard.numpadEnterKey.wasPressedThisFrame))
             {
                 Open(keyboard);
@@ -360,6 +386,34 @@ namespace Ankhu.Speech
                 return;
             }
 
+            CommandResult result = SpeakCore(utterance, true);
+            ShowReply(utterance, result.Message, result.Outcome);
+            Close();
+            Spoken?.Invoke(utterance, result);
+        }
+
+        /// <summary>
+        /// Speaks for another front end: pushes history, asks the rules, raises <see cref="Spoken"/> (voice and
+        /// animation) and returns the result. Feedback is published only when <paramref name="publishFeedback"/>
+        /// is true, so a front end that plays an effect first can publish when the effect lands. Returns null when no
+        /// rules are connected. The caller checks <see cref="RoomRulesHost.IsWorldSettled"/> first.
+        /// </summary>
+        public CommandResult SpeakExternal(string utterance, bool publishFeedback)
+        {
+            utterance = (utterance ?? string.Empty).Trim();
+            RoomRulesHost host = RoomRulesHost.Instance;
+            if (utterance.Length == 0 || host == null || host.Adapter == null)
+            {
+                return null;
+            }
+            CommandResult result = SpeakCore(utterance, publishFeedback);
+            Spoken?.Invoke(utterance, result);
+            return result;
+        }
+
+        private CommandResult SpeakCore(string utterance, bool publishFeedback)
+        {
+            RoomRulesHost host = RoomRulesHost.Instance;
             history.Push(utterance);
             PlayerContext context = zoneTracker != null ? zoneTracker.Context : new PlayerContext(ZoneIds.Floor, false, false);
             CommandResult result;
@@ -376,11 +430,11 @@ namespace Ankhu.Speech
             {
                 result = new CommandResult(CommandOutcome.NotConnected, "The words fall into silence.");
             }
-
-            FeedbackBus.Publish(FeedbackSource.Speech, result.Outcome, result.Message);
-            ShowReply(utterance, result.Message, result.Outcome);
-            Close();
-            Spoken?.Invoke(utterance, result);
+            if (publishFeedback)
+            {
+                FeedbackBus.Publish(FeedbackSource.Speech, result.Outcome, result.Message);
+            }
+            return result;
         }
 
         private void ShowReply(string utterance, string message, CommandOutcome outcome)

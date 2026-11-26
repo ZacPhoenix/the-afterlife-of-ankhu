@@ -1,0 +1,40 @@
+{
+ "scores": {
+  "art": 7.5,
+  "continuity": 5,
+  "cinematography_cuts": 6.5,
+  "motion_fx": 5,
+  "character_grounding": 5.5,
+  "game_feel": 6,
+  "ui_title": 7.5,
+  "audio_dialogue": 7
+ },
+ "evidence": {
+  "art": "All 50 frames viewed at full resolution. Title 000-003 and film 005-018 are cohesive painterly night-gold-and-blue work. The painted gate set in 019-044 matches that quality. 016 is the best Anpu shot, with a bronze ankh and Set-head sceptre.",
+  "continuity": "The film and walk read as different games. Attendants are jet black in 005-018 and dark brown in 019-044. Anpu's nemes is teal in the walk, not blue. His kilt is a white and tan panel, with a plainer pectoral than in 016. Ankhu is flat pink with a ragged kilt hem and white patches (020, 031, 041, 043). The ankh is barely visible in the walk. Sandals are present in 005, 008, 040, 041 and 043 but only one is visible in 013. The sceptre is vertical and correct in 041-046.",
+  "cinematography_cuts": "Walk cuts at 021, 024, 030, 037 and 040 are readable. The 040/041 push toward the gate is a clean closing composition. Film 014-015 crop Anpu's head. In 024-029 the group is tiny and half-hidden by the statue pedestal, and many frames are near-duplicates.",
+  "motion_fx": "Pose variety is low. Walk frames repeat (024-029, 042-044) and characters overlap in 038-039. Brazier flames are fine, and title flicker in 000-003 is subtle. There is no dust or contact FX. Attendants stand stiffly at the gate.",
+  "character_grounding": "Feet have shadows and mostly good contact. The 3D low-poly figures sit flat over the painted set with no ambient occlusion or colour grading, so they look pasted on. In 044-046 the left attendant overlaps the brazier pedestal and appears to stand on it. Anpu reads as a flat black silhouette.",
+  "game_feel": "The gate is an obvious goal, and hard cuts keep the direction clear. The group is slow and static, and attendants block the path in 041-044. The handover to the end card at 045 is abrupt, with a letterbox over a frozen scene.",
+  "ui_title": "The gold logo and low-left menu on a highlight bar are clear (000-003). Subtitles are legible serif with good contrast (019-044). The 'The First Gate' card in 045-046 has good hierarchy. The ghosted title text on 049 is nearly illegible.",
+  "audio_dialogue": "Judged from the subtitle script text only, not from audio or a timing file, which I did not open. The lines are strong, for example 'Hold it as you held it in the water.' and 'Walk with me, Ankhu.' Pacing and sync are unverified."
+ },
+ "mean": 6.3,
+ "defects": [
+  {
+   "axis": "continuity",
+   "frames": "019-044 vs 005-018",
+   "what": "The 3D walk characters do not match the painted film. The nemes is teal, not blue. Attendants are brown, not black. Anpu's kilt is a white and tan panel. Ankhu is flat pink with a torn kilt hem. The ankh is not readable. The result is a large fidelity and identity gap between film and walk."
+  },
+  {
+   "axis": "character_grounding",
+   "frames": "044-046",
+   "what": "The left attendant stands overlapping the brazier pedestal and looks like he is on it. In 024-029 the group is also occluded or cropped by the statue pedestal. The 3D figures have no grade or occlusion to blend them into the painted plates."
+  },
+  {
+   "axis": "motion_fx",
+   "frames": "024-029, 038-039, 042-044",
+   "what": "Near-duplicate frames show static, low-variety movement. Characters overlap, and there is no dust or contact FX. The ending is a frozen scene under a letterboxed title card, then a dim image whose ghost title text on 049 is unreadable."
+  }
+ ]
+}

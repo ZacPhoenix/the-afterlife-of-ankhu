@@ -1,0 +1,67 @@
+{
+ "version": 1,
+ "sampleRate": 44100,
+ "targetAsl": -20.0,
+ "ceilingDbtp": -1.0,
+ "timing": {
+  "clauseGap": 0.12,
+  "wordGap": 0.0
+ },
+ "entries": [
+  {
+   "key": "dialogue.other.row.1",
+   "variant": 0,
+   "file": "Clips/dialogue.other.row.1__0.wav",
+   "text": "What is he called?",
+   "asl": -20.0,
+   "lufs": -20.74,
+   "truePeak": -8.33,
+   "duration": 0.905,
+   "rawDuration": 1.2539,
+   "trimStart": 0.045,
+   "alignment": {
+    "characters": "What is he called?",
+    "start": [
+     -0.045,
+     0.048,
+     0.094,
+     0.129,
+     0.164,
+     0.21,
+     0.245,
+     0.28,
+     0.327,
+     0.361,
+     0.385,
+     0.443,
+     0.489,
+     0.594,
+     0.64,
+     0.698,
+     0.756,
+     0.814
+    ],
+    "end": [
+     0.048,
+     0.094,
+     0.129,
+     0.164,
+     0.21,
+     0.245,
+     0.28,
+     0.327,
+     0.361,
+     0.385,
+     0.443,
+     0.489,
+     0.594,
+     0.64,
+     0.698,
+     0.756,
+     0.814,
+     1.209
+    ]
+   }
+  }
+ ]
+}

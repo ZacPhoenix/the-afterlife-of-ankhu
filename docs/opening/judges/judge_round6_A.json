@@ -1,0 +1,5 @@
+{"run":"run9","build":21,"judge":"A","scores":{"art":6.5,"continuity":5,"cinematography":6,"motion_fx":4.5,"grounding":4.5,"game_feel":5.5,"ui_title":7,"audio":6},"mean":5.6,
+"defects":[
+{"axis":"grounding","frames":"029, 033-035","what":"Ankhu clips into Anpu, party fuses into one silhouette, shadows detach and double"},
+{"axis":"continuity","frames":"015 film vs 023/029","what":"ankh not visible in walk, kilt reads green-olive vs film gold, attendant skin differs"},
+{"axis":"motion_fx","frames":"022-029","what":"stiff repeated poses, no dust or cloth, paint filter reads as low-res posterise"}]}

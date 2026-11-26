@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "speaker": "ankhu",
+  "source": "cinematics/spell25_beat_sheet.md",
+  "lines": [
+    {
+      "key": "dialogue.ankhu.spell25.anpu",
+      "text": "My Lord... Anpu.",
+      "context": "Spell 25 opening cinematic, 1:26. Ankhu's first words to Anpu: reverent, hushed, awed recognition. Anpu answers at 1:32, so the line must end well inside 6 s."
+    }
+  ]
+}

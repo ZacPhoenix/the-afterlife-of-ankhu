@@ -17,6 +17,8 @@ namespace Ankhu.World
     public sealed class BeamView : SnapshotListener
     {
         [Header("Lines")]
+        [Tooltip("Zac 2026-11-26: the teaching rooms have no mirror socket, so the faint shaft read as a stray white bar across the painted wall. Off there, the shaft only shows once the mirror is installed.")]
+        [SerializeField] private bool faintShaft = true;
         [SerializeField] private LineRenderer sunShaft;
         [SerializeField] private LineRenderer nearCore;
         [SerializeField] private LineRenderer nearGlow;
@@ -77,7 +79,7 @@ namespace Ankhu.World
 
             bool installed = next.Mirror == MirrorLocation.Socket;
             shaftFull = installed;
-            SetLine(sunShaft, clerestory, socket, true, installed ? GreyboxPalette.WithAlpha(GreyboxPalette.SunShaft, 0.55f) : GreyboxPalette.SunShaft);
+            SetLine(sunShaft, clerestory, socket, installed || faintShaft, installed ? GreyboxPalette.WithAlpha(GreyboxPalette.SunShaft, 0.55f) : GreyboxPalette.SunShaft);
 
             float endX;
             if (next.SunReachesGate)

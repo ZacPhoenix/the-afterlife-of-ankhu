@@ -13,7 +13,7 @@ namespace Ankhu.Layout
         // Character
         public const float AnkhuHeight = 1.8f;
         public const float AnkhuWidth = 0.6f;
-        public const float WalkSpeed = 3.2f;
+        public const float WalkSpeed = 1.4f;          // walk clip implies about 1.11 m/s, so it plays near 1.26x without sliding
         public const float ClimbSpeed = 2.2f;
         public const float MaxStepHeight = 0.3f;
 

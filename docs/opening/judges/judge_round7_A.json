@@ -1,0 +1,5 @@
+{"run":"run11","build":23,"judge":"A","scores":{"art":7,"continuity":4,"cinematography":6,"motion_fx":5,"grounding":4,"game_feel":6,"ui_title":6,"audio":5},"mean":5.4,
+"defects":[
+{"axis":"grounding","frames":"027, 037-039, 041","what":"Anpu and Ankhu overlap and clip, cam4 figures at frame edge overlapping the statue, floating over the plate"},
+{"axis":"continuity","frames":"016-017, 023, 030","what":"ankh far larger than 0.32 m, Anpu trim and kilt read bright gold or yellow-green"},
+{"axis":"audio","frames":"021-026, 039","what":"subtitles include lines missing from walk_anpu_lines.json (judge only had the Anpu file)"}]}

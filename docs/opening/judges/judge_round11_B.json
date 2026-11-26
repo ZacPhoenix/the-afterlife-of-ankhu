@@ -1,0 +1,5 @@
+{"run":"run16","build":28,"judge":"B","scores":{"art":7.5,"continuity":5,"cinematography":6,"motion_fx":5,"grounding":5,"game_feel":5.5,"ui_title":7.5,"audio":7},"mean":5.9,
+"defects":[
+{"axis":"continuity","frames":"015/018 vs 019/023/029","what":"painted Anpu and attendants do not match in-engine models, 3D cast looks pasted on"},
+{"axis":"cinematography","frames":"020 to 021","what":"cut 1 reverses screen direction (walk away then toward camera)"},
+{"axis":"grounding","frames":"020, 026, 030, 033","what":"attendants cropped at frame edge, one on a brazier plinth, no footfall dust or contact, floating sprite read"}]}

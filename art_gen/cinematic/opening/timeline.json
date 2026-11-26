@@ -1,0 +1,801 @@
+{
+ "music": "D:/TheAfterlifeofAnkhu/Assets/Ankhu/Opening/Audio/Spell25.wav",
+ "shots": [
+  {
+   "id": "A1",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/A1_womb_optB.png",
+   "bg": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/test_act1/layers/A1_bg.png",
+   "fig": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/test_act1/layers/A1_fig.png",
+   "mid": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/test_act1/layers/A1_mid.png",
+   "t0": 0.0,
+   "t1": 7.5,
+   "cam": [
+    [
+     1.0,
+     0,
+     -0.03
+    ],
+    [
+     1.08,
+     0,
+     0.02
+    ]
+   ],
+   "fx": [
+    "caustics",
+    "wobble",
+    "motes",
+    "shaft"
+   ],
+   "fade_in": 2.5,
+   "group": "water"
+  },
+  {
+   "id": "A2",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/A2_spark_optB.png",
+   "bg": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/test_act1/layers/A2_bg.png",
+   "fig": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/test_act1/layers/A2_fig.png",
+   "t0": 7.5,
+   "t1": 10.9,
+   "cam": [
+    [
+     0.92,
+     -0.02,
+     0.01
+    ],
+    [
+     0.94,
+     0.01,
+     0.012
+    ]
+   ],
+   "fx": [
+    "spark",
+    "caustics",
+    "wobble",
+    "motes"
+   ],
+   "spark_to": [
+    0.415,
+    0.45
+   ],
+   "group": "water"
+  },
+  {
+   "id": "A3",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/A3_eyes_optC.png",
+   "bg": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/test_act1/layers/A3_bg.png",
+   "fig": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/test_act1/layers/A3_fig.png",
+   "mid": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/test_act1/layers/A3_mid.png",
+   "t0": 10.9,
+   "t1": 14.1,
+   "cam": [
+    [
+     1.04,
+     0,
+     0.02
+    ],
+    [
+     1.04,
+     0,
+     -0.03
+    ]
+   ],
+   "fx": [
+    "bubbles",
+    "caustics",
+    "wobble",
+    "motes"
+   ],
+   "lips": [
+    0.525,
+    0.575
+   ],
+   "to_warm": 1.0,
+   "group": "water"
+  },
+  {
+   "id": "M1a",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M1_child_optA.png",
+   "t0": 14.1,
+   "t1": 15.575,
+   "cam": [
+    [
+     1.0,
+     0,
+     0
+    ],
+    [
+     1.05,
+     0,
+     0
+    ]
+   ],
+   "group": "memory",
+   "trans_d": 0.45,
+   "from_warm": 0.8
+  },
+  {
+   "id": "M1b",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M1_child_optC.png",
+   "t0": 15.575,
+   "t1": 17.05,
+   "cam": [
+    [
+     1.05,
+     0.01,
+     0
+    ],
+    [
+     1.0,
+     -0.01,
+     0
+    ]
+   ],
+   "group": "memory",
+   "trans": "dissolve",
+   "trans_d": 0.2
+  },
+  {
+   "id": "M2",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/consistency/out/M2_priest_r1c_blank.png",
+   "t0": 17.05,
+   "t1": 20.0,
+   "cam": [
+    [
+     1.02,
+     -0.012,
+     0
+    ],
+    [
+     1.04,
+     0.012,
+     0
+    ]
+   ],
+   "group": "memory",
+   "trans": "ripple",
+   "trans_d": 0.45,
+   "write": {
+    "ink": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/consistency/out/M2_priest_r1c_ink.png",
+    "order": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/consistency/out/M2_priest_r1c_order.npy",
+    "from": -0.15,
+    "to": 1.15,
+    "t0": 0.35,
+    "t1": 2.4499999999999997
+   }
+  },
+  {
+   "id": "M3a",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M3_husband_optC.png",
+   "t0": 20.0,
+   "t1": 21.475,
+   "cam": [
+    [
+     1.0,
+     0,
+     0
+    ],
+    [
+     1.05,
+     0,
+     0
+    ]
+   ],
+   "group": "memory",
+   "trans": "ripple",
+   "trans_d": 0.45
+  },
+  {
+   "id": "M3b",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M3_husband_optB.png",
+   "t0": 21.475,
+   "t1": 22.95,
+   "cam": [
+    [
+     1.05,
+     0.01,
+     0
+    ],
+    [
+     1.0,
+     -0.01,
+     0
+    ]
+   ],
+   "group": "memory",
+   "trans": "dissolve",
+   "trans_d": 0.2
+  },
+  {
+   "id": "M4a",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M4_father_optB.png",
+   "t0": 22.95,
+   "t1": 24.425,
+   "cam": [
+    [
+     1.02,
+     -0.012,
+     0
+    ],
+    [
+     1.04,
+     0.012,
+     0
+    ]
+   ],
+   "group": "memory",
+   "trans": "ripple",
+   "trans_d": 0.45
+  },
+  {
+   "id": "M4b",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M4_father_optC.png",
+   "t0": 24.425,
+   "t1": 25.9,
+   "cam": [
+    [
+     1.0,
+     0,
+     0
+    ],
+    [
+     1.05,
+     0,
+     0
+    ]
+   ],
+   "group": "memory",
+   "trans": "dissolve",
+   "trans_d": 0.2
+  },
+  {
+   "id": "M5a",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M5_child_dies_optA.png",
+   "t0": 25.9,
+   "t1": 27.375,
+   "cam": [
+    [
+     1.05,
+     0.01,
+     0
+    ],
+    [
+     1.0,
+     -0.01,
+     0
+    ]
+   ],
+   "group": "grief",
+   "trans": "ripple",
+   "trans_d": 0.45
+  },
+  {
+   "id": "M5b",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M5_child_dies_optB.png",
+   "t0": 27.375,
+   "t1": 28.85,
+   "cam": [
+    [
+     1.02,
+     -0.012,
+     0
+    ],
+    [
+     1.04,
+     0.012,
+     0
+    ]
+   ],
+   "group": "grief",
+   "trans": "dissolve",
+   "trans_d": 0.2
+  },
+  {
+   "id": "M6a",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M6_grieving_apart_optA.png",
+   "t0": 28.85,
+   "t1": 30.325,
+   "cam": [
+    [
+     1.0,
+     0,
+     0
+    ],
+    [
+     1.05,
+     0,
+     0
+    ]
+   ],
+   "group": "grief",
+   "trans": "ripple",
+   "trans_d": 0.45
+  },
+  {
+   "id": "M6b",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M6_grieving_apart_optB.png",
+   "t0": 30.325,
+   "t1": 31.8,
+   "cam": [
+    [
+     1.05,
+     0.01,
+     0
+    ],
+    [
+     1.0,
+     -0.01,
+     0
+    ]
+   ],
+   "group": "grief",
+   "trans": "dissolve",
+   "trans_d": 0.2
+  },
+  {
+   "id": "M7",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M7_fading_apart_optC.png",
+   "t0": 31.8,
+   "t1": 34.75,
+   "cam": [
+    [
+     1.02,
+     -0.012,
+     0
+    ],
+    [
+     1.04,
+     0.012,
+     0
+    ]
+   ],
+   "group": "grief",
+   "trans": "ripple",
+   "trans_d": 0.45
+  },
+  {
+   "id": "M8",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/consistency/out/M8_wife_funeral_r1a.png",
+   "t0": 34.75,
+   "t1": 37.7,
+   "cam": [
+    [
+     1.0,
+     0,
+     0
+    ],
+    [
+     1.05,
+     0,
+     0
+    ]
+   ],
+   "group": "grief",
+   "trans": "ripple",
+   "trans_d": 0.45
+  },
+  {
+   "id": "M9a",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M9_depression_optB.png",
+   "t0": 37.7,
+   "t1": 39.175,
+   "cam": [
+    [
+     1.05,
+     0.01,
+     0
+    ],
+    [
+     1.0,
+     -0.01,
+     0
+    ]
+   ],
+   "group": "grief",
+   "trans": "ripple",
+   "trans_d": 0.45
+  },
+  {
+   "id": "M9b",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M9_depression_optA.png",
+   "t0": 39.175,
+   "t1": 40.65,
+   "cam": [
+    [
+     1.02,
+     -0.012,
+     0
+    ],
+    [
+     1.04,
+     0.012,
+     0
+    ]
+   ],
+   "group": "grief",
+   "trans": "dissolve",
+   "trans_d": 0.2
+  },
+  {
+   "id": "M10a",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/consistency/out/M10_A_r2b.png",
+   "t0": 40.65,
+   "t1": 41.633,
+   "cam": [
+    [
+     1.0,
+     0,
+     0
+    ],
+    [
+     1.05,
+     0,
+     0
+    ]
+   ],
+   "group": "memory",
+   "trans": "ripple",
+   "trans_d": 0.45
+  },
+  {
+   "id": "M10b",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/consistency/out/M10_priest_of_anpu_C_r1c.png",
+   "t0": 41.633,
+   "t1": 42.617,
+   "cam": [
+    [
+     1.05,
+     0.01,
+     0
+    ],
+    [
+     1.0,
+     -0.01,
+     0
+    ]
+   ],
+   "group": "memory",
+   "trans": "dissolve",
+   "trans_d": 0.2
+  },
+  {
+   "id": "M10c",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/consistency/out/M10_B_r3a.png",
+   "t0": 42.617,
+   "t1": 43.6,
+   "cam": [
+    [
+     1.02,
+     -0.012,
+     0
+    ],
+    [
+     1.04,
+     0.012,
+     0
+    ]
+   ],
+   "group": "memory",
+   "trans": "dissolve",
+   "trans_d": 0.2
+  },
+  {
+   "id": "M11a",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M11_old_sick_optC.png",
+   "t0": 43.6,
+   "t1": 45.075,
+   "cam": [
+    [
+     1.0,
+     0,
+     0
+    ],
+    [
+     1.05,
+     0,
+     0
+    ]
+   ],
+   "group": "grief",
+   "trans": "ripple",
+   "trans_d": 0.45
+  },
+  {
+   "id": "M11b",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M11_old_sick_optA.png",
+   "t0": 45.075,
+   "t1": 46.55,
+   "cam": [
+    [
+     1.05,
+     0.01,
+     0
+    ],
+    [
+     1.0,
+     -0.01,
+     0
+    ]
+   ],
+   "group": "grief",
+   "trans": "dissolve",
+   "trans_d": 0.2
+  },
+  {
+   "id": "M12a",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/consistency/out/M12_A_r2a.png",
+   "t0": 46.55,
+   "t1": 48.025,
+   "cam": [
+    [
+     1.02,
+     -0.012,
+     0
+    ],
+    [
+     1.04,
+     0.012,
+     0
+    ]
+   ],
+   "group": "grief",
+   "trans": "ripple",
+   "trans_d": 0.45
+  },
+  {
+   "id": "M12b",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/M12_death_optC.png",
+   "t0": 48.025,
+   "t1": 49.5,
+   "cam": [
+    [
+     1.0,
+     0,
+     0
+    ],
+    [
+     1.05,
+     0,
+     0
+    ]
+   ],
+   "group": "grief",
+   "trans": "dissolve",
+   "trans_d": 0.2,
+   "fade_out": 0.5
+  },
+  {
+   "id": "E1b",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/E1_surface_optB.png",
+   "t0": 49.5,
+   "t1": 51.0,
+   "cam": [
+    [
+     1.06,
+     0,
+     0.01
+    ],
+    [
+     1.0,
+     0,
+     -0.01
+    ]
+   ],
+   "group": "water",
+   "fx": [
+    "wobble"
+   ],
+   "fade_in": 0.6
+  },
+  {
+   "id": "E1c",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/E1_surface_optC.png",
+   "t0": 51.0,
+   "t1": 52.5,
+   "cam": [
+    [
+     1.0,
+     0,
+     0
+    ],
+    [
+     1.05,
+     0,
+     0
+    ]
+   ],
+   "group": "water",
+   "fx": [
+    "wobble"
+   ]
+  },
+  {
+   "id": "E2",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/E2_edge_optB.png",
+   "t0": 52.5,
+   "t1": 54.0,
+   "cam": [
+    [
+     1.0,
+     -0.01,
+     0
+    ],
+    [
+     1.04,
+     0.01,
+     0
+    ]
+   ],
+   "group": "temple",
+   "fx": [],
+   "trans": "dissolve",
+   "trans_d": 0.25
+  },
+  {
+   "id": "E3",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/E3_remembers_optA.png",
+   "t0": 54.0,
+   "t1": 55.5,
+   "cam": [
+    [
+     1.03,
+     0,
+     0
+    ],
+    [
+     1.07,
+     0,
+     0
+    ]
+   ],
+   "group": "temple",
+   "fx": [],
+   "trans": "dissolve",
+   "trans_d": 0.25
+  },
+  {
+   "id": "E4",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/options/out/E4_writes_optA.png",
+   "t0": 55.5,
+   "t1": 58.9,
+   "cam": [
+    [
+     1.0,
+     0,
+     0
+    ],
+    [
+     1.06,
+     0,
+     0.005
+    ]
+   ],
+   "group": "temple",
+   "fx": [],
+   "trans": "dissolve",
+   "trans_d": 0.25
+  },
+  {
+   "id": "E5",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/consistency/out/E5_props_r1b.png",
+   "t0": 58.9,
+   "t1": 68.5,
+   "cam": [
+    [
+     1.0,
+     0,
+     0.01
+    ],
+    [
+     1.14,
+     0,
+     -0.005
+    ]
+   ],
+   "group": "temple",
+   "fx": []
+  },
+  {
+   "id": "S12",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/consistency/out/S12_props_r1a.png",
+   "t0": 68.5,
+   "t1": 71.7,
+   "cam": [
+    [
+     1.0,
+     0,
+     0
+    ],
+    [
+     1.05,
+     0,
+     -0.005
+    ]
+   ],
+   "group": "temple",
+   "fx": []
+  },
+  {
+   "id": "S13",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/consistency/out/S13_rise_ankh_b.png",
+   "t0": 71.7,
+   "t1": 73.0,
+   "cam": [
+    [
+     1.04,
+     0,
+     0
+    ],
+    [
+     1.07,
+     0,
+     0
+    ]
+   ],
+   "group": "temple",
+   "fx": []
+  },
+  {
+   "id": "S15",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/consistency/out/S15_props_r1a.png",
+   "t0": 73.0,
+   "t1": 76.0,
+   "cam": [
+    [
+     1.0,
+     0,
+     0
+    ],
+    [
+     1.06,
+     0,
+     0
+    ]
+   ],
+   "group": "temple",
+   "fx": []
+  },
+  {
+   "id": "S14",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/consistency/out/S14_props_r1a.png",
+   "t0": 76.0,
+   "t1": 78.1,
+   "cam": [
+    [
+     1.06,
+     0,
+     0.01
+    ],
+    [
+     1.02,
+     0,
+     -0.01
+    ]
+   ],
+   "group": "temple",
+   "fx": []
+  },
+  {
+   "id": "S16",
+   "img": "D:/TheAfterlifeofAnkhu/art_gen/cinematic/consistency/out/S16_props_r1a.png",
+   "t0": 78.1,
+   "t1": 84.5,
+   "cam": [
+    [
+     1.12,
+     0,
+     0
+    ],
+    [
+     1.0,
+     0,
+     0.01
+    ]
+   ],
+   "group": "temple",
+   "fx": [],
+   "ease": true
+  }
+ ]
+}

@@ -5,6 +5,7 @@
         "Ankhu.Integration",
         "Ankhu.Runtime",
         "Ankhu.BorrowedDawn",
+        "Ankhu.Opening",
         "Unity.InputSystem",
         "UnityEngine.UI"
     ],

@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "speaker": "anpu",
+  "source": "Assets/Ankhu/Realms/Core/Content/WernesScripts.cs",
+  "lines": [
+    {
+      "key": "dialogue.anpu.arit1.1",
+      "text": "Seven gates stand between you and the scale. Each has three who mind it. One calls, one watches, one keeps.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The First Gate."
+    },
+    {
+      "key": "dialogue.anpu.arit1.2",
+      "text": "You have read it. Now it is read over you.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The First Gate."
+    },
+    {
+      "key": "dialogue.anpu.arit1.3",
+      "text": "Take this. It is empty. Every soul who walks the Duat writes its own road.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The First Gate."
+    },
+    {
+      "key": "dialogue.anpu.arit1.4",
+      "text": "So is every road, before it is walked.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The First Gate."
+    },
+    {
+      "key": "dialogue.anpu.arit1.5",
+      "text": "That one is Sad of Voice. He announces everyone the same way. Do not take it to heart.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The First Gate."
+    },
+    {
+      "key": "dialogue.anpu.arit1.6",
+      "text": "Speak a name in the Duat and its owner must answer. Try his.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The First Gate."
+    },
+    {
+      "key": "dialogue.anpu.arit1.7",
+      "text": "He hears everything. That is his work.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The First Gate."
+    },
+    {
+      "key": "dialogue.anpu.arit1.8",
+      "text": "It does not need one written. Face-downward, Numerous of Shapes. You have met.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The First Gate."
+    },
+    {
+      "key": "dialogue.anpu.arit1.9",
+      "text": "A gate is not opened by force. It is opened by being known.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The First Gate."
+    },
+    {
+      "key": "dialogue.anpu.arit1.10",
+      "text": "I can give you the first gate. I cannot give you the others.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The First Gate."
+    },
+    {
+      "key": "dialogue.anpu.field.1",
+      "text": "They forgot.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The Field That Waits."
+    },
+    {
+      "key": "dialogue.anpu.field.2",
+      "text": "Here the dead are given fields. This one is yours. It is waiting.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The Field That Waits."
+    },
+    {
+      "key": "dialogue.anpu.field.3",
+      "text": "In the old tongue the word is wen. In yours, open. Say it to what is shut.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The Field That Waits."
+    },
+    {
+      "key": "dialogue.anpu.field.4",
+      "text": "Then something must carry it. Your worker sleeps on its feet. Res. Wake.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The Field That Waits."
+    },
+    {
+      "key": "dialogue.anpu.field.5",
+      "text": "It does exactly what it is told. Nothing more.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The Field That Waits."
+    },
+    {
+      "key": "dialogue.anpu.field.6",
+      "text": "Every pour breaks the water. Look at the worker. It will never stop unless it is told.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The Field That Waits."
+    },
+    {
+      "key": "dialogue.anpu.field.7",
+      "text": "Hetep. Peace. The word is still.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The Field That Waits."
+    },
+    {
+      "key": "dialogue.anpu.field.8",
+      "text": "Not the water. What keeps breaking it?",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The Field That Waits."
+    },
+    {
+      "key": "dialogue.anpu.field.9",
+      "text": "That word is not yours yet. The land will give it to you when you need it.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The Field That Waits."
+    },
+    {
+      "key": "dialogue.anpu.field.10",
+      "text": "The worker stopped, and you remembered. That is the whole of Wernes.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The Field That Waits."
+    },
+    {
+      "key": "dialogue.anpu.field.11",
+      "text": "Your field is still waiting.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The Field That Waits."
+    },
+    {
+      "key": "dialogue.anpu.house.1",
+      "text": "Here you are not required to labour.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The House With One Door."
+    },
+    {
+      "key": "dialogue.anpu.house.2",
+      "text": "That is the question the land is asking.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The House With One Door."
+    },
+    {
+      "key": "dialogue.anpu.house.3",
+      "text": "Nothing you know stops water. There is a word for it. You have been afraid of it a long time.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The House With One Door."
+    },
+    {
+      "key": "dialogue.anpu.house.4",
+      "text": "You know it exists. Your mouth will not make it. Ask the door on the wall why.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The House With One Door."
+    },
+    {
+      "key": "dialogue.anpu.house.5",
+      "text": "A shut door kept the night out of that house for years. Use the word for something small.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The House With One Door."
+    },
+    {
+      "key": "dialogue.anpu.house.6",
+      "text": "A seal is not only a wall. Sometimes it is a hand over a cup.",
+      "context": "The god Anpu (Anubis) guiding the dead priest Ankhu through the Duat. Warm, grave, kind, unhurried. Never theatrical. Scene: The House With One Door."
+    }
+  ]
+}

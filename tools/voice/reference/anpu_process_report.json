@@ -1,0 +1,10 @@
+{
+ "takes": 25,
+ "asl_min": -20.0,
+ "asl_max": -20.0,
+ "truePeak_max": -2.84,
+ "lufs_measurable": 25,
+ "lufs_min": -20.8,
+ "lufs_max": -19.98,
+ "duration_total": 249.71
+}

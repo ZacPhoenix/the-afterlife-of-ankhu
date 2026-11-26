@@ -1,0 +1,5 @@
+{"run":"run17","build":29,"judge":"A","scores":{"art":7.5,"continuity":5,"cinematography":6.5,"motion_fx":5.5,"grounding":6,"game_feel":6,"ui_title":7.5,"audio":7},"mean":6.38,
+"defects":[
+{"axis":"continuity","frames":"013, 016 vs 021, 023, 027, 040","what":"film Anpu and attendants differ from in-engine versions, ankh not readable in walk"},
+{"axis":"motion_fx","frames":"039, 040, 046","what":"attendants lean back, hop or float, no visible foot dust"},
+{"axis":"cinematography","frames":"030, 033, 036, 039, 046","what":"foreground attendants clip frame edges and subtitles, leads too small in several cams"}]}

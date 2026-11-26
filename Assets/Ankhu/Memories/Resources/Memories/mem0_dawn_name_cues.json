@@ -1,0 +1,22 @@
+{
+ "cues": [
+  {
+   "t0": 0.8,
+   "t1": 3.68,
+   "speaker": "NEFERET",
+   "text": "Say his name. Let the gods hear it."
+  },
+  {
+   "t0": 7.5,
+   "t1": 9.08,
+   "speaker": "ANKHU",
+   "text": "Hori."
+  },
+  {
+   "t0": 14.6,
+   "t1": 17.25,
+   "speaker": "NEFERET",
+   "text": "Not so loud... he is sleeping..."
+  }
+ ]
+}

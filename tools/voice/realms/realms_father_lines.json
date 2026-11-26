@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "speaker": "father",
+  "source": "Assets/Ankhu/Realms/Core/Content/WernesScripts.cs",
+  "lines": [
+    {
+      "key": "dialogue.father.house.1",
+      "text": "Mind your mother. I will bring you something from the north.",
+      "context": "Ankhu's father, a soldier in his thirties leaving at dawn for a war, kneeling to his six-year-old son. Tender, trying to sound cheerful. A memory. Scene: The House With One Door. This line is a memory, heard as if from far away."
+    }
+  ]
+}

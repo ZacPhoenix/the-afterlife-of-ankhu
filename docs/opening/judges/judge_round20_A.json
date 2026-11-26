@@ -1,0 +1,40 @@
+{
+ "scores": {
+  "art": 8,
+  "continuity": 6,
+  "cinematography": 7,
+  "motion_fx": 5,
+  "grounding": 5,
+  "game_feel": 6,
+  "ui_title": 7,
+  "audio": 6
+ },
+ "evidence": {
+  "art": "Painted title 000-004 and film 005-018 are rich and coherent (moonlit blues against warm torchlight). The walk-shot backdrops 021, 024, 030, 040 hold the same style. The 3D actors in 019-047 are plainly CG and flat against them.",
+  "continuity": "Painted Anpu in 016-017 has a full ornate nemes, collar and checkered chest. The 3D Anpu in 019-023 has a plain teal hood and a black body. In 014-018 he is bare-armed and bare-footed, but in 019-047 his limbs read black. Ankhu keeps sandals in 021, 023 and 040, but the 3D face and skin are generic. In 045-047 Ankhu is hidden behind an attendant.",
+  "cinematography": "Film shots 005-018 flow well: foetal float to close-up, then memory vignettes, then the arrival wide. Walk cuts at 021, 024, 030, 037 and 040 give varied compositions with a strong foreground statue. 024-025 open on an empty frame for several beats before the group enters. 037-039 is a steep high angle.",
+  "motion_fx": "Walk poses vary across 027-029, 038 and 041, and the foot-dust and torch glow are present. Sequences 031-036 show tiny group sprites. 044-045 have Anpu and Ankhu clustered and overlapping, and the end fade 046-048 is abrupt. Poses are stiff and the strides look mannequin-like.",
+  "grounding": "Cast shadows exist in 020, 027 and 038. Scale is off in 026-027, where the group is tiny against the statue and pedestal. In 042-045 Anpu and Ankhu clip into the gate shadow and the attendants. Black-limbed Anpu has no readable silhouette against dark ground in 023, and he looks dropped onto the painted plates.",
+  "game_feel": "Cuts fire as the group crosses shot boundaries, and the torch line and pylon guide the eye (019-021). In 024-036 the camera dwells on a static view with distant actors, so the player has no direction cue. The 044-045 clump at the gate is unreadable, and the ending has no clear handover.",
+  "ui_title": "Title 000-003 has a strong gold serif logo, a clear menu and a highlighted selection. The menu items are small and sit low-left. Subtitles in 023-044 are legible but thin and sit over bright paving, and 036 shows a fading subtitle overlapping the floor.",
+  "audio": "Judged from subtitle lines and timing only. Script reads strong: 'I served your house...' (023-025), 'I know. I was there...' (026-027), 'A son. A father...' (029-033), and 'Walk with me, Ankhu...' (042-045). Dialogue is paced, but gaps with no subtitle in 019-022 and 046-048 suggest silence. Anpu's cinematic line 'My Lord... Anpu.' in 016 is the only film subtitle."
+ },
+ "mean": 6.25,
+ "defects": [
+  {
+   "axis": "continuity",
+   "frames": "016-018 vs 019-023, 040-043",
+   "what": "3D Anpu is a plain teal hood on a black body, with no ornate nemes, collar or chest, unlike the painted Anpu. Ankhu's 3D model looks generic and different from the painted man."
+  },
+  {
+   "axis": "grounding",
+   "frames": "026-027, 031-036, 042-045",
+   "what": "Characters read as tiny, flat sprites against the painted sets. Anpu is hard to read against the dark ground, and in 042-045 the group clumps together at the gate with Ankhu hidden."
+  },
+  {
+   "axis": "motion_fx",
+   "frames": "024-025, 044-048",
+   "what": "024-025 hold an empty camera frame for many beats. The 046-048 fade is abrupt, and it cuts to a title-like painted frame with no handover to the player."
+  }
+ ]
+}

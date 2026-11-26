@@ -6,6 +6,66 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Ankhu/Generated/Scenes/Opening/Opening_Title.unity
+    guid: 169d7271fd18bd9409aedfd70ac56d45
+  - enabled: 1
+    path: Assets/Ankhu/Generated/Scenes/Opening/Opening_Cinematic.unity
+    guid: af0edd36a9743fd44af3fb45117f63d3
+  - enabled: 1
+    path: Assets/Ankhu/Generated/Scenes/Opening/Opening_WalkDuat.unity
+    guid: 8ad3c137cbfda454f8706c1fbed419cd
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Realm_01_Arit1_Painted.unity
+    guid: 34549ed45e6a61245be122ada33daf0f
+  - enabled: 1
+    path: Assets/Ankhu/Generated/Scenes/Teach1_Cistern_Painted.unity
+    guid: 2354c77ae2a07694085f37a38745810e
+  - enabled: 1
+    path: Assets/Ankhu/Generated/Scenes/Teach2_HeldStep_Painted.unity
+    guid: 7b150f520639ecc42beac2621f67ba8e
+  - enabled: 1
+    path: Assets/Ankhu/Generated/Scenes/Teach3_LingeringShadow_Painted.unity
+    guid: c1a2bb300d0270141a7e0cce6fa416df
+  - enabled: 1
+    path: Assets/Ankhu/Generated/Scenes/BorrowedDawn_Painted.unity
+    guid: 538741f4fcc363141b279fdf64e95d55
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Wernes_Terrace.unity
+    guid: 3a559dcce897ac74aaa07c3e6c3edf10
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Wernes_Hub.unity
+    guid: 73e0a13cde857bf45989c9bdb24ae284
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Wernes_A_Field.unity
+    guid: b26ed00f308eec649b52d9ae5f378e73
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Wernes_B_Shabti.unity
+    guid: b8057675a00980649b78290a14b9d54b
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Wernes_C_House.unity
+    guid: 72368f48c10e43945b8f0b5ec5abca6f
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Wernes_D_Bricks.unity
+    guid: a1f9ef0e49bb5fb4c8ad7f0489272467
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Wernes_Finale.unity
+    guid: 3bb7fcbe38a0a544195752deeaaa2e97
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Rosetau_A_Laugh.unity
+    guid: 64635426805b30e40aadaa8fa20d7937
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Rosetau_B_Mourners.unity
+    guid: efbfec16b7d7a424d8496fe766ceeff7
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Rosetau_C_Mother.unity
+    guid: dedd9bf75d0fef247a928678a212197b
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Rosetau_D_TwoWays.unity
+    guid: c3b7ac719d6743f47a3ad1d38987ee8e
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Rosetau_E_Finale.unity
+    guid: c3ba197427aef7d4aa54f09be241954b
+  - enabled: 1
     path: Assets/Ankhu/Generated/Scenes/Teach1_Cistern.unity
     guid: 9577b3e6021df794cab008bc1ab52c34
   - enabled: 1
@@ -17,6 +77,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Ankhu/Generated/Scenes/BorrowedDawn_Greybox.unity
     guid: 9c6e4a5d1fd78b742bce90be2215154c
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Realm_01_Arit1.unity
+    guid: dfc03887348a2244a8b8a5c5eea2c835
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Realm_02_Wernes_Field.unity
+    guid: 25bec6e9bbc39dc41a2337b360d9edf7
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Realm_03_Wernes_House.unity
+    guid: f34a1382faeacda41b564a0dfbe191bf
+  - enabled: 1
+    path: Assets/Ankhu/Realms/Generated/Scenes/Realm_04_Wernes_Row.unity
+    guid: b00350d33dcb31a4185fbbc5f5d4dc62
   - enabled: 1
     path: Assets/Ankhu/Generated/Scenes/Terrace_Parallax.unity
     guid: ffebda7d7f94e944193926eed8e97c80

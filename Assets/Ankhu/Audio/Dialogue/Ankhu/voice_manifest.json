@@ -1,0 +1,63 @@
+{
+ "version": 1,
+ "sampleRate": 44100,
+ "targetAsl": -20.0,
+ "ceilingDbtp": -1.0,
+ "timing": {
+  "clauseGap": 0.12,
+  "wordGap": 0.0
+ },
+ "entries": [
+  {
+   "key": "dialogue.ankhu.spell25.anpu",
+   "variant": 0,
+   "file": "Clips/dialogue.ankhu.spell25.anpu__0.wav",
+   "text": "My Lord... Anpu.",
+   "asl": -20.0,
+   "lufs": -21.28,
+   "truePeak": -2.92,
+   "duration": 2.305,
+   "rawDuration": 2.4149,
+   "trimStart": 0.005,
+   "alignment": {
+    "characters": "My Lord... Anpu.",
+    "start": [
+     -0.005,
+     0.111,
+     0.158,
+     0.239,
+     0.285,
+     0.448,
+     0.529,
+     0.657,
+     0.738,
+     0.866,
+     0.889,
+     1.191,
+     1.377,
+     1.481,
+     1.609,
+     1.876
+    ],
+    "end": [
+     0.111,
+     0.158,
+     0.239,
+     0.285,
+     0.448,
+     0.529,
+     0.657,
+     0.738,
+     0.866,
+     0.889,
+     1.191,
+     1.377,
+     1.481,
+     1.609,
+     1.876,
+     2.41
+    ]
+   }
+  }
+ ]
+}

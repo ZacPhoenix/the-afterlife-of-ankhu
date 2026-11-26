@@ -1,0 +1,5 @@
+{"run":"run16","build":28,"judge":"A","scores":{"art":7.5,"continuity":6.5,"cinematography":6.5,"motion_fx":5.5,"grounding":5.5,"game_feel":6.5,"ui_title":7,"audio":7},"mean":6.5,
+"defects":[
+{"axis":"grounding","frames":"029, 033, 039, 043, 046","what":"attendants clip braziers and pedestals, slide with no foot contact in high cams"},
+{"axis":"motion_fx","frames":"021, 023, 025, 030, 039","what":"stiff repeated walk poses, no visible dust or cloth secondary motion, Ankhu hop pose"},
+{"axis":"continuity","frames":"015 vs 023, 030, 037","what":"painted film characters do not match the 3D walk models"}]}

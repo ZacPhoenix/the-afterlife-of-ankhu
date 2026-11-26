@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "speaker": "hori",
+  "source": "Assets/Ankhu/Realms/Core/Content/WernesScripts.cs",
+  "lines": [
+    {
+      "key": "dialogue.hori.field.1",
+      "text": "He is flying. Look. He is flying to Heru.",
+      "context": "Hori, Ankhu's son, about four years old, delighted, laughing, on his father's shoulders at sunset. A memory. Scene: The Field That Waits. This line is a memory, heard as if from far away."
+    },
+    {
+      "key": "dialogue.hori.field.2",
+      "text": "He will not fall. You are holding me, and I am holding him.",
+      "context": "Hori, Ankhu's son, about four years old, delighted, laughing, on his father's shoulders at sunset. A memory. Scene: The Field That Waits. This line is a memory, heard as if from far away."
+    }
+  ]
+}

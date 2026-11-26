@@ -171,7 +171,9 @@ namespace Ankhu.EditorTools
             new GameObject("Debug").AddComponent<TraversalDebugPanel>();
 
             Camera camera = BuildCamera(spec.Spawn);
-            Ankhu.Player.PlayerRigFactory.Create(spec.Spawn, camera);
+            GameObject player = Ankhu.Player.PlayerRigFactory.Create(spec.Spawn, camera);
+            // Rigged Ankhu replaces the primitive stand-in once Ankhu.prefab exists.
+            Character.AnkhuCharacterSetup.AssignModel(player);
 
             EditorSceneManager.MarkSceneDirty(scene);
             if (!EditorSceneManager.SaveScene(scene, spec.ScenePath))

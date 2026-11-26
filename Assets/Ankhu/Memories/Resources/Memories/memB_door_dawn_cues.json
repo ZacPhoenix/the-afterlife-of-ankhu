@@ -1,0 +1,16 @@
+{
+ "cues": [
+  {
+   "t0": 0.8,
+   "t1": 3.8,
+   "speaker": "FATHER",
+   "text": "Mind your mother. I will bring you something from the north."
+  },
+  {
+   "t0": 11.3,
+   "t1": 19.01,
+   "speaker": "ANKHU",
+   "text": "He did not come back. I have hated that word since. Khetem. Seal."
+  }
+ ]
+}

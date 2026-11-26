@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "speaker": "ankhu",
+  "source": "Wernes rules",
+  "lines": [
+    {
+      "key": "name.hu-kheru",
+      "text": "Sad of Voice.",
+      "context": "Ankhu speaking a word of power aloud in the afterlife: firm, resonant, deliberate, as a priest intoning a spell. Not shouted."
+    },
+    {
+      "key": "name.sedjem",
+      "text": "Eavesdropper.",
+      "context": "Ankhu speaking a word of power aloud in the afterlife: firm, resonant, deliberate, as a priest intoning a spell. Not shouted."
+    },
+    {
+      "key": "name.her-khed",
+      "text": "Face-downward.",
+      "context": "Ankhu speaking a word of power aloud in the afterlife: firm, resonant, deliberate, as a priest intoning a spell. Not shouted."
+    },
+    {
+      "key": "name.ankhu",
+      "text": "Ankhu.",
+      "context": "Ankhu speaking a word of power aloud in the afterlife: firm, resonant, deliberate, as a priest intoning a spell. Not shouted."
+    },
+    {
+      "key": "spell.open.sluice",
+      "text": "Open the sluice.",
+      "context": "Ankhu speaking a word of power aloud in the afterlife: firm, resonant, deliberate, as a priest intoning a spell. Not shouted."
+    },
+    {
+      "key": "spell.wake.shabti",
+      "text": "Wake the shabti.",
+      "context": "Ankhu speaking a word of power aloud in the afterlife: firm, resonant, deliberate, as a priest intoning a spell. Not shouted."
+    },
+    {
+      "key": "spell.still.shabti",
+      "text": "Still the shabti.",
+      "context": "Ankhu speaking a word of power aloud in the afterlife: firm, resonant, deliberate, as a priest intoning a spell. Not shouted."
+    },
+    {
+      "key": "spell.still.basin",
+      "text": "Still the basin.",
+      "context": "Ankhu speaking a word of power aloud in the afterlife: firm, resonant, deliberate, as a priest intoning a spell. Not shouted."
+    },
+    {
+      "key": "spell.open.lotus",
+      "text": "Open the lotus.",
+      "context": "Ankhu speaking a word of power aloud in the afterlife: firm, resonant, deliberate, as a priest intoning a spell. Not shouted."
+    },
+    {
+      "key": "spell.open.lower",
+      "text": "Open the lower sluice.",
+      "context": "Ankhu speaking a word of power aloud in the afterlife: firm, resonant, deliberate, as a priest intoning a spell. Not shouted."
+    },
+    {
+      "key": "spell.seal.lower",
+      "text": "Seal the lower sluice.",
+      "context": "Ankhu speaking a word of power aloud in the afterlife: firm, resonant, deliberate, as a priest intoning a spell. Not shouted."
+    },
+    {
+      "key": "spell.seal.upper",
+      "text": "Seal the upper sluice.",
+      "context": "Ankhu speaking a word of power aloud in the afterlife: firm, resonant, deliberate, as a priest intoning a spell. Not shouted."
+    },
+    {
+      "key": "spell.open.upper",
+      "text": "Open the upper sluice.",
+      "context": "Ankhu speaking a word of power aloud in the afterlife: firm, resonant, deliberate, as a priest intoning a spell. Not shouted."
+    },
+    {
+      "key": "spell.still.plot",
+      "text": "Still the plot.",
+      "context": "Ankhu speaking a word of power aloud in the afterlife: firm, resonant, deliberate, as a priest intoning a spell. Not shouted."
+    },
+    {
+      "key": "spell.open.falsedoor",
+      "text": "Open the false door.",
+      "context": "Ankhu speaking a word of power aloud in the afterlife: firm, resonant, deliberate, as a priest intoning a spell. Not shouted."
+    },
+    {
+      "key": "word.open",
+      "text": "Open.",
+      "context": "Ankhu speaking a single word of power aloud: firm, resonant, deliberate."
+    },
+    {
+      "key": "word.seal",
+      "text": "Seal.",
+      "context": "Ankhu speaking a single word of power aloud: firm, resonant, deliberate."
+    },
+    {
+      "key": "word.wake",
+      "text": "Wake.",
+      "context": "Ankhu speaking a single word of power aloud: firm, resonant, deliberate."
+    },
+    {
+      "key": "word.still",
+      "text": "Still.",
+      "context": "Ankhu speaking a single word of power aloud: firm, resonant, deliberate."
+    },
+    {
+      "key": "word.name",
+      "text": "Name.",
+      "context": "Ankhu speaking a single word of power aloud: firm, resonant, deliberate."
+    }
+  ]
+}
